@@ -1,0 +1,27 @@
+numba
+tqdm
+redis
+sqlalchemy
+
+
+# ===========================================
+# REQUIREMENTS - Fintech Analysis Tools
+# ===========================================
+
+# --- CORE: Vietnamese Stock Data ---
+vnstock>=0.2.9
+
+# --- Data Processing (Required) ---
+pandas>=1.5.0
+
+# --- Database Dependencies (for xno) ---
+sqlalchemy>=1.4.0
+psycopg2-binary>=2.8.0  # PostgreSQL driver
+redis>=4.0.0            # Already installed
+
+# --- Progress & Utilities ---
+tqdm>=4.0.0             # Already installed
+
+# --- TA-Lib (after manual installation) ---
+# TA-Lib requires manual wheel installation
+# See INSTALL_TALIB.md for instructions
