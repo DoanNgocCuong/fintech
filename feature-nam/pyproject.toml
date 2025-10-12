@@ -1,0 +1,16 @@
+[project]
+name = "feature-nam"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "beautifulsoup4>=4.14.2",
+    "loguru>=0.7.3",
+    "lxml>=6.0.2",
+    "openpyxl>=3.1.5",
+    "pandas>=2.3.3",
+    "requests>=2.32.5",
+    "streamlit>=1.50.0",
+    "xlrd>=2.0.2",
+]
