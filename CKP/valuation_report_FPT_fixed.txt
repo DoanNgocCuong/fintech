@@ -1,0 +1,33 @@
+BAO CAO PHAN TICH DINH GIA - MA FPT (VNSTOCK 3.2.6)
+============================================================
+Thoi gian tao bao cao: 2025-10-12 22:28:41
+
+CHI SO DINH GIA:
+  PE                  :       19.0
+  PB                  :        4.9
+  PEG                 :     413.04
+  Earnings_Yield      :       5.26%
+  Simple_DCF          :        N/A
+  Dividend_Yield      :        N/A
+
+CHI SO SINH LOI:
+  ROE                 :       28.3%
+  EPS_Growth          :        4.6%
+  EPS                 :       5057
+
+TINH HINH TAI CHINH:
+  Debt_Equity         :        0.6
+  Current_Ratio       :        1.4
+
+THONG TIN THI TRUONG:
+  Current_Price       :        N/A
+  Book_Value_Per_Share:      19549
+  Market_Cap          :        N/A
+
+DANH GIA TONG QUAN:
+----------------------------------------
+  PE Ratio: TRUNG BINH (15-25)
+  ROE: XUAT SAC (trên 20%)
+  PEG: OVERVALUED (trên 1.5)
+
+Tong so chi so: 10/14
