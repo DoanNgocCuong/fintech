@@ -1,0 +1,15 @@
+transformers<5,>=4.44
+accelerate<1,>=0.33
+safetensors<1,>=0.4
+Pillow<12,>=10
+pdf2image<2,>=1.17
+ipython<9,>=8
+jupyter<2,>=1
+
+[extras]
+qwen_vl_utils==0.0.14
+PyMuPDF
+gradio
+openai
+modelscope
+gradio_image_annotation

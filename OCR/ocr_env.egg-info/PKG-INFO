@@ -1,0 +1,85 @@
+Metadata-Version: 2.4
+Name: ocr-env
+Version: 0.1.0
+Summary: Environment for DotsOCR experiments and OCR utilities
+Author: cuong_dn
+License: MIT
+Project-URL: homepage, https://github.com/rednote-hilab/dots.ocr
+Requires-Python: <3.14,>=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: transformers<5,>=4.44
+Requires-Dist: accelerate<1,>=0.33
+Requires-Dist: safetensors<1,>=0.4
+Requires-Dist: Pillow<12,>=10
+Requires-Dist: pdf2image<2,>=1.17
+Requires-Dist: ipython<9,>=8
+Requires-Dist: jupyter<2,>=1
+Provides-Extra: extras
+Requires-Dist: qwen_vl_utils==0.0.14; extra == "extras"
+Requires-Dist: PyMuPDF; extra == "extras"
+Requires-Dist: gradio; extra == "extras"
+Requires-Dist: openai; extra == "extras"
+Requires-Dist: modelscope; extra == "extras"
+Requires-Dist: gradio_image_annotation; extra == "extras"
+
+# DotsOCR Quickstart (Python 3.12)
+
+## 1) Create venv and install (fast)
+
+```bash
+# From repo root
+cd /home/ubuntu/cuong_dn/fintech/OCR
+
+# Option A: Use the helper installer (CPU by default)
+/usr/local/bin/python3.12 install_env.py --venv .venv312 --torch cpu
+
+# Option B: Manual steps
+/usr/local/bin/python3.12 -m venv .venv312
+source .venv312/bin/activate
+python -m pip install --upgrade pip setuptools wheel
+python -m pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cpu
+python -m pip install -e .[extras]
+[ -d dots.ocr ] || git clone https://github.com/rednote-hilab/dots.ocr.git
+cd dots.ocr && git checkout -q 2562ed0df4e7fdc699e4890143828014d0dada04 && cd ..
+python -m pip install -e dots.ocr --no-deps
+python dots.ocr/tools/download_model.py
+```
+
+Notes:
+- CUDA users: replace the Torch index with `--index-url https://download.pytorch.org/whl/cu121`.
+- System deps: `pdf2image` needs Poppler. If missing, install `poppler-utils` (requires sudo).
+- A fallback font `assets/DejaVuSans.ttf` is downloaded by `install_env.py`.
+
+## 2) Run OCR
+
+Run on an image:
+```bash
+source .venv312/bin/activate
+python run_layout_ocr.py path/to/image.jpg --out output.txt
+```
+
+Run on a PDF (first page is auto-converted):
+```bash
+python run_layout_ocr.py path/to/file.pdf --out output.txt
+```
+
+Advanced options:
+```bash
+python run_layout_ocr.py path/to/image.jpg \
+  --weights ./dots.ocr/weights/DotsOCR \
+  --prompt "Extract layout elements in English."
+```
+
+## 3) Troubleshooting
+- If you see "flash attention not available", it is fine; model runs without it.
+- If `pdf2image` fails, install Poppler on the system and retry.
+- If processor complains about versions, ensure `transformers` is installed from this project (`pip install -e .`) and avoid forcing `transformers==4.51.3`.
+
+## 4) Project files
+- `install_env.py`: one-shot installer (venv, torch, deps, dots.ocr, weights)
+- `run_layout_ocr.py`: CLI to run inference on images/PDFs
+- `pyproject.toml`: dependencies and optional extras 
+
+
+
+
