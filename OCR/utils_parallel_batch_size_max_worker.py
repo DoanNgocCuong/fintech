@@ -228,12 +228,13 @@ class ParallelBatchProcessor:
         logger.info(f"🚀 Parallel Batch Processing Setup:")
         logger.info(f"   📊 Total items: {self.total_items}")
         logger.info(f"   📦 Batch size: {batch_size} items/batch")
-        logger.info(f"   🧵 Max workers: {self.max_workers}")
+        logger.info(f"   🧵 Max workers: {self.max_workers} (Processing {self.max_workers} items simultaneously)")
         logger.info(f"   📋 Total batches: {len(batches)}")
         logger.info(f"   💾 Memory limit: {self.memory_limit_mb}MB")
         logger.info(f"   🔧 Adaptive mode: {'✅' if self.enable_adaptive else '❌'}")
         if self.enable_gpu_monitoring:
             logger.info(f"   🎮 GPU monitoring: ✅")
+        logger.info(f"   ⚡ Parallel capacity: Up to {self.max_workers} concurrent requests")
 
         # Process batches in parallel
         with ThreadPoolExecutor(max_workers=self.max_workers) as executor:

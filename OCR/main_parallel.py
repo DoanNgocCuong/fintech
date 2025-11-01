@@ -39,7 +39,7 @@ OUT_MD = "data/33_pages_test.md"
 PDF_CONVERT_THREADS = multiprocessing.cpu_count()  # Số cores để convert PDF
 # OCR_MAX_WORKERS phải ≤ server max_num_seqs (hiện tại server = 8)
 # Nên set = 8 để tận dụng tối đa server capacity
-OCR_MAX_WORKERS = 8  # Số workers cho OCR parallel (đồng bộ với server max-num-seqs=8)
+OCR_MAX_WORKERS = 20  # Số workers cho OCR parallel (đồng bộ với server max-num-seqs=8)
 
 # ============================================================================
 # OPTIMIZE 1: PDF -> Images với parallel conversion
@@ -182,9 +182,12 @@ def pdf2finalmarkdown(pdf_path, out_dir, model, api, output_md, max_workers=None
     
     # Step 2: Process images -> Markdown (PARALLEL với utils_parallel_batch_size_max_worker.py)
     # Sử dụng ParallelBatchProcessor với GPU monitoring và adaptive batch processing
+    actual_max_workers = max_workers or OCR_MAX_WORKERS
     logger.info(f"🚀 Using ParallelBatchProcessor with GPU monitoring...")
-    logger.info(f"   🎮 Max workers: {max_workers or OCR_MAX_WORKERS}")
+    logger.info(f"   🎮 Max workers: {actual_max_workers} (Server max-num-seqs: {actual_max_workers})")
+    logger.info(f"   📊 Total images to process: {len(image_paths)}")
     logger.info(f"   🔧 Adaptive batch processing: ✅")
+    logger.info(f"   ⚡ Parallel capacity: {actual_max_workers} OCR requests simultaneously")
     
     md_all = process_images_parallel_optimized(
         image_paths=image_paths,
