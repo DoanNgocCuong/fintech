@@ -23,5 +23,6 @@ nohup env CUDA_VISIBLE_DEVICES=1 vllm serve rednote-hilab/dots.ocr \
   --host 0.0.0.0 \
   --port 30010 \
   --max-num-batched-tokens 8192 \
+  --max-num-seqs 8 \
   > vllm.log 2>&1 &
 
