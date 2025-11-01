@@ -258,3 +258,4 @@ nohup env CUDA_VISIBLE_DEVICES=1 vllm serve rednote-hilab/dots.ocr \
 **Ngày**: 2025-11-01  
 **Version**: Final 1.0
 
+

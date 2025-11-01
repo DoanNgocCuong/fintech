@@ -1,0 +1,231 @@
+nohup: ignoring input
+INFO 11-01 12:21:50 [__init__.py:225] Automatically detected platform cuda.
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:21:55 [api_server.py:1869] vLLM API server version 0.11.1rc3.dev29+g3fa2c1218
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:21:55 [utils.py:253] non-default args: {'model_tag': 'rednote-hilab/dots.ocr', 'host': '0.0.0.0', 'port': 30010, 'model': 'rednote-hilab/dots.ocr', 'trust_remote_code': True, 'gpu_memory_utilization': 0.6, 'async_scheduling': True}
+[1;36m(APIServer pid=993228)[0;0m A new version of the following files was downloaded from https://huggingface.co/rednote-hilab/dots.ocr:
+[1;36m(APIServer pid=993228)[0;0m - configuration_dots.py
+[1;36m(APIServer pid=993228)[0;0m . Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:22:00 [model.py:667] Resolved architecture: DotsOCRForCausalLM
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:22:00 [model.py:1756] Using max model len 131072
+[1;36m(APIServer pid=993228)[0;0m The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:22:00 [scheduler.py:219] Chunked prefill is enabled with max_num_batched_tokens=2048.
+INFO 11-01 12:22:12 [__init__.py:225] Automatically detected platform cuda.
+[1;36m(EngineCore_DP0 pid=999197)[0;0m INFO 11-01 12:22:16 [core.py:716] Waiting for init message from front-end.
+[1;36m(EngineCore_DP0 pid=999197)[0;0m INFO 11-01 12:22:16 [core.py:94] Initializing a V1 LLM engine (v0.11.1rc3.dev29+g3fa2c1218) with config: model='rednote-hilab/dots.ocr', speculative_config=None, tokenizer='rednote-hilab/dots.ocr', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=131072, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=rednote-hilab/dots.ocr, enable_prefix_caching=True, chunked_prefill_enabled=True, pooler_config=None, compilation_config={'level': None, 'mode': 3, 'debug_dump_path': None, 'cache_dir': '', 'backend': 'inductor', 'custom_ops': ['none'], 'splitting_ops': ['vllm::unified_attention', 'vllm::unified_attention_with_output', 'vllm::unified_mla_attention', 'vllm::unified_mla_attention_with_output', 'vllm::mamba_mixer2', 'vllm::mamba_mixer', 'vllm::short_conv', 'vllm::linear_attention', 'vllm::plamo2_mamba_mixer', 'vllm::gdn_attention', 'vllm::sparse_attn_indexer'], 'use_inductor': None, 'compile_sizes': [], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_AND_PIECEWISE: (2, 1)>, 'use_cudagraph': True, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [512, 504, 496, 488, 480, 472, 464, 456, 448, 440, 432, 424, 416, 408, 400, 392, 384, 376, 368, 360, 352, 344, 336, 328, 320, 312, 304, 296, 288, 280, 272, 264, 256, 248, 240, 232, 224, 216, 208, 200, 192, 184, 176, 168, 160, 152, 144, 136, 128, 120, 112, 104, 96, 88, 80, 72, 64, 56, 48, 40, 32, 24, 16, 8, 4, 2, 1], 'cudagraph_copy_inputs': False, 'full_cuda_graph': True, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {}, 'max_capture_size': 512, 'local_cache_dir': None}
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[1;36m(EngineCore_DP0 pid=999197)[0;0m INFO 11-01 12:22:23 [parallel_state.py:1325] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+[1;36m(EngineCore_DP0 pid=999197)[0;0m The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+[1;36m(EngineCore_DP0 pid=999197)[0;0m INFO 11-01 12:22:35 [gpu_model_runner.py:2856] Starting to load model rednote-hilab/dots.ocr...
+[1;36m(EngineCore_DP0 pid=999197)[0;0m INFO 11-01 12:22:36 [cuda.py:403] Using Flash Attention backend on V1 engine.
+[1;36m(EngineCore_DP0 pid=999197)[0;0m INFO 11-01 12:22:37 [weight_utils.py:419] Using model weights format ['*.safetensors']
+[1;36m(EngineCore_DP0 pid=999197)[0;0m INFO 11-01 12:22:38 [weight_utils.py:440] Time spent downloading weights for rednote-hilab/dots.ocr: 0.856239 seconds
+[1;36m(EngineCore_DP0 pid=999197)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
+[1;36m(EngineCore_DP0 pid=999197)[0;0m Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:01<00:01,  1.36s/it]
+[1;36m(EngineCore_DP0 pid=999197)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:04<00:00,  2.52s/it]
+[1;36m(EngineCore_DP0 pid=999197)[0;0m Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:04<00:00,  2.35s/it]
+[1;36m(EngineCore_DP0 pid=999197)[0;0m 
+[1;36m(EngineCore_DP0 pid=999197)[0;0m INFO 11-01 12:22:44 [default_loader.py:314] Loading weights took 4.87 seconds
+[1;36m(EngineCore_DP0 pid=999197)[0;0m INFO 11-01 12:22:45 [gpu_model_runner.py:2917] Model loading took 5.7174 GiB and 8.121581 seconds
+[1;36m(EngineCore_DP0 pid=999197)[0;0m INFO 11-01 12:22:46 [gpu_model_runner.py:3685] Encoder cache will be initialized with a budget of 14400 tokens, and profiled with 1 image items of the maximum feature size.
+[1;36m(EngineCore_DP0 pid=999197)[0;0m INFO 11-01 12:23:10 [backends.py:609] Using cache directory: /home/ubuntu/.cache/vllm/torch_compile_cache/d224f1ef9b/rank_0_0/backbone for vLLM's torch.compile
+[1;36m(EngineCore_DP0 pid=999197)[0;0m INFO 11-01 12:23:10 [backends.py:623] Dynamo bytecode transform time: 7.64 s
+[1;36m(EngineCore_DP0 pid=999197)[0;0m INFO 11-01 12:23:15 [backends.py:207] Directly load the compiled graph(s) for dynamic shape from the cache, took 4.049 s
+[1;36m(EngineCore_DP0 pid=999197)[0;0m INFO 11-01 12:23:16 [monitor.py:34] torch.compile takes 11.69 s in total
+[1;36m(EngineCore_DP0 pid=999197)[0;0m INFO 11-01 12:23:17 [gpu_worker.py:337] Available KV cache memory: 4.03 GiB
+[1;36m(EngineCore_DP0 pid=999197)[0;0m INFO 11-01 12:23:18 [kv_cache_utils.py:1229] GPU KV cache size: 150,880 tokens
+[1;36m(EngineCore_DP0 pid=999197)[0;0m INFO 11-01 12:23:18 [kv_cache_utils.py:1234] Maximum concurrency for 131,072 tokens per request: 1.15x
+[1;36m(EngineCore_DP0 pid=999197)[0;0m Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/67 [00:00<?, ?it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   4%|▍         | 3/67 [00:00<00:03, 19.88it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   9%|▉         | 6/67 [00:00<00:02, 20.71it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  13%|█▎        | 9/67 [00:00<00:02, 19.41it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  18%|█▊        | 12/67 [00:00<00:02, 20.15it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  22%|██▏       | 15/67 [00:00<00:02, 20.82it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  27%|██▋       | 18/67 [00:00<00:02, 21.51it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  31%|███▏      | 21/67 [00:00<00:02, 21.97it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  36%|███▌      | 24/67 [00:01<00:01, 22.11it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  40%|████      | 27/67 [00:01<00:01, 22.39it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  45%|████▍     | 30/67 [00:01<00:01, 22.45it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  49%|████▉     | 33/67 [00:01<00:01, 22.49it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  54%|█████▎    | 36/67 [00:01<00:01, 23.39it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  58%|█████▊    | 39/67 [00:01<00:01, 24.16it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  63%|██████▎   | 42/67 [00:01<00:01, 24.97it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  67%|██████▋   | 45/67 [00:01<00:00, 26.04it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  72%|███████▏  | 48/67 [00:02<00:00, 27.04it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  76%|███████▌  | 51/67 [00:02<00:00, 27.64it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  81%|████████  | 54/67 [00:02<00:00, 27.77it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  85%|████████▌ | 57/67 [00:02<00:00, 27.93it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  90%|████████▉ | 60/67 [00:02<00:00, 25.80it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  94%|█████████▍| 63/67 [00:02<00:00, 25.48it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  99%|█████████▊| 66/67 [00:02<00:00, 25.40it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 67/67 [00:02<00:00, 23.41it/s]
+[1;36m(EngineCore_DP0 pid=999197)[0;0m Capturing CUDA graphs (decode, FULL):   0%|          | 0/35 [00:00<?, ?it/s]Capturing CUDA graphs (decode, FULL):   9%|▊         | 3/35 [00:00<00:01, 21.84it/s]Capturing CUDA graphs (decode, FULL):  17%|█▋        | 6/35 [00:00<00:01, 24.00it/s]Capturing CUDA graphs (decode, FULL):  26%|██▌       | 9/35 [00:00<00:01, 24.79it/s]Capturing CUDA graphs (decode, FULL):  34%|███▍      | 12/35 [00:00<00:00, 25.76it/s]Capturing CUDA graphs (decode, FULL):  43%|████▎     | 15/35 [00:00<00:00, 26.41it/s]Capturing CUDA graphs (decode, FULL):  51%|█████▏    | 18/35 [00:00<00:00, 27.04it/s]Capturing CUDA graphs (decode, FULL):  60%|██████    | 21/35 [00:00<00:00, 27.21it/s]Capturing CUDA graphs (decode, FULL):  69%|██████▊   | 24/35 [00:00<00:00, 26.63it/s]Capturing CUDA graphs (decode, FULL):  77%|███████▋  | 27/35 [00:01<00:00, 26.81it/s]Capturing CUDA graphs (decode, FULL):  86%|████████▌ | 30/35 [00:01<00:00, 26.97it/s]Capturing CUDA graphs (decode, FULL):  94%|█████████▍| 33/35 [00:01<00:00, 26.46it/s]Capturing CUDA graphs (decode, FULL): 100%|██████████| 35/35 [00:01<00:00, 26.35it/s]
+[1;36m(EngineCore_DP0 pid=999197)[0;0m INFO 11-01 12:23:23 [gpu_model_runner.py:3843] Graph capturing finished in 5 secs, took 2.25 GiB
+[1;36m(EngineCore_DP0 pid=999197)[0;0m INFO 11-01 12:23:23 [core.py:238] init engine (profile, create kv cache, warmup model) took 37.28 seconds
+[1;36m(EngineCore_DP0 pid=999197)[0;0m WARNING 11-01 12:23:24 [core.py:132] Using configured V1 scheduler class vllm.v1.core.sched.async_scheduler.AsyncScheduler. This scheduler interface is not public and compatibility may not be maintained.
+[1;36m(EngineCore_DP0 pid=999197)[0;0m INFO 11-01 12:23:24 [core.py:176] Batch queue is enabled with size 2
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:24 [loggers.py:218] Engine 000: vllm cache_config_info with initialization after num_gpu_blocks is: 9430
+[1;36m(EngineCore_DP0 pid=999197)[0;0m INFO 11-01 12:23:24 [gc_utils.py:40] GC Debug Config. enabled:False,top_objects:-1
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:24 [api_server.py:1647] Supported tasks: ['generate']
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [api_server.py:1938] Starting vLLM API server 0 on http://0.0.0.0:30010
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:38] Available routes are:
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /openapi.json, Methods: GET, HEAD
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /docs, Methods: GET, HEAD
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /docs/oauth2-redirect, Methods: GET, HEAD
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /redoc, Methods: GET, HEAD
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /health, Methods: GET
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /load, Methods: GET
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /ping, Methods: POST
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /ping, Methods: GET
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /tokenize, Methods: POST
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /detokenize, Methods: POST
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /v1/models, Methods: GET
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /version, Methods: GET
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /v1/responses, Methods: POST
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /v1/responses/{response_id}, Methods: GET
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /v1/responses/{response_id}/cancel, Methods: POST
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /v1/chat/completions, Methods: POST
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /v1/completions, Methods: POST
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /v1/embeddings, Methods: POST
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /pooling, Methods: POST
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /classify, Methods: POST
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /score, Methods: POST
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /v1/score, Methods: POST
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /v1/audio/transcriptions, Methods: POST
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /v1/audio/translations, Methods: POST
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /rerank, Methods: POST
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /v1/rerank, Methods: POST
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /v2/rerank, Methods: POST
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /scale_elastic_ep, Methods: POST
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /is_scaling_elastic_ep, Methods: POST
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /invocations, Methods: POST
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:23:25 [launcher.py:46] Route: /metrics, Methods: GET
+[1;36m(APIServer pid=993228)[0;0m INFO:     Started server process [993228]
+[1;36m(APIServer pid=993228)[0;0m INFO:     Waiting for application startup.
+[1;36m(APIServer pid=993228)[0;0m INFO:     Application startup complete.
+[1;36m(APIServer pid=993228)[0;0m The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:31:14 [chat_utils.py:546] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:31:32 [loggers.py:208] Engine 000: Avg prompt throughput: 496.8 tokens/s, Avg generation throughput: 138.5 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 4.2%, Prefix cache hit rate: 0.0%, MM cache hit rate: 0.0%
+[1;36m(APIServer pid=993228)[0;0m INFO:     103.253.20.30:56894 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+/pytorch/aten/src/ATen/native/cuda/IndexKernel.cu:402: masked_scatter_size_check: block: [0,0,0], thread: [0,0,0] Assertion `totalElements <= srcSize` failed.
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [dump_input.py:72] Dumping input data for V1 LLM engine (v0.11.1rc3.dev29+g3fa2c1218) with config: model='rednote-hilab/dots.ocr', speculative_config=None, tokenizer='rednote-hilab/dots.ocr', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=131072, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=rednote-hilab/dots.ocr, enable_prefix_caching=True, chunked_prefill_enabled=True, pooler_config=None, compilation_config={'level': None, 'mode': 3, 'debug_dump_path': None, 'cache_dir': '/home/ubuntu/.cache/vllm/torch_compile_cache/d224f1ef9b', 'backend': 'inductor', 'custom_ops': ['none'], 'splitting_ops': ['vllm::unified_attention', 'vllm::unified_attention_with_output', 'vllm::unified_mla_attention', 'vllm::unified_mla_attention_with_output', 'vllm::mamba_mixer2', 'vllm::mamba_mixer', 'vllm::short_conv', 'vllm::linear_attention', 'vllm::plamo2_mamba_mixer', 'vllm::gdn_attention', 'vllm::sparse_attn_indexer'], 'use_inductor': None, 'compile_sizes': [], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_AND_PIECEWISE: (2, 1)>, 'use_cudagraph': True, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [512, 504, 496, 488, 480, 472, 464, 456, 448, 440, 432, 424, 416, 408, 400, 392, 384, 376, 368, 360, 352, 344, 336, 328, 320, 312, 304, 296, 288, 280, 272, 264, 256, 248, 240, 232, 224, 216, 208, 200, 192, 184, 176, 168, 160, 152, 144, 136, 128, 120, 112, 104, 96, 88, 80, 72, 64, 56, 48, 40, 32, 24, 16, 8, 4, 2, 1], 'cudagraph_copy_inputs': False, 'full_cuda_graph': True, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {}, 'max_capture_size': 512, 'local_cache_dir': '/home/ubuntu/.cache/vllm/torch_compile_cache/d224f1ef9b/rank_0_0/backbone'}, 
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [dump_input.py:79] Dumping scheduler output for model execution: SchedulerOutput(scheduled_new_reqs=[NewRequestData(req_id=chatcmpl-e77511233c7c4414b7716888caa99f5a,prompt_token_ids_len=4832,mm_features=[MultiModalFeatureSpec(data={'pixel_values': MultiModalFieldElem(modality='image', key='pixel_values', data=tensor([[1.9297, 1.9297, 1.9297,  ..., 2.1406, 2.1406, 2.1406],
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [dump_input.py:79]         [1.9297, 1.9297, 1.9297,  ..., 2.1406, 2.1406, 2.1406],
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [dump_input.py:79]         [1.9297, 1.9297, 1.9297,  ..., 2.1406, 2.1406, 2.1406],
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [dump_input.py:79]         ...,
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [dump_input.py:79]         [1.9297, 1.9297, 1.9297,  ..., 2.1406, 2.1406, 2.1406],
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [dump_input.py:79]         [1.9297, 1.9297, 1.9297,  ..., 2.1406, 2.1406, 2.1406],
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [dump_input.py:79]         [1.9297, 1.9297, 1.9297,  ..., 2.1406, 2.1406, 2.1406]],
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [dump_input.py:79]        dtype=torch.bfloat16), field=MultiModalFlatField(slices=[[slice(0, 19276, None)]], dim=0)), 'image_grid_thw': MultiModalFieldElem(modality='image', key='image_grid_thw', data=tensor([  1, 158, 122]), field=MultiModalBatchedField())}, modality='image', identifier='c8201938639d11bf5efe11b1b39de5438d88c378d9eb896a4b1321d7a5e50f2b', mm_position=PlaceholderRange(offset=2, length=4819, is_embed=None))],sampling_params=SamplingParams(n=1, presence_penalty=0.0, frequency_penalty=0.0, repetition_penalty=1.0, temperature=0.0, top_p=1.0, top_k=0, min_p=0.0, seed=None, stop=[], stop_token_ids=[151673], bad_words=[], include_stop_str_in_output=False, ignore_eos=False, max_tokens=4096, min_tokens=0, logprobs=None, prompt_logprobs=None, skip_special_tokens=True, spaces_between_special_tokens=True, truncate_prompt_tokens=None, structured_outputs=None, extra_args=None),block_ids=([461, 462, 463, 464, 465, 466, 467, 468, 469, 470, 471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499, 500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512, 513, 514, 515, 516, 517, 518, 519, 520, 521, 522, 523, 524, 525, 526, 527, 528, 529, 530, 531, 532, 533, 534, 535, 536, 537, 538, 539, 540, 541, 542, 543, 544, 545, 546, 547, 548, 549, 550, 551, 552, 553, 554, 555, 556, 557, 558, 559, 560, 561, 562, 563, 564, 565, 566, 567, 568, 569, 570, 571, 572, 573, 574, 575, 576, 577, 578, 579, 580, 581, 582, 583, 584, 585, 586, 587, 588, 589, 590, 591, 592, 593, 594, 595, 596, 597, 598, 599, 600, 601, 602, 603, 604, 605, 606, 607, 608, 609, 610, 611, 612, 613, 614, 615, 616, 617, 618, 619, 620, 621, 622, 623, 624, 625, 626, 627, 628, 629, 630, 631, 632, 633, 634, 635, 636, 637, 638, 639, 640, 641, 642, 643, 644, 645, 646, 647, 648, 649, 650, 651, 652, 653, 654, 655, 656, 657, 658, 659, 660, 661, 662, 663, 664, 665, 666, 667, 668, 669, 670, 671, 672, 673, 674, 675, 676, 677, 678, 679, 680, 681, 682, 683, 684, 685, 686, 687, 688, 689, 690, 691, 692, 693, 694, 695, 696, 697, 698, 699, 700, 701, 702, 703, 704, 705, 706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716],),num_computed_tokens=0,lora_request=None,prompt_embeds_shape=None)], scheduled_cached_reqs=CachedRequestData(req_ids=[], resumed_from_preemption=[], new_token_ids=[], resumed_req_token_ids=[], new_block_ids=[], num_computed_tokens=[], num_output_tokens=[]), num_scheduled_tokens={chatcmpl-e77511233c7c4414b7716888caa99f5a: 2048}, total_num_scheduled_tokens=2048, scheduled_spec_decode_tokens={}, scheduled_encoder_inputs={chatcmpl-e77511233c7c4414b7716888caa99f5a: [0]}, num_common_prefix_blocks=[128], finished_req_ids=[], free_encoder_mm_hashes=[], structured_output_request_ids=[], grammar_bitmask=null, kv_connector_metadata=null)
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [dump_input.py:81] Dumping scheduler stats: SchedulerStats(num_running_reqs=1, num_waiting_reqs=0, step_counter=0, current_wave=0, kv_cache_usage=0.027150281047831126, prefix_cache_stats=PrefixCacheStats(reset=False, requests=1, queries=4832, hits=0, preempted_requests=0, preempted_queries=0, preempted_hits=0), connector_prefix_cache_stats=None, spec_decoding_stats=None, kv_connector_stats=None, num_corrupted_reqs=0)
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781] EngineCore encountered a fatal error.
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781] Traceback (most recent call last):
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]   File "/home/ubuntu/.local/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 772, in run_engine_core
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]     engine_core.run_busy_loop()
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]   File "/home/ubuntu/.local/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 799, in run_busy_loop
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]     self._process_engine_step()
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]   File "/home/ubuntu/.local/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 828, in _process_engine_step
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]     outputs, model_executed = self.step_fn()
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]                               ^^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]   File "/home/ubuntu/.local/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 382, in step_with_batch_queue
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]     model_output = future.result()
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]                    ^^^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]   File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]     return self.__get_result()
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]            ^^^^^^^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]   File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]     raise self._exception
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]   File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]     result = self.fn(*self.args, **self.kwargs)
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]   File "/home/ubuntu/.local/lib/python3.11/site-packages/vllm/v1/worker/gpu_model_runner.py", line 198, in get_output
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]     self.async_copy_ready_event.synchronize()
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]   File "/home/ubuntu/.local/lib/python3.11/site-packages/torch/cuda/streams.py", line 231, in synchronize
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781]     super().synchronize()
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781] torch.AcceleratorError: CUDA error: device-side assert triggered
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781] Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781] CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781] For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781] Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+[1;36m(EngineCore_DP0 pid=999197)[0;0m ERROR 11-01 12:31:40 [core.py:781] 
+[1;36m(EngineCore_DP0 pid=999197)[0;0m Process EngineCore_DP0:
+[1;36m(EngineCore_DP0 pid=999197)[0;0m Traceback (most recent call last):
+[1;36m(EngineCore_DP0 pid=999197)[0;0m   File "/usr/local/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+[1;36m(EngineCore_DP0 pid=999197)[0;0m     self.run()
+[1;36m(EngineCore_DP0 pid=999197)[0;0m   File "/usr/local/lib/python3.11/multiprocessing/process.py", line 108, in run
+[1;36m(EngineCore_DP0 pid=999197)[0;0m     self._target(*self._args, **self._kwargs)
+[1;36m(EngineCore_DP0 pid=999197)[0;0m   File "/home/ubuntu/.local/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 783, in run_engine_core
+[1;36m(EngineCore_DP0 pid=999197)[0;0m     raise e
+[1;36m(EngineCore_DP0 pid=999197)[0;0m   File "/home/ubuntu/.local/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 772, in run_engine_core
+[1;36m(EngineCore_DP0 pid=999197)[0;0m     engine_core.run_busy_loop()
+[1;36m(EngineCore_DP0 pid=999197)[0;0m   File "/home/ubuntu/.local/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 799, in run_busy_loop
+[1;36m(EngineCore_DP0 pid=999197)[0;0m     self._process_engine_step()
+[1;36m(EngineCore_DP0 pid=999197)[0;0m   File "/home/ubuntu/.local/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 828, in _process_engine_step
+[1;36m(EngineCore_DP0 pid=999197)[0;0m     outputs, model_executed = self.step_fn()
+[1;36m(EngineCore_DP0 pid=999197)[0;0m                               ^^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=999197)[0;0m   File "/home/ubuntu/.local/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 382, in step_with_batch_queue
+[1;36m(EngineCore_DP0 pid=999197)[0;0m     model_output = future.result()
+[1;36m(EngineCore_DP0 pid=999197)[0;0m                    ^^^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=999197)[0;0m   File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+[1;36m(EngineCore_DP0 pid=999197)[0;0m     return self.__get_result()
+[1;36m(EngineCore_DP0 pid=999197)[0;0m            ^^^^^^^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=999197)[0;0m   File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+[1;36m(EngineCore_DP0 pid=999197)[0;0m     raise self._exception
+[1;36m(EngineCore_DP0 pid=999197)[0;0m   File "/usr/local/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+[1;36m(EngineCore_DP0 pid=999197)[0;0m     result = self.fn(*self.args, **self.kwargs)
+[1;36m(EngineCore_DP0 pid=999197)[0;0m              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=999197)[0;0m   File "/home/ubuntu/.local/lib/python3.11/site-packages/vllm/v1/worker/gpu_model_runner.py", line 198, in get_output
+[1;36m(EngineCore_DP0 pid=999197)[0;0m     self.async_copy_ready_event.synchronize()
+[1;36m(EngineCore_DP0 pid=999197)[0;0m   File "/home/ubuntu/.local/lib/python3.11/site-packages/torch/cuda/streams.py", line 231, in synchronize
+[1;36m(EngineCore_DP0 pid=999197)[0;0m     super().synchronize()
+[1;36m(EngineCore_DP0 pid=999197)[0;0m torch.AcceleratorError: CUDA error: device-side assert triggered
+[1;36m(EngineCore_DP0 pid=999197)[0;0m Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+[1;36m(EngineCore_DP0 pid=999197)[0;0m CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[1;36m(EngineCore_DP0 pid=999197)[0;0m For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[1;36m(EngineCore_DP0 pid=999197)[0;0m Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+[1;36m(EngineCore_DP0 pid=999197)[0;0m 
+[1;36m(APIServer pid=993228)[0;0m ERROR 11-01 12:31:40 [async_llm.py:533] AsyncLLM output_handler failed.
+[1;36m(APIServer pid=993228)[0;0m ERROR 11-01 12:31:40 [async_llm.py:533] Traceback (most recent call last):
+[1;36m(APIServer pid=993228)[0;0m ERROR 11-01 12:31:40 [async_llm.py:533]   File "/home/ubuntu/.local/lib/python3.11/site-packages/vllm/v1/engine/async_llm.py", line 487, in output_handler
+[1;36m(APIServer pid=993228)[0;0m ERROR 11-01 12:31:40 [async_llm.py:533]     outputs = await engine_core.get_output_async()
+[1;36m(APIServer pid=993228)[0;0m ERROR 11-01 12:31:40 [async_llm.py:533]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(APIServer pid=993228)[0;0m ERROR 11-01 12:31:40 [async_llm.py:533]   File "/home/ubuntu/.local/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 882, in get_output_async
+[1;36m(APIServer pid=993228)[0;0m ERROR 11-01 12:31:40 [async_llm.py:533]     raise self._format_exception(outputs) from None
+[1;36m(APIServer pid=993228)[0;0m ERROR 11-01 12:31:40 [async_llm.py:533] vllm.v1.engine.exceptions.EngineDeadError: EngineCore encountered an issue. See stack trace (above) for the root cause.
+[1;36m(APIServer pid=993228)[0;0m INFO:     103.253.20.30:56894 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+terminate called after throwing an instance of 'c10::AcceleratorError'
+  what():  CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Exception raised from c10_cuda_check_implementation at /pytorch/c10/cuda/CUDAException.cpp:44 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7efd70242b80 in /home/ubuntu/.local/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x11fb7 (0x7efd702d7fb7 in /home/ubuntu/.local/lib/python3.11/site-packages/torch/lib/libc10_cuda.so)
+frame #2: <unknown function> + 0xc77b78 (0x7efd70fe8b78 in /home/ubuntu/.local/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: <unknown function> + 0xc72ba3 (0x7efd70fe3ba3 in /home/ubuntu/.local/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xc7a6d5 (0x7efd70feb6d5 in /home/ubuntu/.local/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: <unknown function> + 0x48cbaf (0x7efdc1475baf in /home/ubuntu/.local/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+frame #6: c10::TensorImpl::~TensorImpl() + 0x9 (0x7efd7021fd69 in /home/ubuntu/.local/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #7: <unknown function> + 0x7d5d58 (0x7efdc17bed58 in /home/ubuntu/.local/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x7d60dc (0x7efdc17bf0dc in /home/ubuntu/.local/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+frame #9: <unknown function> + 0x231104 (0x55dae2f44104 in VLLM::EngineCore)
+frame #10: <unknown function> + 0x24c2be (0x55dae2f5f2be in VLLM::EngineCore)
+frame #11: <unknown function> + 0x20bdc5 (0x55dae2f1edc5 in VLLM::EngineCore)
+frame #12: <unknown function> + 0x2aafa5 (0x55dae2fbdfa5 in VLLM::EngineCore)
+frame #13: <unknown function> + 0x2aaf8b (0x55dae2fbdf8b in VLLM::EngineCore)
+frame #14: <unknown function> + 0x2aaf8b (0x55dae2fbdf8b in VLLM::EngineCore)
+frame #15: <unknown function> + 0x2aaf8b (0x55dae2fbdf8b in VLLM::EngineCore)
+frame #16: <unknown function> + 0x2aaf8b (0x55dae2fbdf8b in VLLM::EngineCore)
+frame #17: <unknown function> + 0x2aaf8b (0x55dae2fbdf8b in VLLM::EngineCore)
+frame #18: <unknown function> + 0x2aaf8b (0x55dae2fbdf8b in VLLM::EngineCore)
+frame #19: <unknown function> + 0x2aaf8b (0x55dae2fbdf8b in VLLM::EngineCore)
+frame #20: <unknown function> + 0x2aaf8b (0x55dae2fbdf8b in VLLM::EngineCore)
+frame #21: <unknown function> + 0x2aaf8b (0x55dae2fbdf8b in VLLM::EngineCore)
+frame #22: <unknown function> + 0x2aaf8b (0x55dae2fbdf8b in VLLM::EngineCore)
+frame #23: <unknown function> + 0x206d16 (0x55dae2f19d16 in VLLM::EngineCore)
+frame #24: <unknown function> + 0x24c2f0 (0x55dae2f5f2f0 in VLLM::EngineCore)
+frame #25: <unknown function> + 0x23250b (0x55dae2f4550b in VLLM::EngineCore)
+frame #26: <unknown function> + 0x24df1c (0x55dae2f60f1c in VLLM::EngineCore)
+frame #27: <unknown function> + 0x325766 (0x55dae3038766 in VLLM::EngineCore)
+frame #28: <unknown function> + 0x32511b (0x55dae303811b in VLLM::EngineCore)
+frame #29: PyGC_Collect + 0x64 (0x55dae3038e34 in VLLM::EngineCore)
+frame #30: Py_FinalizeEx + 0x7b (0x55dae302defb in VLLM::EngineCore)
+frame #31: Py_Exit + 0x8 (0x55dae302ee18 in VLLM::EngineCore)
+frame #32: <unknown function> + 0x31d93b (0x55dae303093b in VLLM::EngineCore)
+frame #33: <unknown function> + 0x31d864 (0x55dae3030864 in VLLM::EngineCore)
+frame #34: PyRun_SimpleStringFlags + 0x67 (0x55dae3030097 in VLLM::EngineCore)
+frame #35: Py_RunMain + 0x38b (0x55dae3037d0b in VLLM::EngineCore)
+frame #36: Py_BytesMain + 0x39 (0x55dae30377d9 in VLLM::EngineCore)
+frame #37: __libc_start_main + 0xf3 (0x7efdd304f083 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #38: _start + 0x2a (0x55dae2fdb0fa in VLLM::EngineCore)
+
+[1;36m(APIServer pid=993228)[0;0m INFO:     103.253.20.30:56894 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=993228)[0;0m INFO:     103.253.20.30:56894 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+[1;36m(APIServer pid=993228)[0;0m INFO 11-01 12:31:42 [loggers.py:208] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 100.2 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%, MM cache hit rate: 0.0%
+[1;36m(APIServer pid=993228)[0;0m INFO:     Shutting down
+[1;36m(APIServer pid=993228)[0;0m INFO:     Waiting for application shutdown.
+[1;36m(APIServer pid=993228)[0;0m INFO:     Application shutdown complete.
+[1;36m(APIServer pid=993228)[0;0m INFO:     Finished server process [993228]

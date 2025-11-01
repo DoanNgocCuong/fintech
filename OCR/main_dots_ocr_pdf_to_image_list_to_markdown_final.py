@@ -17,11 +17,11 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-PDF = "/home/ubuntu/cuong_dn/fintech/OCR/data/BIC_2016_2_1_1.pdf"
+PDF = "/home/ubuntu/cuong_dn/fintech/OCR/data/33_pages_test.pdf"
 OUT_DIR = "/home/ubuntu/cuong_dn/fintech/OCR/data/out_images"
 MODEL = "rednote-hilab/dots.ocr"
 API = "http://103.253.20.30:30010/v1"
-OUT_MD = "data/BIC_2016_2_1_1.md"
+OUT_MD = "data/33_pages_test.md"
 
 def pdf2listimages(pdf_path, out_dir):
     os.makedirs(out_dir, exist_ok=True)
@@ -98,6 +98,12 @@ def pdf2finalmarkdown(pdf_path, out_dir, model, api, output_md):
         markdown = text2markdown(page_text)
         logger.info(f"Processed image: {img_path}")
         md_all.append(markdown)
+        # Xóa ảnh sau khi đã process thành công
+        try:
+            os.remove(img_path)
+            logger.info(f"Deleted image: {img_path}")
+        except Exception as e:
+            logger.warning(f"Failed to delete image {img_path}: {e}")
     logger.info(f"Found {len(md_all)} markdown")
     os.makedirs(os.path.dirname(output_md), exist_ok=True)
     with open(output_md, "w", encoding="utf-8") as f:
