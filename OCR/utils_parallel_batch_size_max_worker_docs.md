@@ -110,4 +110,4 @@ Ví dụ:
 - Time 5-10s: 8 workers xử lý 16 images tiếp theo (8 batches × 2 images)
 - Time 10-15s: 1 worker xử lý 1 image cuối (batch 17)
 
-Tổng thời gian: ~20s thay vì ~165s nếu xử lý tuần tự (33 × 5s/image)
+Tổng thời gian: ~20s thay vì ~165s nếu xử lý tuần tự (33 × 5s/image)ư

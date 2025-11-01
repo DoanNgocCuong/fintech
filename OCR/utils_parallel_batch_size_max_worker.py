@@ -281,8 +281,9 @@ class ParallelBatchProcessor:
         self._log_final_summary()
 
         # Merge results theo đúng thứ tự
-        ordered_results = [self.results[i] for i in range(self.total_items) if i in self.results]
-
+        # FIX: GIỮ TẤT CẢ items kể cả None để không mất thứ tự
+        # Dùng .get(i, None) để đảm bảo tất cả indices từ 0 đến total_items-1 đều có
+        ordered_results = [self.results.get(i, None) for i in range(self.total_items)]
         return ordered_results
 
     def _process_batch_with_retry(self,
@@ -296,8 +297,8 @@ class ParallelBatchProcessor:
         Returns: List of (item_index, result) tuples
         """
         batch_results = []
-        start_index = batch_index * (len(batch_items) + (self.batch_size or 10))
-
+        batch_size_actual = self.batch_size or 10
+        start_index = batch_index * batch_size_actual
         for attempt in range(max_retries + 1):
             try:
                 # Process all items in batch
