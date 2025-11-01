@@ -65,6 +65,62 @@ nohup env CUDA_VISIBLE_DEVICES=1 vllm serve rednote-hilab/dots.ocr \
 - Lệnh này sẽ khởi động server để cung cấp APIs cho inference dots.ocr, tự động dùng toàn bộ tài nguyên GPU được phép bởi CUDA_VISIBLE_DEVICES.  
 - Nếu không chỉ định, mặc định dùng GPU 0. Nếu muốn dùng GPU 1, thêm `CUDA_VISIBLE_DEVICES=1`.
 
+## 3. Deployment với Docker Compose
+
+Thay vì chạy trực tiếp, bạn có thể sử dụng Docker Compose để quản lý service dễ dàng hơn:
+
+### Yêu cầu:
+- Docker và Docker Compose đã cài đặt
+- NVIDIA Container Toolkit đã cài đặt và cấu hình
+- Nvidia runtime đã được enable
+
+### Sử dụng:
+
+**1. Tạo file `.env` (tùy chọn) để cấu hình:**
+```bash
+# Copy file example và chỉnh sửa theo nhu cầu
+CUDA_VISIBLE_DEVICES=1
+MODEL=rednote-hilab/dots.ocr
+GPU_MEMORY_UTILIZATION=0.60
+PORT=30010
+```
+
+**2. Khởi động service:**
+```bash
+docker-compose up -d
+```
+
+**3. Xem logs:**
+```bash
+# Xem logs real-time
+docker-compose logs -f
+
+# Hoặc xem logs của container
+docker logs -f vllm-ocr
+```
+
+**4. Dừng service:**
+```bash
+docker-compose down
+```
+
+**5. Restart service:**
+```bash
+docker-compose restart
+```
+
+**Lợi ích khi dùng Docker Compose:**
+- Tự động restart nếu container crash
+- Quản lý logs dễ dàng
+- Dễ dàng thay đổi cấu hình thông qua biến môi trường
+- Tách biệt môi trường, không ảnh hưởng đến hệ thống chính
+- Health check tự động để đảm bảo service hoạt động
+
+**Lưu ý:**
+- Model weights sẽ được cache trong `~/.cache/huggingface` để không phải download lại mỗi lần restart
+- Logs được lưu trong thư mục `./logs` 
+- Container sẽ sử dụng GPU được chỉ định trong `CUDA_VISIBLE_DEVICES`
+
 
 [1](https://github.com/rednote-hilab/dots.ocr)
 
