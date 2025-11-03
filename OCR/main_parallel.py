@@ -255,10 +255,14 @@ def pdf2finalmarkdown(pdf_path, out_dir, model, api, output_md, max_workers=None
         logger.error("No valid markdown content found!")
         return
     
-    # Gộp và lưu file markdown cuối cùng
+    # Gộp và lưu file markdown cuối cùng (chèn tiêu đề Trang N và separator)
     os.makedirs(os.path.dirname(output_md), exist_ok=True)
+    merged = []
+    for i, content in enumerate(md_contents, start=1):
+        merged.append(f"Trang {i}\n\n{content}\n\n---")
+    merged_text = "\n\n".join(merged).rstrip("-\n")
     with open(output_md, "w", encoding="utf-8") as f:
-        f.write("\n\n ---\n\n".join(md_contents))
+        f.write(merged_text)
     logger.info(f"💾 Saved: {output_md} ({len(md_contents)} pages)")
     
     # Xóa các file markdown tạm
