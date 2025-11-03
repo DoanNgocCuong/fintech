@@ -15,7 +15,9 @@ python3 tools/download_model.py
 ## with modelscope
 python3 tools/download_model.py --type modelscope
 ```
-
+```bash
+pip install vllm==0.6.3.post1
+```
 
 ## 3. Deployment 
 
