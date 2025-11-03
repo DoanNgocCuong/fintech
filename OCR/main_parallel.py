@@ -30,9 +30,9 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-PDF = "/home/ubuntu/cuong_dn/fintech/OCR/data/Ngành Bảo hiểm/BIC/2014/Bao_cao_tai_chinh/BIC_2014_1_4_1.pdf"
-PDF = "/home/ubuntu/cuong_dn/fintech/OCR/data/5_pages_test.pdf"
-OUT_DIR = "/home/ubuntu/cuong_dn/fintech/OCR/data/out_images"
+PDF = "/home/ubuntu/fintech/OCR/data/Ngành Bảo hiểm/BIC/2014/Bao_cao_tai_chinh/BIC_2014_1_4_1.pdf"
+PDF = "/home/ubuntu/fintech/OCR/data/Ngành Bảo hiểm/BIC/2025/Tai_lieu_DHDCD/BIC_2025_5_1_1_zip/20250307 - BIC - Thong bao moi hop Dai hoi dong co dong thuong nien BIC 2025_Vie.pdf"
+OUT_DIR = "/home/ubuntu/fintech/OCR/data/out_images"
 MODEL = "rednote-hilab/dots.ocr"
 API = "http://103.253.20.30:30010/v1"
 OUT_MD = "data/33_pages_test.md"
@@ -75,23 +75,30 @@ def pdf2listimages(pdf_path, out_dir, thread_count=None):
     convert_time = time.time() - convert_start
     logger.info(f"✅ PDF converted in {convert_time:.2f} seconds")
     
-    # Tìm và sắp xếp file ảnh theo thời gian modify để đảm bảo đúng thứ tự page
+    # Sử dụng pattern tên file tạm mà convert_from_path tạo ra để đảm bảo đúng thứ tự trang
+    # Thông thường tên file là: [tên file pdf (có thể thêm bunch random chars)]-1.png, -2.png,...
     temp_image_paths = glob.glob(f"{out_dir}/*.png")
-    temp_image_paths.sort(key=lambda x: os.path.getmtime(x))
+
+    # Ưu tiên extract luôn số trang từ tên file, không dựa vào thời gian modifed (đôi khi OS ghi disk không đúng order)
+    def extract_page_from_tmpimg(filename):
+        # Lấy ra số cuối trước .png:   ...-1.png, ...-2.png, ...
+        basename = os.path.basename(filename)
+        match = re.search(r'-(\d+)\.png$', basename)
+        return int(match.group(1)) if match else 0
     
+    temp_image_paths_sorted = sorted(temp_image_paths, key=extract_page_from_tmpimg)
+
     # Đổi tên các file ảnh theo format: tên_file_pdf-1.png, tên_file_pdf-2.png, ...
     image_paths = []
-    for idx, temp_path in enumerate(temp_image_paths, start=1):
+    for idx, temp_path in enumerate(temp_image_paths_sorted, start=1):
         new_name = f"{pdf_basename}-{idx}.png"
         new_path = os.path.join(out_dir, new_name)
-        
         try:
             os.rename(temp_path, new_path)
             image_paths.append(new_path)
         except Exception as e:
             logger.error(f"❌ Failed to rename {temp_path} to {new_path}: {e}")
             image_paths.append(temp_path)
-    
     logger.info(f"📄 Found {len(image_paths)} images (renamed to {pdf_basename}-N.png format)")
     return image_paths
 
