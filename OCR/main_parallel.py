@@ -6,18 +6,13 @@ from pdf2image import convert_from_path
 from openai import OpenAI
 import logging
 from markdownify import markdownify
-from PIL import Image
 import time
-import threading
 import multiprocessing
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timedelta
-from typing import List, Dict, Any, Callable, Optional, Tuple
-import psutil
+from typing import Optional
+from utils_count import compare_page_counts
 
 # Import utils từ utils_parallel_batch_size_max_worker.py
 from utils_parallel_batch_size_max_worker import (
-    ParallelBatchProcessor,
     process_images_parallel_optimized
 )
 
@@ -31,7 +26,6 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 PDF = "/home/ubuntu/fintech/OCR/data/Ngành Bảo hiểm/BIC/2014/Bao_cao_tai_chinh/BIC_2014_1_4_1.pdf"
-PDF = "/home/ubuntu/fintech/OCR/data/Ngành Bảo hiểm/BIC/2025/Tai_lieu_DHDCD/BIC_2025_5_1_1_zip/20250307 - BIC - Thong bao moi hop Dai hoi dong co dong thuong nien BIC 2025_Vie.pdf"
 OUT_DIR = "/home/ubuntu/fintech/OCR/data/out_images"
 MODEL = "rednote-hilab/dots.ocr"
 API = "http://103.253.20.30:30010/v1"
@@ -73,7 +67,7 @@ def pdf2listimages(pdf_path, out_dir, thread_count=None):
     )
     
     convert_time = time.time() - convert_start
-    logger.info(f"✅ PDF converted in {convert_time:.2f} seconds")
+    logger.info(f"✅ PDF converted to images in {convert_time:.2f} seconds")
     
     # Sử dụng pattern tên file tạm mà convert_from_path tạo ra để đảm bảo đúng thứ tự trang
     # Thông thường tên file là: [tên file pdf (có thể thêm bunch random chars)]-1.png, -2.png,...
@@ -106,32 +100,50 @@ def pdf2listimages(pdf_path, out_dir, thread_count=None):
 # OCR Functions
 # ============================================================================
 def image2text(image_path, model, api, client=None):
-    """OCR image -> text (optimized: read once, no unnecessary conversions)"""
+    """OCR image -> text with explicit retry logs."""
     if client is None:
-        client = OpenAI(base_url=api, api_key="EMPTY", timeout=120.0)
-    
+        client = OpenAI(base_url=api, api_key="EMPTY", timeout=180.0)
+
     # Read file once and encode to base64
     with open(image_path, "rb") as f:
         b64 = base64.b64encode(f.read()).decode("utf-8")
-    
-    # Call OCR API
-    resp = client.chat.completions.create(
-        model=model,
-        messages=[{
-            "role": "user",
-            "content": [
-                {"type": "text", "text": "Extract structured markdown from this page."},
-                {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{b64}"}}
-            ],
-        }],
-        temperature=0.0,
-        max_tokens=4096,
-        timeout=120.0
-    )
-    
-    page_text = resp.choices[0].message.content or ""
-    logger.info(f"✅ OCR: {os.path.basename(image_path)} -> {len(page_text)} chars")
-    return page_text
+
+    # Đoạn này thực hiện retry (thử lại tối đa max_attempts lần), mỗi lần fail thì backoff và log chi tiết
+    max_attempts = 3  # Số lần thử lại tối đa
+    for attempt in range(1, max_attempts + 1):  # Lặp qua từng lần thử
+        try:
+            # Gửi request nhận diện OCR qua API client
+            resp = client.chat.completions.create(
+                model=model,  # Chọn model cho OCR
+                messages=[{
+                    "role": "user",
+                    "content": [
+                        {"type": "text", "text": "Extract structured markdown from this page."},  # Yêu cầu tạo markdown có cấu trúc
+                        {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{b64}"}}
+                    ],
+                }],
+                temperature=0.0,    # Đặt nhiệt thấp nhất để kết quả ổn định
+                max_tokens=4096,    # Giới hạn token đầu ra
+                timeout=180.0,      # Timeout cho request
+            )
+            page_text = resp.choices[0].message.content or ""  # Lấy kết quả markdown, fallback sang rỗng nếu không có
+            logger.info(f"✅ OCR: {os.path.basename(image_path)} -> {len(page_text)} chars (attempt {attempt})")  # Log thành công, số ký tự trả về
+            return page_text  # Trả về nội dung
+        except Exception as e:
+            if attempt < max_attempts:
+                # Nếu chưa hết số lần thử lại, log cảnh báo kèm số lần retry và lỗi
+                logger.warning(
+                    f"⚠️ Retry {attempt}/{max_attempts - 1} for {os.path.basename(image_path)}: {type(e).__name__}: {e}"
+                )
+                # Thực hiện "exponential backoff": càng lỗi nhiều càng chờ lâu dần (delay = 1s, 2s, 4s,...)
+                try:
+                    time.sleep(1.0 * (2 ** (attempt - 1)))
+                except Exception:
+                    pass  # Nếu sleep cũng lỗi thì bỏ qua luôn
+            else:
+                # Nếu hết số lần thử lại, log lỗi cuối cùng và trả chuỗi rỗng
+                logger.error(f"❌ Exhausted retries for {os.path.basename(image_path)}: {type(e).__name__}: {e}")
+                return ""
 
 def text2markdown(page_text):
     """Convert HTML to markdown"""
@@ -201,8 +213,7 @@ def pdf2finalmarkdown(pdf_path, out_dir, model, api, output_md, max_workers=None
     pdf_start = time.time()
     image_paths = pdf2listimages(pdf_path, out_dir, thread_count=PDF_CONVERT_THREADS)
     pdf_time = time.time() - pdf_start
-    logger.info(f"⏱️  PDF conversion: {pdf_time:.2f}s")
-    
+    logger.info(f"✅ PDF converted to images in {pdf_time:.2f} seconds")
     if not image_paths:
         logger.error("No images generated from PDF!")
         return
@@ -255,6 +266,8 @@ def pdf2finalmarkdown(pdf_path, out_dir, model, api, output_md, max_workers=None
         logger.error("No valid markdown content found!")
         return
     
+
+    
     # Gộp và lưu file markdown cuối cùng (chèn tiêu đề Trang N và separator)
     os.makedirs(os.path.dirname(output_md), exist_ok=True)
     merged = []
@@ -264,6 +277,18 @@ def pdf2finalmarkdown(pdf_path, out_dir, model, api, output_md, max_workers=None
     with open(output_md, "w", encoding="utf-8") as f:
         f.write(merged_text)
     logger.info(f"💾 Saved: {output_md} ({len(md_contents)} pages)")
+   
+    # So sánh số trang của pdf và số trang của markdown
+    pdf_pages, md_pages, is_match = compare_page_counts(pdf_path, output_md)
+    logger.info(f"PDF pages: {pdf_pages}")
+    logger.info(f"Markdown pages: {md_pages}")
+    logger.info(f"Match: {is_match}")
+    if not is_match:
+        logger.error(f"❌ Số trang của pdf ({pdf_pages}) không bằng số trang của markdown ({md_pages})")
+        # Thêm đường dẫn của file markdown fail và pdf fail vào file fail.txt
+        with open("fail.txt", "a", encoding="utf-8") as f:
+            f.write(f"{pdf_path} -> {output_md}\n")
+        return
     
     # Xóa các file markdown tạm
     for md_file in md_files:
