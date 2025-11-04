@@ -256,7 +256,7 @@ def pdf2finalmarkdown(pdf_path, out_dir, model, api, output_md, max_workers=None
     for md_file in md_files:
         try:
             with open(md_file, "r", encoding="utf-8") as f:
-                content = f.read().strip()
+                content = f.read()
                 if content:
                     md_contents.append(content)
         except Exception as e:
