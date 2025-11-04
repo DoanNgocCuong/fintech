@@ -11,6 +11,11 @@ from pathlib import Path
 import shutil
 import re
 from utils_count import compare_page_counts
+import gc
+try:
+    import torch  # type: ignore
+except Exception:
+    torch = None
 
 # Import tất cả các hàm và constants cần thiết từ main_parallel.py
 from main_parallel import (
@@ -30,8 +35,21 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Base folder path
-BASE_FOLDER = "/home/ubuntu/fintech/OCR/data/Ngành Bảo hiểm/BVH/2025/Bao_cao_tai_chinh"
-BASE_FOLDER = "/home/ubuntu/fintech/OCR/data/test"
+BASE_FOLDER = "/home/ubuntu/fintech/OCR/data/Ngành Bảo hiểm"
+
+def clear_gpu_cache() -> None:
+    """
+    Giải phóng bộ nhớ GPU và thu gom rác CPU sau mỗi file PDF.
+    """
+    try:
+        if torch is not None and hasattr(torch, "cuda") and torch.cuda.is_available():
+            torch.cuda.empty_cache()
+            torch.cuda.synchronize()
+    except Exception:
+        # Bỏ qua lỗi dọn GPU để không chặn pipeline
+        pass
+    finally:
+        gc.collect()
 
 def prepare_pdf_processing(pdf_path: Path, idx: int, total_pdfs: int) -> tuple[bool, Path]:
     """
@@ -130,6 +148,7 @@ def process(base_folder=None):
             skip, out_dir = prepare_pdf_processing(pdf_path, idx, total_pdfs)
             if skip:
                 skipped_count += 1
+                clear_gpu_cache()
                 continue
             
             try:
@@ -150,17 +169,20 @@ def process(base_folder=None):
                     logger.debug(f"🗑️  Đã xóa thư mục tạm: {out_dir}")            
                 processed_count += 1
                 logger.info(f"✅ [{idx}/{total_pdfs}] Hoàn thành: {pdf_path.name} -> {md_path.name}")
+                clear_gpu_cache()
                 
             except Exception as e:
                 # Giữ lại thư mục tạm nếu có lỗi để debug
                 logger.error(f"❌ [{idx}/{total_pdfs}] Lỗi khi xử lý {pdf_path.name}: {e}")
                 logger.error(f"   Thư mục tạm được giữ lại: {out_dir}")
                 error_count += 1
+                clear_gpu_cache()
                 continue
                 
         except Exception as e:
             error_count += 1
             logger.error(f"❌ [{idx}/{total_pdfs}] Lỗi khi xử lý {pdf_path}: {e}")
+            clear_gpu_cache()
             continue
     
     # Tóm tắt kết quả
