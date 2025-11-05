@@ -40,16 +40,26 @@ BASE_FOLDER = "/home/ubuntu/fintech/OCR/data/Ngành Bảo hiểm"
 def clear_gpu_cache() -> None:
     """
     Giải phóng bộ nhớ GPU và thu gom rác CPU sau mỗi file PDF.
+    Lưu ý: Nếu OCR được gọi qua API HTTP (vLLM server), GPU cache nằm trên server side,
+    function này chỉ clear CPU memory và GPU cache trên client side (nếu có).
     """
     try:
         if torch is not None and hasattr(torch, "cuda") and torch.cuda.is_available():
+            # Clear GPU cache và synchronize
             torch.cuda.empty_cache()
             torch.cuda.synchronize()
-    except Exception:
+            # Reset peak memory stats để theo dõi memory usage
+            torch.cuda.reset_peak_memory_stats()
+            logger.debug("🧹 GPU cache cleared and memory stats reset")
+        else:
+            logger.debug("🧹 GPU not available, skipping GPU cache clear")
+    except Exception as e:
         # Bỏ qua lỗi dọn GPU để không chặn pipeline
-        pass
+        logger.debug(f"⚠️  Error clearing GPU cache: {e}")
     finally:
+        # Always run garbage collection for CPU memory
         gc.collect()
+        logger.debug("🧹 CPU garbage collection completed")
 
 def prepare_pdf_processing(pdf_path: Path, idx: int, total_pdfs: int) -> tuple[bool, Path]:
     """
