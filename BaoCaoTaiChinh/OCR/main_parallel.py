@@ -230,9 +230,11 @@ def pdf2finalmarkdown(pdf_path, out_dir, model, api, output_md, max_workers=None
     
     ocr_time = time.time() - ocr_start
     
-    # Log kết quả xử lý
+    # Log kết quả xử lý với thông tin về concurrency
     logger.info(f"✅ OCR completed: {result['total_ok']}/{result['total']} images successful, {result['total_err']} errors")
     logger.info(f"⏱️  OCR processing time: {ocr_time:.2f}s")
+    logger.info(f"📊 Performance: fastest={result['fastest_dur']:.2f}s | slowest={result['slowest_dur']:.2f}s")
+    logger.info(f"🚀 Approximate concurrency (số lượng bắn song song): {result['approx_conc']}")
     
     # Step 3: Merge markdown từ các file tạm trong out_dir
     md_files_all = glob.glob(f"{out_dir}/*.md")
