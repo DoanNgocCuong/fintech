@@ -11,9 +11,9 @@ import multiprocessing
 from typing import Optional
 from utils_count import compare_page_counts
 
-# Import utils từ utils_parallel_batch_size_max_worker.py
-from utils_parallel_batch_size_max_worker import (
-    process_images_parallel_optimized
+# Import utils từ utils_parallel_num_worker.py
+from utils_parallel_num_worker import (
+    process_images_parallel
 )
 
 # Cấu hình logging
@@ -26,7 +26,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 PDF = "/home/ubuntu/fintech/OCR/data/Ngành Bảo hiểm/BIC/2014/Bao_cao_tai_chinh/BIC_2014_1_4_1.pdf"
-OUT_DIR = "/home/ubuntu/fintech/OCR/data/out_images"
+PDF = "/home/ubuntu/fintech/BaoCaoTaiChinh/OCR/data/test/33_pages_test.pdf"
+OUT_DIR = "/home/ubuntu/fintech/BaoCaoTaiChinh/OCR/data/out_images"
 MODEL = "rednote-hilab/dots.ocr"
 API = "http://103.253.20.30:30010/v1"
 OUT_MD = "data/33_pages_test.md"
@@ -180,10 +181,6 @@ def process_single_image_ocr(image_path: str, model: str, api: str, **kwargs) ->
             f.write(markdown)
         logger.debug(f"💾 Saved: {os.path.basename(md_temp_path)}")
         
-        # Delete image after processing
-        os.remove(image_path)
-        logger.debug(f"🗑️  Deleted: {os.path.basename(image_path)}")
-        
         return markdown
         
     except Exception as e:
@@ -219,22 +216,23 @@ def pdf2finalmarkdown(pdf_path, out_dir, model, api, output_md, max_workers=None
         return
     
     # Step 2: Process images -> Markdown (PARALLEL)
-    # Sử dụng ParallelBatchProcessor với GPU monitoring và adaptive batch processing
+    # Sử dụng process_images_parallel từ utils_parallel_num_worker.py
     ocr_start = time.time()
     logger.info(f"🚀 Processing {len(image_paths)} images in parallel...")
     
-    process_images_parallel_optimized(
-        image_paths=image_paths,
-        process_func=process_single_image_ocr,
+    result = process_images_parallel(
+        list_image_paths=image_paths,
         max_workers=max_workers or OCR_MAX_WORKERS,
-        batch_size=None,  # Auto-calculate optimal batch size
-        enable_gpu_monitoring=True,
         model=model,
-        api=api
+        api=api,
+        process_func=process_single_image_ocr
     )
     
     ocr_time = time.time() - ocr_start
-    logger.info(f"⏱️  OCR processing: {ocr_time:.2f}s")
+    
+    # Log kết quả xử lý
+    logger.info(f"✅ OCR completed: {result['total_ok']}/{result['total']} images successful, {result['total_err']} errors")
+    logger.info(f"⏱️  OCR processing time: {ocr_time:.2f}s")
     
     # Step 3: Merge markdown từ các file tạm trong out_dir
     md_files_all = glob.glob(f"{out_dir}/*.md")
