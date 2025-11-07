@@ -175,7 +175,12 @@ def process_single_image_ocr(image_path: str, model: str, api: str, **kwargs) ->
         page_text = image2text(image_path, model, api, client)
         markdown = text2markdown(page_text)
         
-        # Save temp markdown file (same name as image but .md extension)
+        # Check content sau khi OCR thành công: nếu trống thì set placeholder
+        if not markdown.strip():
+            markdown = "*[Trang trống]*"
+            logger.warning(f"⚠️  Trang trống: {os.path.basename(image_path)}")
+        
+        # CHỈ tạo file .md khi OCR thành công (không có exception)
         md_temp_path = os.path.splitext(image_path)[0] + ".md"
         with open(md_temp_path, "w", encoding="utf-8") as f:
             f.write(markdown)
@@ -184,6 +189,7 @@ def process_single_image_ocr(image_path: str, model: str, api: str, **kwargs) ->
         return markdown
         
     except Exception as e:
+        # Nếu OCR lỗi thì KHÔNG tạo file .md
         logger.error(f"❌ Error processing {image_path}: {e}")
         return None
 
@@ -241,6 +247,43 @@ def pdf2finalmarkdown(pdf_path, out_dir, model, api, output_md, max_workers=None
         logger.error("No markdown files found in output directory!")
         return
     
+    # Check nếu có trang OCR lỗi (thiếu file .md) → DỪNG LUÔN
+    if len(md_files_all) < len(image_paths):
+        missing_count = len(image_paths) - len(md_files_all)
+        logger.error(f"❌ Có {missing_count} trang OCR lỗi (không tạo file .md) - DỪNG XỬ LÝ")
+        logger.error(f"   Tổng số images: {len(image_paths)} | Số file .md: {len(md_files_all)}")
+        
+        # Tìm và log các file image không có file .md tương ứng
+        md_basenames = {os.path.splitext(os.path.basename(md_file))[0] for md_file in md_files_all}
+        missing_images = []
+        for image_path in image_paths:
+            image_basename = os.path.splitext(os.path.basename(image_path))[0]
+            if image_basename not in md_basenames:
+                missing_images.append(os.path.basename(image_path))
+        
+        if missing_images:
+            logger.error(f"   📋 Danh sách các file image OCR lỗi ({len(missing_images)} files):")
+            for img_file in sorted(missing_images):
+                logger.error(f"      - {img_file}")
+            
+            # Lưu vào file fail.log
+            fail_log_path = "fail.log"
+            try:
+                with open(fail_log_path, "a", encoding="utf-8") as f:
+                    f.write(f"\n{'='*80}\n")
+                    f.write(f"PDF: {pdf_path}\n")
+                    f.write(f"Thời gian: {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
+                    f.write(f"Tổng số images: {len(image_paths)} | Số file .md: {len(md_files_all)} | Thiếu: {missing_count}\n")
+                    f.write(f"Danh sách các file image OCR lỗi ({len(missing_images)} files):\n")
+                    for img_file in sorted(missing_images):
+                        f.write(f"  - {img_file}\n")
+                    f.write(f"{'='*80}\n")
+                logger.info(f"💾 Đã lưu thông tin lỗi vào: {fail_log_path}")
+            except Exception as e:
+                logger.error(f"❌ Không thể ghi vào file {fail_log_path}: {e}")
+        
+        return
+    
     # Sắp xếp file theo số page (extract từ tên file: xxx-1.md -> 1)
     def extract_page_number(filepath):
         match = re.search(r'-(\d+)\.md$', os.path.basename(filepath))
@@ -249,43 +292,36 @@ def pdf2finalmarkdown(pdf_path, out_dir, model, api, output_md, max_workers=None
     md_files = sorted(md_files_all, key=extract_page_number)
     logger.info(f"📄 Found {len(md_files)} markdown files")
     
-    # Đọc và gộp tất cả các file markdown (GIỮ LẠI TRANG TRỐNG để đảm bảo số trang khớp)
-    md_contents = []
-    empty_pages = []  # Track các trang trống để log
+    # Đọc và gộp tất cả các file markdown
+    # Lưu ý: Chỉ có file .md khi OCR thành công (đã xử lý trang trống ở bước OCR)
+    md_data = []  # List of (page_num, content)
     for md_file in md_files:
         try:
             with open(md_file, "r", encoding="utf-8") as f:
-                content = f.read().strip()  # Strip whitespace để check rỗng chính xác
-                # LUÔN append, kể cả nếu rỗng (để giữ số trang khớp với PDF)
-                md_contents.append(content)
-                if not content:
-                    page_num = extract_page_number(md_file)
-                    empty_pages.append(page_num)
-                    logger.warning(f"⚠️  Trang {page_num} trống (file: {os.path.basename(md_file)})")
+                content = f.read()
+                # Extract số trang từ tên file (ví dụ: xxx-5.md -> 5)
+                page_num = extract_page_number(md_file)
+                md_data.append((page_num, content))
         except Exception as e:
             logger.error(f"❌ Error reading {md_file}: {e}")
-            # Nếu đọc lỗi, vẫn append rỗng để giữ số trang
-            md_contents.append("")
     
-    if not md_contents:
+    if not md_data:
         logger.error("No valid markdown content found!")
         return
     
-    if empty_pages:
-        logger.warning(f"⚠️  Tổng cộng {len(empty_pages)} trang trống: {empty_pages}")
+    # Sắp xếp lại theo số trang (đảm bảo thứ tự đúng)
+    md_data.sort(key=lambda x: x[0])
     
-    # Gộp và lưu file markdown cuối cùng (chèn tiêu đề Trang N và separator)
+    # Gộp và lưu file markdown cuối cùng (dùng số trang từ tên file, không phải số tuần tự)
     os.makedirs(os.path.dirname(output_md), exist_ok=True)
     merged = []
-    for i, content in enumerate(md_contents, start=1):
-        # Nếu trang trống, thêm placeholder để dễ nhận biết
-        if not content.strip():
-            content = "*[Trang trống]*"
-        merged.append(f"Trang {i}\n\n{content}\n\n---")
+    for page_num, content in md_data:
+        # Số trang lấy từ đuôi file .png (ví dụ: xxx-5.png -> Trang 5)
+        merged.append(f"Trang {page_num}\n\n{content}\n\n---")
     merged_text = "\n\n".join(merged).rstrip("-\n")
     with open(output_md, "w", encoding="utf-8") as f:
         f.write(merged_text)
-    logger.info(f"💾 Saved: {output_md} ({len(md_contents)} pages)")
+    logger.info(f"💾 Saved: {output_md} ({len(md_data)} pages)")
    
     # So sánh số trang của pdf và số trang của markdown
     pdf_pages, md_pages, is_match = compare_page_counts(pdf_path, output_md)
