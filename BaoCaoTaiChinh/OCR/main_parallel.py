@@ -249,27 +249,38 @@ def pdf2finalmarkdown(pdf_path, out_dir, model, api, output_md, max_workers=None
     md_files = sorted(md_files_all, key=extract_page_number)
     logger.info(f"📄 Found {len(md_files)} markdown files")
     
-    # Đọc và gộp tất cả các file markdown
+    # Đọc và gộp tất cả các file markdown (GIỮ LẠI TRANG TRỐNG để đảm bảo số trang khớp)
     md_contents = []
+    empty_pages = []  # Track các trang trống để log
     for md_file in md_files:
         try:
             with open(md_file, "r", encoding="utf-8") as f:
-                content = f.read()
-                if content:
-                    md_contents.append(content)
+                content = f.read().strip()  # Strip whitespace để check rỗng chính xác
+                # LUÔN append, kể cả nếu rỗng (để giữ số trang khớp với PDF)
+                md_contents.append(content)
+                if not content:
+                    page_num = extract_page_number(md_file)
+                    empty_pages.append(page_num)
+                    logger.warning(f"⚠️  Trang {page_num} trống (file: {os.path.basename(md_file)})")
         except Exception as e:
             logger.error(f"❌ Error reading {md_file}: {e}")
+            # Nếu đọc lỗi, vẫn append rỗng để giữ số trang
+            md_contents.append("")
     
     if not md_contents:
         logger.error("No valid markdown content found!")
         return
     
-
+    if empty_pages:
+        logger.warning(f"⚠️  Tổng cộng {len(empty_pages)} trang trống: {empty_pages}")
     
     # Gộp và lưu file markdown cuối cùng (chèn tiêu đề Trang N và separator)
     os.makedirs(os.path.dirname(output_md), exist_ok=True)
     merged = []
     for i, content in enumerate(md_contents, start=1):
+        # Nếu trang trống, thêm placeholder để dễ nhận biết
+        if not content.strip():
+            content = "*[Trang trống]*"
         merged.append(f"Trang {i}\n\n{content}\n\n---")
     merged_text = "\n\n".join(merged).rstrip("-\n")
     with open(output_md, "w", encoding="utf-8") as f:
