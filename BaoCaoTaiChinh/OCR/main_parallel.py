@@ -266,13 +266,14 @@ def pdf2finalmarkdown(pdf_path, out_dir, model, api, output_md, max_workers=None
             for img_file in sorted(missing_images):
                 logger.error(f"      - {img_file}")
             
-            # Lưu vào file fail.log
-            fail_log_path = "fail.log"
+            # Lưu vào file fail.txt
+            fail_log_path = "fail.txt"
             try:
                 with open(fail_log_path, "a", encoding="utf-8") as f:
                     f.write(f"\n{'='*80}\n")
                     f.write(f"PDF: {pdf_path}\n")
                     f.write(f"Thời gian: {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
+                    f.write(f"Lỗi: OCR thiếu trang (không tạo file .md)\n")
                     f.write(f"Tổng số images: {len(image_paths)} | Số file .md: {len(md_files_all)} | Thiếu: {missing_count}\n")
                     f.write(f"Danh sách các file image OCR lỗi ({len(missing_images)} files):\n")
                     for img_file in sorted(missing_images):

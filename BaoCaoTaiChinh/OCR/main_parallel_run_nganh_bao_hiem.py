@@ -185,6 +185,16 @@ def process(base_folder=None):
                 # Giữ lại thư mục tạm nếu có lỗi để debug
                 logger.error(f"❌ [{idx}/{total_pdfs}] Lỗi khi xử lý {pdf_path.name}: {e}")
                 logger.error(f"   Thư mục tạm được giữ lại: {out_dir}")
+                
+                # Lưu lỗi vào fail.txt
+                try:
+                    fail_txt_path = "fail.txt"
+                    with open(fail_txt_path, "a", encoding="utf-8") as f:
+                        f.write(f"{pdf_path} -> Lỗi: {str(e)}\n")
+                    logger.info(f"💾 Đã lưu thông tin lỗi vào: {fail_txt_path}")
+                except Exception as write_err:
+                    logger.warning(f"⚠️  Không thể ghi vào file fail.txt: {write_err}")
+                
                 error_count += 1
                 clear_gpu_cache()
                 continue
@@ -192,6 +202,16 @@ def process(base_folder=None):
         except Exception as e:
             error_count += 1
             logger.error(f"❌ [{idx}/{total_pdfs}] Lỗi khi xử lý {pdf_path}: {e}")
+            
+            # Lưu lỗi vào fail.txt
+            try:
+                fail_txt_path = "fail.txt"
+                with open(fail_txt_path, "a", encoding="utf-8") as f:
+                    f.write(f"{pdf_path} -> Lỗi: {str(e)}\n")
+                logger.info(f"💾 Đã lưu thông tin lỗi vào: {fail_txt_path}")
+            except Exception as write_err:
+                logger.warning(f"⚠️  Không thể ghi vào file fail.txt: {write_err}")
+            
             clear_gpu_cache()
             continue
     
