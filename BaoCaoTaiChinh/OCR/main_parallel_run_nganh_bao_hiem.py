@@ -40,26 +40,16 @@ BASE_FOLDER = "/home/ubuntu/fintech/OCR/data/Ngành Bảo hiểm"
 def clear_gpu_cache() -> None:
     """
     Giải phóng bộ nhớ GPU và thu gom rác CPU sau mỗi file PDF.
-    Lưu ý: Nếu OCR được gọi qua API HTTP (vLLM server), GPU cache nằm trên server side,
-    function này chỉ clear CPU memory và GPU cache trên client side (nếu có).
     """
     try:
         if torch is not None and hasattr(torch, "cuda") and torch.cuda.is_available():
-            # Clear GPU cache và synchronize
             torch.cuda.empty_cache()
             torch.cuda.synchronize()
-            # Reset peak memory stats để theo dõi memory usage
-            torch.cuda.reset_peak_memory_stats()
-            logger.debug("🧹 GPU cache cleared and memory stats reset")
-        else:
-            logger.debug("🧹 GPU not available, skipping GPU cache clear")
-    except Exception as e:
+    except Exception:
         # Bỏ qua lỗi dọn GPU để không chặn pipeline
-        logger.debug(f"⚠️  Error clearing GPU cache: {e}")
+        pass
     finally:
-        # Always run garbage collection for CPU memory
         gc.collect()
-        logger.debug("🧹 CPU garbage collection completed")
 
 def prepare_pdf_processing(pdf_path: Path, idx: int, total_pdfs: int) -> tuple[bool, Path]:
     """
@@ -185,16 +175,6 @@ def process(base_folder=None):
                 # Giữ lại thư mục tạm nếu có lỗi để debug
                 logger.error(f"❌ [{idx}/{total_pdfs}] Lỗi khi xử lý {pdf_path.name}: {e}")
                 logger.error(f"   Thư mục tạm được giữ lại: {out_dir}")
-                
-                # Lưu lỗi vào fail.txt
-                try:
-                    fail_txt_path = "fail.txt"
-                    with open(fail_txt_path, "a", encoding="utf-8") as f:
-                        f.write(f"{pdf_path} -> Lỗi: {str(e)}\n")
-                    logger.info(f"💾 Đã lưu thông tin lỗi vào: {fail_txt_path}")
-                except Exception as write_err:
-                    logger.warning(f"⚠️  Không thể ghi vào file fail.txt: {write_err}")
-                
                 error_count += 1
                 clear_gpu_cache()
                 continue
@@ -202,16 +182,6 @@ def process(base_folder=None):
         except Exception as e:
             error_count += 1
             logger.error(f"❌ [{idx}/{total_pdfs}] Lỗi khi xử lý {pdf_path}: {e}")
-            
-            # Lưu lỗi vào fail.txt
-            try:
-                fail_txt_path = "fail.txt"
-                with open(fail_txt_path, "a", encoding="utf-8") as f:
-                    f.write(f"{pdf_path} -> Lỗi: {str(e)}\n")
-                logger.info(f"💾 Đã lưu thông tin lỗi vào: {fail_txt_path}")
-            except Exception as write_err:
-                logger.warning(f"⚠️  Không thể ghi vào file fail.txt: {write_err}")
-            
             clear_gpu_cache()
             continue
     

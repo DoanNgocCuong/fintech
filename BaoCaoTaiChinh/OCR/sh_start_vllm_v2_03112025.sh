@@ -23,7 +23,7 @@ nohup env CUDA_VISIBLE_DEVICES=1 /home/ubuntu/fintech/OCR/.venv311/bin/python -c
   --gpu-memory-utilization 0.60 \
   --host 0.0.0.0 \
   --port 30010 \
-  --max-model-len 10000 \
+  --max-model-len 8192 \
   --max-num-batched-tokens 4096 \
   --max-num-seqs 8 \
   --served-model-name rednote-hilab/dots.ocr \

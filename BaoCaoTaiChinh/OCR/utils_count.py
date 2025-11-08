@@ -1,25 +1,16 @@
 import re
 from typing import Optional
 
-# Hỗ trợ cả PyPDF2 version cũ và mới
-PdfReader = None
-PdfFileReader = None
-
 try:
-    # Thử import PyPDF2 version mới (>= 2.0)
+    # PyPDF2 là phổ biến, nhẹ
     from PyPDF2 import PdfReader
-except ImportError:
-    try:
-        # Fallback: PyPDF2 version cũ (< 2.0) dùng PdfFileReader
-        from PyPDF2 import PdfFileReader
-    except ImportError:
-        PdfReader = None
-        PdfFileReader = None
+except Exception:  # pragma: no cover
+    PdfReader = None  # type: ignore
 
 """
 Tiện ích đếm số trang
 
-- count_pdf_pages(pdf_path): Đếm số trang của một file PDF (ưu tiên PyPDF2, fallback PyMuPDF/pdf2image).
+- count_pdf_pages(pdf_path): Đếm số trang của một file PDF (ưu tiên PyPDF2).
 - count_markdown_pages(md_path): Đếm số trang trong file markdown được ghép theo format:
   
   Trang 1
@@ -48,51 +39,15 @@ def count_pdf_pages(pdf_path: str) -> Optional[int]:
         Số trang (int) nếu đọc được, None nếu lỗi hoặc thiếu thư viện.
 
     Yêu cầu:
-        - Ưu tiên dùng PyPDF2 (PdfReader). Nếu không cài, fallback PyMuPDF hoặc pdf2image.
+        - Ưu tiên dùng PyPDF2 (PdfReader). Nếu không cài, trả về None.
     """
-    # Method 1: PyPDF2 (version mới hoặc cũ)
-    if PdfReader is not None:
-        try:
-            reader = PdfReader(pdf_path)
-            return len(reader.pages)
-        except Exception:
-            pass
-    elif PdfFileReader is not None:
-        try:
-            reader = PdfFileReader(open(pdf_path, 'rb'))
-            page_count = reader.getNumPages()
-            reader.stream.close()
-            return page_count
-        except Exception:
-            pass
-    
-    # Method 2: PyMuPDF (fitz)
+    if PdfReader is None:
+        return None
     try:
-        import fitz
-        doc = fitz.open(pdf_path)
-        page_count = len(doc)
-        doc.close()
-        return page_count
-    except ImportError:
-        pass
+        reader = PdfReader(pdf_path)
+        return len(reader.pages)
     except Exception:
-        pass
-    
-    # Method 3: pdf2image (convert và đếm)
-    try:
-        from pdf2image import convert_from_path
-        images = convert_from_path(pdf_path, first_page=1, last_page=1)
-        if images:
-            # Nếu có thể convert, thử convert tất cả để đếm
-            # Nhưng cách này chậm, nên chỉ dùng khi không có method khác
-            # Thực tế, nếu đã có pdf2image thì nên dùng PyMuPDF hoặc cài PyPDF2
-            pass
-    except ImportError:
-        pass
-    except Exception:
-        pass
-    
-    return None
+        return None
 
 
 def count_markdown_pages(md_path: str) -> Optional[int]:

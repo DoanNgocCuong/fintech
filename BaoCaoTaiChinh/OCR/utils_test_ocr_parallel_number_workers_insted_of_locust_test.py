@@ -17,8 +17,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-IMAGE_PATH = "/home/ubuntu/fintech/BaoCaoTaiChinh/OCR/data/out_images/33_pages_test-8.png"
-NUM_REQUESTS = 1
+IMAGE_PATH = "/home/ubuntu/fintech/OCR/data/test/33_pages_test-1.png"
+NUM_REQUESTS = 20
 WINDOW_S = 5.0  # window to group the first completion wave
 
 

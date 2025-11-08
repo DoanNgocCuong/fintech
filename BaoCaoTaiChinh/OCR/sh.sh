@@ -14,7 +14,7 @@ kill -9 PID
 
 
 ```bash
-echo "kill -9 2313508" | at now + 3 hours
+echo "kill -9 423425" | at now + 6 hours
 ```
 
 
