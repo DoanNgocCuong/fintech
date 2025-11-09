@@ -207,7 +207,7 @@ def main():
     """
     Hàm chính để xử lý file markdown và chuyển đổi bảng sang Excel.
     """
-    input_file = Path(__file__).parent / "Example_KetQuaHoatDongKinhDoanh.md"
+    input_file = Path(__file__).parent / "Example2_MarkdownKetQuaHoatDongKinhDoanh.md"
     
     try:
         result_path = process_markdown_file_to_xlsx(

@@ -116,3 +116,4 @@ df.to_excel("output.xlsx", index=False)
 ```
 
 Tóm lại: Parse → Normalize → DataFrame → Excel
+
