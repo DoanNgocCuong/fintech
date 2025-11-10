@@ -1,0 +1,73 @@
+{
+    "ket_qua_hoat_dong_kinh_doanh": {
+        "doanh_thu_ban_hang_va_cung_cap_dich_vu_10": {
+            "ma_so": 10,
+            "so_cuoi_nam": null
+        },
+        "cac_khoan_giam_tru_doanh_thu_11": {
+            "ma_so": 11,
+            "so_cuoi_nam": null
+        },
+        "doanh_thu_thuan_ve_ban_hang_va_cung_cap_dich_vu_20": {
+            "ma_so": 20,
+            "so_cuoi_nam": null
+        },
+        "gia_von_ban_hang_22": {
+            "ma_so": 22,
+            "so_cuoi_nam": null
+        },
+        "loi_nhuan_gop_ve_ban_hang_va_cung_cap_dich_vu_30": {
+            "ma_so": 30,
+            "so_cuoi_nam": null
+        },
+        "doanh_thu_hoat_dong_tai_chinh_31": {
+            "ma_so": 31,
+            "so_cuoi_nam": null
+        },
+        "chi_phi_tai_chinh_32": {
+            "ma_so": 32,
+            "so_cuoi_nam": null
+        },
+        "chi_phi_ban_hang_64": {
+            "ma_so": 64,
+            "so_cuoi_nam": null
+        },
+        "chi_phi_quan_ly_doanh_nghiep_65": {
+            "ma_so": 65,
+            "so_cuoi_nam": null
+        },
+        "loi_nhuan_thuan_tu_hoat_dong_kinh_doanh_70": {
+            "ma_so": 70,
+            "so_cuoi_nam": null
+        },
+        "thu_nhap_khac_71": {
+            "ma_so": 71,
+            "so_cuoi_nam": null
+        },
+        "chi_phi_khac_81": {
+            "ma_so": 81,
+            "so_cuoi_nam": null
+        },
+        "loi_nhuan_khac_91": {
+            "ma_so": 91,
+            "so_cuoi_nam": null
+        },
+        "tong_loi_nhuan_ke_toan_truoc_thue_90": {
+            "ma_so": 90,
+            "so_cuoi_nam": null
+        },
+        "chi_phi_thue_thu_nhap_doanh_nghiep_hien_hanh_92": {
+            "ma_so": 92,
+            "so_cuoi_nam": null
+        },
+        "chi_phi_thue_thu_nhap_doanh_nghiep_hoan_lai_93": {
+            "ma_so": 93,
+            "so_cuoi_nam": null
+        },
+        "loi_nhuan_sau_thue_thu_nhap_doanh_nghiep_100": {
+            "ma_so": 100,
+            "so_cuoi_nam": null
+        }
+    }
+}
+

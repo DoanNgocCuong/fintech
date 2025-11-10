@@ -1,0 +1,28 @@
+#  Dựng file docker-compose.postgress.yaml để deploy database postgres
+name: financial-reporting-postgres-db
+
+services:
+  postgres:
+    image: postgres:17
+    container_name: financial-reporting-postgres-container
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: financial-reporting-database
+    ports:
+      - "29990:5432"
+    volumes:
+      - /srv/postgres/data-v17:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - financial-reporting-network
+ 
+
+networks:
+  financial-reporting-network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.11.0.0/24
+          gateway: 10.11.0.1
