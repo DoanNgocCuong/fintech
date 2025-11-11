@@ -1,8 +1,8 @@
 """
-Utility script: upload existing balance-sheet JSON files into PostgreSQL.
+Utility script: upload existing income statement JSON files into PostgreSQL.
 
 Usage:
-    python main_JSONCanDoiKeToan_to_DB.py <json_file_or_folder> [--overwrite] [--no-recursive]
+    python main_JSONKetQuaHoatDongKinhDoanh_to_DB.py <json_file_or_folder> [--overwrite] [--no-recursive]
 
 Responsibilities:
 - Scan a single file or a directory (recursive by default)
@@ -14,8 +14,8 @@ Filename patterns:
     STOCK_YYYY_*.json            → Extracts stock and year (quarter = None)
 
 Examples:
-    BIC_2024_1_5_1_CanDoiKeToan.json → stock=BIC, year=2024, quarter=5
-    PGI_2024_1_3_CanDoiKeToan.json   → stock=PGI, year=2024, quarter=3
+    BIC_2024_1_5_1_KetQuaHoatDongKinhDoanh.json → stock=BIC, year=2024, quarter=5
+    PGI_2024_1_3_KetQuaHoatDongKinhDoanh.json   → stock=PGI, year=2024, quarter=3
 
 The script intentionally skips any conversion from markdown/xlsx.
 """
@@ -30,8 +30,10 @@ from datetime import datetime
 from utils_database_manager import (
     upload_json_to_db,
     DB_CONFIG,
-    TABLE_NAME,
 )
+
+# Table name for income statements
+TABLE_NAME = 'income_statement_raw'
 
 
 @dataclass
@@ -59,7 +61,7 @@ def parse_stock_year_quarter_from_filename(filename: str) -> Tuple[Optional[str]
     """
     stem = Path(filename).stem
 
-    # Pattern 1: STOCK_YYYY_1_QUARTER_* (e.g., BIC_2024_1_5_1_CanDoiKeToan)
+    # Pattern 1: STOCK_YYYY_1_QUARTER_* (e.g., BIC_2024_1_5_1_KetQuaHoatDongKinhDoanh)
     # Extract quarter as the number after YYYY_1_
     pattern_with_quarter = r"^([A-Z]+)_(\d{4})_1_(\d+)_"
     match = re.match(pattern_with_quarter, stem)
@@ -242,7 +244,7 @@ def process_json_files(json_files: List[Path], overwrite: bool) -> Tuple[int, in
 
 def main() -> None:
     if len(sys.argv) < 2:
-        print("Usage: python main_JSONCanDoiKeToan_to_DB.py <json_file_or_folder> [--overwrite] [--no-recursive]")
+        print("Usage: python main_JSONKetQuaHoatDongKinhDoanh_to_DB.py <json_file_or_folder> [--overwrite] [--no-recursive]")
         print("\nOptions:")
         print("  --overwrite      Overwrite existing records in database")
         print("  --no-recursive   Only search current directory (disable recursive search)")
@@ -303,5 +305,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-

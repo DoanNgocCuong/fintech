@@ -46,6 +46,7 @@ def create_table_if_not_exists(conn, table_name: str = None) -> None:
         stock VARCHAR(10) NOT NULL,
         year INTEGER NOT NULL,
         quarter INTEGER,
+        source_filename VARCHAR(500),
         json_raw JSONB NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -55,30 +56,30 @@ def create_table_if_not_exists(conn, table_name: str = None) -> None:
     try:
         cursor.execute(create_table_query)
         conn.commit()
-        # Add quarter column if table exists but column doesn't exist
+        # Add columns if table exists but columns don't exist
         try:
             # Check if quarter column exists
-            check_column_query = """
+            check_quarter_query = f"""
             SELECT 1 FROM information_schema.columns 
-            WHERE table_name = %s AND column_name = 'quarter'
+            WHERE table_name = '{table_name}' AND column_name = 'quarter'
             """
-            cursor.execute(check_column_query, (table_name,))
-            column_exists = cursor.fetchone()
+            cursor.execute(check_quarter_query)
+            quarter_exists = cursor.fetchone()
             
-            if not column_exists:
+            if not quarter_exists:
                 # Add quarter column
-                alter_add_column = f'ALTER TABLE "{table_name}" ADD COLUMN quarter INTEGER'
-                cursor.execute(alter_add_column)
+                alter_add_quarter = f'ALTER TABLE "{table_name}" ADD COLUMN quarter INTEGER'
+                cursor.execute(alter_add_quarter)
                 
                 # Find and drop old unique constraint (stock, year)
-                find_constraint_query = """
+                find_constraint_query = f"""
                 SELECT constraint_name 
                 FROM information_schema.table_constraints 
-                WHERE table_name = %s 
+                WHERE table_name = '{table_name}' 
                 AND constraint_type = 'UNIQUE'
                 AND constraint_name LIKE '%stock%year%'
                 """
-                cursor.execute(find_constraint_query, (table_name,))
+                cursor.execute(find_constraint_query)
                 old_constraints = cursor.fetchall()
                 
                 for (constraint_name,) in old_constraints:
@@ -91,6 +92,20 @@ def create_table_if_not_exists(conn, table_name: str = None) -> None:
                 ADD CONSTRAINT "{table_name}_stock_year_quarter_key" UNIQUE(stock, year, quarter)
                 """
                 cursor.execute(add_constraint)
+                conn.commit()
+            
+            # Check if source_filename column exists
+            check_filename_query = f"""
+            SELECT 1 FROM information_schema.columns 
+            WHERE table_name = '{table_name}' AND column_name = 'source_filename'
+            """
+            cursor.execute(check_filename_query)
+            filename_exists = cursor.fetchone()
+            
+            if not filename_exists:
+                # Add source_filename column
+                alter_add_filename = f'ALTER TABLE "{table_name}" ADD COLUMN source_filename VARCHAR(500)'
+                cursor.execute(alter_add_filename)
                 conn.commit()
         except Exception as alter_e:
             # If alter fails, it's okay - table might be new or constraint might already exist
@@ -119,6 +134,7 @@ def upload_json_to_db(
     overwrite: bool = False,
     json_data: Optional[Dict[str, Any]] = None,
     table_name: Optional[str] = None,
+    source_filename: Optional[str] = None,
 ) -> bool:
     if psycopg2 is None:
         raise ImportError("psycopg2 is required. Install with: pip install psycopg2-binary")
@@ -145,8 +161,11 @@ def upload_json_to_db(
 
     cursor = None
     try:
+        # Use provided table_name or default
+        target_table = table_name if table_name else TABLE_NAME
+        
         # Tạo bảng nếu chưa tồn tại
-        create_table_if_not_exists(conn)
+        create_table_if_not_exists(conn, table_name=target_table)
 
         cursor = conn.cursor()
 
@@ -159,8 +178,9 @@ def upload_json_to_db(
         if stock is None or year is None:
             raise ValueError("stock and year are required when uploading to DB")
 
-        # Use provided table_name or default
-        target_table = table_name if table_name else TABLE_NAME
+        # Get source filename if not provided
+        if source_filename is None and json_path is not None:
+            source_filename = json_path.name
 
         # Kiểm tra record (with quarter if provided)
         # Use schema-qualified table name and ensure proper parameter binding
@@ -185,17 +205,17 @@ def upload_json_to_db(
             if quarter is not None:
                 update_query = f"""
                 UPDATE "{target_table}"
-                SET json_raw = %s, updated_at = CURRENT_TIMESTAMP
+                SET json_raw = %s, source_filename = %s, updated_at = CURRENT_TIMESTAMP
                 WHERE stock = %s AND year = %s AND quarter = %s
                 """
-                cursor.execute(update_query, (PsycopgJson(json_data), str(stock), int(year), int(quarter)))
+                cursor.execute(update_query, (PsycopgJson(json_data), source_filename, str(stock), int(year), int(quarter)))
             else:
                 update_query = f"""
                 UPDATE "{target_table}"
-                SET json_raw = %s, updated_at = CURRENT_TIMESTAMP
+                SET json_raw = %s, source_filename = %s, updated_at = CURRENT_TIMESTAMP
                 WHERE stock = %s AND year = %s AND quarter IS NULL
                 """
-                cursor.execute(update_query, (PsycopgJson(json_data), str(stock), int(year)))
+                cursor.execute(update_query, (PsycopgJson(json_data), source_filename, str(stock), int(year)))
             try:
                 print(f"  ✓ Updated existing record")
             except UnicodeEncodeError:
@@ -203,16 +223,16 @@ def upload_json_to_db(
         else:
             if quarter is not None:
                 insert_query = f"""
-                INSERT INTO "{target_table}" (stock, year, quarter, json_raw)
-                VALUES (%s, %s, %s, %s)
+                INSERT INTO "{target_table}" (stock, year, quarter, source_filename, json_raw)
+                VALUES (%s, %s, %s, %s, %s)
                 """
-                cursor.execute(insert_query, (str(stock), int(year), int(quarter), PsycopgJson(json_data)))
+                cursor.execute(insert_query, (str(stock), int(year), int(quarter), source_filename, PsycopgJson(json_data)))
             else:
                 insert_query = f"""
-                INSERT INTO "{target_table}" (stock, year, json_raw)
-                VALUES (%s, %s, %s)
+                INSERT INTO "{target_table}" (stock, year, source_filename, json_raw)
+                VALUES (%s, %s, %s, %s)
                 """
-                cursor.execute(insert_query, (str(stock), int(year), PsycopgJson(json_data)))
+                cursor.execute(insert_query, (str(stock), int(year), source_filename, PsycopgJson(json_data)))
             try:
                 print(f"  ✓ Inserted new record")
             except UnicodeEncodeError:

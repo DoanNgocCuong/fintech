@@ -174,6 +174,9 @@ def process_income_statement(
     if not input_path.exists():
         raise FileNotFoundError(f"Input file not found: {input_file}")
     
+    if not input_path.is_file():
+        raise ValueError(f"Input path is not a file: {input_file}")
+    
     # Xác định file output
     if output_file is None:
         output_file = str(input_path.parent / f"{input_path.stem}_KetQuaHoatDongKinhDoanh.xlsx")
@@ -344,35 +347,115 @@ def _get_income_statement_json_template(
 
 
 
+def _get_display_path(md_file: Path, base_path: Path) -> str:
+    """
+    Lấy đường dẫn hiển thị cho file markdown.
+    Nếu file nằm trong folder con, trả về đường dẫn tương đối.
+    Nếu không, trả về tên file.
+    
+    Args:
+        md_file (Path): Đường dẫn đến file markdown
+        base_path (Path): Đường dẫn gốc (input folder hoặc file)
+    
+    Returns:
+        str: Đường dẫn hiển thị
+    """
+    if base_path.is_dir():
+        try:
+            rel_path = md_file.relative_to(base_path)
+            return str(rel_path) if str(rel_path) != md_file.name else md_file.name
+        except ValueError:
+            return str(md_file)
+    else:
+        return md_file.name
+
+
 def main():
     """
     Hàm chính: Xử lý file markdown Kết quả Hoạt động Kinh doanh.
     Sử dụng:
-        python main_KetQuaHoatDongKinhDoanh.py <input_file>
+        python main_KetQuaHoatDongKinhDoanh.py <input_file_or_folder>
+    
+    Nếu input là folder, sẽ xử lý tất cả file .md trong folder đó và tất cả các folder con (đệ quy).
+    Nếu input là file, sẽ xử lý file đó.
     """
-    # Không dùng parameters/options  
-    input_file = None
+    input_path = None
     if len(sys.argv) >= 2:
-        input_file = sys.argv[1]
+        input_path = sys.argv[1]
     else:
         # Default file nếu không truyền argument
-        input_file = str(Path(__file__).parent / "MIG_2024_1_5_1.md")
-        if not Path(input_file).exists():
-            print("Usage: python main_KetQuaHoatDongKinhDoanh.py <input_file>")
-            print("\nOr provide a markdown file in the current directory.")
+        input_path = str(Path(__file__).parent / "MIG_2024_1_5_1.md")
+        if not Path(input_path).exists():
+            print("Usage: python main_KetQuaHoatDongKinhDoanh.py <input_file_or_folder>")
+            print("\nOr provide a markdown file or folder in the current directory.")
             sys.exit(1)
-        print(f"Using default file: {input_file}")
+        print(f"Using default file: {input_path}")
     
-    try:
-        result_path = process_income_statement(
-            input_file=input_file,
-            skip_missing=True,
-            max_pages=30
-        )
-        print(f"\nOutput file: {result_path}")
-        print("\nDone!")
-    except Exception as e:
-        print(f"\nError: {e}")
+    input_path_obj = Path(input_path)
+    
+    # Kiểm tra xem input là file hay folder
+    if input_path_obj.is_file():
+        # Xử lý một file
+        md_files = [input_path_obj] if input_path_obj.suffix.lower() == '.md' else []
+    elif input_path_obj.is_dir():
+        # Xử lý tất cả file .md trong folder và các folder con (đệ quy)
+        md_files = list(input_path_obj.rglob("*.md"))
+        if not md_files:
+            print(f"No .md files found in folder (including subfolders): {input_path}")
+            sys.exit(1)
+        print(f"Found {len(md_files)} .md file(s) in folder and subfolders: {input_path}")
+    else:
+        print(f"Error: Path does not exist: {input_path}")
+        sys.exit(1)
+    
+    # Xử lý từng file .md
+    successful_files = []
+    failed_files = []
+    
+    # Sắp xếp các file để xử lý theo thứ tự (tên file)
+    md_files = sorted(md_files)
+    
+    for idx, md_file in enumerate(md_files, 1):
+        print("\n" + "=" * 80)
+        display_name = _get_display_path(md_file, input_path_obj)
+        print(f"Processing file {idx}/{len(md_files)}: {display_name}")
+        print("=" * 80)
+        
+        try:
+            result_path = process_income_statement(
+                input_file=str(md_file),
+                skip_missing=True,
+                max_pages=30
+            )
+            print(f"\n✓ Successfully processed: {display_name}")
+            print(f"  Output file: {result_path}")
+            successful_files.append((display_name, result_path))
+        except Exception as e:
+            print(f"\n✗ Error processing {display_name}: {e}")
+            failed_files.append((display_name, str(e)))
+    
+    # Tổng kết
+    print("\n" + "=" * 80)
+    print("FINAL SUMMARY")
+    print("=" * 80)
+    print(f"Total files processed: {len(md_files)}")
+    print(f"Successful: {len(successful_files)}")
+    print(f"Failed: {len(failed_files)}")
+    
+    if successful_files:
+        print("\nSuccessful files:")
+        for file_name, output_path in successful_files:
+            print(f"  ✓ {file_name} -> {output_path}")
+    
+    if failed_files:
+        print("\nFailed files:")
+        for file_name, error_msg in failed_files:
+            print(f"  ✗ {file_name}: {error_msg}")
+    
+    print("\nDone!")
+    
+    # Exit với code 1 nếu có file nào đó failed
+    if failed_files:
         sys.exit(1)
     
 
