@@ -24,6 +24,8 @@ import sys
 import re
 from pathlib import Path
 from typing import Optional, Tuple, List
+from dataclasses import dataclass
+from datetime import datetime
 
 from utils_database_manager import (
     upload_json_to_db,
@@ -32,6 +34,13 @@ from utils_database_manager import (
 
 # Table name for cash flow statements
 TABLE_NAME = 'cash_flow_statement_raw'
+
+
+@dataclass
+class FailedFile:
+    """Information about a failed file."""
+    filepath: str
+    reason: str
 
 
 def parse_stock_year_quarter_from_filename(filename: str) -> Tuple[Optional[str], Optional[int], Optional[int]]:
@@ -100,9 +109,19 @@ def collect_json_files(target: Path, recursive: bool = True) -> List[Path]:
     return []
 
 
-def process_json_files(json_files: List[Path], overwrite: bool) -> Tuple[int, int]:
+def parse_stock_year_quarter_from_foldername(foldername: str) -> Tuple[Optional[str], Optional[int], Optional[int]]:
+    """
+    Parse stock code, year, and quarter from folder name.
+    Mirrors filename parsing but allows fallback when filename lacks info.
+    """
+    # Reuse filename pattern logic
+    return parse_stock_year_quarter_from_filename(foldername)
+
+
+def process_json_files(json_files: List[Path], overwrite: bool) -> Tuple[int, int, List[FailedFile]]:
     success = 0
     failed = 0
+    failed_files: List[FailedFile] = []
 
     total = len(json_files)
     for idx, json_file in enumerate(json_files, start=1):
@@ -111,14 +130,41 @@ def process_json_files(json_files: List[Path], overwrite: bool) -> Tuple[int, in
         print("=" * 80)
 
         stock, year, quarter = parse_stock_year_quarter_from_filename(json_file.name)
+        parse_source = "filename"
+
         if stock is None or year is None:
-            print(f"  ✗ Cannot parse stock/year from filename: {json_file.name}")
+            try:
+                parent_folder = json_file.parent.name
+                if parent_folder:
+                    print(f"  ⚠ Cannot parse from filename, trying parent folder: {parent_folder}")
+                    stock, year, quarter = parse_stock_year_quarter_from_foldername(parent_folder)
+                    if stock is not None and year is not None:
+                        parse_source = "parent folder"
+            except Exception as e:
+                print(f"  ⚠ Error accessing parent folder: {e}")
+
+        if stock is None or year is None:
+            try:
+                grandparent_path = json_file.parent.parent
+                if grandparent_path.exists() and grandparent_path.name:
+                    grandparent_folder = grandparent_path.name
+                    print(f"  ⚠ Cannot parse from parent folder, trying grandparent folder: {grandparent_folder}")
+                    stock, year, quarter = parse_stock_year_quarter_from_foldername(grandparent_folder)
+                    if stock is not None and year is not None:
+                        parse_source = "grandparent folder"
+            except Exception as e:
+                print(f"  ⚠ Error accessing grandparent folder: {e}")
+
+        if stock is None or year is None:
+            folder_info = f" (folder: {json_file.parent.name})" if json_file.parent.name else ""
+            reason = f"Cannot parse stock/year from filename or folder: {json_file.name}{folder_info}"
+            print(f"  ✗ {reason}")
             failed += 1
+            failed_files.append(FailedFile(filepath=str(json_file), reason=reason))
             continue
 
-        # Display parsed information
         quarter_info = f", quarter={quarter}" if quarter is not None else ", quarter=None"
-        print(f"  Parsed: stock={stock}, year={year}{quarter_info}")
+        print(f"  Parsed from {parse_source}: stock={stock}, year={year}{quarter_info}")
 
         upload_ok = upload_json_to_db(
             json_file=str(json_file),
@@ -133,8 +179,12 @@ def process_json_files(json_files: List[Path], overwrite: bool) -> Tuple[int, in
             success += 1
         else:
             failed += 1
+            failed_files.append(FailedFile(
+                filepath=str(json_file),
+                reason=f"Upload failed: stock={stock}, year={year}, quarter={quarter}"
+            ))
 
-    return success, failed
+    return success, failed, failed_files
 
 
 def main() -> None:
@@ -165,7 +215,7 @@ def main() -> None:
     print(f"Recursive search: {recursive}")
     print("=" * 80)
 
-    success, failed = process_json_files(json_files, overwrite)
+    success, failed, failed_files = process_json_files(json_files, overwrite)
 
     print("\n" + "=" * 80)
     print("SUMMARY")
@@ -173,6 +223,26 @@ def main() -> None:
     print(f"Total JSON files: {len(json_files)}")
     print(f"Successful uploads: {success}")
     print(f"Failed uploads: {failed}")
+
+    if failed_files:
+        fail_log_path = Path("fail_LuuChuyenTienTe.txt")
+        try:
+            with open(fail_log_path, "w", encoding="utf-8") as f:
+                f.write("=" * 80 + "\n")
+                f.write("FAILED FILES LOG - LUU CHUYEN TIEN TE\n")
+                f.write("=" * 80 + "\n")
+                f.write(f"Generated at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+                f.write(f"Total failed files: {len(failed_files)}\n")
+                f.write("=" * 80 + "\n\n")
+
+                for idx, failed_file in enumerate(failed_files, start=1):
+                    f.write(f"{idx}. {failed_file.filepath}\n")
+                    f.write(f"   Reason: {failed_file.reason}\n\n")
+
+            print(f"\n✓ Failed files logged to: {fail_log_path.absolute()}")
+        except Exception as e:
+            print(f"\n✗ Error writing to fail_LuuChuyenTienTe.txt: {e}")
+
     if failed:
         sys.exit(1)
 
