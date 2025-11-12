@@ -6,7 +6,8 @@ from utils_markdownTable_to_xlsx import (
     extract_markdown_tables,
     _parse_markdown_table,
     _create_dataframe_from_rows,
-    remove_diacritics
+    remove_diacritics,
+    _is_separator_line
 )
 
 try:
@@ -565,14 +566,59 @@ def replace_null_in_dict(data: Any, replacement: float) -> Any:
         return data
 
 
+def _remove_markdown_tables(text: str) -> str:
+    """
+    Loại bỏ tất cả các bảng markdown khỏi văn bản, chỉ giữ lại phần text thông thường.
+    
+    Hàm này giúp tránh false positive khi check các từ khóa trong bảng markdown.
+    Ví dụ: Tránh match "Thuyết minh" trong cột header của bảng với "thuyết minh báo cáo tài chính".
+    
+    Args:
+        text (str): Văn bản chứa các bảng markdown
+        
+    Returns:
+        str: Văn bản đã loại bỏ các bảng markdown
+    """
+    lines = text.split('\n')
+    result_lines = []
+    in_table = False
+    
+    for line in lines:
+        stripped = line.strip()
+        
+        # Check if line is part of a table
+        if stripped.startswith('|'):
+            # Check if it's a separator line
+            if _is_separator_line(stripped):
+                # Skip separator line
+                in_table = True
+                continue
+            
+            # This is a table row, skip it
+            in_table = True
+            continue
+        else:
+            # End of table or regular text
+            in_table = False
+            result_lines.append(line)
+    
+    return '\n'.join(result_lines)
+
+
 def detect_thuyetminhbaocaotaichinh(text: str, threshold: float = 0.8) -> bool:
     """
     Phát hiện xem văn bản có chứa "thuyết minh báo cáo tài chính" hay không.
     
     Logic:
-    1. Lowercase toàn bộ văn bản
-    2. Loại bỏ dấu tiếng Việt
-    3. So khớp fuzzy 80% với "thuyet minh bao cao tai chinh"
+    1. Loại bỏ tất cả các bảng markdown khỏi văn bản (chỉ check trong text thông thường)
+    2. Lowercase toàn bộ văn bản
+    3. Loại bỏ dấu tiếng Việt
+    4. So khớp fuzzy 80% với "thuyet minh bao cao tai chinh"
+    
+    Lưu ý:
+        Hàm này KHÔNG tìm kiếm trong các bảng markdown, chỉ tìm trong phần text thông thường.
+        Điều này giúp tránh false positive khi "Thuyết minh" xuất hiện trong cột header của bảng
+        (ví dụ: bảng "Báo cáo kết quả hoạt động kinh doanh" có cột "Thuyết minh").
     
     Args:
         text (str): Văn bản cần kiểm tra
@@ -586,9 +632,14 @@ def detect_thuyetminhbaocaotaichinh(text: str, threshold: float = 0.8) -> bool:
         >>> detect_thuyetminhbaocaotaichinh("THUYET MINH BAO CAO TAI CHINH")   # True
         >>> detect_thuyetminhbaocaotaichinh("Thuyết minh báo cáo")             # True (fuzzy)
         >>> detect_thuyetminhbaocaotaichinh("Bảng cân đối kế toán")            # False
+        >>> # Không match "Thuyết minh" trong cột header của bảng
+        >>> detect_thuyetminhbaocaotaichinh("| Mã số | Thuyết minh |")  # False
     """
-    # Lowercase và loại bỏ dấu
-    text_lower = text.lower()
+    # Bước 1: Loại bỏ tất cả các bảng markdown (chỉ check trong text thông thường)
+    text_without_tables = _remove_markdown_tables(text)
+    
+    # Bước 2: Lowercase và loại bỏ dấu
+    text_lower = text_without_tables.lower()
     text_khong_dau = remove_diacritics(text_lower)
     
     # Pattern chuẩn để so khớp (ưu tiên pattern đầy đủ, sau đó là pattern ngắn hơn)

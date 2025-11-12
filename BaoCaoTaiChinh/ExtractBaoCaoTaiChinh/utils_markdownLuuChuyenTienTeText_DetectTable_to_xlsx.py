@@ -81,9 +81,16 @@ def detect_luuchuyentiente(text: str, threshold: float = 0.8) -> bool:
     
     Logic:
     1. Loại bỏ tất cả các bảng markdown khỏi văn bản (chỉ check trong text thông thường)
-    2. Lowercase toàn bộ văn bản
-    3. Loại bỏ dấu tiếng Việt
-    4. So khớp fuzzy 80% với "bao cao luu chuyen tien te"
+    2. Loại trừ các pattern liên quan đến "kết quả hoạt động kinh doanh" hoặc "bảng cân đối kế toán"
+    3. Lowercase toàn bộ văn bản
+    4. Loại bỏ dấu tiếng Việt
+    5. So khớp fuzzy 80% với "bao cao luu chuyen tien te"
+    
+    Lưu ý:
+        Hàm này KHÔNG tìm kiếm trong các bảng markdown, chỉ tìm trong phần text thông thường.
+        Điều này giúp tránh false positive khi "lưu chuyển tiền tệ" xuất hiện trong dữ liệu bảng khác.
+        Nếu trang có chứa "kết quả hoạt động kinh doanh" hoặc "bảng cân đối kế toán", 
+        sẽ không match với "lưu chuyển tiền tệ".
     
     Args:
         text (str): Văn bản cần kiểm tra
@@ -97,19 +104,34 @@ def detect_luuchuyentiente(text: str, threshold: float = 0.8) -> bool:
         >>> detect_luuchuyentiente("BAO CAO LUU CHUYEN TIEN TE")   # True
         >>> detect_luuchuyentiente("Lưu chuyển tiền tệ")           # True
         >>> detect_luuchuyentiente("Statement of cash flows")       # True (có thể)
+        >>> detect_luuchuyentiente("BÁO CÁO KẾT QUẢ HOẠT ĐỘNG KINH DOANH")  # False
+        >>> detect_luuchuyentiente("BẢNG CÂN ĐỐI KẾ TOÁN")  # False
         >>> detect_luuchuyentiente("Không có gì")                   # False
-        
-    Lưu ý:
-        Hàm này KHÔNG tìm kiếm trong các bảng markdown, chỉ tìm trong phần text thông thường.
-        Điều này giúp tránh false positive khi "lưu chuyển tiền tệ" xuất hiện trong dữ liệu bảng khác.
     """
     # Bước 1: Loại bỏ tất cả các bảng markdown
     text_without_tables = _remove_markdown_tables(text)
     
-    # Bước 2: Lowercase và loại bỏ dấu
+    # Bước 2: Loại trừ các pattern liên quan đến các báo cáo tài chính khác
+    # Nếu trang có chứa "kết quả hoạt động kinh doanh" hoặc "bảng cân đối kế toán",
+    # không phải "lưu chuyển tiền tệ"
     text_lower = text_without_tables.lower()
     text_khong_dau = remove_diacritics(text_lower)
     
+    # Kiểm tra xem có phải là các báo cáo tài chính khác không
+    other_statements_patterns = [
+        "ket qua hoat dong kinh doanh",
+        "bao cao ket qua hoat dong kinh doanh",
+        "bang can doi ke toan",
+        "income statement",
+        "balance sheet"
+    ]
+    
+    for other_pattern in other_statements_patterns:
+        if other_pattern in text_khong_dau:
+            # Đây là báo cáo tài chính khác, không phải lưu chuyển tiền tệ
+            return False
+    
+    # Bước 3: Kiểm tra các pattern của "lưu chuyển tiền tệ"
     # Pattern chuẩn để so khớp (các biến thể)
     patterns = [
         "bao cao luu chuyen tien te",

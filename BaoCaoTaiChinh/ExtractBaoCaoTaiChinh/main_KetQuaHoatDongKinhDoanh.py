@@ -90,7 +90,8 @@ _INCOME_TEMPLATE_JSON_PATH = Path(__file__).parent / "income_template_json.json"
 from utils_markdownKetQuaHoatDongKinhDoanhText_DetectTable_to_xlsx import detect_ketquahoedongkinhdoanh
 from utils_markdownTable_to_xlsx import (
     _parse_markdown_table,
-    _create_dataframe_from_rows
+    _create_dataframe_from_rows,
+    _remove_last_column,
 )
 
 # Import JSON creation function (will be imported after function definitions to avoid circular import)
@@ -234,6 +235,8 @@ def process_income_statement(
                             continue
                         
                         df = _create_dataframe_from_rows(rows)
+
+                        df = _remove_last_column(df)
                         
                         # Sheet name (đặt tên theo số trang và số bảng)
                         if total_tables == 1:

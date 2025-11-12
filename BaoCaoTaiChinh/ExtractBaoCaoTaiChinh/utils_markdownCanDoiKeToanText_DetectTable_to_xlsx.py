@@ -37,8 +37,48 @@ from utils_markdownTable_to_xlsx import (
     extract_markdown_tables,
     remove_diacritics,
     _parse_markdown_table,
-    _create_dataframe_from_rows
+    _create_dataframe_from_rows,
+    _is_separator_line
 )
+
+
+def _remove_markdown_tables(text: str) -> str:
+    """
+    Loại bỏ tất cả các bảng markdown khỏi văn bản, chỉ giữ lại phần text thông thường.
+    
+    Hàm này giúp tránh false positive khi check các từ khóa trong bảng markdown.
+    Ví dụ: Tránh match các từ khóa trong bảng với pattern của báo cáo tài chính.
+    
+    Args:
+        text (str): Văn bản chứa các bảng markdown
+        
+    Returns:
+        str: Văn bản đã loại bỏ các bảng markdown
+    """
+    lines = text.split('\n')
+    result_lines = []
+    in_table = False
+    
+    for line in lines:
+        stripped = line.strip()
+        
+        # Check if line is part of a table
+        if stripped.startswith('|'):
+            # Check if it's a separator line
+            if _is_separator_line(stripped):
+                # Skip separator line
+                in_table = True
+                continue
+            
+            # This is a table row, skip it
+            in_table = True
+            continue
+        else:
+            # End of table or regular text
+            in_table = False
+            result_lines.append(line)
+    
+    return '\n'.join(result_lines)
 
 
 def detect_candoiketoan(text: str, threshold: float = 0.8) -> bool:
@@ -46,9 +86,14 @@ def detect_candoiketoan(text: str, threshold: float = 0.8) -> bool:
     Phát hiện xem văn bản có chứa "bảng cân đối kế toán" hay không.
     
     Logic:
-    1. Lowercase toàn bộ văn bản
-    2. Loại bỏ dấu tiếng Việt
-    3. So khớp fuzzy 80% với "bang can doi ke toan"
+    1. Loại bỏ tất cả các bảng markdown khỏi văn bản (chỉ check trong text thông thường)
+    2. Lowercase toàn bộ văn bản
+    3. Loại bỏ dấu tiếng Việt
+    4. So khớp fuzzy 80% với "bang can doi ke toan"
+    
+    Lưu ý:
+        Hàm này KHÔNG tìm kiếm trong các bảng markdown, chỉ tìm trong phần text thông thường.
+        Điều này giúp tránh false positive khi các từ khóa xuất hiện trong dữ liệu bảng.
     
     Args:
         text (str): Văn bản cần kiểm tra
@@ -62,8 +107,11 @@ def detect_candoiketoan(text: str, threshold: float = 0.8) -> bool:
         >>> detect_candoiketoan("BANG CAN DOI KE TOAN")   # True
         >>> detect_candoiketoan("Không có gì")            # False
     """
-    # Lowercase và loại bỏ dấu
-    text_lower = text.lower()
+    # Bước 1: Loại bỏ tất cả các bảng markdown (chỉ check trong text thông thường)
+    text_without_tables = _remove_markdown_tables(text)
+    
+    # Bước 2: Lowercase và loại bỏ dấu
+    text_lower = text_without_tables.lower()
     text_khong_dau = remove_diacritics(text_lower)
     
     # Pattern chuẩn để so khớp
