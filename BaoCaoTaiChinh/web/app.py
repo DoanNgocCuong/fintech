@@ -260,6 +260,13 @@ async def get_years(
 
 if __name__ == '__main__':
     import uvicorn
+    import argparse
+    
+    parser = argparse.ArgumentParser(description='FastAPI Financial Dashboard Server')
+    parser.add_argument('--host', type=str, default='0.0.0.0', help='Host to bind to')
+    parser.add_argument('--port', type=int, default=8000, help='Port to bind to')
+    parser.add_argument('--reload', action='store_true', help='Enable auto-reload')
+    args = parser.parse_args()
     
     print("=" * 80)
     print("Financial Dashboard API Server (FastAPI)")
@@ -267,7 +274,7 @@ if __name__ == '__main__':
     print(f"Database: {DB_CONFIG['host']}:{DB_CONFIG['port']}")
     print(f"Database: {DB_CONFIG['database']}")
     print("=" * 80)
-    print("\nStarting server on http://localhost:8000")
+    print(f"\nStarting server on http://{args.host}:{args.port}")
     print("\nAPI Endpoints:")
     print("  - GET /api/health")
     print("  - GET /api/stats")
@@ -277,10 +284,17 @@ if __name__ == '__main__':
     print("  - GET /api/stocks?table=income_statement_raw")
     print("  - GET /api/years?table=income_statement_raw")
     print("\nAPI Documentation:")
-    print("  - Swagger UI: http://localhost:8000/docs")
-    print("  - ReDoc: http://localhost:8000/redoc")
+    print(f"  - Swagger UI: http://{args.host}:{args.port}/docs")
+    print(f"  - ReDoc: http://{args.host}:{args.port}/redoc")
     print("\nOpen index.html in your browser to view the dashboard")
+    if args.reload:
+        print("\n⚠️  Note: For --reload to work properly, use: uvicorn app:app --host 0.0.0.0 --port 8000 --reload")
     print("=" * 80)
     
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
+    # If reload is requested, warn and run without reload (or use import string method)
+    if args.reload:
+        print("\n⚠️  WARNING: Running with --reload requires using uvicorn directly.")
+        print("   Use this command instead: uvicorn app:app --host 0.0.0.0 --port 8000 --reload\n")
+    
+    uvicorn.run(app, host=args.host, port=args.port, reload=False)
 
