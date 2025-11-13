@@ -77,6 +77,11 @@ from utils_prepare_process import (
     update_json_with_ma_so,
     replace_null_in_dict
 )
+from utils_error_logger import (
+    log_simple_error,
+    XLSX_TO_JSON_LOG_LuuChuyenTienTe,
+    MARKDOWN_TO_XLSX_LOG_LuuChuyenTienTe,
+)
 
 try:
     import pandas as pd
@@ -255,7 +260,18 @@ def process_cash_flow_statement(
                 if not skip_missing:
                     raise ValueError("No pages found with cash flow statement")
         except Exception as e:
-            print(f"  ✗ Error: {str(e)}")
+            error_msg = str(e)
+            try:
+                print(f"  ✗ Error: {error_msg}")
+            except UnicodeEncodeError:
+                print(f"  [ERROR] Error: {error_msg}")
+            # Log error to file
+            log_simple_error(
+                MARKDOWN_TO_XLSX_LOG_LuuChuyenTienTe,
+                str(input_file),
+                'markdown_to_xlsx',
+                f"Cash flow statement processing failed: {error_msg}"
+            )
             if not skip_missing:
                 raise            
     
@@ -288,7 +304,18 @@ def process_cash_flow_statement(
             json_file = json_output_file
             print(f"\n✓ JSON file created: {json_file}")
         except Exception as e:
-            print(f"\n✗ Error creating JSON file: {e}")
+            error_msg = str(e)
+            try:
+                print(f"\n✗ Error creating JSON file: {error_msg}")
+            except UnicodeEncodeError:
+                print(f"\n[ERROR] Error creating JSON file: {error_msg}")
+            # Log error to file
+            log_simple_error(
+                XLSX_TO_JSON_LOG_LuuChuyenTienTe,
+                str(output_path),
+                'xlsx_to_json',
+                f"Failed to create JSON from Excel: {error_msg}"
+            )
             # Không raise error, chỉ cảnh báo vì Excel đã được tạo thành công
     
     print("=" * 80)
@@ -434,8 +461,19 @@ def main():
             print(f"  Output file: {result_path}")
             successful_files.append((display_name, result_path))
         except Exception as e:
-            print(f"\n✗ Error processing {display_name}: {e}")
-            failed_files.append((display_name, str(e)))
+            error_msg = str(e)
+            try:
+                print(f"\n✗ Error processing {display_name}: {error_msg}")
+            except UnicodeEncodeError:
+                print(f"\n[ERROR] Error processing {display_name}: {error_msg}")
+            # Log error to file
+            log_simple_error(
+                MARKDOWN_TO_XLSX_LOG_LuuChuyenTienTe,
+                str(md_file),
+                'markdown_to_xlsx',
+                f"Failed to process markdown file: {error_msg}"
+            )
+            failed_files.append((display_name, error_msg))
     
     # Tổng kết
     print("\n" + "=" * 80)

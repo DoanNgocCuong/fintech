@@ -136,24 +136,31 @@ def parse_stock_year_quarter_from_foldername(foldername: str) -> Tuple[Optional[
 
 def collect_json_files(target: Path, recursive: bool = True) -> List[Path]:
     """
-    Collect JSON files from target path.
+    Collect JSON files from target path (only balance sheet files).
     
     Args:
         target: File or directory path
         recursive: If True, recursively search subdirectories. Default: True.
         
     Returns:
-        List of JSON file paths
+        List of JSON file paths (only balance sheet files with "CanDoiKeToan" in name)
     """
     if target.is_file():
-        return [target] if target.suffix.lower() == ".json" else []
+        # Only return if it's a balance sheet JSON file
+        if target.suffix.lower() == ".json" and "CanDoiKeToan" in target.name:
+            return [target]
+        return []
     if target.is_dir():
         if recursive:
             # Recursive search: rglob searches all subdirectories
-            return sorted(p for p in target.rglob("*.json") if p.is_file())
+            # Filter: only balance sheet files
+            return sorted(p for p in target.rglob("*.json") 
+                         if p.is_file() and "CanDoiKeToan" in p.name)
         else:
             # Non-recursive: only current directory level
-            return sorted(p for p in target.glob("*.json") if p.is_file())
+            # Filter: only balance sheet files
+            return sorted(p for p in target.glob("*.json") 
+                         if p.is_file() and "CanDoiKeToan" in p.name)
     return []
 
 
@@ -183,12 +190,18 @@ def process_json_files(json_files: List[Path], overwrite: bool) -> Tuple[int, in
             try:
                 parent_folder = json_file.parent.name
                 if parent_folder:  # Check if parent folder name is not empty
-                    print(f"  ⚠ Cannot parse from filename, trying parent folder: {parent_folder}")
+                    try:
+                        print(f"  ⚠ Cannot parse from filename, trying parent folder: {parent_folder}")
+                    except UnicodeEncodeError:
+                        print(f"  [WARN] Cannot parse from filename, trying parent folder: {parent_folder}")
                     stock, year, quarter = parse_stock_year_quarter_from_foldername(parent_folder)
                     if stock is not None and year is not None:
                         parse_source = "parent folder"
             except Exception as e:
-                print(f"  ⚠ Error accessing parent folder: {e}")
+                try:
+                    print(f"  ⚠ Error accessing parent folder: {e}")
+                except UnicodeEncodeError:
+                    print(f"  [WARN] Error accessing parent folder: {e}")
         
         # If still failed, try parsing from grandparent folder name (in case file is nested deeper)
         if stock is None or year is None:
@@ -196,18 +209,27 @@ def process_json_files(json_files: List[Path], overwrite: bool) -> Tuple[int, in
                 grandparent_path = json_file.parent.parent
                 if grandparent_path.exists() and grandparent_path.name:  # Check if grandparent exists and has a name
                     grandparent_folder = grandparent_path.name
-                    print(f"  ⚠ Cannot parse from parent folder, trying grandparent folder: {grandparent_folder}")
+                    try:
+                        print(f"  ⚠ Cannot parse from parent folder, trying grandparent folder: {grandparent_folder}")
+                    except UnicodeEncodeError:
+                        print(f"  [WARN] Cannot parse from parent folder, trying grandparent folder: {grandparent_folder}")
                     stock, year, quarter = parse_stock_year_quarter_from_foldername(grandparent_folder)
                     if stock is not None and year is not None:
                         parse_source = "grandparent folder"
             except Exception as e:
-                print(f"  ⚠ Error accessing grandparent folder: {e}")
+                try:
+                    print(f"  ⚠ Error accessing grandparent folder: {e}")
+                except UnicodeEncodeError:
+                    print(f"  [WARN] Error accessing grandparent folder: {e}")
         
         # Final check: if still cannot parse, mark as failed
         if stock is None or year is None:
             folder_info = f" (folder: {json_file.parent.name})" if json_file.parent.name else ""
             reason = f"Cannot parse stock/year from filename or folder: {json_file.name}{folder_info}"
-            print(f"  ✗ {reason}")
+            try:
+                print(f"  ✗ {reason}")
+            except UnicodeEncodeError:
+                print(f"  [ERROR] {reason}")
             failed += 1
             failed_files.append(FailedFile(
                 filepath=str(json_file),
@@ -277,13 +299,13 @@ def main() -> None:
     print(f"Successful uploads: {success}")
     print(f"Failed uploads: {failed}")
     
-    # Write failed files to fail.txt
+    # Write failed files to fail_CanDoiKeToan.txt
     if failed_files:
-        fail_log_path = Path("fail.txt")
+        fail_log_path = Path("fail_CanDoiKeToan.txt")
         try:
             with open(fail_log_path, "w", encoding="utf-8") as f:
                 f.write("=" * 80 + "\n")
-                f.write("FAILED FILES LOG\n")
+                f.write("FAILED FILES LOG - CAN DOI KE TOAN\n")
                 f.write("=" * 80 + "\n")
                 f.write(f"Generated at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
                 f.write(f"Total failed files: {len(failed_files)}\n")
@@ -293,9 +315,15 @@ def main() -> None:
                     f.write(f"{idx}. {failed_file.filepath}\n")
                     f.write(f"   Reason: {failed_file.reason}\n\n")
             
-            print(f"\n✓ Failed files logged to: {fail_log_path.absolute()}")
+            try:
+                print(f"\n✓ Failed files logged to: {fail_log_path.absolute()}")
+            except UnicodeEncodeError:
+                print(f"\n[OK] Failed files logged to: {fail_log_path.absolute()}")
         except Exception as e:
-            print(f"\n✗ Error writing to fail.txt: {e}")
+            try:
+                print(f"\n✗ Error writing to fail_CanDoiKeToan.txt: {e}")
+            except UnicodeEncodeError:
+                print(f"\n[ERROR] Error writing to fail_CanDoiKeToan.txt: {e}")
     
     if failed:
         sys.exit(1)

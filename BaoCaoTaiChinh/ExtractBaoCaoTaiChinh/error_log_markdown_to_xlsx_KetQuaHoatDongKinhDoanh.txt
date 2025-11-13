@@ -1,0 +1,2890 @@
+================================================================================
+ERROR LOG
+================================================================================
+Generated at: 2025-11-13 21:23:17
+================================================================================
+
+[2025-11-13 21:23:17] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2014\Nghi_quyet_DHDCD\BIC_2014_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:17] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2014\Tai_lieu_DHDCD\BIC_2014_5_1_1_zip\(1) Thong bao moi hop DHDCD.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:17] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2014\Tai_lieu_DHDCD\BIC_2014_5_1_1_zip\(2) Giay uy quyen.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:19] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2014\Tai_lieu_DHDCD\BIC_2014_5_1_1_zip\(5) Bao cao hoat dong cua Ban Kiem soat.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:19] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2014\Tai_lieu_DHDCD\BIC_2014_5_1_1_zip\(6) Bao cao tham dinh tai chinh.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:20] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2014\Tai_lieu_DHDCD\BIC_2014_5_1_1_zip\(8) To trinh phuong an tang von 2014.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:28] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2015\Nghi_quyet_DHDCD\BIC_2015_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:28] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2015\Tai_lieu_DHDCD\BIC_2015_5_1_1_rar\Cao Cu Tri.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:28] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2015\Tai_lieu_DHDCD\BIC_2015_5_1_1_rar\Dang Thi Hong Phuong.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:28] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2015\Tai_lieu_DHDCD\BIC_2015_5_1_1_rar\Don de cu ong Nguyen Thanh Cong vao BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:29] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2015\Tai_lieu_DHDCD\BIC_2015_5_1_1_rar\Nguyen Thanh Cong.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:29] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2015\Tai_lieu_DHDCD\BIC_2015_5_1_1_rar\Nguyen Thi Quynh Giao.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:29] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2015\Tai_lieu_DHDCD\BIC_2015_5_1_1_rar\Nguyen Trung Kien.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:29] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2015\Tai_lieu_DHDCD\BIC_2015_5_1_1_rar\Pham Quang Tung.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:29] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2015\Tai_lieu_DHDCD\BIC_2015_5_1_1_rar\Thu de cu BIDV.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:29] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2015\Tai_lieu_DHDCD\BIC_2015_5_1_1_rar\Tran Hoai An.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:30] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2015\Tai_lieu_DHDCD\BIC_2015_5_1_1_rar\Vo Hai Nam.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:30] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2015\Tai_lieu_DHDCD\BIC_2015_5_2_1_zip\20150406_1. TB tam ung co tuc 2014.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:32] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2015\Tai_lieu_DHDCD\BIC_2015_5_2_1_zip\20150406_10.TT PA phat hanh rieng le cho co dong chien luoc.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:32] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2015\Tai_lieu_DHDCD\BIC_2015_5_2_1_zip\20150406_6.BC hoat dong cua HDQT nam 2014 va nhiem ky 2010-2015.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:33] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2015\Tai_lieu_DHDCD\BIC_2015_5_2_1_zip\20150406_8.BC tham dinh BCTC 2014.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:33] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2015\Tai_lieu_DHDCD\BIC_2015_5_2_1_zip\20150406_9.BC chi tra thu lao tro cap cho thanh vien HDQT BKS 2014.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:34] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2015\Tai_lieu_DHDCD\BIC_2015_5_2_1_zip\20150406_Thong bao moi hop.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:41] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2016\Tai_lieu_DHDCD\BIC_2016_5_1_1_rar\BIC\3. Bao cao hoat dong cua HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:42] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2016\Tai_lieu_DHDCD\BIC_2016_5_1_1_rar\BIC\6. To trinh ket qua chi tra thu lao phu cap 2015 va ke hoach 2016.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:23:49] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2017\Nghi_quyet_DHDCD\BIC_2017_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:10] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Nghi_quyet_DHDCD\BIC_2020_4_1_1_zip\20200625_20200625 - BIC - NQ DHDCD 2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:11] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Nghi_quyet_DHDCD\BIC_2020_4_2_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:11] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\1. Giay moi hop DHCD 2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:11] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\10 Bao cao ve viec bau nhan su tham gia HDQT va BKS cua BIC nhiem ky moi.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:12] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\10.1 Quy che ung cu bau cu thanh vien HÐQT BKS 2020__.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:12] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\10.8 De cu cua BIDV va FairFax_zip\BIDV _ HDQT _ SYLL_ Ms, Nguyen Thi Ngoc Tu.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:13] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\10.8 De cu cua BIDV va FairFax_zip\BIDV _ HDQT_SYLL _ Mr. Tran Hoai An.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:13] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\10.8 De cu cua BIDV va FairFax_zip\BIDV _ Thu de cu thanh vien BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:13] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\10.8 De cu cua BIDV va FairFax_zip\BIDV _ Thu de cu thanh vien HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:13] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\10.8 De cu cua BIDV va FairFax_zip\BIDV _HDQT _ SYLL _ MR.  Tran Xuan Hoang.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:13] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\10.8 De cu cua BIDV va FairFax_zip\BIDV_ BKS _ SYLL _ Mr.  Do Viet Dung.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:14] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\10.8 De cu cua BIDV va FairFax_zip\BIDV_ BKS _ SYLL _ Ms. Lai Ngan Giang.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:14] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\10.8 De cu cua BIDV va FairFax_zip\BIDV_HDQT_SYLL_Ms Pham Thi Van Khanh.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:14] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\10.8 De cu cua BIDV va FairFax_zip\Fairfax _ BOD Member Nomination Letter.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:14] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\10.8 De cu cua BIDV va FairFax_zip\Fairfax _ BOD Ramaswamy Athappan.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:15] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\10.8 De cu cua BIDV va FairFax_zip\Fairfax _ BOS Member Nomination Letter.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:15] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\10.8 De cu cua BIDV va FairFax_zip\Fairfax _ BOS Osith Ramanathan .md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:15] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\10.8 De cu cua BIDV va FairFax_zip\Fairfax _ BOS Ravishankar Wickneswaran.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:15] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\10.8 De cu cua BIDV va FairFax_zip\Fairfax _BOD Gobinath Arvind Athappan.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:17] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\3.3 _Ke hoach chi tra co tuc 2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:17] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\3.4 _Bảng tính cổ tức dự kiến 2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:18] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\4 Bao cao ket qua hoat dong HDQT 2019 va ke hoach 2020 .md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:19] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\6. Bao cao chi tra thu lap, tro cap HDQT va BKS 2019 va ke hoach 2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:19] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\7. Bao cao ke hoach chuyen tru so chinh.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:19] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\8. Sua doi, bo dung noi dung thay doi TSC trong Dieu le.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:20] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\9. Sua doi, bo sung Quy che quan tri noi bo.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:25] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\9.1 Quy che noi bo ve quan tri Tong cong ty.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:27] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2021\Bao_cao_tai_chinh\BIC_2021_1_5_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:28] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2021\Nghi_quyet_DHDCD\BIC_2021_4_1_1_zip\20210419_20210419 - BIC - NQ DHCD TN.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:32] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2022\Bao_cao_tai_chinh\BIC_2022_1_5_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:34] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2022\Nghi_quyet_DHDCD\BIC_2022_4_2_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:38] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2022\Tai_lieu_DHDCD\BIC_2022_5_2_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:48] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2024\Nghi_quyet_DHDCD\BIC_2024_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:52] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2024\Tai_lieu_DHDCD\BIC_2024_5_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:55] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2025\Bao_cao_tai_chinh\_.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:24:57] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC\2025\Tai_lieu_DHDCD\BIC_2025_5_1_1_zip\20250307 - BIC - Thong bao moi hop Dai hoi dong co dong thuong nien BIC 2025_Vie.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:10] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2014\Tai_lieu_DHDCD\BMI_2014_5_1_1_rar\ket qua 2013 - ke hoach 2014_rar\KHKD 2014.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:12] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2014\Tai_lieu_DHDCD\BMI_2014_5_1_1_rar\ket qua 2013 - ke hoach 2014_rar\KQKD 2013.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:12] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2014\Tai_lieu_DHDCD\BMI_2014_5_1_1_rar\tai lieu_rar\Phan phoi loi nhuan 2013.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:12] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2014\Tai_lieu_DHDCD\BMI_2014_5_1_1_rar\tai lieu_rar\Quyet toan thu lao HDQT & BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:15] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2014\Tai_lieu_DHDCD\BMI_2014_5_1_1_rar\tai lieu_rar\Sua doi dieu le.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:24] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2015\Tai_lieu_DHDCD\BMI_2015_5_1_1_rar\Bao cao HDQT 2014.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:25] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2015\Tai_lieu_DHDCD\BMI_2015_5_1_1_rar\Thong bao moi hop CD 2015.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:25] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2015\Tai_lieu_DHDCD\BMI_2015_5_1_1_rar\To trinh quy che to chuc dai hoi.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:25] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2015\Tai_lieu_DHDCD\BMI_2015_5_1_1_rar\To trinh quyet toan thu lao HDQT, BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:26] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2015\Tai_lieu_DHDCD\BMI_2015_5_1_1_rar\To trinh thong qua KQKD 2014.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:26] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2015\Tai_lieu_DHDCD\BMI_2015_5_1_1_rar\Trinh KHKD 2015.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:27] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2015\Tai_lieu_DHDCD\BMI_2015_5_1_1_rar\Trinh lua cho cong ty kiem toan doc lap 2015.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:27] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2015\Tai_lieu_DHDCD\BMI_2015_5_1_1_rar\Trinh phan phoi loi nhuan 2014.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:27] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2015\Tai_lieu_DHDCD\BMI_2015_5_1_1_rar\Trinh quy che de cu, bau cu.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:31] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2015\Tai_lieu_DHDCD\BMI_2015_5_1_1_rar\TT sua doi dieu le to chuc va hoat dong cua BMI.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:38] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2016\Nghi_quyet_DHDCD\BMI_2016_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:39] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2016\Tai_lieu_DHDCD\BMI_2016_5_1_1_rar\BMI\BC cua HDQT 2015 dinh huong 2016.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:39] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2016\Tai_lieu_DHDCD\BMI_2016_5_1_1_rar\BMI\Giay UQ.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:40] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2016\Tai_lieu_DHDCD\BMI_2016_5_1_1_rar\BMI\Quy che DHDCD.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:40] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2016\Tai_lieu_DHDCD\BMI_2016_5_1_1_rar\BMI\Thong bao moi hop DHDCD.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:40] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2016\Tai_lieu_DHDCD\BMI_2016_5_1_1_rar\BMI\To trinh thong qua quy che DHDCD.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:43] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2016\Tai_lieu_DHDCD\BMI_2016_5_1_1_rar\BMI\TT Phan phoi loi nhuan.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:44] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2016\Tai_lieu_DHDCD\BMI_2016_5_1_1_rar\BMI\TT phe duyet ke hoach kd 2016.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:44] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2016\Tai_lieu_DHDCD\BMI_2016_5_1_1_rar\BMI\TT Phuong an phat hanh co phieu.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:44] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2016\Tai_lieu_DHDCD\BMI_2016_5_1_1_rar\BMI\TT quyet toan thu lao khen thuong.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:51] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2017\Nghi_quyet_DHDCD\BMI_2017_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:53] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2017\Tai_lieu_DHDCD\BMI_2017_5_1_1_rar\BC tham tra cua BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:53] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2017\Tai_lieu_DHDCD\BMI_2017_5_1_1_rar\Chon Cty kiem toan 2016.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:53] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2017\Tai_lieu_DHDCD\BMI_2017_5_1_1_rar\Chuong trinh dai hoi.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:53] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2017\Tai_lieu_DHDCD\BMI_2017_5_1_1_rar\Danh sach thay doi TVHĐQT BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:55] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2017\Tai_lieu_DHDCD\BMI_2017_5_1_1_rar\Du thao NQ.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:55] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2017\Tai_lieu_DHDCD\BMI_2017_5_1_1_rar\KHKD 2017.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:56] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2017\Tai_lieu_DHDCD\BMI_2017_5_1_1_rar\Mien nhiem TVHĐQT BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:56] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2017\Tai_lieu_DHDCD\BMI_2017_5_1_1_rar\Phan phoi loi nhuan 2016.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:57] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2017\Tai_lieu_DHDCD\BMI_2017_5_1_1_rar\Quy che dai hoi.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:57] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2017\Tai_lieu_DHDCD\BMI_2017_5_1_1_rar\Quyet toan thu lao.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:25:57] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2017\Tai_lieu_DHDCD\BMI_2017_5_1_1_rar\Thu moi tham du dai hoi.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:02] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2018\Nghi_quyet_DHDCD\BMI_2018_4_1_1_zip\20180423_20180423 - BMP - BB DHDCDTN 2018.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:02] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2018\Nghi_quyet_DHDCD\BMI_2018_4_1_1_zip\20180423_20180423 - BMP - NQ DHDCDTN 2018.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:03] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2018\Tai_lieu_DHDCD\BMI_2018_5_1_1_rar\1_To trinh KHKD 2018.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:03] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2018\Tai_lieu_DHDCD\BMI_2018_5_1_1_rar\1_To trinh PPLN 2017.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:05] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2018\Tai_lieu_DHDCD\BMI_2018_5_1_1_rar\Bao cao BKS danh gia KQKD 2017 KQHD HDQT BDH.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:06] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2018\Tai_lieu_DHDCD\BMI_2018_5_1_1_rar\Quy che de cu bau cu bo sung tv hdqt bks.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:07] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2018\Tai_lieu_DHDCD\BMI_2018_5_1_1_rar\Quy che lam viec cua Dai hoi 2018.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:07] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2018\Tai_lieu_DHDCD\BMI_2018_5_1_1_rar\Thong bao moi hop DHDCD 2018.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:07] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2018\Tai_lieu_DHDCD\BMI_2018_5_1_1_rar\Thong tin ung vien BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:08] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2018\Tai_lieu_DHDCD\BMI_2018_5_1_1_rar\Thong tin ung vien HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:08] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2018\Tai_lieu_DHDCD\BMI_2018_5_1_1_rar\to trinh khen thuong HDQT, BKS_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:08] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2018\Tai_lieu_DHDCD\BMI_2018_5_1_1_rar\To trinh mien nhiem TV HDQT BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:08] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2018\Tai_lieu_DHDCD\BMI_2018_5_1_1_rar\To trinh thong qua danh sach ung vien HDQT BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:09] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2018\Tai_lieu_DHDCD\BMI_2018_5_1_1_rar\To trinh uy quyen HDQT ban hanh Quy che quan tri noi bo.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:09] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2018\Tai_lieu_DHDCD\BMI_2018_5_1_1_rar\Tờ trình lựa chọn kiểm toán độc lập 2018_18 Apr 2018.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:15] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Nghi_quyet_DHDCD\BMI_2019_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:16] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Nghi_quyet_DHDCD\BMI_2019_4_2_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:16] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\2019-04-24 (2) (1).md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:17] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\Bao cao HDQT 2018 va giai doan 2014 2018 reviewed_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:20] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\BKS-2018_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:20] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\BMI_Don de cu HDQT BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:20] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\BMI_Don ung cu HDQT va BKS reviewed.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:21] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\BMI_Giay tham du UQ DHDCD 2019.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:22] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\BMI_Thong tin ung vien HDQT BKS 20 4 2019.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:22] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\Chuong-trinh-DHDCD-2019.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:22] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\Phu luc 03 So yeu ly lich TV HDQT (19.03.2018).md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:22] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\Phu luc 04 So yeu ly lich TV BKS  (19.03.2018).md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:23] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\Quy-che-de-cu-bau-cu.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:24] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\Quy-che-DHDCD.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:24] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\SUA DOI DIEU LE 2019 TRINH DHDCD 18 04 2019 reviewed PC 1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:24] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\Sua-doi-dieu-le.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:24] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\To trinh lua chon kiem toan 2019 cua BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:24] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\TT-de-cu-TVHDQT-BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:24] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\TT-noi-room-nuoc-ngoai_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:25] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\TT-phan-phoi-loi-nhuan-2018_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:25] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\TT-phe-duyet-BCTC-2018-da-duoc-kiem-toan.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:25] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\TT-quyet-toan-thu-lao-HDQT-BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:31] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2020\Nghi_quyet_DHDCD\BMI_2020_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:31] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2020\Tai_lieu_DHDCD\BMI_2020_5_1_1_rar\BMI. Chuong trinh DHDCD 2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:32] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2020\Tai_lieu_DHDCD\BMI_2020_5_1_1_rar\BMI. Don de cu TVBKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:32] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2020\Tai_lieu_DHDCD\BMI_2020_5_1_1_rar\BMI. Don ung cu TVHDQT, TVBKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:33] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2020\Tai_lieu_DHDCD\BMI_2020_5_1_1_rar\BMI. Quy che de cu, bau cu bo sung TV HDQT va BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:34] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2020\Tai_lieu_DHDCD\BMI_2020_5_1_1_rar\BMI. Quy che lam viec DHDCD 2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:34] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2020\Tai_lieu_DHDCD\BMI_2020_5_1_1_rar\BMI. So yeu ly lich TV BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:35] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2020\Tai_lieu_DHDCD\BMI_2020_5_1_1_rar\BMI. So yeu ly lich TV HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:35] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2020\Tai_lieu_DHDCD\BMI_2020_5_1_1_rar\BMI. Thu moi tham du DHDCDTN 2020 gui Co dong.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:42] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210331_001. BMI. NQ 0351.2021.HDQT to chuc DHDCD 2021..md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:42] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210331_002. BMI. Thu moi tham du DHDCDTN 2020 ngay 23.04.2021 gui Co dong-dp chuy_n d_i.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:42] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210331_003. BMI. Mau so 01. Giay UQ tham du DHCD-dp chuy_n d_i.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:42] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210331_004. BMI. Mau so 02. Giay UQ tham du DHCD-dp chuy_n d_i.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:42] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210331_005. BMI. Don de cu TVHDQT-dp chuy_n d_i.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:44] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210331_006. BMI. Quy che to chuc DHDCD 2020 truc tuyen-dp chuy_n d_i.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:45] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210331_007. BMI. Quy che de cu, bau cu bo sung TV HDQT-dp chuy_n d_i.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:46] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210331_008. BMI. Bßo cßo ho_t d_ng H-QT-dp chuy_n d_i.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:46] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210331_009. BMI. BKS trinh DHCDTN 2021 ve lua chon don vi Kiem toan doc lap-dp chuy_n d_i.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:48] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210331_011. BMI. To trinh Thu lao HDQT BKS 2019 va 2020-dp chuy_n d_i.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:48] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210331_013. BMI. T_ tr8nh H-QT v_ vi_c phO duy_t d_ th_o -i_u l_ va cßc quy ch_ n_i b_ B_o minh..md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:54] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210331_014. BMI. D_ th_o -i_u l_..md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:26:59] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210331_015. BMI. D_ th_o Quy ch_ n_i b_ qu_n tr_..md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:01] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210331_016. BMI. D_ th_o Quy ch_ H-QT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:03] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210331_017.BMI. D_ th_o Quy ch_ BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:03] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210331_018. BMI. Du thao Bien ban DHDCDTN nam 2020-dp chuy_n d_i.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:04] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210331_018. BMI. To trinh Mien nhiem TV HDQT nam 2021-dp chuy_n d_i.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:04] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210331_019. BMI. Du thao Nghi quyet DHDCDTN nam 2020-dp chuy_n d_i.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:04] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210331_20210331 - BMI - CBTT Tai lieu hop DHDCD TN nam 2021.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:12] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2022\Nghi_quyet_DHDCD\BMI_2022_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:16] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2022\Nghi_quyet_DHDCD\BMI_2022_4_2_1_zip\20220429_20220429___bmi___cbtt_bo_sung_noi_dung_bien_ban_dhdcd_nam_2022.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:18] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2022\Nghi_quyet_DHDCD\BMI_2022_4_2_1_zip\BMI_Nghiquyet_DHCD thuong nien_2022.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:18] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2022\Tai_lieu_DHDCD\BMI_2022_5_2_1_zip\01.CHUONG TRINH DAI HOI.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:19] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2022\Tai_lieu_DHDCD\BMI_2022_5_2_1_zip\02.QUY CHE LAM VIEC.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:20] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2022\Tai_lieu_DHDCD\BMI_2022_5_2_1_zip\03.BAO CAO HOAT DONG HDQT && DINH HUONG 2022.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:21] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2022\Tai_lieu_DHDCD\BMI_2022_5_2_1_zip\04.BAO CAO CUA BDH VA KET QUA HOAT DONG KINH DOANH 2021.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:21] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2022\Tai_lieu_DHDCD\BMI_2022_5_2_1_zip\07.TO TRINH CHIA CO TUC VA PHAN PHOI LOI NHUAN.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:22] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2022\Tai_lieu_DHDCD\BMI_2022_5_2_1_zip\08. TO TRINH KE HOACH KINH DOANH.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:24] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2022\Tai_lieu_DHDCD\BMI_2022_5_2_1_zip\09.TO TRINH + CHIEN LUOC KD.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:24] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2022\Tai_lieu_DHDCD\BMI_2022_5_2_1_zip\1. Thong Bao Moi Hop.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:24] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2022\Tai_lieu_DHDCD\BMI_2022_5_2_1_zip\12. TO TRINH CHI TRA THU LAO.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:25] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2022\Tai_lieu_DHDCD\BMI_2022_5_2_1_zip\13. DU THAO BIEN BAN.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:25] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2022\Tai_lieu_DHDCD\BMI_2022_5_2_1_zip\14. DU THAO NGHI QUYET.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:25] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2022\Tai_lieu_DHDCD\BMI_2022_5_2_1_zip\20220407 - BMI - CBTT tai lieu DHDCDTN nam 2022 (1).md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:25] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2022\Tai_lieu_DHDCD\BMI_2022_5_2_1_zip\3. Mau Uy Quyen 01.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:26] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2022\Tai_lieu_DHDCD\BMI_2022_5_2_1_zip\4. Mau Uy Quyen 02.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:32] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2023\Nghi_quyet_DHDCD\BMI_2023_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:32] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2023\Tai_lieu_DHDCD\BMI_2023_5_1_1_rar\1.2.Mau giay UQ so 1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:33] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2023\Tai_lieu_DHDCD\BMI_2023_5_1_1_rar\1.3.Mau giay UQ so 2.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:33] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2023\Tai_lieu_DHDCD\BMI_2023_5_1_1_rar\1.Thong bao moi hop truc tuyen DHDCD 2023.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:35] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2023\Tai_lieu_DHDCD\BMI_2023_5_1_1_rar\CBTT Chuong trinh DHDCD 2023 (28.03.2023)_compressed.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:38] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2023\Tai_lieu_DHDCD\BMI_2023_5_1_1_rar\Du thao full bo tai lieu DHDCD 2023 lan 2 (2)_compressed.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:41] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2023\Tai_lieu_DHDCD\BMI_2023_5_1_1_rar\Tai lieu DHDCD lan 3-đã nén.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:51] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2024\Nghi_quyet_DHDCD\BMI_2024_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:54] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2024\Nghi_quyet_DHDCD\BMI_2024_4_2_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:54] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2024\Tai_lieu_DHDCD\BMI_2024_5_1_1_zip\19.Dự thảo Biên bản ĐHĐCĐBT năm 2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:55] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2024\Tai_lieu_DHDCD\BMI_2024_5_1_1_zip\20.Dự thảo Nghị quyết ĐHCĐBT năm 2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:55] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2024\Tai_lieu_DHDCD\BMI_2024_5_1_1_zip\20241206 - BMI - CBTT  duong dan tai lieu hop DHDCD bat thuong nam 2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:56] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2024\Tai_lieu_DHDCD\BMI_2024_5_1_1_zip\4. BMI - Quy che lam viec (truc tuyen)_khong bau cu.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:56] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2024\Tai_lieu_DHDCD\BMI_2024_5_1_1_zip\Chuong trinh DHDCD bat thuong nam 2024_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:57] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2024\Tai_lieu_DHDCD\BMI_2024_5_1_1_zip\GUQ so 1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:57] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2024\Tai_lieu_DHDCD\BMI_2024_5_1_1_zip\GUQ so 2.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:27:57] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2024\Tai_lieu_DHDCD\BMI_2024_5_1_1_zip\Thong bao moi hop truc tuyen DHDCD bat thuong nam 2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:01] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2024\Tai_lieu_DHDCD\BMI_2024_5_2_1_zip\Bo tai lieu lan 1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:01] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2024\Tai_lieu_DHDCD\BMI_2024_5_2_1_zip\GUQ so 1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:02] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2024\Tai_lieu_DHDCD\BMI_2024_5_2_1_zip\GUQ so 2.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:02] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2024\Tai_lieu_DHDCD\BMI_2024_5_2_1_zip\TB moi hop.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:05] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2024\Tai_lieu_DHDCD\BMI_2024_5_2_1_zip\Thong bao de cu, ung cu TV.HDQT BKS nhiem ky 2024-2029_full bo.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:09] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2025\Bao_cao_tai_chinh\BMI_2025_1_2_1_zip\BCTC QUY 2 NAM 2025 BAN TIENG ANH.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:19] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2025\Nghi_quyet_DHDCD\BMI_2025_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:19] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\1. BMI - Chuong trinh DHCDTN nam 2025 (30.03.2025)(1).md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:19] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\11.Tờ trình thù lao HĐQT, BKS năm 2024 và phương án năm 2025.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:20] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\12.BMI2025.Trinh DHCD lua chon KT năm 2025.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:20] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\13.Tờ trình miễn nhiệm TV.HĐQT nhiệm kỳ 2024 - 2029.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:20] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\14.Tờ trình bầu cử bổ sung TV.HĐQT nhiệm kỳ 2024 - 2029.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:21] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\15.Dự thảo Biên bản ĐHĐCĐTN năm 2025.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:21] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\16.Dự thảo Nghị quyết ĐHCĐTN năm 2025.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:23] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\2. BMI - Quy che lam viec (truc tuyen)_PC y kien - V 4.12.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:23] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\3. BMI - Quy che bau cu HDQT (truc tuyen) (06.03.2025)(1).md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:25] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\4. Báo cáo hoạt động của HĐQT năm 2024 và định hướng năm 2025(1).md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:26] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\5. Bao cao cua BDH ve KQKD nam 2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:26] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\6. BMI 2025. Báo cáo BKS trình ĐHCĐ(1).md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:26] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\7.Tờ trình phê duyệt BCTC năm 2024 đã kiểm toán.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:26] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\8.Tờ trình phương án phân phối lợi nhuận năm 2024(1).md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:27] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\9. Tờ trình phương án phát hành cổ phiếu để trả cổ tức năm 2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:27] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\Mau giay Uy quyen so 1 1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:28] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\Mau giay Uy quyen so 2 1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:31] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\Thong bao de cu - ung cu TV.HDQT nhiem ky 2024-2029 1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:31] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\Thong bao moi hop 1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:37] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2014\Nghi_quyet_DHDCD\BVH_2014_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:39] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2014\Tai_lieu_DHDCD\BVH_2014_5_1_1_rar\To-trinh-thu-lao-HDQT-va-BKS(NhieuFile)\Bao cao cua HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:40] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2014\Tai_lieu_DHDCD\BVH_2014_5_1_1_rar\To-trinh-thu-lao-HDQT-va-BKS(NhieuFile)\Bao cao TGD.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:40] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2014\Tai_lieu_DHDCD\BVH_2014_5_1_1_rar\To-trinh-thu-lao-HDQT-va-BKS(NhieuFile)\CBTT NQ HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:40] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2014\Tai_lieu_DHDCD\BVH_2014_5_1_1_rar\To-trinh-thu-lao-HDQT-va-BKS(NhieuFile)\QD thanh lap ban Kiem tra tu cach co dong.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:40] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2014\Tai_lieu_DHDCD\BVH_2014_5_1_1_rar\To-trinh-thu-lao-HDQT-va-BKS(NhieuFile)\To trinh lua chon don vi kiem toan.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:41] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2014\Tai_lieu_DHDCD\BVH_2014_5_1_1_rar\To-trinh-thu-lao-HDQT-va-BKS(NhieuFile)\To trinh phan phoi LNST.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:41] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2014\Tai_lieu_DHDCD\BVH_2014_5_1_1_rar\To-trinh-thu-lao-HDQT-va-BKS(NhieuFile)\to trinh Quy che to chuc Dai hoi.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:41] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2014\Tai_lieu_DHDCD\BVH_2014_5_1_1_rar\To-trinh-thu-lao-HDQT-va-BKS(NhieuFile)\To trinh thu lao HDQT va BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:45] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2015\Nghi_quyet_DHDCD\BVH_2015_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:46] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2015\Nghi_quyet_DHDCD\BVH_2015_4_2_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:46] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2015\Tai_lieu_DHDCD\BVH_2015_5_1_1_rar\402.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:47] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2015\Tai_lieu_DHDCD\BVH_2015_5_1_1_rar\417 tt thong qua  quy che to chuc DHDCD.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:48] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2015\Tai_lieu_DHDCD\BVH_2015_5_1_1_rar\418 thanh lap ban kiem tra tu cach co dong.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:50] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2015\Tai_lieu_DHDCD\BVH_2015_5_1_1_rar\419 de cu thanh vien HDQT va BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:51] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2015\Tai_lieu_DHDCD\BVH_2015_5_1_1_rar\420 Quy che bau cu HDQT va thanh vien BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:51] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2015\Tai_lieu_DHDCD\BVH_2015_5_1_1_rar\421 to trinh thong qua Doan chu tich ban bau cu va kiem phieu.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:52] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2015\Tai_lieu_DHDCD\BVH_2015_5_1_1_rar\422 bao cao hoat dong hdqt.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:54] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2015\Tai_lieu_DHDCD\BVH_2015_5_1_1_rar\423 bao cao tong giam doc ve ket qua kinh doanh 2014 va kh 2015.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:54] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2015\Tai_lieu_DHDCD\BVH_2015_5_1_1_rar\424 tt phe duyet thu lao cua hdqt va ban ks.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:54] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2015\Tai_lieu_DHDCD\BVH_2015_5_1_1_rar\425 tt phuong an su dung loi nhuan sau thue.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:54] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2015\Tai_lieu_DHDCD\BVH_2015_5_1_1_rar\426 tt bo sung nganh nghe kinh doanh.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:55] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2015\Tai_lieu_DHDCD\BVH_2015_5_1_1_rar\Thong bao ngay dang ky cuoi cung tham du DHDCD.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:55] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2015\Tai_lieu_DHDCD\BVH_2015_5_1_1_rar\Thu moi DHCD 2015.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:56] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2015\Tai_lieu_DHDCD\BVH_2015_5_1_1_rar\TT 427.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:58] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2015\Tai_lieu_DHDCD\BVH_2015_5_1_1_rar\VPK_Du Thao.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:28:58] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2015\Tai_lieu_DHDCD\BVH_2015_5_2_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:06] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Nghi_quyet_DHDCD\BVH_2016_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:06] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\01_0 Chuong trinh Dai hoi 2016_26_4_2016-upload.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:06] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\01_1 Meeting announcement - general -final.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:06] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\03_1 Comfirmation_Authorization Letter - to organization - final A.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:06] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\03_2 Confirmation_Authorization Letter - to individual-final A.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:07] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\1109s.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:07] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\1114.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:08] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\1118.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:08] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\1119.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:12] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\bctc TA HN 2015 audited.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:14] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\BCTC TA rieng 2015 audited.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:14] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\Du kien noi dung chuong trinh.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:15] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\du thao nghi quyet dhdcd.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:16] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\Giay xac nhan ca nhan.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:16] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\Giay xac nhan hoac uy quyen tham du (codong).md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:16] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\Giay xac nhan hoac uy quyen tham du (tochuc).md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:16] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\Giay xac nhan to chuc.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:17] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\No 1109_ Submission on AGM Organization Regulation.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:17] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\No 1113_ Proposal on the 2015 audited financial statements-signed.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:17] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\No 1114_ Proposal on Remuneration of the BOD and the SB.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:17] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\No 1118_ Proposal on the replacement of BOD members of BVH.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:18] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\No 1119_ Submission to approve election regulation NEW.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:18] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\Thong bao moi hop(1).md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:18] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\Thong bao moi hop.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:24] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2017\Nghi_quyet_DHDCD\BVH_2017_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:25] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2017\Tai_lieu_DHDCD\BVH_2017_5_1_1_rar\02- Bao cao cua TGD.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:26] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2017\Tai_lieu_DHDCD\BVH_2017_5_1_1_rar\05-TT lua chon DVKT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:27] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2017\Tai_lieu_DHDCD\BVH_2017_5_1_1_rar\737-QC to chuc DHDCD 2017.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:28] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2017\Tai_lieu_DHDCD\BVH_2017_5_1_1_rar\BCKQHĐ.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:28] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2017\Tai_lieu_DHDCD\BVH_2017_5_1_1_rar\CBTT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:28] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2017\Tai_lieu_DHDCD\BVH_2017_5_1_1_rar\ChuongTrinh.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:29] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2017\Tai_lieu_DHDCD\BVH_2017_5_1_1_rar\Du thao bien ban hop DHDCD2017.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:29] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2017\Tai_lieu_DHDCD\BVH_2017_5_1_1_rar\du thao nghi quyet dhdcd 2017.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:29] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2017\Tai_lieu_DHDCD\BVH_2017_5_1_1_rar\Pages  04 from 735 CV-4.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:30] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2017\Tai_lieu_DHDCD\BVH_2017_5_1_1_rar\Pages 03 from 735 CV-3.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:30] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2017\Tai_lieu_DHDCD\BVH_2017_5_1_1_rar\ThuMoi.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:33] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2017\Tai_lieu_DHDCD\BVH_2017_5_1_1_rar\TT.TruSoChinh.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:39] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2018\Nghi_quyet_DHDCD\BVH_2018_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:40] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2018\Tai_lieu_DHDCD\BVH_2018_5_1_1_rar\725.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:40] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2018\Tai_lieu_DHDCD\BVH_2018_5_1_1_rar\726 QD TL Ban kiem tra tu cach co dong.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:40] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2018\Tai_lieu_DHDCD\BVH_2018_5_1_1_rar\727 TTr thong qua QC to chuc DH.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:41] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2018\Tai_lieu_DHDCD\BVH_2018_5_1_1_rar\729 BC TGD.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:43] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2018\Tai_lieu_DHDCD\BVH_2018_5_1_1_rar\731 BC HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:45] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2018\Tai_lieu_DHDCD\BVH_2018_5_1_1_rar\733 TTr thu lao.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:45] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2018\Tai_lieu_DHDCD\BVH_2018_5_1_1_rar\734 TTr PPLN.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:45] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2018\Tai_lieu_DHDCD\BVH_2018_5_1_1_rar\735 TTr Dieu le va QC Quan tri.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:45] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2018\Tai_lieu_DHDCD\BVH_2018_5_1_1_rar\736 TTr bau TV HDQT, KSV.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:46] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2018\Tai_lieu_DHDCD\BVH_2018_5_1_1_rar\737 TB de cu, ung cu.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:46] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2018\Tai_lieu_DHDCD\BVH_2018_5_1_1_rar\738 TTr QC bau cu.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:47] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2018\Tai_lieu_DHDCD\BVH_2018_5_1_1_rar\AGM - Du thao Bien ban DHDCD thuong nien 2018 (up mang)A.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:47] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2018\Tai_lieu_DHDCD\BVH_2018_5_1_1_rar\AGM1 - Du thao Nghi quyet DHDCD thuong nien 2018 (up mang).md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:48] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2018\Tai_lieu_DHDCD\BVH_2018_5_1_1_rar\chuong trinh.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:48] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2018\Tai_lieu_DHDCD\BVH_2018_5_1_1_rar\CV 1249 cua So Ke hoach Dau tu.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:48] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2018\Tai_lieu_DHDCD\BVH_2018_5_1_1_rar\Final_Bao cao thuong nien 2017 FULL.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:48] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2018\Tai_lieu_DHDCD\BVH_2018_5_1_1_rar\PHIEU CAU HOI 2018.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:49] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2018\Tai_lieu_DHDCD\BVH_2018_5_1_1_rar\uy quyen ca nhan.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:49] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2018\Tai_lieu_DHDCD\BVH_2018_5_1_1_rar\uy quyen to chuc.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:52] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Nghi_quyet_DHDCD\BVH_2019_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:55] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Nghi_quyet_DHDCD\BVH_2019_4_2_1_rar\20190701_20190701 - BVH -  BB va  DHDCD TN NAM 2019.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:56] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_1_1_rar\1532s (1).md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:29:56] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_1_1_rar\1532s.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:00] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_1_1_rar\1_1 Charter of BVH.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:00] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_1_1_rar\BB Kiem phieu.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:01] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_1_1_rar\Du thao BB Kiem phieu.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:04] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_1_1_rar\du thao nghi quyet.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:05] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_1_1_rar\Opion Form.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:05] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_1_1_rar\phieu lay y kien.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:06] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_1_1_rar\Proposal.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:06] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_1_1_rar\Resolution.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:06] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_1_1_rar\To trinh 1530.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:06] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\01.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:07] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\02.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:07] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\03.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:07] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\03_10_ So yeu ly lich ung vien HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:07] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\03_11_ So yeu ly lich ung vien KSV.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:08] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\44.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:08] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\505.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:08] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\5_ TTr phe duyet thu lao.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:09] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\6_ TTr phe duyet LNST.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:09] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\738s.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:10] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\739.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:11] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\741.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:12] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\745.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:12] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\747.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:14] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\748.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:15] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\7_ TTr  PA phat hanh CP rieng le.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:18] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\bien ban.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:18] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\chuong trinh DH 24 06.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:18] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\Giay xac nhan uy quyen 2019 ca nhan.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:18] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\Giay xac nhan uy quyen 2019 to chuc.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:18] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\NQ17_ KH to chuc DHDCD.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:19] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\Thu moi moi 19 06.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:23] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2020\Nghi_quyet_DHDCD\BVH_2020_4_1_1_zip\20200630_20200630 - BVH - BIEN BAN HOP DHDCDTN 2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:23] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2020\Nghi_quyet_DHDCD\BVH_2020_4_1_1_zip\20200630_20200630 - BVH - NGHI QUYET HOP DHDCDTN 2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:23] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2020\Tai_lieu_DHDCD\BVH_2020_5_1_1_rar\766 tieng viet A.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:24] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2020\Tai_lieu_DHDCD\BVH_2020_5_1_1_rar\766 tieng viet B.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:24] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2020\Tai_lieu_DHDCD\BVH_2020_5_1_1_rar\766 tieng viet C.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:24] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2020\Tai_lieu_DHDCD\BVH_2020_5_1_1_rar\766 tieng viet.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:25] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2020\Tai_lieu_DHDCD\BVH_2020_5_1_1_rar\775 tieng viet.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:25] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2020\Tai_lieu_DHDCD\BVH_2020_5_1_1_rar\776 tieng viet.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:26] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2020\Tai_lieu_DHDCD\BVH_2020_5_1_1_rar\777 tieng viet.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:27] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2020\Tai_lieu_DHDCD\BVH_2020_5_1_1_rar\779  Tieng Viet 22 06.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:28] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2020\Tai_lieu_DHDCD\BVH_2020_5_1_1_rar\781 tieng viet.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:28] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2020\Tai_lieu_DHDCD\BVH_2020_5_1_1_rar\783 tieng viet.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:29] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2020\Tai_lieu_DHDCD\BVH_2020_5_1_1_rar\784 tieng viet.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:29] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2020\Tai_lieu_DHDCD\BVH_2020_5_1_1_rar\785 tieng viet.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:30] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2020\Tai_lieu_DHDCD\BVH_2020_5_1_1_rar\786 tieng viet.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:31] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2020\Tai_lieu_DHDCD\BVH_2020_5_1_1_rar\du thao bien ban AGM 2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:31] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2020\Tai_lieu_DHDCD\BVH_2020_5_1_1_rar\du thao nghi quyet AGM 2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:35] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2021\Nghi_quyet_DHDCD\BVH_2021_4_1_1_rar\20211231_20211230 - BVH - Bien ban kiem phieu lay y kien co dong.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:35] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2021\Nghi_quyet_DHDCD\BVH_2021_4_1_1_rar\20211231_20211230 - BVH - Cong van cong bo thong tin.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:36] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2021\Nghi_quyet_DHDCD\BVH_2021_4_2_1_zip\20210701_20210630 - BVH - BIEN BAN HOP DHCDTN 2021.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:37] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2021\Nghi_quyet_DHDCD\BVH_2021_4_2_1_zip\20210701_20210630 - BVH - NQ DHCDTN 2021.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:37] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2021\Tai_lieu_DHDCD\BVH_2021_5_1_1_zip\1583.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:37] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2021\Tai_lieu_DHDCD\BVH_2021_5_1_1_zip\1584.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:37] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2021\Tai_lieu_DHDCD\BVH_2021_5_1_1_zip\1585.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:37] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2021\Tai_lieu_DHDCD\BVH_2021_5_1_1_zip\1586.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:38] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2021\Tai_lieu_DHDCD\BVH_2021_5_1_1_zip\1588s.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:41] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2021\Tai_lieu_DHDCD\BVH_2021_5_1_1_zip\19_11_2021-Dieu-le-TĐBV-du-thao-sua-doi-lan-thu-13_CLEAN.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:42] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2021\Tai_lieu_DHDCD\BVH_2021_5_1_1_zip\3_-BB-kiểm-phiếu_TGPC.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:42] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2021\Tai_lieu_DHDCD\BVH_2021_5_1_1_zip\4_-Du-thao-NQ-DHDCD-TGPC (1).md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:42] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2021\Tai_lieu_DHDCD\BVH_2021_5_1_1_zip\phieu lay y kien.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:47] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Nghi_quyet_DHDCD\BVH_2022_4_1_1_zip\20220701_20220630___bvh___bien_ban_hop_dhdcd.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:48] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Nghi_quyet_DHDCD\BVH_2022_4_1_1_zip\20220701_20220630___bvh___nghi_quyet_01_dhdcd_thuong_nien_2022.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:48] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Nghi_quyet_DHDCD\BVH_2022_4_1_1_zip\20220701_20220630___bvh___nghi_quyet_02_dhdcd_2022_.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:48] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Tai_lieu_DHDCD\BVH_2022_5_1_1_zip\1100.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:49] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Tai_lieu_DHDCD\BVH_2022_5_1_1_zip\20220630-BVH-Bien-ban-hop-DHDCD.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:53] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Tai_lieu_DHDCD\BVH_2022_5_1_1_zip\20220630-BVH-Dieu-le-lan-thu-muoi-bon.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:54] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Tai_lieu_DHDCD\BVH_2022_5_1_1_zip\20220630-BVH-Nghi-quyet-01-DHDCD-thuong-nien-2022.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:54] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Tai_lieu_DHDCD\BVH_2022_5_1_1_zip\20220630-BVH-NGHI-QUYET-02-DHDCD-2022.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:54] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Tai_lieu_DHDCD\BVH_2022_5_1_1_zip\601-thu-moi-dhcd.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:55] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Tai_lieu_DHDCD\BVH_2022_5_1_1_zip\602-tt-quy-che-to-chuc-dh.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:55] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Tai_lieu_DHDCD\BVH_2022_5_1_1_zip\603-thanh-lap-ban-kiem-tra-tu-cach.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:56] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Tai_lieu_DHDCD\BVH_2022_5_1_1_zip\608-tv.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:57] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Tai_lieu_DHDCD\BVH_2022_5_1_1_zip\611-thay-doi-dia-chi-tru-so-chinh.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:58] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Tai_lieu_DHDCD\BVH_2022_5_1_1_zip\613-tb-de-cu-ung-cu.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:30:59] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Tai_lieu_DHDCD\BVH_2022_5_1_1_zip\614-tt-quy-che-de-cu-ung-cu.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:00] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Tai_lieu_DHDCD\BVH_2022_5_1_1_zip\615-bau-bo-sung-thay-the-TV-HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:00] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Tai_lieu_DHDCD\BVH_2022_5_1_1_zip\681-bao-cao-cua-TGD.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:01] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Tai_lieu_DHDCD\BVH_2022_5_1_1_zip\682-bao-cao-hoat-dong-cua-HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:01] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Tai_lieu_DHDCD\BVH_2022_5_1_1_zip\683-PA-su-dung-LNST.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:05] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Tai_lieu_DHDCD\BVH_2022_5_1_1_zip\706-tv.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:05] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Tai_lieu_DHDCD\BVH_2022_5_1_1_zip\Noi-dung-chuong-trinh-dhcd-2022.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:05] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Tai_lieu_DHDCD\BVH_2022_5_1_1_zip\NQ_36.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:05] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Tai_lieu_DHDCD\BVH_2022_5_1_1_zip\Xac-nhan-tham-du-co-dong-ca-nhan-DHCD-2022.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:05] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2022\Tai_lieu_DHDCD\BVH_2022_5_1_1_zip\Xac-nhan-tham-du-co-dong-to-chuc-DHCD-2022.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:09] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2023\Nghi_quyet_DHDCD\BVH_2023_4_1_1_zip\20230703_20230630___bvh___bao_cao_kiem_tra_tu_cach_co_dong.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:10] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2023\Nghi_quyet_DHDCD\BVH_2023_4_1_1_zip\20230703_20230630___bvh___bien_ban_hop_dhdcd_thuong_nien_2023.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:10] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2023\Nghi_quyet_DHDCD\BVH_2023_4_1_1_zip\20230703_20230630___bvh___bien_ban_kiem_phieu_bieu_quyet_dhdcd_2023.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:10] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2023\Nghi_quyet_DHDCD\BVH_2023_4_1_1_zip\20230703_20230630___bvh___cong_van_cbtt_nghi_quyet_va_bien_ban_hop_dhdcd_thuong_nien_2023.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:11] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2023\Nghi_quyet_DHDCD\BVH_2023_4_1_1_zip\20230703_20230630___bvh___nghi_quyet_dhdcd_thuong_nien_2023.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:14] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2023\Tai_lieu_DHDCD\BVH_2023_5_1_1_zip\20230515 - BVH - Nghi quyet ve Ke hoach to chuc DHDCD thuong nien 2023.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:14] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2023\Tai_lieu_DHDCD\BVH_2023_5_1_1_zip\20230608-BVH-CD Ca nhan-DHDCD-2023.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:14] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2023\Tai_lieu_DHDCD\BVH_2023_5_1_1_zip\20230608-BVH-CD To chuc-DHDCD-2023.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:15] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2023\Tai_lieu_DHDCD\BVH_2023_5_1_1_zip\20230608-BVH-Thu-moi-hop-DHDCD-2023.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:15] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2023\Tai_lieu_DHDCD\BVH_2023_5_1_1_zip\20230619 - BVH - Tom tat so co dong tai ngay chot danh sach 05_06.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:15] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2023\Tai_lieu_DHDCD\BVH_2023_5_1_1_zip\493-Lua-chon-cong-ty-kiem-toan.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:16] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2023\Tai_lieu_DHDCD\BVH_2023_5_1_1_zip\495-1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:17] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2023\Tai_lieu_DHDCD\BVH_2023_5_1_1_zip\496-tV Quy che.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:18] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2023\Tai_lieu_DHDCD\BVH_2023_5_1_1_zip\496s-TTr-Quy-che-to-chuc-DH.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:19] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2023\Tai_lieu_DHDCD\BVH_2023_5_1_1_zip\530-Bao-cao-HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:19] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2023\Tai_lieu_DHDCD\BVH_2023_5_1_1_zip\531-PA-LNST.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:19] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2023\Tai_lieu_DHDCD\BVH_2023_5_1_1_zip\532-chi-tra-thu-lao.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:21] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2023\Tai_lieu_DHDCD\BVH_2023_5_1_1_zip\534s-noi-dung-trong-tam-Chien-luoc.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:21] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2023\Tai_lieu_DHDCD\BVH_2023_5_1_1_zip\535-Bao-cao-TGD.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:27] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Nghi_quyet_DHDCD\BVH_2024_4_1_1_zip\20240627 - BVH - Bien ban hop DHDCD thuong nien 2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:27] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Nghi_quyet_DHDCD\BVH_2024_4_1_1_zip\20240627 - BVH - Bien ban kiem phieu bieu quyet DHDCD 2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:28] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Nghi_quyet_DHDCD\BVH_2024_4_1_1_zip\20240627 - BVH - Nghi quyet DHDCD thuong nien 2024_0.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:28] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_1_1_zip\1. Don ung cu KSV - ca nhan mau 01B.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:28] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_1_1_zip\1577_Thư mời họp.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:29] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_1_1_zip\1579 N 25 12 24.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:30] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_1_1_zip\1579-TA.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:30] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_1_1_zip\2. Don de cu KSV - ca nhan mau 02B.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:30] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_1_1_zip\2.1. Giay xac nhan_uy quyen DHDCD - BVH gui ca nhan 2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:30] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_1_1_zip\2.2. Giay xac nhan_uy quyen DHDCD - BVH gui to chuc 2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:31] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_1_1_zip\20241205 - BVH - Nghi quyet ve Ke hoach to chuc DHDCD bat thuong 2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:31] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_1_1_zip\3. BB họp nhom co dong TV HDQT mau 03A.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:31] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_1_1_zip\3. Don de cu TV BKS gui co dong to chuc 04B.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:31] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_1_1_zip\3. Don de cu TV HĐQT gui co đông TC 04A.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:32] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_1_1_zip\4. BB họp nhom co dong BKS mau 03B.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:32] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_1_1_zip\4.-Decision-re-Establishment-of-Inspection-Board-on-Eligibility-of-Shareholders_2024-AGM.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:32] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_1_1_zip\5. So yeu ly lich ung vien BKS Mau 05B.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:32] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_1_1_zip\5. So yeu ly lich ung vien HĐQT mau 05A.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:32] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_1_1_zip\Attentive-Agenda_2024-EGM.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:32] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_1_1_zip\NQ 92_Kế hoạch tổ chức ĐHĐCD bất thường 2024 của TĐBV.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:32] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_1_1_zip\QĐ 1578_Thành lập BKT tư cách cổ đông.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:33] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_1_1_zip\Regulation-on-orgarnising-2024-EGm.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:34] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_2_1_zip\632-VN- Thu moi hop (gui chung).md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:35] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_2_1_zip\633-VN-TTr Quy che to chuc DH.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:35] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_2_1_zip\634-VN-QĐ thanh lap Ban kiem tra tu cach co dong_0.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:37] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_2_1_zip\709_0.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:37] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_2_1_zip\711_0.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:38] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_2_1_zip\712_0.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:38] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_2_1_zip\713_0.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:38] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_2_1_zip\714_0.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:38] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_2_1_zip\AGM2024 - Du thao BB - up mạng.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:38] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_2_1_zip\AGM2024 - Du thao NQ - up mang.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:42] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_2_1_zip\Du-thao-Dieu-le-TDBV-sua-doi-bo-sung-lan-T15_0.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:46] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2025\Bao_cao_tai_chinh\BVH_2025_1_3_1_zip\20251030 - BVH - CBTT BCTC Hop nhat Quy 3.2025 truoc soat xet TA.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:48] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2025\Nghi_quyet_DHDCD\BVH_2025_4_1_1_zip\20250621___bvh___nghi_quyet_dhdcd_thuong_nien_2025_sign.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:49] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2025\Tai_lieu_DHDCD\BVH_2025_5_1_1_zip\1.1_558_Thư-mời-họp_0.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:49] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2025\Tai_lieu_DHDCD\BVH_2025_5_1_1_zip\1.3.-Giấy-xác-nhận-ủy-quyền-tham-dự-ĐHĐCĐ-2025.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:49] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2025\Tai_lieu_DHDCD\BVH_2025_5_1_1_zip\1a.-Dự-kiến-Chương-trình-ĐH-2025.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:49] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2025\Tai_lieu_DHDCD\BVH_2025_5_1_1_zip\2.1.-591_Tờ-trình-thông-qua-Quy-chế-tổ-chức-Đại-hội-đồng-cổ-đông-thường-niên-năm-2025.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:50] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2025\Tai_lieu_DHDCD\BVH_2025_5_1_1_zip\2.2.-Dự-thảo-Quy-chế-tổ-chức-Đại-hội-đồng-cổ-đông-thường-niên-năm-2025.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:50] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2025\Tai_lieu_DHDCD\BVH_2025_5_1_1_zip\3.-592_Quyết-định-về-việc-thành-lập-Ban-kiểm-tra-tư-cách-cổ-đông.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:51] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2025\Tai_lieu_DHDCD\BVH_2025_5_1_1_zip\4.-BC-của-TGĐ-2025.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:51] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2025\Tai_lieu_DHDCD\BVH_2025_5_1_1_zip\682.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:53] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2025\Tai_lieu_DHDCD\BVH_2025_5_1_1_zip\7.-BC-của-BKS-ĐHĐCĐ-2025.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:53] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2025\Tai_lieu_DHDCD\BVH_2025_5_1_1_zip\8.-Tờ-trình-thù-lao-2024-và-đề-xuất-thù-lao-2025.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:31:53] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BVH\2025\Tai_lieu_DHDCD\BVH_2025_5_1_1_zip\9.-Tờ-trình-PA-phân-phối-LNST-2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:15] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2018\Nghi_quyet_DHDCD\MIG_2018_4_1_1_zip\1.MIG_2018.12.5_8718a24_02.2018.BB.DHDCD_Bien_ban_kiem_phieu_lay_y_kien_co_dong_bang_van_ban.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:16] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2018\Nghi_quyet_DHDCD\MIG_2018_4_1_1_zip\2.MIG_2018.12.5_adcd6a1_02.2018.NQ.DHDCD_Nghi_quyet_DHDCD_lay_y_kien_co_dong_bang_van_ban_nam_2018_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:16] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2018\Nghi_quyet_DHDCD\MIG_2018_4_2_1_zip\1.MIG_2018.4.26_21dfd2d_Bien_ban_hop_DHDCD_thuong_nien_nam_2018.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:19] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2018\Tai_lieu_DHDCD\MIG_2018_5_1_1_rar\Báo cáo HĐQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:19] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2018\Tai_lieu_DHDCD\MIG_2018_5_1_1_rar\Sửa đổi bổ sung điều lệ MIC 2018.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:20] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2018\Tai_lieu_DHDCD\MIG_2018_5_1_1_rar\Tờ trình biểu quyết thông qua các vấn đề tại ĐHĐCĐ thường niên năm 2018.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:20] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2018\Tai_lieu_DHDCD\MIG_2018_5_1_1_rar\Tờ trình Báo cáo và phê duyệt kế hoạch tăng vốn điều lệ.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:20] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2018\Tai_lieu_DHDCD\MIG_2018_5_1_1_rar\Tờ trình chi trả thù lao HĐQT BKS năm 2017 và KH chi trả năm 2018.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:20] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2018\Tai_lieu_DHDCD\MIG_2018_5_1_1_rar\Tờ trình lựa chọn Công ty kiểm toán BCTC năm 2018 2019.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:24] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2018\Tai_lieu_DHDCD\MIG_2018_5_1_1_rar\Tờ trình đăng ký niêm yết cổ phiếu MIC trên sàn HOSE.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:32] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2019\Nghi_quyet_DHDCD\MIG_2019_4_1_1_zip\2.MIG_2019.4.16_d912ea4_Bien_Ban_DHDCD_thuong_nien_nam_2019.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:32] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2019\Tai_lieu_DHDCD\MIG_2019_5_1_1_rar\Báo cáo BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:32] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2019\Tai_lieu_DHDCD\MIG_2019_5_1_1_rar\Báo cáo HĐQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:33] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2019\Tai_lieu_DHDCD\MIG_2019_5_1_1_rar\Giấy ủy quyền tham dự họp ĐHĐCĐ.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:33] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2019\Tai_lieu_DHDCD\MIG_2019_5_1_1_rar\Phieu bieu quyet.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:34] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2019\Tai_lieu_DHDCD\MIG_2019_5_1_1_rar\Phiếu đóng góp ý kiến.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:34] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2019\Tai_lieu_DHDCD\MIG_2019_5_1_1_rar\TB23.1.3.Ngay dang ki cuoi cung dhcd.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:34] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2019\Tai_lieu_DHDCD\MIG_2019_5_1_1_rar\Tờ trình Biểu quyết thông qua các vấn đề tại ĐHĐCĐ thường niên năm 2019.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:34] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2019\Tai_lieu_DHDCD\MIG_2019_5_1_1_rar\Tờ trình chi trả thù lao HĐQT, BKS năm 2018 và kế hoạch chi trả năm 2019.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:34] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2019\Tai_lieu_DHDCD\MIG_2019_5_1_1_rar\Tờ trình lựa chọn Công ty kiểm toán BCTC năm 2018 2019.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:35] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2019\Tai_lieu_DHDCD\MIG_2019_5_1_1_rar\Tờ trình Niêm yết cổ phiếu MIC trên sàn HOSE.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:35] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2019\Tai_lieu_DHDCD\MIG_2019_5_1_1_rar\Tờ trình sửa đổi bổ sung điều lệ MIC Quy chế nội bộ về quản trị MIC năm 2019.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:35] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2019\Tai_lieu_DHDCD\MIG_2019_5_1_1_rar\Tờ trình Thông qua BCTC năm 2018 đã được kiểm toán và Phương án phân phối lợi nhuận năm 2018.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:35] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2019\Tai_lieu_DHDCD\MIG_2019_5_1_1_rar\Đăng ký dự họp.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:41] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Nghi_quyet_DHDCD\MIG_2020_4_1_1_zip\1.MIG_2020.5.29_0dbc348_Bien_ban_hop_DHCD_2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:42] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\1.MIG_2020.5.22_b802460_To_trinh_Mien_nhiem_va_bau_bo_sung_thanh_vien_HDQT_nhiem_ky_2017__2022.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:42] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\1.MIG_2020.5.27_98017cc_To_trinh_chi_tra_thu_lao_HDQT_BKS_nam_2019_va_ke_hoach_chi_tra_nam_2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:43] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\1.MIG_2020.5.27_b3e4e71_Quy_che_Bau_cu_Bo_sung_thanh_vien_HDQT_va_BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:44] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\Báo cáo BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:44] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\Báo cáo HĐQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:45] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\Giấy ủy quyền.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:45] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\Hồ sơ Ứng cử, Đề cử BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:46] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\Hồ sơ Ứng cử, Đề cử HĐQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:46] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\Phiếu đóng góp ý kiến.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:47] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\Quy chế Bẩu cử bổ sung Thành viên HĐQT và BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:47] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\Sơ yếu lí lịch.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:47] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\Thông báo mời họp ĐHĐCĐ thường niên năm 2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:47] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\Thông báo Ứng cử, đề cử Thành viên HĐQT, Thành viên HĐQT độc lập và Thành viên BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:48] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\Tờ trình Biểu quyết thông qua các vấn đề tại ĐHĐCĐ thường niên năm 2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:48] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\Tờ trình chi trả thù lao HĐQT, BKS năm 2019 và kế hoạch chi trả năm 2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:48] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\Tờ trình lựa chọn Công ty kiểm toán BCTC năm 2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:48] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\Tờ trình miễn nhiệm và bầu bổ sung thành viên BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:48] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\Tờ trình Niêm yết cổ phiếu MIC trên sàn HOSE.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:48] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\Tờ trình Thay đổi địa điểm đặt trụ sở chính của Công ty.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:48] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\Tờ trình Thông qua BCTC năm 2019 kiểm toán và Phương án pp lợi nhuận năm 2019.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:49] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\Đăng ký dự họp.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:57] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\01.Báo cáo của Hội đồng Quản trị về kết quả hoạt động năm 2020 và định hướng năm 2021.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:58] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\03.Tờ trình xin thông qua phương án chi trả thù lao Hội đồng Quản trị, Ban Kiểm soát năm 2020 và kế hoạch chi trả năm 2021..md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:58] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\04.Tờ trình xin thông qua phương án phát hành cổ phiếu năm 2021 để trả cổ tức năm 2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:32:58] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\05.0.Tờ trình xin thông qua việc sửa đổi, bổ sung Điều lệ MIC.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:02] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\05.1. Dự thảo Điều lệ.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:02] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\06.Tờ trình xin thông qua việc lựa chọn Công ty kiểm toán báo cáo tài chính năm 2021.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:02] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\07.0.Tờ trình xin thông qua việc sửa đổibổ sung Quy chế quản trị nội bộ.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:06] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\07.1. Du thao Quy che quan tri noi bo.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:10] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\07.2. Phu luc so sanh Quy che quan tri noi bo.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:10] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\08.0.To trinh sua doi quy che to chuc hoat dong HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:13] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\08.1. Du thao Quy che to chuc va hoat dong HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:17] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\08.2. Phu luc so sanh quy che HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:17] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\08.2. Phụ lục chi tiết - SĐ Điều lệ 2021.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:17] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\09. 0.To trinh sua doi quy che to chuc hoat dong BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:20] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\09.1. Du thao Quy che to chuc hoat dong BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:20] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\10. To trinh mien nhiem va bau bo sung TV HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:20] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\11. To trinh mien nhiem va bau bo sung TV BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:21] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\12. to trinh thong qua cac van de tai DHDCD.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:22] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\13.Quy che bau cu.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:23] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\14.Quy chế làm việc ĐHĐCĐ MIC 2021.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:23] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\15. So yeu ly lich ung vien TV BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:23] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\16. So yeu ly lich ung vien TV HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:25] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\BC BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:25] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\CV724. Bổ sung tài liệu họp ĐHĐCĐ.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:25] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\Mau giay de cu TV HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:26] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\May giay de cu TV BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:26] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\Thong bao de cu TV HDQT- TV BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:27] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\Thong bao moi hop DHCD 2021 (1).md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:28] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\Thong bao moi hop DHCD 2021.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:37] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2022\Tai_lieu_DHDCD\MIG_2022_5_1_1_rar\00. Chuong trinh dhcd 2022.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:37] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2022\Tai_lieu_DHDCD\MIG_2022_5_1_1_rar\01.Danh muc tai lieu.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:37] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2022\Tai_lieu_DHDCD\MIG_2022_5_1_1_rar\01.TB moi hop.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:37] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2022\Tai_lieu_DHDCD\MIG_2022_5_1_1_rar\02.Mau Giay Uy quyen.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:38] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2022\Tai_lieu_DHDCD\MIG_2022_5_1_1_rar\03.Phieu Dang ky du hop.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:38] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2022\Tai_lieu_DHDCD\MIG_2022_5_1_1_rar\04.Phieu dong gop y kien.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:39] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2022\Tai_lieu_DHDCD\MIG_2022_5_1_1_rar\05.Quy che lam viec tai DHCD.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:40] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2022\Tai_lieu_DHDCD\MIG_2022_5_1_1_rar\06. Quy che bau cu.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:41] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2022\Tai_lieu_DHDCD\MIG_2022_5_1_1_rar\06.TTR tang von 2022.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:41] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2022\Tai_lieu_DHDCD\MIG_2022_5_1_1_rar\07.TTR thu lao HDQT BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:42] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2022\Tai_lieu_DHDCD\MIG_2022_5_1_1_rar\08.TTR kiem toan doc lap.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:42] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2022\Tai_lieu_DHDCD\MIG_2022_5_1_1_rar\09.TTR chu truong tim doi tac chien luoc.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:43] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2022\Tai_lieu_DHDCD\MIG_2022_5_1_1_rar\14.DU thao Nghi quyet thong qua tang VDL - 9.3 - DT2.2 Van.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:45] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2023\Bao_cao_tai_chinh\MIG_2023_1_5_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:48] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\00.Quy chế làm việc ĐHĐCĐ MIC 2023.fin.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:49] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\01.0.BC HDQT 2023.fin (1).md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:50] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\01.0.BC HDQT 2023.fin.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:52] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\03 Bao cao cua BKS.fin.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:52] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\06. KTNB - To trinh cong ty kiem toan.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:52] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\09.0.TTr sửa đổi điều lệ MIC. fin.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:52] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\09.1. Phu luc chi tiet sua doi bo sung Dieu le 20.3.2023.fin.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:55] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\09.2 Dieu le MIC 20.3.2023.fin.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:56] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\10.0 To trinh sua doi Quy che quan tri noi bo 2023.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:33:56] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\10.1 Phu luc so sanh QC noi bo ve quan tri MIC 2023.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:00] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\10.2. Quy che noi bo ve quan tri 2023 - 20.3.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:00] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\11.0 To trinh sua doi Quy che HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:00] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\11.1. Phu luc so sanh Quy che HDQT 2023.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:00] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\12.0.To trinh sua doi Quy che BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:01] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\12.1.Phu luc so sanh Quy che BKS 2023.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:03] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\12.2.Du thao Quy che BKS MIC 2023 gui MB.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:04] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\20230330 - CBTT - MIG - Thông báo mời họp ĐHĐCĐ và tài liệu họp.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:05] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\MIG_TAILIEU_DHCD_2023.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:13] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2024\Tai_lieu_DHDCD\MIG_2024_5_1_1_zip\00. Quy che lam viec cua DHDCD 2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:14] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2024\Tai_lieu_DHDCD\MIG_2024_5_1_1_zip\01. BC HDQT ve KQKD 2023 va dinh huong 2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:15] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2024\Tai_lieu_DHDCD\MIG_2024_5_1_1_zip\03. BC BKS ve hoat dong 2023 va ke hoach 2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:15] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2024\Tai_lieu_DHDCD\MIG_2024_5_1_1_zip\20240318 - MIG - Thong bao moi hop DHDCD 2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:15] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2024\Tai_lieu_DHDCD\MIG_2024_5_1_1_zip\GUQ tham du DHCD 2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:16] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2024\Tai_lieu_DHDCD\MIG_2024_5_1_1_zip\Phieu Dang ky tham du DHCD 2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:16] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2024\Tai_lieu_DHDCD\MIG_2024_5_1_1_zip\Phieu dong gop y kien DHCD 2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:21] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\01.2. Dang ky tham du DHCD 2025_vi.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:22] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\01.4. GUQ tham du DHCD 2025.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:23] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\1. Bao cao HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:25] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\11. Thong bao ung cu thanh vien HDQT, BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:25] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\11.1 Mau so yeu ly lich.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:25] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\11.2. Phieu bau cu 2025.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:27] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\20250320_20250319___mig___cbtt_tai_lieu_bo_sung_va_thong_tin_ung_vien.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:28] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\3. Bao cao Ban kiem soat.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:29] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\4. To trinh BCTC 2024 va phan phoi loi nhuan.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:29] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\5. To trinh phuong an chi tra co tuc 2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:30] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\6. To trinh chi tra thu lao.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:30] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\7. To trinh lua chon cong ty kiem toan.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:30] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\8. To trinh bieu quyet cac van de dai hoi.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:31] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\9. Du thao NQ DHDCD ve chi tra co tuc.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:32] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\Quy che DHDCD nam 2025.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:33] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\Thong bao moi hop DHDCD nam 2025 va Tai lieu Dai hoi.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:33] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2014\Bao_cao_tai_chinh\PGI_2014_1_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:33] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2014\Bao_cao_tai_chinh\PGI_2014_1_2_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:35] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2014\Nghi_quyet_DHDCD\PGI_2014_4_1_1\20140424 - PGI - BB DHDCDTN 2014.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:35] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2014\Nghi_quyet_DHDCD\PGI_2014_4_1_1\20140424 - PGI - NQ DHDCDTN 2014.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:36] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2014\Tai_lieu_DHDCD\PGI_2014_5_1_1\2014 To trinh Dai hoi dong co dong ds ung cu vien de bau vao BKS nhiem ki 2014 2019.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:36] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2014\Tai_lieu_DHDCD\PGI_2014_5_1_1\BAO CAO CUA TONG GIAM DOC.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:36] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2014\Tai_lieu_DHDCD\PGI_2014_5_1_1\BAO CAO HOAT DONG NHIEM KY (2009 - 2014).md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:38] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2015\Bao_cao_tai_chinh\PGI_2015_1_2_1_zip\CBTT BCTC QuyII.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:45] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2015\Nghi_quyet_DHDCD\PGI_2015_4_1_1_rar\ĐHĐCĐ PGI 2015\BB ĐHĐCĐ 2015.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:45] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2015\Nghi_quyet_DHDCD\PGI_2015_4_1_1_rar\ĐHĐCĐ PGI 2015\NQ ĐHĐCĐ 2015.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:52] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2016\Nghi_quyet_DHDCD\PGI_2016_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:34:58] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2017\Nghi_quyet_DHDCD\PGI_2017_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:00] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2017\Nghi_quyet_DHDCD\PGI_2017_4_2_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:00] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_1_1_zip\cac to trinh  nhan su thanh vien HDQT va BKS0001.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:00] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_1_1_zip\chuong trinh hop0001.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:00] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_1_1_zip\Quy che dai hoi0001.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:01] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_1_1_zip\To trinh sua doi Dieu le0001.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:01] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_2_1_rar\1.-Chương-trình-ĐHĐCĐ.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:01] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_2_1_rar\10.-Quyết-toán-QTL-và-thù-lao-HĐQT-và-BKS-2016.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:01] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_2_1_rar\11.-Phương-án-trả-lương-thù-lao-cho-HĐQT-và-BKS-20170001.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:01] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_2_1_rar\12.-Tờ-trình-miễn-nhiệm-TV-HĐQT-và-BKS-1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:01] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_2_1_rar\13.Tờ-trình-bổ-sung-TV-BKS.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:02] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_2_1_rar\14.-Tờ-trình-phương-án-phát-hành-CP-riêng-lẻ.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:03] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_2_1_rar\2.-Quy-chế-ĐH.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:03] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_2_1_rar\4.-BC-của-HĐQT-1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:04] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_2_1_rar\5.-Báo-cáo-BKS-tại-ĐHĐCĐ-2017.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:04] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_2_1_rar\6.-Thông-qua-BCTC-2016.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:04] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_2_1_rar\9.-Tờ-trình-lựa-chọn-đơn-vị-kiểm-toán-BCTC-2017.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:07] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_2_1_rar\Báo-cáo-GDCP_Matexim.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:07] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_2_1_rar\CBTT_TB-GDCP_Matexim_ban-xoa.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:07] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_2_1_rar\Nghi-quyet-01-Thanh-lap-PJICO-Ha-Thanh0001.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:07] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_2_1_rar\TB_Mời-họp_ĐHĐCĐ-2017.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:13] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2018\Nghi_quyet_DHDCD\PGI_2018_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:15] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2018\Tai_lieu_DHDCD\PGI_2018_5_1_1_rar\20180410_1. Báo cáo của Tổng giám đốc ĐHĐCĐ 2018 - Final0001.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:15] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2018\Tai_lieu_DHDCD\PGI_2018_5_1_1_rar\20180410_1.1 Tờ trình thông qua BCTC 20170001.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:16] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2018\Tai_lieu_DHDCD\PGI_2018_5_1_1_rar\20180410_10. Tờ trình  sửa đổi, bổ sung ĐL Tcty.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:16] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2018\Tai_lieu_DHDCD\PGI_2018_5_1_1_rar\20180410_11. Tờ trình sửa đổi, bổ sung Quy chế quản trị ĐHĐCĐ 2018.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:17] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2018\Tai_lieu_DHDCD\PGI_2018_5_1_1_rar\20180410_3. Báo cáo của Ban kiểm toán nội bộ.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:17] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2018\Tai_lieu_DHDCD\PGI_2018_5_1_1_rar\20180410_5. Tờ trình lựa chọn Cty kiểm toán 20180001.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:17] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2018\Tai_lieu_DHDCD\PGI_2018_5_1_1_rar\20180410_6. Tờ trình quyết toán QTL và thù lao TV HĐQT 20170001.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:17] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2018\Tai_lieu_DHDCD\PGI_2018_5_1_1_rar\20180410_7. Tờ trình phương án chi trả TL, TL 20180001.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:17] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2018\Tai_lieu_DHDCD\PGI_2018_5_1_1_rar\20180410_8. Tờ trình miễn nhiệm TV HĐQT ĐHĐCĐ 20180001.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:17] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2018\Tai_lieu_DHDCD\PGI_2018_5_1_1_rar\20180410_9. Tờ trình bầu bổ sung TV HĐQT ĐHĐCĐ 20180001.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:18] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2018\Tai_lieu_DHDCD\PGI_2018_5_1_1_rar\20180410_9.2 CV Bãi nhiệm và bổ nhiệm TV HĐQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:18] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2018\Tai_lieu_DHDCD\PGI_2018_5_1_1_rar\20180410_Công bố thông tin 09-04-20180001.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:18] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2018\Tai_lieu_DHDCD\PGI_2018_5_1_1_rar\20180410_Thông báo họp ĐHĐCĐ 20180001.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:22] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2019\Nghi_quyet_DHDCD\PGI_2019_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:23] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2019\Tai_lieu_DHDCD\PGI_2019_5_1_1_zip\20190416_20190416 - PGI - CBTT tai lieu DHDCD TN 2019 - cap nhat.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:27] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2019\Tai_lieu_DHDCD\PGI_2019_5_1_1_zip\20190417_20190417 - PGI - CBTT bo sung tai lieu DHDCD TN 2019.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:27] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2019\Tai_lieu_DHDCD\PGI_2019_5_1_1_zip\3.1-TT-phê-duyệt-BCTCĐKT0001.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:29] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2019\Tai_lieu_DHDCD\PGI_2019_5_1_1_zip\4.-Báo-cáo-hoạt-động-KS-KT-20180.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:29] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2019\Tai_lieu_DHDCD\PGI_2019_5_1_1_zip\5.-TT-loi-nhuan-sau-thue-2019-va-chi-tieu-KHKD-2019.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:30] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2019\Tai_lieu_DHDCD\PGI_2019_5_1_1_zip\6.-TT-quyet-toan-QTL-va-Thu-lao-TV-HDQT2018.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:30] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2019\Tai_lieu_DHDCD\PGI_2019_5_1_1_zip\7.-TT-Phương-án-chi-trả-lương-thù-lao-TV-HĐQT-20190001.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:30] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2019\Tai_lieu_DHDCD\PGI_2019_5_1_1_zip\8.-Tờ-trình-lựa-chọn-công-ty-kiểm-toán-BCTC-20180001.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:30] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2019\Tai_lieu_DHDCD\PGI_2019_5_1_1_zip\9.-TT-Gia-hạn-thời-hạn-Tcty0001.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:32] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2019\Tai_lieu_DHDCD\PGI_2019_5_1_1_zip\Bao-cao-cua-TGD-tai-DHDCD-20190001.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:34] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2020\Nghi_quyet_DHDCD\PGI_2020_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:35] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\10.-Tờ-trình-phương-án-phân-phối-lợi-nhuận-2019-và-một-số-chỉ-tiêu-kế-hoạch-2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:35] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\11.-Tờ-trình-phương-án-trả-lương-thù-lao-cho-Thành-viên-HĐQT-năm-2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:35] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\12.-Báo-cáo-quyết-toán-QTL-và-thù-lao-thành-viên-HĐQT-năm-2019.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:36] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\13.-Tờ-trình-thông-qua-chủ-trương-nới-room-nâng-tỷ-lệ-sở-hữu-tối-đa-NĐT-nước-ngoài.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:37] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\2.1-Quy-chế-làm-việc-tại-ĐHĐCĐ-thường-niên-năm-2020-1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:37] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\2.2-Quy-chế-bầu-cử-thành-viên-HĐQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:38] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\26.05.2020-PGI-Nghi-quyet-cua-HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:40] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\3.-Báo-cáo-của-Tổng-giám-đốc-tại-ĐHĐCĐ.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:40] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\4.1-Tờ-trình-phê-duyệt-BCTC-2019.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:42] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\5.-Báo-cáo-kết-quả-hoạt-động-của-HĐQT-năm-2019-và-định-hướng-kế-hoạch-2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:42] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\6.1-Báo-cáo-của-Ban-Kiểm-toán-nội-bộ.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:43] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\7.-Tờ-trình-lựa-chọn-đơn-vị-kiểm-toán-2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:43] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\8.-Tờ-trình-miễn-nhiệm-thành-viên-HĐQT-nhiệm-kỳ-2019-2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:43] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\9.1-Tờ-trình-danh-sách-ứng-cử-viên-bầu-thành-viên-HĐQT-nhiệm-kỳ-2019-2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:43] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\9.2-Sơ-yếu-lý-lịch-Bà-Trương-Diệu-Linh.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:43] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\9.3-Sơ-yếu-lý-lịch-Ông-Le-Jea-Hoon.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:50] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_1_1_zip\20211112_20211112 - PGI - Quy che lam viec tai DHDCD bat thuong 2021.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:50] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_1_1_zip\20211112_20211112 - PGI - Thu moi hop DHDCD bat thuong 2021.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:51] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_1_1_zip\20211112_20211112 - PGI - TTr PA phat hanh co phieu thuong tang VDL tu nguon thang du von va PA tra co tuc 2021.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:51] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_2_1_rar\1.-Chương-trình-ĐHĐCĐ-thường-niên2021.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:51] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_2_1_rar\10.-Tờ-trình-nội-dung-sửa-đổi-bổ-sung-Điều-lệ.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:51] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_2_1_rar\11.-Tờ-trình-nội-dung-sửa-đổi-bổ-sung-quy-chế-nội-bộ-về-quản-trị.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:51] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_2_1_rar\12.-Tờ-trình-nội-dung-sửa-đổi-bổ-sung-quy-chế-hoạt-động-của-HĐQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:53] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_2_1_rar\2.-Báo-cáo-của-Tổng-giám-đốc-tại-ĐHĐCĐ.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:53] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_2_1_rar\27.03.2021-PGI-CBTT-tai-lieu-dai-hoi-dong-co-dong-thuong-nien-2021.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:54] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_2_1_rar\3.-Báo-cáo-của-HĐQT-tại-ĐHĐCĐ.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:55] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_2_1_rar\4.-Báo-cáo-của-Ban-KTNB-tại-ĐHĐCĐ.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:57] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_2_1_rar\6.-Tờ-trình-phương-án-phân-phối-lợi-nhuận-năm-2020.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:57] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_2_1_rar\7.-Báo-cáo-quyết-toán-QLT-và-thù-lao-các-thành-viên-HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:57] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_2_1_rar\8.-Tờ-trình-phương-án-chỉ-trả-tiền-lương-thù-lao-thành-viên-HĐQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:57] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_2_1_rar\9.-Tờ-trình-lựa-chọn-đơn-vị-kiểm-toán-BCTC-năm-2021.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:35:57] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_2_1_rar\Thông-báo-mời-họp-ĐHĐCĐ-thường-niên-2021.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:04] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2022\Nghi_quyet_DHDCD\PGI_2022_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:05] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2022\Tai_lieu_DHDCD\PGI_2022_5_1_1_rar\PGI_TAILIEU_DHCD thuong nien_2022\20220329_0__pgi___cbtt_tai_lieu_dhdcd_thuong_nien_2022.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:05] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2022\Tai_lieu_DHDCD\PGI_2022_5_1_1_rar\PGI_TAILIEU_DHCD thuong nien_2022\20220329_10__to_trinh_phuong_an_tra_luong__thu_lao_cho_cac_thanh_vien_hdqt_nam_2022.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:05] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2022\Tai_lieu_DHDCD\PGI_2022_5_1_1_rar\PGI_TAILIEU_DHCD thuong nien_2022\20220329_11__to_trinh_thong_qua_noi_dung_sua_doi__bo_sung_dieu_le.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:05] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2022\Tai_lieu_DHDCD\PGI_2022_5_1_1_rar\PGI_TAILIEU_DHCD thuong nien_2022\20220329_12__to_trinh__mien_nhiem_thanh_vien_hdqt.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:05] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2022\Tai_lieu_DHDCD\PGI_2022_5_1_1_rar\PGI_TAILIEU_DHCD thuong nien_2022\20220329_13__to_trinh_danh_sach_ung_cu_vien_bau_thanh_vien_hdqt_nhiem_ky_2019_2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:05] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2022\Tai_lieu_DHDCD\PGI_2022_5_1_1_rar\PGI_TAILIEU_DHCD thuong nien_2022\20220329_1__chuong_trinh_dhdcd_thuong_nien_2022.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:06] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2022\Tai_lieu_DHDCD\PGI_2022_5_1_1_rar\PGI_TAILIEU_DHCD thuong nien_2022\20220329_2__quy_che_lam_viec_va_quy_che_bau_cu_tai_dhdcd.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:07] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2022\Tai_lieu_DHDCD\PGI_2022_5_1_1_rar\PGI_TAILIEU_DHCD thuong nien_2022\20220329_3__bao_cao_cua_tong_giam_doc_tai_dhdcd.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:08] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2022\Tai_lieu_DHDCD\PGI_2022_5_1_1_rar\PGI_TAILIEU_DHCD thuong nien_2022\20220329_6__bao_cao_cua_uy_ban_kiem_toan_tai_dhdcd.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:09] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2022\Tai_lieu_DHDCD\PGI_2022_5_1_1_rar\PGI_TAILIEU_DHCD thuong nien_2022\20220329_7__to_trinh_phuong_an_phan_phoi_loi_nhuan_nam_2021_va_mot_so_chi_tieu_tai_chinh_2022.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:09] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2022\Tai_lieu_DHDCD\PGI_2022_5_1_1_rar\PGI_TAILIEU_DHCD thuong nien_2022\20220329_8__to_trinh_lua_chon_don_vi_kiem_toan_bctc_nam_2022.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:09] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2022\Tai_lieu_DHDCD\PGI_2022_5_1_1_rar\PGI_TAILIEU_DHCD thuong nien_2022\20220329_9__to_trinh_quyet_toan_tien_luong__thu_lao_cho_cac_thanh_vien_hdqt_nam_2021.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:09] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2022\Tai_lieu_DHDCD\PGI_2022_5_1_1_rar\PGI_TAILIEU_DHCD thuong nien_2022\20220329_thong_bao_moi_hop_dhdcd_thuong_nien_nam_2022.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:16] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2023\Nghi_quyet_DHDCD\PGI_2023_4_1_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:16] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2023\Tai_lieu_DHDCD\PGI_2023_5_1_1_zip\20230331_10__to_trinh_mien_nhiem_thanh_vien_hdqt.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:16] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2023\Tai_lieu_DHDCD\PGI_2023_5_1_1_zip\20230331_20230331___pgi___cbtt_tai_lieu_dhdcd_thuong_nien_2023.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:18] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2023\Tai_lieu_DHDCD\PGI_2023_5_1_1_zip\20230331_3__bao_cao_ket_qua_hoat_dong_cua_hdqt_nam_2022_va_ke_hoach_nam_2023.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:19] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2023\Tai_lieu_DHDCD\PGI_2023_5_1_1_zip\20230331_4__bao_cao_cua_ubkt_tai_dhdcd_2023_final.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:20] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2023\Tai_lieu_DHDCD\PGI_2023_5_1_1_zip\20230331_6__to_trinh_thong_qua_phuong_an_ppln_2022.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:20] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2023\Tai_lieu_DHDCD\PGI_2023_5_1_1_zip\20230331_7__bao_cao_quyet_toan_qtl_va_thu_lao_cua_cac_tv_hdqt_nam_2022.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:21] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2023\Tai_lieu_DHDCD\PGI_2023_5_1_1_zip\20230331_8__trinh_phuong_an_tra_thu_lao_tv_hdqt_2023.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:21] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2023\Tai_lieu_DHDCD\PGI_2023_5_1_1_zip\20230331_9_to_trinh_lua_chon_don_vi_kiem_toan_2023_final.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:29] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\10.-Tờ-Trình-phương-án-thù-lao-TV-HĐQT-2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:29] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\11-To-trinh-mien-nhiem-TV-HDQT-2019-2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:30] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\12-To-trinh-bầu-TV-HĐQT-nhiệm-kỳ-2024-2029.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:30] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\13-Tờ-trình-Thông-qua-logo-nhận-diện-thương-hiệu-và-sửa-đổi-Điều-lệ.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:30] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\20240222-PGI-Nghi-quyet-to-chuc-DHDCD-thuong-nien-2024.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:31] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\20240319-PGI-Thong-bao-tham-gia-ung-cu-de-cu-thanh-vien-HDQT.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:32] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\5.-Báo-cáo-của-UBKT-tại-ĐHĐCD-2024-final.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:34] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\7.-Tơ-trinh-PPLN-2023.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:34] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\8.-Tờ-trình-lựa-chọn-đơn-vị-kiểm-toán-2024-final.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:34] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\9.-Tờ-trình-quyết-toán-Quỹ-tiền-lương-NQL-2023.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:36] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\BC-TGD-TAI-DHCD_1.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:36] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\công bố tt.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:40] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2025\Bao_cao_tai_chinh\PGI_2025_1_2_1_zip\BCTC-6T.2025-Eng.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:45] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2025\Bao_cao_tai_chinh\PGI_2025_1_3_1_zip\20251027-PGI-Financial-Report-Quarter-III-2025.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:46] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2025\Tai_lieu_DHDCD\PGI_2025_5_1_1_zip\20250416_20250416___pgi___cap_nhat_tai_lieu_dhdcd_thuong_nien_2025.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+
+[2025-11-13 21:36:50] markdown_to_xlsx
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PGI\2025\Tai_lieu_DHDCD\PGI_2025_5_1_1_zip\PGI_TAILIEU_DHDCD thuong nien_2025.md
+  Reason: Failed to process markdown file: At least one sheet must be visible
+

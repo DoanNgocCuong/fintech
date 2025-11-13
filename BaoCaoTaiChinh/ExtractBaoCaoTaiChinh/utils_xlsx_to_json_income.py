@@ -12,8 +12,10 @@ from utils_prepare_process import (
     find_ma_so_column,
     find_value_column,
     parse_ma_so,
+    parse_ma_so_full,
     parse_number,
-    update_json_with_ma_so
+    update_json_with_ma_so,
+    update_json_with_ma_so_full
 )
 
 
@@ -105,22 +107,37 @@ def create_json_result(
             if pd.isna(ma_so_str):
                 continue
             
-            ma_so = parse_ma_so(str(ma_so_str))
-            if ma_so is None:
+            # Parse mã số đầy đủ (hỗ trợ mã số phụ như 1.1, 1.2)
+            ma_so_full = parse_ma_so_full(str(ma_so_str))
+            if ma_so_full is None:
                 continue
             
             value = row.get(value_col)
             parsed_value = parse_number(value)
             
-            # Cập nhật vào JSON
-            if update_json_with_ma_so(json_result, ma_so, parsed_value):
+            # Thử cập nhật với mã số đầy đủ trước (hỗ trợ mã số phụ)
+            updated = False
+            if ma_so_full and '.' in ma_so_full:
+                # Mã số phụ (1.1, 1.2, etc.) - dùng update_json_with_ma_so_full
+                updated = update_json_with_ma_so_full(json_result, ma_so_full, parsed_value)
+            else:
+                # Mã số chính (1, 2, 3, etc.) - thử cả hai cách
+                # Ưu tiên dùng update_json_with_ma_so_full (nếu template có ma_so dạng string)
+                updated = update_json_with_ma_so_full(json_result, ma_so_full, parsed_value)
+                if not updated:
+                    # Fallback: dùng update_json_with_ma_so (nếu template có ma_so dạng int)
+                    ma_so_int = parse_ma_so(str(ma_so_str))
+                    if ma_so_int is not None:
+                        updated = update_json_with_ma_so(json_result, ma_so_int, parsed_value)
+            
+            if updated:
                 mapped_in_sheet += 1
                 total_mapped += 1
                 if parsed_value is not None:
                     try:
-                        print(f"      OK Mapped ma so {ma_so}: {parsed_value:,.0f}")
+                        print(f"      OK Mapped ma so {ma_so_full}: {parsed_value:,.0f}")
                     except UnicodeEncodeError:
-                        print(f"      OK Mapped ma so {ma_so}: {parsed_value}")
+                        print(f"      OK Mapped ma so {ma_so_full}: {parsed_value}")
         
         print(f"    Mapped {mapped_in_sheet} value(s) in sheet {sheet_name}")
     

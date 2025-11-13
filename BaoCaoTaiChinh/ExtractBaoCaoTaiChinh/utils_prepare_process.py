@@ -194,6 +194,145 @@ def parse_ma_so(ma_so_str: Any) -> Optional[int]:
         return None
 
 
+def normalize_ma_so(ma_so: str) -> str:
+    """
+    Normalize mã số bằng cách loại bỏ số 0 đứng đầu ở phần nguyên.
+    Hỗ trợ cả mã số chính (1, 01, 001) và mã số phụ (1.1, 01.1, 001.1).
+    
+    Args:
+        ma_so (str): Mã số dạng string (ví dụ: "1", "01", "1.1", "01.1", "001.2")
+        
+    Returns:
+        str: Mã số đã được normalize (ví dụ: "1", "1.1", "1.2")
+        
+    Ví dụ:
+        >>> normalize_ma_so("1")
+        "1"
+        >>> normalize_ma_so("01")
+        "1"
+        >>> normalize_ma_so("001")
+        "1"
+        >>> normalize_ma_so("1.1")
+        "1.1"
+        >>> normalize_ma_so("01.1")
+        "1.1"
+        >>> normalize_ma_so("001.1")
+        "1.1"
+        >>> normalize_ma_so("01.2")
+        "1.2"
+    """
+    if not ma_so or not isinstance(ma_so, str):
+        return ma_so
+    
+    # Loại bỏ khoảng trắng
+    ma_so = ma_so.strip()
+    
+    if not ma_so:
+        return ma_so
+    
+    # Kiểm tra xem có dấu chấm không
+    if '.' in ma_so:
+        # Có phần thập phân (1.1, 01.1, etc.)
+        parts = ma_so.split('.')
+        if len(parts) == 2:
+            integer_part = parts[0].strip()
+            decimal_part = parts[1].strip()
+            
+            # Normalize phần nguyên (loại bỏ số 0 đứng đầu)
+            try:
+                integer_part_int = int(integer_part)
+                integer_part_normalized = str(integer_part_int)
+            except ValueError:
+                integer_part_normalized = integer_part
+            
+            # Giữ nguyên phần thập phân
+            if decimal_part:
+                return f"{integer_part_normalized}.{decimal_part}"
+            else:
+                return integer_part_normalized
+        else:
+            # Nhiều hơn 1 dấu chấm -> không hợp lệ, trả về nguyên bản
+            return ma_so
+    else:
+        # Chỉ có phần nguyên (1, 01, 001)
+        try:
+            # Loại bỏ số 0 đứng đầu
+            num = int(ma_so)
+            return str(num)
+        except ValueError:
+            # Không parse được -> trả về nguyên bản
+            return ma_so
+
+
+def parse_ma_so_full(ma_so_str: Any) -> Optional[str]:
+    """
+    Parse mã số đầy đủ từ string hoặc số (có thể là "1", "1.1", "1.2", "01.3", etc.).
+    Trả về mã số dạng string đã được normalize (loại bỏ số 0 đứng đầu) để hỗ trợ mã số phụ.
+    
+    Hàm này sẽ normalize mã số: "01.1" -> "1.1", "01.2" -> "1.2", "001.3" -> "1.3"
+    để đảm bảo có thể match cả "1.1" và "01.1", "1.2" và "01.2", etc.
+    
+    Args:
+        ma_so_str: String hoặc số chứa mã số
+        
+    Returns:
+        Optional[str]: Mã số dạng string đã được normalize (ví dụ: "1", "1.1", "1.2"), hoặc None nếu không parse được
+        
+    Ví dụ:
+        >>> parse_ma_so_full("1")
+        "1"
+        >>> parse_ma_so_full("01")
+        "1"
+        >>> parse_ma_so_full("1.1")
+        "1.1"
+        >>> parse_ma_so_full("01.1")
+        "1.1"
+        >>> parse_ma_so_full("001.2")
+        "1.2"
+        >>> parse_ma_so_full("01.2")
+        "1.2"
+        >>> parse_ma_so_full("111")
+        "111"
+        >>> parse_ma_so_full(111.0)
+        "111"
+        >>> parse_ma_so_full(1.1)
+        "1.1"
+        >>> parse_ma_so_full("abc")
+        None
+    """
+    if ma_so_str is None:
+        return None
+    
+    # Chuyển sang string
+    if not isinstance(ma_so_str, str):
+        # Nếu là số float (1.1, 1.2), giữ nguyên phần thập phân
+        if isinstance(ma_so_str, float):
+            # Kiểm tra xem có phần thập phân không
+            if ma_so_str == int(ma_so_str):
+                return str(int(ma_so_str))
+            else:
+                # Giữ nguyên định dạng float nhưng normalize
+                return normalize_ma_so(str(ma_so_str))
+        else:
+            ma_so_str = str(ma_so_str)
+    
+    # Loại bỏ khoảng trắng
+    ma_so_str = ma_so_str.strip()
+    
+    if not ma_so_str:
+        return None
+    
+    # Loại bỏ các ký tự không phải số, dấu chấm
+    # Giữ lại số và dấu chấm (để hỗ trợ mã số phụ như 1.1, 1.2)
+    cleaned = re.sub(r'[^\d.]', '', ma_so_str)
+    
+    if not cleaned:
+        return None
+    
+    # Normalize mã số (loại bỏ số 0 đứng đầu)
+    return normalize_ma_so(cleaned)
+
+
 def parse_number(value: Any) -> Optional[float]:
     """
     Parse số từ cell value (có thể có dấu phẩy, dấu ngoặc đơn cho số âm, etc.).
@@ -529,6 +668,63 @@ def update_json_with_ma_so(data: Dict[str, Any], ma_so: int, value: Optional[flo
             
             # Đệ quy vào các dict con
             if update_json_with_ma_so(val, ma_so, value):
+                return True
+    
+    return False
+
+
+def update_json_with_ma_so_full(data: Dict[str, Any], ma_so: str, value: Optional[float]) -> bool:
+    """
+    Cập nhật giá trị vào JSON structure dựa trên mã số đầy đủ (hỗ trợ mã số phụ như "1.1", "1.2").
+    
+    Hàm này tương tự update_json_with_ma_so nhưng hỗ trợ mã số dạng string để có thể
+    phân biệt mã số chính (1) và mã số phụ (1.1, 1.2, 1.3).
+    
+    Hàm này sẽ normalize cả hai phía trước khi so sánh để có thể match:
+    - "1.1" với "1.1", "01.1", "001.1"
+    - "1.2" với "1.2", "01.2", "001.2"
+    - "1" với "1", "01", "001"
+    
+    Args:
+        data (Dict[str, Any]): JSON structure (có thể là nested dict)
+        ma_so (str): Mã số cần tìm (ví dụ: "1", "1.1", "1.2", "01.1", "01.2")
+        value (Optional[float]): Giá trị cần cập nhật
+        
+    Returns:
+        bool: True nếu tìm thấy và cập nhật được, False nếu không
+        
+    Ví dụ:
+        >>> data = {"section": {"ma_so": "1.1", "so_cuoi_nam": None}}
+        >>> update_json_with_ma_so_full(data, "1.1", 1234.56)
+        True
+        >>> data["section"]["so_cuoi_nam"]
+        1234.56
+        >>> # Có thể match "01.1" với "1.1"
+        >>> data2 = {"section": {"ma_so": "1.1", "so_cuoi_nam": None}}
+        >>> update_json_with_ma_so_full(data2, "01.1", 1234.56)
+        True
+    """
+    if not isinstance(data, dict):
+        return False
+    
+    # Normalize mã số cần tìm
+    ma_so_normalized = normalize_ma_so(str(ma_so))
+    
+    for key, val in data.items():
+        if isinstance(val, dict):
+            # Kiểm tra nếu có key "ma_so" và giá trị khớp (so sánh sau khi normalize)
+            if "ma_so" in val:
+                val_ma_so = val["ma_so"]
+                # Normalize cả hai phía trước khi so sánh
+                val_ma_so_normalized = normalize_ma_so(str(val_ma_so))
+                
+                # So sánh sau khi normalize
+                if val_ma_so_normalized == ma_so_normalized:
+                    val["so_cuoi_nam"] = value
+                    return True
+            
+            # Đệ quy vào các dict con
+            if update_json_with_ma_so_full(val, ma_so, value):
                 return True
     
     return False
