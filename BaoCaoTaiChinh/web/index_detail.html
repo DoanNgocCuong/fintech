@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo cáo Tài chính Doanh nghiệp</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Báo cáo Tài chính</span>
+                </div>
+                <div class="header-actions">
+                    <button class="btn-export" onclick="exportData()">
+                        <i class="fas fa-download"></i>
+                        Xuất dữ liệu
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Controls Section -->
+            <div class="controls-section">
+                <div class="control-group">
+                    <label for="stock-select">
+                        <i class="fas fa-building"></i>
+                        Mã cổ phiếu
+                    </label>
+                    <div class="select-wrapper">
+                        <select id="stock-select" onchange="onStockChange()">
+                            <option value="">-- Chọn mã cổ phiếu --</option>
+                        </select>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>
+                        <i class="fas fa-search"></i>
+                        Tìm kiếm chỉ tiêu
+                    </label>
+                    <div class="search-wrapper">
+                        <input type="text" id="search-input" placeholder="Nhập tên chỉ tiêu..." oninput="onSearchChange()">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs Section -->
+            <div class="tabs-section">
+                <div class="tabs">
+                    <button class="tab active" data-report="balance" onclick="onTabChange('balance')">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>Cân đối kế toán</span>
+                    </button>
+                    <button class="tab" data-report="cashflow" onclick="onTabChange('cashflow')">
+                        <i class="fas fa-exchange-alt"></i>
+                        <span>Lưu chuyển tiền tệ</span>
+                    </button>
+                    <button class="tab" data-report="income" onclick="onTabChange('income')">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Kết quả kinh doanh</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Data Section -->
+            <div class="data-section">
+                <div class="table-container">
+                    <div id="loading" class="loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Đang tải dữ liệu...</p>
+                    </div>
+                    <div id="no-data" class="no-data" style="display: none;">
+                        <i class="fas fa-info-circle"></i>
+                        <p>Vui lòng chọn mã cổ phiếu để xem báo cáo</p>
+                    </div>
+                    <div id="table-wrapper" class="table-wrapper" style="display: none;">
+                        <table id="financial-table" class="financial-table">
+                            <thead>
+                                <tr id="table-header">
+                                    <!-- Will be populated by JavaScript -->
+                                </tr>
+                            </thead>
+                            <tbody id="table-body">
+                                <!-- Will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summary Section -->
+            <div id="summary-section" class="summary-section" style="display: none;">
+                <h3><i class="fas fa-info-circle"></i> Thông tin tổng quan</h3>
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <div class="summary-label">Tổng số chỉ tiêu</div>
+                        <div class="summary-value" id="total-indicators">0</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-label">Số quý/năm</div>
+                        <div class="summary-value" id="total-periods">0</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-label">Cập nhật lần cuối</div>
+                        <div class="summary-value" id="last-update">--</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Báo cáo Tài chính Doanh nghiệp. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
+
