@@ -266,10 +266,18 @@ function renderTreeRows(nodes, tableBody, sortedPeriods, depth = 0) {
             treeWrapper.appendChild(spacer);
         }
         
-        // Indicator label
+        // Indicator label with ma_so prefix
         const labelSpan = document.createElement('span');
         labelSpan.className = 'indicator-label';
-        labelSpan.textContent = node.label_vn || node.label;
+        
+        // Build label with ma_so prefix
+        let displayLabel = node.label_vn || node.label;
+        if (node.ma_so !== null && node.ma_so !== undefined) {
+            // Add ma_so prefix: "100. Label" or "1.1. Label"
+            displayLabel = `${node.ma_so}. ${displayLabel}`;
+        }
+        
+        labelSpan.textContent = displayLabel;
         if (node.level === 0 || (node.has_children || (node.children && node.children.length > 0))) {
             labelSpan.style.fontWeight = '600';
         }
