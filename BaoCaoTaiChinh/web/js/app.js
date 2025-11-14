@@ -63,6 +63,9 @@ function populateStockSelector(stocks) {
     const selector = document.getElementById('stock-select');
     if (!selector) return;
     
+    // Save current selected value
+    const currentSelectedValue = selector.value || currentStock;
+    
     selector.innerHTML = '<option value="">-- Chọn mã cổ phiếu --</option>';
     
     stocks.forEach(stock => {
@@ -71,6 +74,17 @@ function populateStockSelector(stocks) {
         option.textContent = stock;
         selector.appendChild(option);
     });
+    
+    // Restore selected value if it exists in the new list
+    if (currentSelectedValue && stocks.includes(currentSelectedValue)) {
+        selector.value = currentSelectedValue;
+        // Update currentStock to match
+        currentStock = currentSelectedValue;
+    } else {
+        // If selected stock is not in new list, clear selection
+        selector.value = '';
+        currentStock = '';
+    }
 }
 
 /**
