@@ -134,10 +134,36 @@ async function loadTableDataForStock(stock, reportType) {
         tableData = data;
         filteredIndicators = data.indicators;
         
+        // Debug: Check tree structure
+        console.log('[DEBUG] Indicators data:', data.indicators);
+        if (data.indicators && data.indicators.length > 0) {
+            const firstIndicator = data.indicators[0];
+            console.log('[DEBUG] First indicator:', {
+                key: firstIndicator.key,
+                has_children: firstIndicator.has_children,
+                children: firstIndicator.children,
+                level: firstIndicator.level,
+                full_path: firstIndicator.full_path
+            });
+        }
+        
+        // Reset expanded paths when loading new data
+        expandedPaths.clear();
+        
+        // Optionally: Auto-expand first level nodes (level 0) for better UX
+        // Uncomment below if you want level 0 nodes expanded by default
+        // data.indicators.forEach(ind => {
+        //     if (ind.level === 0 && (ind.has_children || (ind.children && ind.children.length > 0))) {
+        //         expandedPaths.add(ind.full_path);
+        //     }
+        // });
+        
         // Apply search filter if exists
         const searchInput = document.getElementById('search-input');
         if (searchInput && searchInput.value) {
-            filteredIndicators = filterIndicators(data.indicators, searchInput.value);
+            filteredIndicators = filterIndicatorsInTree(data.indicators, searchInput.value);
+        } else {
+            filteredIndicators = data.indicators;
         }
         
         renderTable(data, filteredIndicators);
@@ -151,8 +177,11 @@ async function loadTableDataForStock(stock, reportType) {
     }
 }
 
+// Global state for expanded/collapsed nodes
+let expandedPaths = new Set();
+
 /**
- * Render table with data
+ * Render table with tree structure
  */
 function renderTable(data, indicators) {
     const tableHeader = document.getElementById('table-header');
@@ -170,7 +199,7 @@ function renderTable(data, indicators) {
     // Create header row
     const indicatorHeader = document.createElement('th');
     indicatorHeader.textContent = 'Chỉ tiêu';
-    indicatorHeader.style.minWidth = '250px';
+    indicatorHeader.style.minWidth = '300px';
     tableHeader.appendChild(indicatorHeader);
     
     sortedPeriods.forEach(period => {
@@ -180,20 +209,79 @@ function renderTable(data, indicators) {
         tableHeader.appendChild(th);
     });
     
-    // Create data rows
-    indicators.forEach(indicator => {
+    // Render tree structure
+    renderTreeRows(indicators, tableBody, sortedPeriods, 0);
+}
+
+/**
+ * Render tree rows recursively
+ */
+function renderTreeRows(nodes, tableBody, sortedPeriods, depth = 0) {
+    if (!nodes || !Array.isArray(nodes)) {
+        console.warn('[DEBUG] renderTreeRows: nodes is not an array', nodes);
+        return;
+    }
+    
+    console.log(`[DEBUG] renderTreeRows: depth=${depth}, nodes count=${nodes.length}`);
+    
+    nodes.forEach(node => {
+        console.log(`[DEBUG] Rendering node: ${node.key}, level=${node.level}, has_children=${node.has_children}, children=${node.children ? node.children.length : 0}, full_path=${node.full_path}`);
         const row = document.createElement('tr');
+        row.className = `tree-row level-${node.level || depth}`;
+        row.dataset.fullPath = node.full_path || '';
+        row.dataset.hasChildren = node.has_children || (node.children && node.children.length > 0) ? 'true' : 'false';
         
-        // Indicator name cell
+        // Indicator name cell with tree structure
         const indicatorCell = document.createElement('td');
-        indicatorCell.textContent = indicator.label_vn || indicator.label;
-        indicatorCell.style.fontWeight = '500';
+        indicatorCell.className = 'indicator-cell';
+        
+        // Create tree structure
+        const treeWrapper = document.createElement('div');
+        treeWrapper.className = 'tree-wrapper';
+        treeWrapper.style.paddingLeft = `${(node.level || depth) * 24}px`;
+        
+        // Toggle button for nodes with children
+        const hasChildren = node.has_children || (node.children && node.children.length > 0);
+        if (hasChildren) {
+            const toggleBtn = document.createElement('button');
+            toggleBtn.className = 'tree-toggle';
+            toggleBtn.type = 'button'; // Prevent form submission
+            const isExpanded = expandedPaths.has(node.full_path);
+            toggleBtn.innerHTML = isExpanded 
+                ? '<i class="fas fa-chevron-down"></i>' 
+                : '<i class="fas fa-chevron-right"></i>';
+            toggleBtn.onclick = (e) => {
+                e.stopPropagation();
+                e.preventDefault();
+                console.log(`[DEBUG] Toggling node: ${node.full_path}, currently expanded: ${isExpanded}`);
+                toggleTreeNode(node.full_path);
+            };
+            treeWrapper.appendChild(toggleBtn);
+        } else {
+            // Spacer for leaf nodes
+            const spacer = document.createElement('span');
+            spacer.className = 'tree-spacer';
+            spacer.style.width = '20px';
+            spacer.style.display = 'inline-block';
+            treeWrapper.appendChild(spacer);
+        }
+        
+        // Indicator label
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'indicator-label';
+        labelSpan.textContent = node.label_vn || node.label;
+        if (node.level === 0 || (node.has_children || (node.children && node.children.length > 0))) {
+            labelSpan.style.fontWeight = '600';
+        }
+        treeWrapper.appendChild(labelSpan);
+        
+        indicatorCell.appendChild(treeWrapper);
         row.appendChild(indicatorCell);
         
         // Value cells
         sortedPeriods.forEach(period => {
             const cell = document.createElement('td');
-            const value = indicator.values[period.label];
+            const value = node.values && node.values[period.label];
             
             if (value !== null && value !== undefined) {
                 cell.textContent = formatNumber(value);
@@ -208,7 +296,48 @@ function renderTable(data, indicators) {
         });
         
         tableBody.appendChild(row);
+        
+        // Render children if expanded (reuse hasChildren from above)
+        const isExpanded = expandedPaths.has(node.full_path);
+        
+        if (hasChildren && isExpanded) {
+            console.log(`[DEBUG] Rendering children of ${node.key}, count=${node.children.length}`);
+            renderTreeRows(node.children, tableBody, sortedPeriods, depth + 1);
+        } else if (hasChildren && !isExpanded) {
+            console.log(`[DEBUG] Node ${node.key} has ${node.children.length} children but is collapsed`);
+        }
     });
+}
+
+/**
+ * Toggle tree node expand/collapse
+ */
+function toggleTreeNode(fullPath) {
+    if (!fullPath) {
+        console.warn('[DEBUG] toggleTreeNode: fullPath is empty');
+        return;
+    }
+    
+    const wasExpanded = expandedPaths.has(fullPath);
+    if (wasExpanded) {
+        expandedPaths.delete(fullPath);
+        console.log(`[DEBUG] Collapsed node: ${fullPath}`);
+    } else {
+        expandedPaths.add(fullPath);
+        console.log(`[DEBUG] Expanded node: ${fullPath}`);
+    }
+    
+    // Re-render table with current filtered indicators
+    if (tableData) {
+        const searchInput = document.getElementById('search-input');
+        let indicatorsToRender = tableData.indicators;
+        
+        if (searchInput && searchInput.value) {
+            indicatorsToRender = filterIndicatorsInTree(tableData.indicators, searchInput.value);
+        }
+        
+        renderTable(tableData, indicatorsToRender);
+    }
 }
 
 /**
@@ -245,9 +374,48 @@ function onSearchChange() {
     if (!searchInput || !tableData) return;
     
     const searchTerm = searchInput.value;
-    filteredIndicators = filterIndicators(tableData.indicators, searchTerm);
+    if (searchTerm.trim() === '') {
+        // If search is empty, show all indicators
+        filteredIndicators = tableData.indicators;
+    } else {
+        // Filter indicators (flatten tree first for search)
+        filteredIndicators = filterIndicatorsInTree(tableData.indicators, searchTerm);
+    }
     
     renderTable(tableData, filteredIndicators);
+}
+
+/**
+ * Filter indicators in tree structure
+ */
+function filterIndicatorsInTree(nodes, searchTerm) {
+    if (!nodes || !Array.isArray(nodes)) return [];
+    
+    const term = searchTerm.toLowerCase().trim();
+    const filtered = [];
+    
+    nodes.forEach(node => {
+        const label = (node.label_vn || node.label || '').toLowerCase();
+        const key = (node.key || '').toLowerCase();
+        const matches = label.includes(term) || key.includes(term);
+        
+        // If node matches, include it and all its children
+        if (matches) {
+            filtered.push(node);
+        } else if (node.children && node.children.length > 0) {
+            // Check children
+            const filteredChildren = filterIndicatorsInTree(node.children, searchTerm);
+            if (filteredChildren.length > 0) {
+                // Create a copy of node with filtered children
+                const nodeCopy = {...node, children: filteredChildren};
+                filtered.push(nodeCopy);
+                // Auto-expand parent if children match
+                expandedPaths.add(node.full_path);
+            }
+        }
+    });
+    
+    return filtered;
 }
 
 /**

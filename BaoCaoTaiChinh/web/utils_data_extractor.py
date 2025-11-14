@@ -4,6 +4,7 @@ Utilities to extract financial indicators from JSON data.
 
 from typing import Optional, Dict, Any, List
 import json
+import re
 from pathlib import Path
 
 
@@ -95,6 +96,8 @@ def extract_all_indicators_recursive(data: Dict[str, Any], prefix: str = "", ind
 def extract_indicators_recursive(data: Dict[str, Any], prefix: str = "", parent_key: str = "", indicators: List[Dict] = None, report_type: str = "balance-sheet") -> List[Dict]:
     """
     Recursively extract all indicators from JSON data.
+    Extracts all fields that have ma_so and so_cuoi_nam.
+    Uses ten_chi_tieu for labels when available.
     
     Args:
         data: JSON data dictionary
@@ -109,33 +112,63 @@ def extract_indicators_recursive(data: Dict[str, Any], prefix: str = "", parent_
     if indicators is None:
         indicators = []
     
-    if isinstance(data, dict):
+    if not isinstance(data, dict):
+        return indicators
+    
+    try:
         for key, value in data.items():
+            if not isinstance(key, str):
+                continue
+                
             current_path = f"{prefix}.{key}" if prefix else key
             
-            # Check if this node has ma_so and so_cuoi_nam (it's an indicator)
+            # Check if this node has ma_so (it's an indicator)
             if isinstance(value, dict):
+                # Check if this dict has ma_so field (it's an indicator node)
                 if "ma_so" in value:
                     ma_so = value.get("ma_so")
                     so_cuoi_nam = value.get("so_cuoi_nam")
+                    ten_chi_tieu = value.get("ten_chi_tieu")
                     
-                    # Generate label from key name
-                    label_vn = key.replace("_", " ").title()
-                    label = key.replace("_", " ").title()
+                    # Use ten_chi_tieu if available, otherwise generate from key
+                    if ten_chi_tieu:
+                        label_vn = str(ten_chi_tieu)
+                        label = str(ten_chi_tieu)  # Can be improved with translation mapping
+                    else:
+                        # Generate label from key name - improve formatting
+                        # Remove numbers and underscores, make readable
+                        clean_key = key
+                        # Remove trailing numbers like "_100", "_20", etc.
+                        clean_key = re.sub(r'_\d+$', '', clean_key)
+                        # Replace underscores with spaces and title case
+                        label_vn = clean_key.replace("_", " ").title()
+                        label = clean_key.replace("_", " ").title()
                     
-                    # Create indicator entry
+                    # Create indicator entry with hierarchy info
                     indicator_path = f"{current_path}.so_cuoi_nam"
+                    # Calculate level based on path depth
+                    level = current_path.count('.')
+                    # Get parent path (remove last key)
+                    parent_path = '.'.join(current_path.split('.')[:-1]) if '.' in current_path else None
+                    
                     indicators.append({
                         "key": key,
                         "path": indicator_path,
                         "ma_so": ma_so,
                         "label": label,
                         "label_vn": label_vn,
-                        "full_path": current_path
+                        "full_path": current_path,
+                        "level": level,
+                        "parent_path": parent_path,
+                        "has_children": False  # Will be set later when building tree
                     })
                 
-                # Recursively process nested objects
+                # IMPORTANT: Always recurse into nested dicts to find ALL indicators
+                # Even if this node has ma_so, it might have children with ma_so too
                 extract_indicators_recursive(value, current_path, key, indicators, report_type)
+    except Exception as e:
+        # Log error but continue processing
+        print(f"Error in extract_indicators_recursive at path {prefix}: {e}")
     
     return indicators
 
@@ -143,7 +176,7 @@ def extract_indicators_recursive(data: Dict[str, Any], prefix: str = "", parent_
 def get_balance_sheet_indicators(json_data: Dict[str, Any]) -> List[Dict[str, Any]]:
     """
     Get balance sheet indicators from JSON data.
-    Uses both fixed mapping for main indicators and recursive extraction.
+    Recursively extracts ALL indicators from the JSON structure.
     
     Args:
         json_data: Balance sheet JSON data
@@ -151,74 +184,30 @@ def get_balance_sheet_indicators(json_data: Dict[str, Any]) -> List[Dict[str, An
     Returns:
         List of indicators
     """
-    indicators = []
+    if not isinstance(json_data, dict):
+        print("Warning: json_data is not a dict in get_balance_sheet_indicators")
+        return []
     
-    # Main indicators mapping (priority indicators)
-    main_indicator_paths = {
-        "tong_cong_tai_san": {
-            "path": "can_doi_ke_toan.tai_san.tong_cong_tai_san_270.so_cuoi_nam",
-            "ma_so": 270,
-            "label": "Total assets",
-            "label_vn": "Tổng tài sản"
-        },
-        "tai_san_ngan_han": {
-            "path": "can_doi_ke_toan.tai_san.A_tai_san_ngan_han_100.so_cuoi_nam",
-            "ma_so": 100,
-            "label": "Current assets",
-            "label_vn": "Tài sản ngắn hạn"
-        },
-        "tai_san_dai_han": {
-            "path": "can_doi_ke_toan.tai_san.B_tai_san_dai_han_200.so_cuoi_nam",
-            "ma_so": 200,
-            "label": "Non-current assets",
-            "label_vn": "Tài sản dài hạn"
-        },
-        "tong_no_phai_tra": {
-            "path": "can_doi_ke_toan.nguon_von.C_no_phai_tra_300.so_cuoi_nam",
-            "ma_so": 300,
-            "label": "Total liabilities",
-            "label_vn": "Tổng nợ phải trả"
-        },
-        "no_ngan_han": {
-            "path": "can_doi_ke_toan.nguon_von.C_no_phai_tra_300.I_no_ngan_han_310.so_cuoi_nam",
-            "ma_so": 310,
-            "label": "Current liabilities",
-            "label_vn": "Nợ ngắn hạn"
-        },
-        "no_dai_han": {
-            "path": "can_doi_ke_toan.nguon_von.C_no_phai_tra_300.II_no_dai_han_330.so_cuoi_nam",
-            "ma_so": 330,
-            "label": "Non-current liabilities",
-            "label_vn": "Nợ dài hạn"
-        },
-        "tong_von_chu_so_huu": {
-            "path": "can_doi_ke_toan.nguon_von.D_von_chu_so_huu_400.so_cuoi_nam",
-            "ma_so": 400,
-            "label": "Total equity",
-            "label_vn": "Tổng vốn chủ sở hữu"
-        },
-        "tong_cong_nguon_von": {
-            "path": "can_doi_ke_toan.nguon_von.tong_cong_nguon_von_440.so_cuoi_nam",
-            "ma_so": 440,
-            "label": "Total liabilities & equity",
-            "label_vn": "Tổng nguồn vốn"
-        }
-    }
+    # Extract all indicators recursively from the JSON structure
+    indicators = extract_indicators_recursive(json_data, "", "", [], "balance-sheet")
     
-    # Extract main indicators first
-    for key, config in main_indicator_paths.items():
-        indicators.append({
-            "key": key,
-            "path": config["path"],
-            "ma_so": config["ma_so"],
-            "label": config["label"],
-            "label_vn": config["label_vn"]
-        })
+    print(f"Extracted {len(indicators)} balance sheet indicators")
     
-    # Optionally: Extract all indicators recursively
-    # Uncomment below to extract all indicators from JSON
-    # all_indicators = extract_indicators_recursive(json_data, "", "", [], "balance-sheet")
-    # indicators.extend(all_indicators)
+    # Sort indicators by ma_so for consistent ordering
+    def sort_key(x):
+        ma_so = x["ma_so"]
+        if isinstance(ma_so, (int, float)):
+            return (ma_so, x["full_path"])
+        elif isinstance(ma_so, str):
+            try:
+                # Try to convert to float for proper numeric sorting
+                return (float(ma_so), x["full_path"])
+            except ValueError:
+                return (999999, x["full_path"])
+        else:
+            return (999999, x["full_path"])
+    
+    indicators.sort(key=sort_key)
     
     return indicators
 
@@ -226,6 +215,7 @@ def get_balance_sheet_indicators(json_data: Dict[str, Any]) -> List[Dict[str, An
 def get_income_statement_indicators(json_data: Dict[str, Any]) -> List[Dict[str, Any]]:
     """
     Get income statement indicators from JSON data.
+    Recursively extracts ALL indicators from the JSON structure.
     
     Args:
         json_data: Income statement JSON data
@@ -233,89 +223,31 @@ def get_income_statement_indicators(json_data: Dict[str, Any]) -> List[Dict[str,
     Returns:
         List of indicators
     """
-    indicators = []
+    if not isinstance(json_data, dict):
+        print("Warning: json_data is not a dict in get_income_statement_indicators")
+        return []
     
-    # Main indicators mapping
-    indicator_paths = {
-        "doanh_thu_phi_bao_hiem": {
-            "path": "ket_qua_hoat_dong_kinh_doanh.01_doanh_thu_phi_bao_hiem.so_cuoi_nam",
-            "ma_so": "1",
-            "label": "Insurance premium revenue",
-            "label_vn": "Doanh thu phí bảo hiểm"
-        },
-        "phi_nhuong_tai_bao_hiem": {
-            "path": "ket_qua_hoat_dong_kinh_doanh.02_phi_nhuong_tai_bao_hiem.so_cuoi_nam",
-            "ma_so": "2",
-            "label": "Reinsurance premium",
-            "label_vn": "Phí nhượng tái bảo hiểm"
-        },
-        "doanh_thu_phi_bao_hiem_thuan": {
-            "path": "ket_qua_hoat_dong_kinh_doanh.03_doanh_thu_phi_bao_hiem_thuan.so_cuoi_nam",
-            "ma_so": "3",
-            "label": "Net insurance premium revenue",
-            "label_vn": "Doanh thu phí bảo hiểm thuần"
-        },
-        "doanh_thu_thuan": {
-            "path": "ket_qua_hoat_dong_kinh_doanh.10_doanh_thu_thuan_hoat_dong_kinh_doanh_bao_hiem.so_cuoi_nam",
-            "ma_so": "10",
-            "label": "Total revenue",
-            "label_vn": "Doanh thu thuần hoạt động kinh doanh bảo hiểm"
-        },
-        "chi_boi_thuong": {
-            "path": "ket_qua_hoat_dong_kinh_doanh.11_chi_boi_thuong.so_cuoi_nam",
-            "ma_so": "11",
-            "label": "Claims expenses",
-            "label_vn": "Chi bồi thường"
-        },
-        "tong_chi_phi": {
-            "path": "ket_qua_hoat_dong_kinh_doanh.18_tong_chi_phi_hoat_dong_kinh_doanh_bao_hiem.so_cuoi_nam",
-            "ma_so": "18",
-            "label": "Total operating expenses",
-            "label_vn": "Tổng chi phí hoạt động kinh doanh bảo hiểm"
-        },
-        "loi_nhuan_gop": {
-            "path": "ket_qua_hoat_dong_kinh_doanh.19_loi_nhuan_gop_hoat_dong_kinh_doanh_bao_hiem.so_cuoi_nam",
-            "ma_so": "19",
-            "label": "Gross profit",
-            "label_vn": "Lợi nhuận gộp hoạt động kinh doanh bảo hiểm"
-        },
-        "loi_nhuan_thuan": {
-            "path": "ket_qua_hoat_dong_kinh_doanh.30_loi_nhuan_thuan_tu_hoat_dong_kinh_doanh.so_cuoi_nam",
-            "ma_so": "30",
-            "label": "Operating income",
-            "label_vn": "Lợi nhuận thuần từ hoạt động kinh doanh"
-        },
-        "loi_nhuan_truoc_thue": {
-            "path": "ket_qua_hoat_dong_kinh_doanh.50_tong_loi_nhuan_ke_toan_truoc_thue.so_cuoi_nam",
-            "ma_so": "50",
-            "label": "Profit before tax",
-            "label_vn": "Tổng lợi nhuận kế toán trước thuế"
-        },
-        "loi_nhuan_sau_thue": {
-            "path": "ket_qua_hoat_dong_kinh_doanh.60_loi_nhuan_sau_thue_thu_nhap_doanh_nghiep.so_cuoi_nam",
-            "ma_so": "60",
-            "label": "Net income",
-            "label_vn": "Lợi nhuận sau thuế thu nhập doanh nghiệp"
-        },
-        "loi_nhuan_cong_ty_me": {
-            "path": "ket_qua_hoat_dong_kinh_doanh.62_loi_nhuan_sau_thue_cua_cong_ty_me.so_cuoi_nam",
-            "ma_so": "62",
-            "label": "Net income (parent company)",
-            "label_vn": "Lợi nhuận sau thuế của công ty mẹ"
-        }
-    }
+    # Extract all indicators recursively from the JSON structure
+    indicators = extract_indicators_recursive(json_data, "", "", [], "income-statement")
     
-    # Extract values for each indicator
-    for key, config in indicator_paths.items():
-        value = extract_value_from_json(json_data, config["path"])
-        indicators.append({
-            "key": key,
-            "path": config["path"],
-            "ma_so": config["ma_so"],
-            "label": config["label"],
-            "label_vn": config["label_vn"],
-            "value": value
-        })
+    print(f"Extracted {len(indicators)} income statement indicators")
+    
+    # Sort indicators by ma_so for consistent ordering
+    # Handle both numeric and string ma_so (e.g., "1", "1.1", "2.1")
+    def sort_key(x):
+        ma_so = x["ma_so"]
+        if isinstance(ma_so, (int, float)):
+            return (ma_so, x["full_path"])
+        elif isinstance(ma_so, str):
+            try:
+                # Try to convert to float for proper numeric sorting
+                return (float(ma_so), x["full_path"])
+            except ValueError:
+                return (999999, x["full_path"])
+        else:
+            return (999999, x["full_path"])
+    
+    indicators.sort(key=sort_key)
     
     return indicators
 
@@ -323,6 +255,7 @@ def get_income_statement_indicators(json_data: Dict[str, Any]) -> List[Dict[str,
 def get_cash_flow_indicators(json_data: Dict[str, Any]) -> List[Dict[str, Any]]:
     """
     Get cash flow indicators from JSON data.
+    Recursively extracts ALL indicators from the JSON structure.
     
     Args:
         json_data: Cash flow JSON data
@@ -330,59 +263,30 @@ def get_cash_flow_indicators(json_data: Dict[str, Any]) -> List[Dict[str, Any]]:
     Returns:
         List of indicators
     """
-    indicators = []
+    if not isinstance(json_data, dict):
+        print("Warning: json_data is not a dict in get_cash_flow_indicators")
+        return []
     
-    # Main indicators mapping
-    indicator_paths = {
-        "luu_chuyen_tien_hoat_dong": {
-            "path": "bao_cao_luu_chuyen_tien_te.I_luu_chuyen_tien_tu_hoat_dong_kinh_doanh_20.so_cuoi_nam",
-            "ma_so": 20,
-            "label": "Operating cash flow",
-            "label_vn": "Lưu chuyển tiền thuần từ hoạt động kinh doanh"
-        },
-        "luu_chuyen_tien_dau_tu": {
-            "path": "bao_cao_luu_chuyen_tien_te.II_luu_chuyen_tien_tu_hoat_dong_dau_tu_30.so_cuoi_nam",
-            "ma_so": 30,
-            "label": "Investing cash flow",
-            "label_vn": "Lưu chuyển tiền thuần từ hoạt động đầu tư"
-        },
-        "luu_chuyen_tien_tai_chinh": {
-            "path": "bao_cao_luu_chuyen_tien_te.III_luu_chuyen_tien_tu_hoat_dong_tai_chinh_40.so_cuoi_nam",
-            "ma_so": 40,
-            "label": "Financing cash flow",
-            "label_vn": "Lưu chuyển tiền thuần từ hoạt động tài chính"
-        },
-        "luu_chuyen_tien_thuan": {
-            "path": "bao_cao_luu_chuyen_tien_te.luu_chuyen_tien_thuan_trong_ky_50.so_cuoi_nam",
-            "ma_so": 50,
-            "label": "Net cash flow",
-            "label_vn": "Lưu chuyển tiền thuần trong kỳ"
-        },
-        "tien_dau_ky": {
-            "path": "bao_cao_luu_chuyen_tien_te.tien_va_tuong_duong_tien_dau_ky_60.so_cuoi_nam",
-            "ma_so": 60,
-            "label": "Cash at beginning",
-            "label_vn": "Tiền và tương đương tiền đầu kỳ"
-        },
-        "tien_cuoi_ky": {
-            "path": "bao_cao_luu_chuyen_tien_te.tien_va_tuong_duong_tien_cuoi_ky_70.so_cuoi_nam",
-            "ma_so": 70,
-            "label": "Cash at end",
-            "label_vn": "Tiền và tương đương tiền cuối kỳ"
-        }
-    }
+    # Extract all indicators recursively from the JSON structure
+    indicators = extract_indicators_recursive(json_data, "", "", [], "cash-flow")
     
-    # Extract values for each indicator
-    for key, config in indicator_paths.items():
-        value = extract_value_from_json(json_data, config["path"])
-        indicators.append({
-            "key": key,
-            "path": config["path"],
-            "ma_so": config["ma_so"],
-            "label": config["label"],
-            "label_vn": config["label_vn"],
-            "value": value
-        })
+    print(f"Extracted {len(indicators)} cash flow indicators")
+    
+    # Sort indicators by ma_so for consistent ordering
+    def sort_key(x):
+        ma_so = x["ma_so"]
+        if isinstance(ma_so, (int, float)):
+            return (ma_so, x["full_path"])
+        elif isinstance(ma_so, str):
+            try:
+                # Try to convert to float for proper numeric sorting
+                return (float(ma_so), x["full_path"])
+            except ValueError:
+                return (999999, x["full_path"])
+        else:
+            return (999999, x["full_path"])
+    
+    indicators.sort(key=sort_key)
     
     return indicators
 

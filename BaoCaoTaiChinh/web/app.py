@@ -16,6 +16,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from utils_database_manager import connect, DB_CONFIG
 from utils_data_extractor import get_indicators_for_report_type, extract_value_from_json
 import json
+from typing import Dict, List, Any
 
 app = FastAPI(
     title="Financial Reports Dashboard API",
@@ -366,27 +367,65 @@ async def get_table_data_for_stock(stock: str, table_name: str, report_type: str
             elif not isinstance(first_json, dict):
                 first_json = dict(first_json) if hasattr(first_json, '__iter__') else {}
             
+            # Debug: Print JSON structure
+            print(f"[DEBUG] JSON keys for {report_type}, stock: {stock}: {list(first_json.keys()) if isinstance(first_json, dict) else 'NOT A DICT'}")
+            if isinstance(first_json, dict) and len(first_json) > 0:
+                first_key = list(first_json.keys())[0]
+                print(f"[DEBUG] First key: {first_key}, type: {type(first_json.get(first_key))}")
+                if isinstance(first_json.get(first_key), dict):
+                    print(f"[DEBUG] First key's keys: {list(first_json[first_key].keys())[:5]}...")  # First 5 keys
+            
             indicators_config = get_indicators_for_report_type(first_json, report_type)
             
+            print(f"[DEBUG] Found {len(indicators_config)} indicators for {report_type}, stock: {stock}")
+            if len(indicators_config) > 0:
+                print(f"[DEBUG] First 3 indicators: {[ind.get('key') for ind in indicators_config[:3]]}")
+            
+            # Build tree structure from flat indicators list
+            indicator_tree = build_indicator_tree(indicators_config)
+            
+            print(f"[DEBUG] Built tree with {len(indicator_tree)} root nodes")
+            if indicator_tree:
+                first_root = indicator_tree[0]
+                print(f"[DEBUG] First root: {first_root.get('key')}, has_children: {first_root.get('has_children')}, children count: {len(first_root.get('children', []))}")
+            
             # Build indicator data with values for each period
-            for indicator_config in indicators_config:
+            # Process in tree order to maintain hierarchy
+            def process_tree_node(node):
                 values = {}
                 for period in periods:
                     period_label = period["label"]
                     json_data = data_by_period.get(period_label)
                     if json_data:
-                        value = extract_value_from_json(json_data, indicator_config["path"])
+                        value = extract_value_from_json(json_data, node["path"])
                         values[period_label] = value
                     else:
                         values[period_label] = None
                 
-                indicator_data.append({
-                    "key": indicator_config["key"],
-                    "label": indicator_config["label"],
-                    "label_vn": indicator_config["label_vn"],
-                    "ma_so": indicator_config["ma_so"],
-                    "values": values
-                })
+                indicator_entry = {
+                    "key": node["key"],
+                    "label": node["label"],
+                    "label_vn": node["label_vn"],
+                    "ma_so": node["ma_so"],
+                    "values": values,
+                    "level": node.get("level", 0),
+                    "parent_path": node.get("parent_path"),
+                    "full_path": node.get("full_path"),
+                    "has_children": node.get("has_children", False)
+                }
+                
+                # Process children if exists
+                if "children" in node and node["children"]:
+                    indicator_entry["children"] = [process_tree_node(child) for child in node["children"]]
+                    indicator_entry["has_children"] = True
+                else:
+                    indicator_entry["has_children"] = False
+                
+                return indicator_entry
+            
+            # Process tree and create flat list with hierarchy info
+            for root_node in indicator_tree:
+                indicator_data.append(process_tree_node(root_node))
         
         return {
             "success": True,
@@ -432,6 +471,108 @@ async def get_cash_flow_table_data(
         return await get_table_data_for_stock(stock, "cash_flow_statement_raw", "cash-flow")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+def build_indicator_tree(indicators: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    Build tree structure from flat indicators list.
+    Groups indicators by parent-child relationship.
+    
+    Args:
+        indicators: Flat list of indicators with level and parent_path
+        
+    Returns:
+        Tree structure with children arrays
+    """
+    if not indicators:
+        return []
+    
+    # Create a map of indicators by full_path (use copies to avoid modifying original)
+    indicator_map = {}
+    for ind in indicators:
+        full_path = ind.get("full_path")
+        if full_path:
+            indicator_map[full_path] = ind.copy()
+    
+    # Mark indicators that have children
+    for ind in indicators:
+        parent_path = ind.get("parent_path")
+        if parent_path and parent_path in indicator_map:
+            indicator_map[parent_path]["has_children"] = True
+    
+    # Build tree structure - need to use copies from map
+    tree = []
+    processed = set()
+    
+    for ind in indicators:
+        full_path = ind.get("full_path")
+        if not full_path or full_path in processed:
+            continue
+            
+        parent_path = ind.get("parent_path")
+        if parent_path and parent_path in indicator_map:
+            parent = indicator_map[parent_path]
+            if "children" not in parent:
+                parent["children"] = []
+            # Use copy from map
+            parent["children"].append(indicator_map[full_path])
+            processed.add(full_path)
+        else:
+            # Root level indicator - use copy from map
+            tree.append(indicator_map[full_path])
+            processed.add(full_path)
+    
+    # Sort tree and children by ma_so
+    def sort_by_ma_so(items):
+        if not items:
+            return
+        def sort_key(x):
+            ma_so = x.get("ma_so")
+            if isinstance(ma_so, (int, float)):
+                return ma_so
+            elif isinstance(ma_so, str):
+                try:
+                    return float(ma_so)
+                except ValueError:
+                    return 999999
+            return 999999
+        
+        items.sort(key=sort_key)
+        for item in items:
+            if "children" in item and item["children"]:
+                sort_by_ma_so(item["children"])
+    
+    sort_by_ma_so(tree)
+    
+    return tree
+
+
+def flatten_tree_with_structure(tree: List[Dict[str, Any]], result: List[Dict[str, Any]] = None, expanded_paths: set = None) -> List[Dict[str, Any]]:
+    """
+    Flatten tree structure while preserving hierarchy info for rendering.
+    
+    Args:
+        tree: Tree structure
+        result: Accumulator list
+        expanded_paths: Set of expanded paths (all expanded by default)
+        
+    Returns:
+        Flat list with hierarchy info
+    """
+    if result is None:
+        result = []
+    if expanded_paths is None:
+        expanded_paths = set()  # Empty means all collapsed, or we can default to all expanded
+    
+    for node in tree:
+        # Add node to result
+        result.append(node)
+        
+        # If node has children and is expanded, add children
+        if "children" in node and node["full_path"] in expanded_paths:
+            flatten_tree_with_structure(node["children"], result, expanded_paths)
+    
+    return result
 
 
 if __name__ == '__main__':
