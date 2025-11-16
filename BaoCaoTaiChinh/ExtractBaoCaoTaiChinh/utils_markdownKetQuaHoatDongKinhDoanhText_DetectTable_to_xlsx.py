@@ -10,7 +10,7 @@ Module này thực hiện 3 bước đơn giản:
 
 CHỨC NĂNG:
 ----------
-- detect_ketquahoedongkinhdoanh(): Phát hiện "báo cáo kết quả hoạt động kinh doanh" (fuzzy 80%)
+- detect_ketquahoatdongkinhdoanh(): Phát hiện "báo cáo kết quả hoạt động kinh doanh" (fuzzy 80%)
 - process_markdown_file_to_xlsx(): Xử lý file markdown và chuyển đổi sang Excel
 
 YÊU CẦU:
@@ -23,6 +23,7 @@ CÀI ĐẶT:
     pip install pandas openpyxl
 """
 
+import re
 from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Optional
@@ -36,6 +37,39 @@ from utils_markdownTable_to_xlsx import (
     _create_dataframe_from_rows,
     _is_separator_line
 )
+
+
+def _create_compact(text: str) -> str:
+    """
+    Tạo phiên bản compact của text: lowercase, loại bỏ dấu, loại bỏ khoảng trắng và ký tự đặc biệt.
+    Chỉ giữ lại các chữ cái (a-z).
+    
+    Thuật toán:
+    - Lowercase text
+    - Loại bỏ dấu tiếng Việt
+    - Loại bỏ tất cả khoảng trắng và ký tự đặc biệt
+    - Chỉ giữ lại chữ cái (a-z)
+    
+    Args:
+        text (str): Văn bản cần compact hóa
+        
+    Returns:
+        str: Text đã được compact (chỉ chữ cái, không dấu, không khoảng trắng)
+        
+    Ví dụ:
+        >>> _create_compact("KẾT QUẢ HOẠT ĐỘNG KINH DOANH")
+        'ketquahoatdongkinhdoanh'
+        >>> _create_compact("KET QUA HOAT DONG KINH DOANH")
+        'ketquahoatdongkinhdoanh'
+    """
+    # Lowercase và loại bỏ dấu
+    text_lower = text.lower()
+    text_khong_dau = remove_diacritics(text_lower)
+    
+    # Loại bỏ tất cả khoảng trắng và ký tự đặc biệt, chỉ giữ chữ cái
+    compact = re.sub(r'[^a-z]', '', text_khong_dau)
+    
+    return compact
 
 
 def _remove_markdown_tables(text: str) -> str:
@@ -78,16 +112,19 @@ def _remove_markdown_tables(text: str) -> str:
     return '\n'.join(result_lines)
 
 
-def detect_ketquahoedongkinhdoanh(text: str, threshold: float = 0.8) -> bool:
+def detect_ketquahoatdongkinhdoanh(text: str, threshold: float = 0.8) -> bool:
     """
     Phát hiện xem văn bản có chứa "báo cáo kết quả hoạt động kinh doanh" hay không.
     
-    Logic:
+    Logic sử dụng thuật toán: score = ratio(compact, REFERENCE) với sliding window
+    
     1. Loại bỏ tất cả các bảng markdown khỏi văn bản (chỉ check trong text thông thường)
     2. Loại trừ các pattern liên quan đến "lưu chuyển tiền tệ" hoặc "cash flow"
-    3. Lowercase toàn bộ văn bản
-    4. Loại bỏ dấu tiếng Việt
-    5. So khớp fuzzy 80% với "bao cao ket qua hoat dong kinh doanh"
+    3. Tạo compact version của text: lowercase, loại bỏ dấu, loại bỏ khoảng trắng, chỉ giữ chữ cái
+    4. Tạo compact version của pattern REFERENCE
+    5. Kiểm tra exact match: nếu reference xuất hiện trực tiếp trong compact text
+    6. So khớp fuzzy theo character-level: sử dụng sliding window để tìm pattern ở bất kỳ đâu trong text
+    7. Tính score = ratio(candidate, REFERENCE) và so sánh với threshold (mặc định 0.8 = 80%)
     
     Lưu ý:
         Hàm này KHÔNG tìm kiếm trong các bảng markdown, chỉ tìm trong phần text thông thường.
@@ -103,12 +140,14 @@ def detect_ketquahoedongkinhdoanh(text: str, threshold: float = 0.8) -> bool:
         bool: True nếu tìm thấy "báo cáo kết quả hoạt động kinh doanh", False nếu không
         
     Ví dụ:
-        >>> detect_ketquahoedongkinhdoanh("BÁO CÁO KẾT QUẢ HOẠT ĐỘNG KINH DOANH")  # True
-        >>> detect_ketquahoedongkinhdoanh("BAO CAO KET QUA HOAT DONG KINH DOANH")   # True
-        >>> detect_ketquahoedongkinhdoanh("Kết quả hoạt động kinh doanh")           # True
-        >>> detect_ketquahoedongkinhdoanh("BÁO CÁO LƯU CHUYỂN TIỀN TỆ")            # False
-        >>> detect_ketquahoedongkinhdoanh("Lưu chuyển tiền từ hoạt động kinh doanh") # False (trong bảng)
-        >>> detect_ketquahoedongkinhdoanh("Không có gì")                            # False
+        >>> detect_ketquahoatdongkinhdoanh("BÁO CÁO KẾT QUẢ HOẠT ĐỘNG KINH DOANH")  # True
+        >>> detect_ketquahoatdongkinhdoanh("BAO CAO KET QUA HOAT DONG KINH DOANH")   # True
+        >>> detect_ketquahoatdongkinhdoanh("Kết quả hoạt động kinh doanh")           # True
+        >>> detect_ketquahoatdongkinhdoanh("BÁO CÁO LƯU CHUYỂN TIỀN TỆ")            # False
+        >>> detect_ketquahoatdongkinhdoanh("Lưu chuyển tiền từ hoạt động kinh doanh") # False (trong bảng)
+        >>> detect_ketquahoatdongkinhdoanh("Không có gì")                            # False
+        
+    Cần bắ : "Báo cáo về kết quả của hoạt động kinh doanh", "Báo cáo kết quả các hoạt động kinh doanh"    
     """
     # Bước 1: Loại bỏ tất cả các bảng markdown (chỉ check trong text thông thường)
     text_without_tables = _remove_markdown_tables(text)
@@ -118,47 +157,61 @@ def detect_ketquahoedongkinhdoanh(text: str, threshold: float = 0.8) -> bool:
     text_lower = text_without_tables.lower()
     text_khong_dau = remove_diacritics(text_lower)
     
-    # Kiểm tra xem có phải là "lưu chuyển tiền tệ" không
-    cash_flow_patterns = [
+    # Kiểm tra xem có phải là "bảng cân đối kế toán" hoặc "lưu chuyển tiền tệ" không
+    other_statements_patterns = [
+        "can doi ke toan",
         "luu chuyen tien te",
-        "bao cao luu chuyen tien te",
-        "cash flow",
-        "statement of cash flows"
     ]
     
-    for cash_flow_pattern in cash_flow_patterns:
-        if cash_flow_pattern in text_khong_dau:
-            # Đây là báo cáo lưu chuyển tiền tệ, không phải kết quả hoạt động kinh doanh
+    for other_statement_pattern in other_statements_patterns:
+        if other_statement_pattern in text_khong_dau:
+            # Đây là báo cáo tài chính khác, không phải kết quả hoạt động kinh doanh
             return False
     
-    # Bước 3: Kiểm tra các pattern của "kết quả hoạt động kinh doanh"
+    # Bước 3: Tạo compact version của text
+    text_compact = _create_compact(text_without_tables)
+    
+    # Bước 4: Kiểm tra các pattern của "kết quả hoạt động kinh doanh"
     # Pattern chuẩn để so khớp (các biến thể) - PHẢI có "ket qua" trong pattern
     patterns = [
-        "bao cao ket qua hoat dong kinh doanh",
         "ket qua hoat dong kinh doanh",
         "bao cao ket qua kinh doanh"
     ]
     
-    # Kiểm tra từng pattern
+    # Kiểm tra từng pattern trong danh sách
     for pattern in patterns:
-        # Kiểm tra nếu pattern xuất hiện trực tiếp
-        if pattern in text_khong_dau:
+        # Tạo compact version của pattern
+        pattern_compact = _create_compact(pattern)
+        
+        # Kiểm tra nếu pattern xuất hiện trực tiếp trong compact text (exact match)
+        if pattern_compact in text_compact:
             return True
         
-        # Fuzzy matching: tìm cụm từ có độ dài tương tự và so khớp
-        words = text_khong_dau.split()
-        pattern_words = pattern.split()
+        # Bước 5: So khớp fuzzy theo character-level - sử dụng sliding window
+        # Sử dụng thuật toán: score = ratio(candidate, REFERENCE)
+        # 
+        # Sử dụng hàm có sẵn: SequenceMatcher.ratio() từ difflib (Python standard library)
+        # - ratio() trả về giá trị 0.0 - 1.0 (tương đương 0% - 100%)
+        # - Không cần chia 100 vì ratio() đã trả về 0-1
+        #
+        # Sliding window: Dịch chuyển cửa sổ qua text_compact để tìm cụm có độ dài bằng pattern
+        ref_len = len(pattern_compact)
+        text_len = len(text_compact)
         
-        if len(pattern_words) > len(words):
+        # Nếu text ngắn hơn pattern, không thể match
+        if text_len < ref_len:
             continue
         
-        for i in range(len(words) - len(pattern_words) + 1):
-            candidate = ' '.join(words[i:i+len(pattern_words)])
-            similarity = SequenceMatcher(None, pattern, candidate).ratio()
+        # Dịch chuyển cửa sổ (sliding window) qua text_compact
+        # Tìm cụm có độ dài bằng pattern_compact và tính similarity score
+        for i in range(text_len - ref_len + 1):
+            candidate_compact = text_compact[i:i + ref_len]
+            # Sử dụng hàm có sẵn: SequenceMatcher.ratio() từ difflib
+            score = SequenceMatcher(None, pattern_compact, candidate_compact).ratio()
             
-            if similarity >= threshold:
+            if score >= threshold:
                 return True
-    
+
     return False
 
 
@@ -207,7 +260,7 @@ def process_markdown_file_to_xlsx(
     # Bước 2: Phát hiện "báo cáo kết quả hoạt động kinh doanh" (nếu cần)
     if detect_income_statement:
         print("Detecting 'Bao Cao Ket Qua Hoat Dong Kinh Doanh'...")
-        if not detect_ketquahoedongkinhdoanh(content):
+        if not detect_ketquahoatdongkinhdoanh(content):
             raise ValueError(
                 "File does not contain 'Bao Cao Ket Qua Hoat Dong Kinh Doanh'. "
                 "Set detect_income_statement=False to process anyway."

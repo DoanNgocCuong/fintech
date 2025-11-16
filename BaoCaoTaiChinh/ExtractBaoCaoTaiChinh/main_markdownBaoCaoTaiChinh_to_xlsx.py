@@ -44,7 +44,7 @@ except ImportError:
 
 # Import detection functions và utilities
 from utils_markdownCanDoiKeToanText_DetectTable_to_xlsx import detect_candoiketoan
-from utils_markdownKetQuaHoatDongKinhDoanhText_DetectTable_to_xlsx import detect_ketquahoedongkinhdoanh
+from utils_markdownKetQuaHoatDongKinhDoanhText_DetectTable_to_xlsx import detect_ketquahoatdongkinhdoanh
 from utils_markdownLuuChuyenTienTeText_DetectTable_to_xlsx import detect_luuchuyentiente
 from utils_markdownTable_to_xlsx import (
     extract_markdown_tables,
@@ -201,7 +201,7 @@ def process_pages_for_financial_statements(
     # Xác định hàm detect tương ứng
     detect_functions = {
         'balance_sheet': detect_candoiketoan,
-        'income_statement': detect_ketquahoedongkinhdoanh,
+        'income_statement': detect_ketquahoatdongkinhdoanh,
         'cash_flow': detect_luuchuyentiente
     }
     
@@ -315,7 +315,7 @@ def process_all_financial_statements(
     # Phát hiện các loại báo cáo
     print("\nDetecting financial statements...")
     has_balance_sheet = detect_candoiketoan(content)
-    has_income_statement = detect_ketquahoedongkinhdoanh(content)
+    has_income_statement = detect_ketquahoatdongkinhdoanh(content)
     has_cash_flow = detect_luuchuyentiente(content)
     
     print(f"  - Balance Sheet: {'✓ Found' if has_balance_sheet else '✗ Not found'}")
@@ -500,7 +500,7 @@ def detect_all_financial_statements(input_file: str) -> Dict[str, bool]:
     # Phát hiện các loại báo cáo
     results = {
         'balance_sheet': detect_candoiketoan(content),
-        'income_statement': detect_ketquahoedongkinhdoanh(content),
+        'income_statement': detect_ketquahoatdongkinhdoanh(content),
         'cash_flow': detect_luuchuyentiente(content)
     }
     

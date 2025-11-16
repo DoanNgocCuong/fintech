@@ -14,7 +14,7 @@ Module này sử dụng logic quét qua các trang của file markdown gốc:
    - Hàm này được import từ utils_prepare_process.py (dùng chung cho tất cả các loại báo cáo)
 2. process_pages_for_financial_statements(): Quét qua từng trang để tìm và extract các bảng
    - Hàm generic này được import từ utils_prepare_process.py (dùng chung cho tất cả các loại báo cáo)
-   - Sử dụng detect_ketquahoedongkinhdoanh để phát hiện Kết quả Hoạt động Kinh doanh
+   - Sử dụng detect_ketquahoatdongkinhdoanh để phát hiện Kết quả Hoạt động Kinh doanh
 3. Giới hạn số trang xử lý với tham số max_pages (mặc định: 30 trang)
 4. Bỏ qua các trang có chứa "thuyết minh báo cáo tài chính" (exclude_thuyetminh=True)
 
@@ -35,7 +35,7 @@ Markdown File
 [4] process_pages_for_financial_statements()
     ├─ Vòng lặp qua TỪNG TRANG:
     │  ├─ Bỏ qua trang có "thuyết minh"
-    │  ├─ detect_ketquahoedongkinhdoanh(page_content) ← CHECK TỪNG TRANG
+    │  ├─ detect_ketquahoatdongkinhdoanh(page_content) ← CHECK TỪNG TRANG
     │  └─ extract_markdown_tables(page_content) → [table1, table2, ...]
     ↓
 [5] Parse tables → DataFrame → Excel
@@ -87,7 +87,7 @@ except ImportError:
 _INCOME_TEMPLATE_JSON_PATH = Path(__file__).parent / "income_template_json.json"
 
 # Import detection functions và utilities
-from utils_markdownKetQuaHoatDongKinhDoanhText_DetectTable_to_xlsx import detect_ketquahoedongkinhdoanh
+from utils_markdownKetQuaHoatDongKinhDoanhText_DetectTable_to_xlsx import detect_ketquahoatdongkinhdoanh
 from utils_markdownTable_to_xlsx import (
     _parse_markdown_table,
     _create_dataframe_from_rows,
@@ -99,7 +99,7 @@ from utils_markdownTable_to_xlsx import (
 
 # Các hàm utility đã được di chuyển vào utils_prepare_process.py:
 # - parse_markdown_pages() -> parse_markdown_pages()
-# - process_pages_for_income_statement() -> process_pages_for_financial_statements(pages, detect_ketquahoedongkinhdoanh)
+# - process_pages_for_income_statement() -> process_pages_for_financial_statements(pages, detect_ketquahoatdongkinhdoanh)
 # - parse_ma_so() -> parse_ma_so()
 # - parse_number() -> parse_number()
 # - find_value_column() -> find_value_column()
@@ -219,8 +219,8 @@ def process_income_statement(
         print("-" * 80)
         try:
             # Quét qua từng trang để tìm và extract các bảng của Kết quả Hoạt động Kinh doanh
-            # Sử dụng hàm generic process_pages_for_financial_statements với detect_ketquahoedongkinhdoanh
-            result_pages = process_pages_for_financial_statements(pages, detect_ketquahoedongkinhdoanh)
+            # Sử dụng hàm generic process_pages_for_financial_statements với detect_ketquahoatdongkinhdoanh
+            result_pages = process_pages_for_financial_statements(pages, detect_ketquahoatdongkinhdoanh)
             if result_pages:
                 print(f"  Found {len(result_pages)} page(s) with income statement")
                 table_idx = 1

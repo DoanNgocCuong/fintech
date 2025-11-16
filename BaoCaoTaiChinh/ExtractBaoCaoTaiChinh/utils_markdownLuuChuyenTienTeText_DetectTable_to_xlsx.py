@@ -39,6 +39,39 @@ from utils_markdownTable_to_xlsx import (
 )
 
 
+def _create_compact(text: str) -> str:
+    """
+    Tạo phiên bản compact của text: lowercase, loại bỏ dấu, loại bỏ khoảng trắng và ký tự đặc biệt.
+    Chỉ giữ lại các chữ cái (a-z).
+    
+    Thuật toán:
+    - Lowercase text
+    - Loại bỏ dấu tiếng Việt
+    - Loại bỏ tất cả khoảng trắng và ký tự đặc biệt
+    - Chỉ giữ lại chữ cái (a-z)
+    
+    Args:
+        text (str): Văn bản cần compact hóa
+        
+    Returns:
+        str: Text đã được compact (chỉ chữ cái, không dấu, không khoảng trắng)
+        
+    Ví dụ:
+        >>> _create_compact("LƯU CHUYỂN TIỀN TỆ")
+        'luuchuyentiente'
+        >>> _create_compact("LUU CHUYEN TIEN TE")
+        'luuchuyentiente'
+    """
+    # Lowercase và loại bỏ dấu
+    text_lower = text.lower()
+    text_khong_dau = remove_diacritics(text_lower)
+    
+    # Loại bỏ tất cả khoảng trắng và ký tự đặc biệt, chỉ giữ chữ cái
+    compact = re.sub(r'[^a-z]', '', text_khong_dau)
+    
+    return compact
+
+
 def _remove_markdown_tables(text: str) -> str:
     """
     Loại bỏ tất cả các bảng markdown khỏi văn bản, chỉ giữ lại phần text thông thường.
@@ -79,12 +112,15 @@ def detect_luuchuyentiente(text: str, threshold: float = 0.8) -> bool:
     """
     Phát hiện xem văn bản có chứa "báo cáo lưu chuyển tiền tệ" hay không.
     
-    Logic:
+    Logic sử dụng thuật toán: score = ratio(compact, REFERENCE) với sliding window
+    
     1. Loại bỏ tất cả các bảng markdown khỏi văn bản (chỉ check trong text thông thường)
     2. Loại trừ các pattern liên quan đến "kết quả hoạt động kinh doanh" hoặc "bảng cân đối kế toán"
-    3. Lowercase toàn bộ văn bản
-    4. Loại bỏ dấu tiếng Việt
-    5. So khớp fuzzy 80% với "bao cao luu chuyen tien te"
+    3. Tạo compact version của text: lowercase, loại bỏ dấu, loại bỏ khoảng trắng, chỉ giữ chữ cái
+    4. Tạo compact version của pattern REFERENCE
+    5. Kiểm tra exact match: nếu reference xuất hiện trực tiếp trong compact text
+    6. So khớp fuzzy theo character-level: sử dụng sliding window để tìm pattern ở bất kỳ đâu trong text
+    7. Tính score = ratio(candidate, REFERENCE) và so sánh với threshold (mặc định 0.8 = 80%)
     
     Lưu ý:
         Hàm này KHÔNG tìm kiếm trong các bảng markdown, chỉ tìm trong phần text thông thường.
@@ -131,7 +167,10 @@ def detect_luuchuyentiente(text: str, threshold: float = 0.8) -> bool:
             # Đây là báo cáo tài chính khác, không phải lưu chuyển tiền tệ
             return False
     
-    # Bước 3: Kiểm tra các pattern của "lưu chuyển tiền tệ"
+    # Bước 3: Tạo compact version của text
+    text_compact = _create_compact(text_without_tables)
+    
+    # Bước 4: Kiểm tra các pattern của "lưu chuyển tiền tệ"
     # Pattern chuẩn để so khớp (các biến thể)
     patterns = [
         "bao cao luu chuyen tien te",
@@ -142,22 +181,36 @@ def detect_luuchuyentiente(text: str, threshold: float = 0.8) -> bool:
     
     # Kiểm tra từng pattern
     for pattern in patterns:
-        # Kiểm tra nếu pattern xuất hiện trực tiếp
-        if pattern in text_khong_dau or pattern in text_lower:
+        # Tạo compact version của pattern
+        pattern_compact = _create_compact(pattern)
+        
+        # Kiểm tra nếu pattern xuất hiện trực tiếp trong compact text (exact match)
+        if pattern_compact in text_compact:
             return True
         
-        # Fuzzy matching: tìm cụm từ có độ dài tương tự và so khớp
-        words = text_khong_dau.split()
-        pattern_words = pattern.split()
+        # Bước 5: So khớp fuzzy theo character-level - sử dụng sliding window
+        # Sử dụng thuật toán: score = ratio(candidate, REFERENCE)
+        # 
+        # Sử dụng hàm có sẵn: SequenceMatcher.ratio() từ difflib (Python standard library)
+        # - ratio() trả về giá trị 0.0 - 1.0 (tương đương 0% - 100%)
+        # - Không cần chia 100 vì ratio() đã trả về 0-1
+        #
+        # Sliding window: Dịch chuyển cửa sổ qua text_compact để tìm cụm có độ dài bằng pattern
+        ref_len = len(pattern_compact)
+        text_len = len(text_compact)
         
-        if len(pattern_words) > len(words):
+        # Nếu text ngắn hơn pattern, không thể match
+        if text_len < ref_len:
             continue
         
-        for i in range(len(words) - len(pattern_words) + 1):
-            candidate = ' '.join(words[i:i+len(pattern_words)])
-            similarity = SequenceMatcher(None, pattern, candidate).ratio()
+        # Dịch chuyển cửa sổ (sliding window) qua text_compact
+        # Tìm cụm có độ dài bằng pattern_compact và tính similarity score
+        for i in range(text_len - ref_len + 1):
+            candidate_compact = text_compact[i:i + ref_len]
+            # Sử dụng hàm có sẵn: SequenceMatcher.ratio() từ difflib
+            score = SequenceMatcher(None, pattern_compact, candidate_compact).ratio()
             
-            if similarity >= threshold:
+            if score >= threshold:
                 return True
     
     return False

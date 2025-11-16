@@ -27,6 +27,7 @@ CÀI ĐẶT:
     pip install pandas openpyxl
 """
 
+import re
 from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Optional
@@ -40,6 +41,39 @@ from utils_markdownTable_to_xlsx import (
     _create_dataframe_from_rows,
     _is_separator_line
 )
+
+
+def _create_compact(text: str) -> str:
+    """
+    Tạo phiên bản compact của text: lowercase, loại bỏ dấu, loại bỏ khoảng trắng và ký tự đặc biệt.
+    Chỉ giữ lại các chữ cái (a-z).
+    
+    Thuật toán:
+    - Lowercase text
+    - Loại bỏ dấu tiếng Việt
+    - Loại bỏ tất cả khoảng trắng và ký tự đặc biệt
+    - Chỉ giữ lại chữ cái (a-z)
+    
+    Args:
+        text (str): Văn bản cần compact hóa
+        
+    Returns:
+        str: Text đã được compact (chỉ chữ cái, không dấu, không khoảng trắng)
+        
+    Ví dụ:
+        >>> _create_compact("BẢNG CÂN ĐỐI KẾ TOÁN")
+        'bangcandoiketoan'
+        >>> _create_compact("BANG CAN DOI KE TOAN")
+        'bangcandoiketoan'
+    """
+    # Lowercase và loại bỏ dấu
+    text_lower = text.lower()
+    text_khong_dau = remove_diacritics(text_lower)
+    
+    # Loại bỏ tất cả khoảng trắng và ký tự đặc biệt, chỉ giữ chữ cái
+    compact = re.sub(r'[^a-z]', '', text_khong_dau)
+    
+    return compact
 
 
 def _remove_markdown_tables(text: str) -> str:
@@ -85,11 +119,21 @@ def detect_candoiketoan(text: str, threshold: float = 0.8) -> bool:
     """
     Phát hiện xem văn bản có chứa "bảng cân đối kế toán" hay không.
     
-    Logic:
+    Logic sử dụng thuật toán: score = ratio(compact, REFERENCE)
+    
     1. Loại bỏ tất cả các bảng markdown khỏi văn bản (chỉ check trong text thông thường)
-    2. Lowercase toàn bộ văn bản
-    3. Loại bỏ dấu tiếng Việt
-    4. So khớp fuzzy 80% với "bang can doi ke toan"
+    2. Tạo compact version của text: lowercase, loại bỏ dấu, loại bỏ khoảng trắng, chỉ giữ chữ cái
+    3. Tạo compact version của pattern REFERENCE: "candoiketoan"
+    4. Kiểm tra exact match: nếu reference xuất hiện trực tiếp trong compact text
+    5. So khớp fuzzy theo character-level: sử dụng sliding window để tìm pattern ở bất kỳ đâu trong text
+    6. Tính score = ratio(candidate, REFERENCE) và so sánh với threshold (mặc định 0.8 = 80%)
+    
+    Thuật toán ratio(candidate, REFERENCE) với sliding window:
+    - `candidate`: Cụm từ trong text_compact có độ dài bằng reference (tìm bằng sliding window)
+    - `REFERENCE`: Pattern chuẩn đã compact hóa (ví dụ: "candoiketoan")
+    - `ratio()`: Sử dụng hàm có sẵn SequenceMatcher.ratio() từ difflib (Python standard library)
+    - SequenceMatcher.ratio() trả về 0.0 - 1.0 (tương đương 0% - 100%)
+    - Sliding window: Dịch chuyển cửa sổ qua text để tìm pattern ở bất kỳ đâu
     
     Lưu ý:
         Hàm này KHÔNG tìm kiếm trong các bảng markdown, chỉ tìm trong phần text thông thường.
@@ -110,27 +154,46 @@ def detect_candoiketoan(text: str, threshold: float = 0.8) -> bool:
     # Bước 1: Loại bỏ tất cả các bảng markdown (chỉ check trong text thông thường)
     text_without_tables = _remove_markdown_tables(text)
     
-    # Bước 2: Lowercase và loại bỏ dấu
-    text_lower = text_without_tables.lower()
-    text_khong_dau = remove_diacritics(text_lower)
+    # Bước 2: Tạo compact version của text
+    text_compact = _create_compact(text_without_tables)
     
-    # Pattern chuẩn để so khớp
-    pattern = "bang can doi ke toan"
+    # Bước 3: Pattern REFERENCE đã compact hóa
+    # Pattern gốc: "can doi ke toan" → Compact: "candoiketoan"
+    reference_pattern = "can doi ke toan"
+    reference_compact = _create_compact(reference_pattern)
     
-    # Tìm tất cả các cụm từ có độ dài tương tự trong text
-    words = text_khong_dau.split()
-    pattern_words = pattern.split()
-    
-    # Kiểm tra nếu pattern xuất hiện trực tiếp
-    if pattern in text_khong_dau:
+    # Bước 4: Kiểm tra nếu reference xuất hiện trực tiếp trong compact text (exact match)
+    if reference_compact in text_compact:
         return True
     
-    # Fuzzy matching: tìm cụm từ có độ dài tương tự và so khớp
-    for i in range(len(words) - len(pattern_words) + 1):
-        candidate = ' '.join(words[i:i+len(pattern_words)])
-        similarity = SequenceMatcher(None, pattern, candidate).ratio()
+    # Bước 5: So khớp fuzzy theo character-level - sử dụng sliding window
+    # Sử dụng thuật toán: score = ratio(candidate, REFERENCE)
+    # 
+    # Sử dụng hàm có sẵn: SequenceMatcher.ratio() từ difflib (Python standard library)
+    # - ratio() trả về giá trị 0.0 - 1.0 (tương đương 0% - 100%)
+    # - Không cần chia 100 vì ratio() đã trả về 0-1
+    #
+    # Sliding window: Dịch chuyển cửa sổ qua text_compact để tìm cụm có độ dài bằng reference
+    # Ví dụ:
+    #   text_compact = "daylabangcandoiketoancuacongty"
+    #   reference = "candoiketoan"
+    #   Tìm cụm 15 ký tự trong text và so sánh với reference
+    
+    ref_len = len(reference_compact)
+    text_len = len(text_compact)
+    
+    # Nếu text ngắn hơn reference, không thể match
+    if text_len < ref_len:
+        return False
+    
+    # Dịch chuyển cửa sổ (sliding window) qua text_compact
+    # Tìm cụm có độ dài bằng reference_compact và tính similarity score
+    for i in range(text_len - ref_len + 1):
+        candidate_compact = text_compact[i:i + ref_len]
+        # Sử dụng hàm có sẵn: SequenceMatcher.ratio() từ difflib
+        score = SequenceMatcher(None, reference_compact, candidate_compact).ratio()
         
-        if similarity >= threshold:
+        if score >= threshold:
             return True
     
     return False

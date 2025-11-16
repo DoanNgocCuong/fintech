@@ -108,7 +108,7 @@ def process_pages_for_financial_statements(
     Args:
         pages (List[Tuple[int, str]]): Danh sách các trang (page_number, page_content)
         detect_func (Callable[[str], bool]): Hàm detect để kiểm tra xem trang có chứa loại báo cáo hay không
-                                            Ví dụ: detect_candoiketoan, detect_ketquahoedongkinhdoanh, detect_luuchuyentiente
+                                            Ví dụ: detect_candoiketoan, detect_ketquahoatdongkinhdoanh, detect_luuchuyentiente
         exclude_thuyetminh (bool): Nếu True, bỏ qua các trang có chứa "thuyết minh báo cáo tài chính"
         
     Returns:
