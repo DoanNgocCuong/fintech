@@ -7,7 +7,7 @@ try:
 except ImportError:
     pd = None
 
-from main_KetQuaHoatDongKinhDoanh import _get_income_statement_json_template
+from main_KetQuaHoatDongKinhDoanh_to_excelANDjson import _get_income_statement_json_template
 from utils_prepare_process import (
     find_ma_so_column,
     find_value_column,

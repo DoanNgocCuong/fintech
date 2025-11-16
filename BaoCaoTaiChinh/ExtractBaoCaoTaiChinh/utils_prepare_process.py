@@ -238,6 +238,16 @@ def normalize_ma_so(ma_so: str) -> str:
             integer_part = parts[0].strip()
             decimal_part = parts[1].strip()
             
+            # FIX: Nếu phần thập phân chỉ có số 0 (0, 00, 000, ...), coi như không có phần thập phân
+            # Điều này xử lý trường hợp Excel trả về float 100.0 thành string "100.0"
+            if decimal_part and decimal_part.replace('0', '').strip() == '':
+                # Phần thập phân chỉ có số 0 -> normalize như số nguyên
+                try:
+                    integer_part_int = int(integer_part)
+                    return str(integer_part_int)
+                except ValueError:
+                    return integer_part
+            
             # Normalize phần nguyên (loại bỏ số 0 đứng đầu)
             try:
                 integer_part_int = int(integer_part)
@@ -245,7 +255,7 @@ def normalize_ma_so(ma_so: str) -> str:
             except ValueError:
                 integer_part_normalized = integer_part
             
-            # Giữ nguyên phần thập phân
+            # Giữ nguyên phần thập phân (nếu không phải toàn số 0)
             if decimal_part:
                 return f"{integer_part_normalized}.{decimal_part}"
             else:
@@ -464,15 +474,16 @@ def parse_number(value: Any) -> Optional[float]:
 
 def find_value_column(df) -> Optional[str]:
     """
-    Tìm cột giá trị bằng cách xem dữ liệu ở 2-3 dòng đầu (bỏ qua header),
-    chọn cột có chuỗi số dài nhất (theo tổng số chữ số), bỏ qua tên cột.
+    Tìm cột giá trị (số tiền).
     
-    Quy tắc:
+    QUY TẮC MỚI:
+    - Ưu tiên: Cột cuối cùng (vì đã bỏ cột thuyết minh ở cuối rồi)
+    - Fallback: Cột có chuỗi số dài nhất (theo tổng số chữ số), bỏ qua tên cột.
+    
+    Quy tắc chi tiết:
     - Bỏ qua các cột meta: 'mã số', 'chỉ tiêu', 'thuyết minh'
-    - Chỉ xét 2-3 ô dữ liệu đầu không rỗng của mỗi cột
-    - Một ô được coi là "số" nếu match định dạng VN: cho phép . , và ()
-    - Điểm cột = tổng số chữ số (0-9) trong các ô numeric hợp lệ
-    - Chọn cột có điểm cao nhất; nếu hòa, chọn cột nằm bên phải hơn
+    - Ưu tiên chọn cột cuối cùng (sau khi đã bỏ cột thuyết minh)
+    - Nếu cột cuối không hợp lệ, fallback về logic cũ: chọn cột có nhiều số nhất
     """
     if pd is None:
         raise ImportError("pandas is required for find_value_column. Install with: pip install pandas")
@@ -519,6 +530,20 @@ def find_value_column(df) -> Optional[str]:
         if ('thuyet minh' in col_no_diacritics) or ('thuyết minh' in col_no_diacritics):
             excluded_by_name.add(col)
     
+    # ƯU TIÊN: Cột cuối cùng (sau khi đã bỏ cột thuyết minh)
+    if len(cols) > 0:
+        last_col = cols[-1]
+        if last_col not in excluded_by_name:
+            # Kiểm tra xem cột cuối có chứa số không
+            series = df[last_col]
+            sample_values = series.dropna().head(3).tolist()
+            if sample_values:
+                values_considered = [v for v in sample_values if is_vn_number_like(v)]
+                if values_considered:
+                    # Cột cuối hợp lệ, trả về luôn
+                    return last_col
+    
+    # FALLBACK: Logic cũ - tìm cột có nhiều số nhất
     best_col = None
     best_score = -1
     best_index = -1
