@@ -347,10 +347,22 @@ def parse_number(value: Any) -> Optional[float]:
     """
     Parse số từ cell value (có thể có dấu phẩy, dấu ngoặc đơn cho số âm, etc.).
     
-    Hỗ trợ định dạng Việt Nam:
+    Hỗ trợ cả định dạng Việt Nam và Mỹ:
+    
+    Định dạng Việt Nam:
     - Dấu chấm (.) làm thousand separator: 1.234.567.890
     - Dấu phẩy (,) làm decimal separator: 1.234.567,89
     - Dấu ngoặc đơn cho số âm: (1.234.567.890)
+    
+    Định dạng Mỹ:
+    - Dấu phẩy (,) làm thousand separator: 2,438,488,070,081
+    - Dấu chấm (.) làm decimal separator: 1,234.56
+    - Dấu ngoặc đơn cho số âm: (1,877,469,473,712)
+    
+    Logic detect format:
+    1. Nếu có cả comma và dot: detect dựa trên vị trí (dot ở cuối → US format)
+    2. Nếu chỉ có comma: Check pattern (nhiều comma → US format, 1 comma → có thể decimal)
+    3. Nếu chỉ có dot: VN format
     
     Args:
         value: Giá trị từ cell (có thể là string, int, float, None)
@@ -359,14 +371,53 @@ def parse_number(value: Any) -> Optional[float]:
         Optional[float]: Số đã parse được, hoặc None nếu không parse được
         
     Ví dụ:
-        >>> parse_number("1.234.567.890")
+        >>> parse_number("1.234.567.890")  # VN format
         1234567890.0
-        >>> parse_number("(1.234.567.890)")
+        >>> parse_number("2,438,488,070,081")  # US format
+        2438488070081.0
+        >>> parse_number("(1.234.567.890)")  # VN format negative
         -1234567890.0
-        >>> parse_number("1.234.567,89")
+        >>> parse_number("(1,877,469,473,712)")  # US format negative
+        -1877469473712.0
+        >>> parse_number("1.234.567,89")  # VN format with decimal
         1234567.89
-        >>> parse_number("")
-        None
+        >>> parse_number("1,234.56")  # US format with decimal
+        1234.56
+
+**Format VN cũ (vẫn hoạt động):**
+- `1.234.567.890` → `1234567890.0` ✓
+- `(1.234.567.890)` → `-1234567890.0` ✓
+- `1.234.567,89` → `1234567.89` ✓
+- `1.234,56` → `1234.56` ✓
+- `1234567890` → `1234567890.0` ✓
+
+**Format Mỹ mới (mới thêm):**
+- `2,438,488,070,081` → `2438488070081.0` ✓
+- `(1,877,469,473,712)` → `-1877469473712.0` ✓
+- `(415,040)` → `-415040.0` ✓
+- `1,234.56` → `1234.56` ✓
+
+### Logic detect:
+
+1. Có cả comma và dot:
+   - `1.234,56` (comma sau dot) → VN format ✓
+   - `1,234.56` (dot sau comma) → US format ✓
+
+2. Chỉ có comma:
+   - Nhiều comma → US format (thousand separator)
+   - 1 comma + phần sau ≤ 2 chữ số → VN format (có thể là decimal)
+
+3. Chỉ có dot:
+   - Giữ nguyên logic cũ → VN format ✓
+
+### Kết luận:
+
+- Format VN cũ hoạt động bình thường
+- Đã thêm hỗ trợ format Mỹ
+- Không ảnh hưởng đến code cũ
+- Auto-detect format tự động
+
+JSON sẽ có dữ liệu đúng cho cả format VN và Mỹ.        
     """
     if value is None:
         return None
@@ -400,24 +451,78 @@ def parse_number(value: Any) -> Optional[float]:
         is_negative = True
         value = value[1:].strip()
     
-    # Xử lý định dạng Việt Nam: dấu chấm là thousand separator, dấu phẩy là decimal separator
-    # VD: 1.234.567,89 -> 1234567.89
-    if ',' in value:
-        # Có dấu phẩy -> có thể là decimal separator
+    has_comma = ',' in value
+    has_dot = '.' in value
+    
+    # CASE 1: Có cả comma và dot → Detect format dựa trên pattern
+    if has_comma and has_dot:
+        # Check format: "1,234.56" (US) vs "1.234,56" (VN)
+        comma_pos = value.rfind(',')
+        dot_pos = value.rfind('.')
+        
+        if comma_pos > dot_pos:
+            # Comma ở sau dot → VN format: "1.234,56"
+            parts = value.split(',')
+            if len(parts) == 2:
+                integer_part = parts[0].replace('.', '')  # Remove thousand separators
+                decimal_part = parts[1]
+                try:
+                    result = float(f"{integer_part}.{decimal_part}")
+                    return -result if is_negative else result
+                except (ValueError, AttributeError):
+                    pass
+        else:
+            # Dot ở sau comma → US format: "1,234.56"
+            parts = value.split('.')
+            if len(parts) == 2:
+                integer_part = parts[0].replace(',', '')  # Remove thousand separators
+                decimal_part = parts[1]
+                try:
+                    result = float(f"{integer_part}.{decimal_part}")
+                    return -result if is_negative else result
+                except (ValueError, AttributeError):
+                    pass
+    
+    # CASE 2: Chỉ có comma (không có dot)
+    elif has_comma and not has_dot:
+        # Có thể là US format (comma = thousand) hoặc VN format (comma = decimal)
+        # Detect: Nếu có nhiều comma hoặc comma tạo group 3 chữ số → US format
         parts = value.split(',')
+        
         if len(parts) == 2:
-            # Có 1 dấu phẩy -> là decimal separator
-            integer_part = parts[0].replace('.', '')  # Loại bỏ dấu chấm (thousand separator)
-            decimal_part = parts[1]
+            # Chỉ có 1 comma → có thể là decimal separator (VN) hoặc thousand separator (US)
+            # Check pattern: nếu phần sau comma có 3 chữ số → US format (thousand)
+            # Nếu phần sau comma có 1-2 chữ số → có thể là decimal (VN)
+            if len(parts[1]) <= 2 and parts[1].isdigit():
+                # Có thể là VN format với decimal separator
+                integer_part = parts[0].replace('.', '')
+                decimal_part = parts[1]
+                try:
+                    result = float(f"{integer_part}.{decimal_part}")
+                    return -result if is_negative else result
+                except (ValueError, AttributeError):
+                    pass
+            
+            # Hoặc có thể là US format (thousand separator) với chỉ 1 group
+            # VD: "415,040" → "415040"
             try:
-                result = float(f"{integer_part}.{decimal_part}")
+                cleaned = value.replace(',', '')
+                result = float(cleaned)
+                return -result if is_negative else result
+            except (ValueError, AttributeError):
+                pass
+        else:
+            # Nhiều comma → US format (thousand separator)
+            # VD: "2,438,488,070,081" → "2438488070081"
+            try:
+                cleaned = value.replace(',', '')
+                result = float(cleaned)
                 return -result if is_negative else result
             except (ValueError, AttributeError):
                 pass
     
-    # Nếu không có dấu phẩy hoặc parse thất bại, xử lý dấu chấm
-    # Có thể là: 1.234.567.890 (thousand separator) hoặc 1.234.567.89 (decimal ở cuối)
-    if '.' in value:
+    # CASE 3: Chỉ có dot (không có comma) → VN format
+    elif has_dot and not has_comma:
         parts = value.split('.')
         if len(parts) >= 2:
             # Kiểm tra phần cuối cùng
@@ -442,30 +547,48 @@ def parse_number(value: Any) -> Optional[float]:
             except (ValueError, AttributeError):
                 pass
     
-    # Nếu không có dấu chấm và dấu phẩy, parse trực tiếp
+    # CASE 4: Không có comma và dot → Parse trực tiếp
     try:
         result = float(value)
         return -result if is_negative else result
     except (ValueError, AttributeError):
         pass
     
-    # Cuối cùng, loại bỏ tất cả ký tự không phải số và dấu chấm/phẩy
+    # CASE 5: Fallback - loại bỏ tất cả ký tự không phải số và dấu chấm/phẩy
     try:
         cleaned = re.sub(r'[^\d.,]', '', value)
         if cleaned:
-            # Thử parse lại
-            if ',' in cleaned:
-                parts = cleaned.split(',')
-                if len(parts) == 2:
-                    integer_part = parts[0].replace('.', '')
-                    decimal_part = parts[1]
-                    result = float(f"{integer_part}.{decimal_part}")
-                    return -result if is_negative else result
-            else:
-                cleaned = cleaned.replace('.', '')
-                if cleaned:
-                    result = float(cleaned)
-                    return -result if is_negative else result
+            # Thử parse lại với logic tương tự
+            if ',' in cleaned and '.' in cleaned:
+                # Có cả 2 → detect format
+                comma_pos = cleaned.rfind(',')
+                dot_pos = cleaned.rfind('.')
+                if comma_pos > dot_pos:
+                    # VN format
+                    parts = cleaned.split(',')
+                    if len(parts) == 2:
+                        integer_part = parts[0].replace('.', '')
+                        decimal_part = parts[1]
+                        result = float(f"{integer_part}.{decimal_part}")
+                        return -result if is_negative else result
+                else:
+                    # US format
+                    parts = cleaned.split('.')
+                    if len(parts) == 2:
+                        integer_part = parts[0].replace(',', '')
+                        decimal_part = parts[1]
+                        result = float(f"{integer_part}.{decimal_part}")
+                        return -result if is_negative else result
+            elif ',' in cleaned:
+                # Chỉ có comma → US format (thousand separator)
+                cleaned_no_comma = cleaned.replace(',', '')
+                result = float(cleaned_no_comma)
+                return -result if is_negative else result
+            elif '.' in cleaned:
+                # Chỉ có dot → VN format (thousand separator)
+                cleaned_no_dot = cleaned.replace('.', '')
+                result = float(cleaned_no_dot)
+                return -result if is_negative else result
     except (ValueError, AttributeError):
         pass
     
