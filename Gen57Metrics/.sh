@@ -1,0 +1,1 @@
+python calculate_all_indicators.py MIG 2024 --quarter 5 --output result.json
