@@ -1,11 +1,11 @@
 """
-Main function to convert markdown Bảng Cân Đối Kế Toán to xlsx and JSON.
+Main function to convert markdown Báo cáo Lưu chuyển Tiền tệ to xlsx and JSON.
 
-Module này chỉ xử lý Bảng Cân Đối Kế Toán từ file markdown.
+Module này chỉ xử lý Báo cáo Lưu chuyển Tiền tệ từ file markdown.
 
 CHỨC NĂNG:
 ----------
-- process_balance_sheet(): Xử lý Bảng Cân Đối Kế Toán từ một file markdown và lưu vào Excel + JSON
+- process_cash_flow_statement(): Xử lý Báo cáo Lưu chuyển Tiền tệ từ một file markdown và lưu vào Excel + JSON
 
 LOGIC QUÉT TRANG:
 -----------------
@@ -14,7 +14,7 @@ Module này sử dụng logic quét qua các trang của file markdown gốc:
    - Hàm này được import từ utils_prepare_process.py (dùng chung cho tất cả các loại báo cáo)
 2. process_pages_for_financial_statements(): Quét qua từng trang để tìm và extract các bảng
    - Hàm generic này được import từ utils_prepare_process.py (dùng chung cho tất cả các loại báo cáo)
-   - Sử dụng detect_candoiketoan để phát hiện Bảng Cân Đối Kế Toán
+   - Sử dụng detect_luuchuyentiente để phát hiện Báo cáo Lưu chuyển Tiền tệ
 3. Giới hạn số trang xử lý với tham số max_pages (mặc định: 30 trang)
 4. Bỏ qua các trang có chứa "thuyết minh báo cáo tài chính" (exclude_thuyetminh=True)
 
@@ -22,7 +22,7 @@ YÊU CẦU:
 --------
 - pandas: Để xử lý dữ liệu và tạo Excel
 - openpyxl: Để ghi file Excel (.xlsx)
-- utils_markdownCanDoiKeToanText_DetectTable_to_xlsx: Module để detect Bảng Cân Đối Kế Toán
+- utils_markdownLuuChuyenTienTeText_DetectTable_to_xlsx: Module để detect Báo cáo Lưu chuyển Tiền tệ
 
 Markdown File
     ↓
@@ -35,7 +35,7 @@ Markdown File
 [4] process_pages_for_financial_statements()
     ├─ Vòng lặp qua TỪNG TRANG:
     │  ├─ Bỏ qua trang có "thuyết minh"
-    │  ├─ detect_candoiketoan(page_content) ← CHECK TỪNG TRANG
+    │  ├─ detect_luuchuyentiente(page_content) ← CHECK TỪNG TRANG
     │  └─ extract_markdown_tables(page_content) → [table1, table2, ...]
     ↓
 [5] Parse tables → DataFrame → Excel
@@ -43,14 +43,14 @@ Markdown File
 ---
 Excel File (.xlsx)
     ↓
-[1] Load JSON template từ balance_template_json.json
+[1] Load JSON template từ cash_flow_template_json.json
     ↓
 [2] Đọc Excel file → pd.ExcelFile
     ↓
 [3] Vòng lặp qua từng sheet:
     ├─ Đọc sheet → DataFrame
     ├─ find_ma_so_column(df) → Tìm cột "Mã số"
-    ├─ find_value_column(df) → Tìm cột giá trị ("31/12/2024 VND", etc.)
+    ├─ find_value_column(df) → Tìm cột giá trị ("Năm nay", etc.)
     ├─ Vòng lặp qua từng dòng:
     │  ├─ parse_ma_so(ma_so_str) → Mã số (int)
     │  ├─ parse_number(value) → Giá trị (float)
@@ -70,12 +70,17 @@ from typing import Optional, List, Tuple, Dict, Any
 from utils_prepare_process import (
     parse_markdown_pages,
     process_pages_for_financial_statements,
-    replace_null_in_dict,
+    parse_ma_so,
+    parse_number,
+    find_value_column,
+    find_ma_so_column,
+    update_json_with_ma_so,
+    replace_null_in_dict
 )
 from utils_error_logger import (
     log_simple_error,
-    XLSX_TO_JSON_LOG_CanDoiKeToan,
-    MARKDOWN_TO_XLSX_LOG_CanDoiKeToan,
+    XLSX_TO_JSON_LOG_LuuChuyenTienTe,
+    MARKDOWN_TO_XLSX_LOG_LuuChuyenTienTe,
 )
 
 try:
@@ -83,15 +88,20 @@ try:
 except ImportError:
     pd = None
 
-# Load balance template JSON from file
-_BALANCE_TEMPLATE_JSON_PATH = Path(__file__).parent / "balance_template_json.json"
+# Load cash flow template JSON from file
+_CASH_FLOW_TEMPLATE_JSON_PATH = Path(__file__).parent / "cash_flow_template_json.json"
 
 # Import detection functions và utilities
-from utils_markdownCanDoiKeToanText_DetectTable_to_xlsx import detect_candoiketoan
+from utils_markdownLuuChuyenTienTeText_DetectTable_to_xlsx import detect_luuchuyentiente
 from utils_markdownTable_to_xlsx import (
     _parse_markdown_table,
     _create_dataframe_from_rows,
-    _remove_last_column
+    _remove_last_column,
+    extract_markdown_tables
+)
+# Import hàm break pages để xác định vị trí các phần báo cáo tài chính
+from main_breakPages_for_CanDoiKeToan_KetQuaHoatDongKinhDoanh_LuuChuyenTienTe import (
+    break_pages_for_financial_statements
 )
 
 # Import JSON creation function (will be imported after function definitions to avoid circular import)
@@ -99,17 +109,18 @@ from utils_markdownTable_to_xlsx import (
 
 # Các hàm utility đã được di chuyển vào utils_prepare_process.py:
 # - parse_markdown_pages() -> parse_markdown_pages()
-# - process_pages_for_balance_sheet() -> process_pages_for_financial_statements(pages, detect_candoiketoan)
+# - process_pages_for_cash_flow_statement() -> process_pages_for_financial_statements(pages, detect_luuchuyentiente)
 # - parse_ma_so() -> parse_ma_so()
-# - _parse_number() -> parse_number()
-# - _find_value_column() -> find_value_column()
-# - _find_ma_so_column() -> find_ma_so_column()
-# - _update_json_with_ma_so() -> update_json_with_ma_so()
+# - parse_number() -> parse_number()
+# - find_value_column() -> find_value_column()
+# - find_ma_so_column() -> find_ma_so_column()
+# - update_json_with_ma_so() -> update_json_with_ma_so()
+# - replace_null_in_dict() -> replace_null_in_dict()
 #
 # Sử dụng các hàm từ utils_prepare_process thay vì định nghĩa lại ở đây.
 
 
-def process_balance_sheet(
+def process_cash_flow_statement(
     input_file: str,
     output_file: Optional[str] = None,
     skip_missing: bool = True,
@@ -118,20 +129,20 @@ def process_balance_sheet(
     replace_null_with: Optional[float] = None
 ) -> str:
     """
-    Xử lý Bảng Cân Đối Kế Toán từ một file markdown và lưu vào một file Excel.
+    Xử lý Báo cáo Lưu chuyển Tiền tệ từ một file markdown và lưu vào một file Excel.
     
     Quy trình:
     1. Đọc file markdown
-    2. Parse thành các trang (theo dòng "Trang N" hoặc separator "---")
-    3. Giới hạn chỉ xử lý max_pages trang đầu tiên (mặc định: 30 trang)
-    4. Đi qua từng trang và kiểm tra từng trang có chứa "Bảng Cân Đối Kế Toán" không
-    5. Extract các bảng markdown từ các trang tìm thấy
+    2. Gọi break_pages_for_financial_statements() để xác định vị trí "Lưu chuyển tiền tệ"
+    3. Lấy page number được detect (ví dụ: page 16)
+    4. Xử lý các trang từ page được detect đến page + 3 (ví dụ: page 16, 17, 18, 19)
+    5. Extract các bảng markdown từ các trang đó
     6. Ghi vào một file Excel với các sheets (mỗi bảng là một sheet)
     7. Tạo file JSON từ Excel (nếu create_json=True)
     
     LƯU Ý:
-    - Hàm kiểm tra "Bảng Cân Đối Kế Toán" trên TỪNG TRANG, không kiểm tra toàn bộ file
-    - Chỉ xử lý các trang trong phạm vi max_pages (nếu có)
+    - Sử dụng break_pages_for_financial_statements() để xác định chính xác vị trí
+    - Chỉ xử lý 4 trang liên tiếp từ trang được detect (trang detect + 3 trang sau)
     - Bỏ qua các trang có chứa "thuyết minh báo cáo tài chính"
     
     Args:
@@ -139,7 +150,7 @@ def process_balance_sheet(
         output_file (Optional[str]): Đường dẫn đến file Excel đầu ra.
                                     Nếu None, tự động tạo tên file dựa trên input_file
         skip_missing (bool): Nếu True, không raise error nếu không tìm thấy.
-                            Nếu False, raise ValueError nếu không tìm thấy Bảng Cân Đối Kế Toán
+                            Nếu False, raise ValueError nếu không tìm thấy Báo cáo Lưu chuyển Tiền tệ
         max_pages (Optional[int]): Số trang tối đa để xử lý. Mặc định: 30.
                                   Nếu None, xử lý tất cả các trang.
         create_json (bool): Nếu True, tạo file JSON từ Excel sau khi xử lý xong. Mặc định: True
@@ -153,17 +164,17 @@ def process_balance_sheet(
     Raises:
         FileNotFoundError: Nếu file đầu vào không tồn tại
         ImportError: Nếu pandas hoặc openpyxl chưa được cài đặt
-        ValueError: Nếu skip_missing=False và không tìm thấy Bảng Cân Đối Kế Toán
+        ValueError: Nếu skip_missing=False và không tìm thấy Báo cáo Lưu chuyển Tiền tệ
         
     Ví dụ:
-        >>> result = process_balance_sheet("BIC_2024_1_5_1.md")
+        >>> result = process_cash_flow_statement("BIC_2024_1_5_1.md")
         >>> print(result)
-        'BIC_2024_1_5_1_CanDoiKeToan.xlsx'
+        'BIC_2024_1_5_1_LuuChuyenTienTe.xlsx'
         
-        >>> result = process_balance_sheet("BIC_2024_1_5_1.md", max_pages=50)
+        >>> result = process_cash_flow_statement("BIC_2024_1_5_1.md", max_pages=50)
         >>> # Xử lý 50 trang đầu tiên
         
-        >>> result = process_balance_sheet("BIC_2024_1_5_1.md", create_json=False)
+        >>> result = process_cash_flow_statement("BIC_2024_1_5_1.md", create_json=False)
         >>> # Chỉ tạo Excel, không tạo JSON
     """
     if pd is None:
@@ -174,54 +185,86 @@ def process_balance_sheet(
     if not input_path.exists():
         raise FileNotFoundError(f"Input file not found: {input_file}")
     
+    if not input_path.is_file():
+        raise ValueError(f"Input path is not a file: {input_file}")
+    
     # Xác định file output
     if output_file is None:
-        output_file = str(input_path.parent / f"{input_path.stem}_CanDoiKeToan.xlsx")
+        output_file = str(input_path.parent / f"{input_path.stem}_LuuChuyenTienTe.xlsx")
     
     output_path = Path(output_file)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     
     # Đọc file markdown
     print("=" * 80)
-    try:
-        print(f"Processing Bảng Cân Đối Kế Toán from: {input_file}")
-    except UnicodeEncodeError:
-        print(f"Processing Bang Can Doi Ke Toan from: {input_file}")
+    print(f"Processing Báo cáo Lưu chuyển Tiền tệ from: {input_file}")
     print("=" * 80)
     print(f"Reading file...")
     with open(input_path, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    # Parse thành các trang - LOGIC QUÉT TRANG TỪ main_markdownBaoCaoTaiChinh_to_xlsx.py
-    print("\nParsing pages...")
-    pages = parse_markdown_pages(content)  # Parse markdown thành list các trang (page_number, page_content)
-    total_pages = len(pages)
-    print(f"  Found {total_pages} page(s)")
+    # Bước 1: Sử dụng break_pages_for_financial_statements để xác định vị trí các phần
+    print("\n" + "-" * 80)
+    print("Step 1: Detecting financial statement locations...")
+    print("-" * 80)
+    page_locations = break_pages_for_financial_statements(str(input_file))
     
-    # Giới hạn số trang xử lý - Chỉ xử lý max_pages trang đầu tiên
-    if max_pages is not None and total_pages > max_pages:
-        pages = pages[:max_pages]
-        print(f"  Limiting processing to first {max_pages} page(s) (out of {total_pages} total)")
-    elif max_pages is None:
-        print(f"  Processing all {total_pages} page(s)")
+    # Lấy page number của "Lưu chuyển tiền tệ"
+    luu_chuyen_pages = []
+    if page_locations.get("luu_chuyen_tien_te"):
+        detected_page = page_locations["luu_chuyen_tien_te"][0]["page"]
+        # Xử lý từ page được detect đến page + 3 (tổng 4 trang: page, page+1, page+2, page+3)
+        # Lưu chuyển tiền tệ là loại cuối cùng, nên không cần check page tiếp theo
+        luu_chuyen_pages = list(range(detected_page, detected_page + 4))
+        print(f"  Found 'Lưu chuyển tiền tệ' at page {detected_page}")
+        print(f"  Will process pages: {luu_chuyen_pages} (4 pages)")
     else:
-        print(f"  Processing all {total_pages} page(s) (within limit of {max_pages})")
+        print("  No 'Lưu chuyển tiền tệ' detected")
+        if not skip_missing:
+            raise ValueError("No 'Lưu chuyển tiền tệ' detected in file")
+        return str(output_path)
+    
+    # Parse thành các trang
+    print("\nParsing pages...")
+    all_pages = parse_markdown_pages(content)
+    total_pages = len(all_pages)
+    print(f"  Found {total_pages} page(s) in total")
+    
+    # Chỉ lấy các trang cần xử lý (từ luu_chuyen_pages)
+    pages_dict = {page_num: page_content for page_num, page_content in all_pages}
+    pages_to_process = []
+    for page_num in luu_chuyen_pages:
+        if page_num in pages_dict:
+            pages_to_process.append((page_num, pages_dict[page_num]))
+    
+    if not pages_to_process:
+        print("  No pages to process")
+        if not skip_missing:
+            raise ValueError("No pages found for 'Lưu chuyển tiền tệ'")
+        return str(output_path)
+    
+    print(f"  Processing {len(pages_to_process)} page(s): {[p[0] for p in pages_to_process]}")
     
     # Tạo Excel writer
     print(f"\nCreating Excel file: {output_file}")
     with pd.ExcelWriter(str(output_path), engine='openpyxl') as writer:
         sheet_count = 0
-        # Quét qua từng trang để tìm và extract các bảng của Bảng Cân Đối Kế Toán
-        # Xử lý Bảng Cân Đối Kế Toán - QUÉT QUA TỪNG TRANG
+        # Xử lý Báo cáo Lưu chuyển Tiền tệ - CHỈ XỬ LÝ CÁC TRANG ĐÃ ĐƯỢC XÁC ĐỊNH
         print("\n" + "-" * 80)
-        print("Processing: BANG CAN DOI KE TOAN (Balance Sheet)")
+        print("Processing: BAO CAO LUU CHUYEN TIEN TE (Cash Flow Statement)")
         print("-" * 80)
         try:
-            # Quét qua từng trang để tìm và extract các bảng của Bảng Cân Đối Kế Toán
-            # Sử dụng hàm generic process_pages_for_financial_statements với detect_candoiketoan
-            result_pages = process_pages_for_financial_statements(pages, detect_candoiketoan)
+            # FIX: Không cần detect lại vì đã xác định các trang cần xử lý rồi
+            # Chỉ cần extract tables từ các trang đã được xác định
+            result_pages = []
+            for page_num, page_content in pages_to_process:
+                # Extract tables từ trang
+                tables = extract_markdown_tables(page_content)
+                if tables:
+                    result_pages.append((page_num, page_content, tables))
+            
             if result_pages:
-                print(f"  Found {len(result_pages)} page(s) with balance sheet")
+                print(f"  Found {len(result_pages)} page(s) with cash flow statement")
                 table_idx = 1
                 total_tables = sum(len(tables) for _, _, tables in result_pages)
                 
@@ -239,26 +282,20 @@ def process_balance_sheet(
                         
                         # Sheet name (đặt tên theo số trang và số bảng)
                         if total_tables == 1:
-                            sheet_name = "CanDoiKeToan"[:31]
+                            sheet_name = "LuuChuyenTienTe"[:31]
                         elif len(result_pages) == 1:
-                            sheet_name = f"CanDoiKeToan_T{table_idx}"[:31]
+                            sheet_name = f"LuuChuyen_T{table_idx}"[:31]
                         else:
-                            sheet_name = f"CanDoi_P{page_num}_T{table_idx}"[:31]
+                            sheet_name = f"LuuChuyen_P{page_num}_T{table_idx}"[:31]
                         
                         df.to_excel(writer, sheet_name=sheet_name, index=False)
                         sheet_count += 1
-                        try:
-                            print(f"    ✓ Added sheet: {sheet_name}")
-                        except UnicodeEncodeError:
-                            print(f"    Added sheet: {sheet_name}")
+                        print(f"    ✓ Added sheet: {sheet_name}")
                         table_idx += 1
             else:
-                try:
-                    print("  ✗ No pages found with balance sheet")
-                except UnicodeEncodeError:
-                    print("  No pages found with balance sheet")
+                print("  ✗ No pages found with cash flow statement")
                 if not skip_missing:
-                    raise ValueError("No pages found with balance sheet")
+                    raise ValueError("No pages found with cash flow statement")
         except Exception as e:
             error_msg = str(e)
             try:
@@ -267,10 +304,10 @@ def process_balance_sheet(
                 print(f"  [ERROR] Error: {error_msg}")
             # Log error to file
             log_simple_error(
-                MARKDOWN_TO_XLSX_LOG_CanDoiKeToan,
+                MARKDOWN_TO_XLSX_LOG_LuuChuyenTienTe,
                 str(input_file),
                 'markdown_to_xlsx',
-                f"Balance sheet processing failed: {error_msg}"
+                f"Cash flow statement processing failed: {error_msg}"
             )
             if not skip_missing:
                 raise            
@@ -290,7 +327,7 @@ def process_balance_sheet(
         print("-" * 80)
         try:
             # Lazy import để tránh circular import
-            from utils_xlsx_to_json_balance import create_json_result
+            from utils_xlsx_to_json_cash_flow import create_json_result
             
             # Tự động tạo tên file JSON từ Excel file
             json_output_file = str(output_path.parent / f"{output_path.stem}.json")
@@ -311,7 +348,7 @@ def process_balance_sheet(
                 print(f"\n[ERROR] Error creating JSON file: {error_msg}")
             # Log error to file
             log_simple_error(
-                XLSX_TO_JSON_LOG_CanDoiKeToan,
+                XLSX_TO_JSON_LOG_LuuChuyenTienTe,
                 str(output_path),
                 'xlsx_to_json',
                 f"Failed to create JSON from Excel: {error_msg}"
@@ -324,11 +361,11 @@ def process_balance_sheet(
 
 
 
-def _get_balance_sheet_json_template(
+def _get_cash_flow_statement_json_template(
     replace_null_with: Optional[float] = None
 ) -> Dict[str, Any]:
     """
-    Load cấu trúc JSON template cho Bảng Cân Đối Kế Toán từ file.
+    Load cấu trúc JSON template cho Báo cáo Lưu chuyển Tiền tệ từ file.
     
     Cấu trúc: Nested/hierarchical structure - mỗi section có ma_so, so_cuoi_nam và chứa các section con bên trong.
     
@@ -341,19 +378,19 @@ def _get_balance_sheet_json_template(
         Dict[str, Any]: Cấu trúc JSON template với tất cả các mã số và giá trị
     
     Raises:
-        FileNotFoundError: Nếu file balance_template_json.json không tồn tại
+        FileNotFoundError: Nếu file cash_flow_template_json.json không tồn tại
     
     Ví dụ:
-        >>> template = _get_balance_sheet_json_template()  # Giữ nguyên null
-        >>> template = _get_balance_sheet_json_template(replace_null_with=0)  # Thay null thành 0
+        >>> template = _get_cash_flow_statement_json_template()  # Giữ nguyên null
+        >>> template = _get_cash_flow_statement_json_template(replace_null_with=0)  # Thay null thành 0
     """
-    if not _BALANCE_TEMPLATE_JSON_PATH.exists():
+    if not _CASH_FLOW_TEMPLATE_JSON_PATH.exists():
         raise FileNotFoundError(
-            f"Balance template JSON file not found: {_BALANCE_TEMPLATE_JSON_PATH}"
+            f"Cash flow template JSON file not found: {_CASH_FLOW_TEMPLATE_JSON_PATH}"
         )
     
     # Load JSON từ file
-    with open(_BALANCE_TEMPLATE_JSON_PATH, 'r', encoding='utf-8') as f:
+    with open(_CASH_FLOW_TEMPLATE_JSON_PATH, 'r', encoding='utf-8') as f:
         template = json.load(f)
     
     # Nếu có yêu cầu replace null, thực hiện deep copy và replace
@@ -364,6 +401,7 @@ def _get_balance_sheet_json_template(
 
 
 # Các hàm utility đã được di chuyển vào utils_prepare_process.py:
+# - parse_markdown_pages() -> parse_markdown_pages()
 # - parse_ma_so() -> parse_ma_so()
 # - parse_number() -> parse_number()
 # - find_value_column() -> find_value_column()
@@ -401,9 +439,9 @@ def _get_display_path(md_file: Path, base_path: Path) -> str:
 
 def main():
     """
-    Hàm chính: Xử lý file markdown Bảng Cân Đối Kế Toán.
+    Hàm chính: Xử lý file markdown Báo cáo Lưu chuyển Tiền tệ.
     Sử dụng:
-        python main_CanDoiKeToan.py <input_file_or_folder>
+        python main_LuuChuyenTienTe.py <input_file_or_folder>
     
     Nếu input là folder, sẽ xử lý tất cả file .md trong folder đó và tất cả các folder con (đệ quy).
     Nếu input là file, sẽ xử lý file đó.
@@ -415,7 +453,7 @@ def main():
         # Default file nếu không truyền argument
         input_path = str(Path(__file__).parent / "MIG_2024_1_5_1.md")
         if not Path(input_path).exists():
-            print("Usage: python main_CanDoiKeToan.py <input_file_or_folder>")
+            print("Usage: python main_LuuChuyenTienTe.py <input_file_or_folder>")
             print("\nOr provide a markdown file or folder in the current directory.")
             sys.exit(1)
         print(f"Using default file: {input_path}")
@@ -451,7 +489,7 @@ def main():
         print("=" * 80)
         
         try:
-            result_path = process_balance_sheet(
+            result_path = process_cash_flow_statement(
                 input_file=str(md_file),
                 skip_missing=True,
                 max_pages=30
@@ -467,7 +505,7 @@ def main():
                 print(f"\n[ERROR] Error processing {display_name}: {error_msg}")
             # Log error to file
             log_simple_error(
-                MARKDOWN_TO_XLSX_LOG_CanDoiKeToan,
+                MARKDOWN_TO_XLSX_LOG_LuuChuyenTienTe,
                 str(md_file),
                 'markdown_to_xlsx',
                 f"Failed to process markdown file: {error_msg}"
@@ -501,3 +539,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
