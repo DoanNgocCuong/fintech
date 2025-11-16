@@ -531,17 +531,12 @@ def find_value_column(df) -> Optional[str]:
             excluded_by_name.add(col)
     
     # ƯU TIÊN: Cột cuối cùng (sau khi đã bỏ cột thuyết minh)
+    # Không cần check giá trị, cứ lấy cột cuối cùng luôn (vì đã bỏ cột thuyết minh rồi)
     if len(cols) > 0:
         last_col = cols[-1]
         if last_col not in excluded_by_name:
-            # Kiểm tra xem cột cuối có chứa số không
-            series = df[last_col]
-            sample_values = series.dropna().head(3).tolist()
-            if sample_values:
-                values_considered = [v for v in sample_values if is_vn_number_like(v)]
-                if values_considered:
-                    # Cột cuối hợp lệ, trả về luôn
-                    return last_col
+            # Cột cuối không phải là cột meta -> trả về luôn
+            return last_col
     
     # FALLBACK: Logic cũ - tìm cột có nhiều số nhất
     best_col = None
