@@ -172,7 +172,8 @@ def process_all_financial_statements(
             skip_missing=skip_missing,
             max_pages=None,  # Không giới hạn, vì đã xác định vị trí rồi
             create_json=create_json,
-            replace_null_with=replace_null_with
+            replace_null_with=replace_null_with,
+            page_locations=page_locations  # Truyền kết quả detect đã có
         )
         results["can_doi_ke_toan"] = result_path
         print(f"\n✓ Successfully processed: {result_path}")
@@ -203,7 +204,8 @@ def process_all_financial_statements(
             skip_missing=skip_missing,
             max_pages=None,  # Không giới hạn, vì đã xác định vị trí rồi
             create_json=create_json,
-            replace_null_with=replace_null_with
+            replace_null_with=replace_null_with,
+            page_locations=page_locations  # Truyền kết quả detect đã có
         )
         results["ket_qua_hoat_dong_kinh_doanh"] = result_path
         print(f"\n✓ Successfully processed: {result_path}")
@@ -234,7 +236,8 @@ def process_all_financial_statements(
             skip_missing=skip_missing,
             max_pages=None,  # Không giới hạn, vì đã xác định vị trí rồi
             create_json=create_json,
-            replace_null_with=replace_null_with
+            replace_null_with=replace_null_with,
+            page_locations=page_locations  # Truyền kết quả detect đã có
         )
         results["luu_chuyen_tien_te"] = result_path
         print(f"\n✓ Successfully processed: {result_path}")

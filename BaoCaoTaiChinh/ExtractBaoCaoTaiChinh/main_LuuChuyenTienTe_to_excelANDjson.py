@@ -126,7 +126,8 @@ def process_cash_flow_statement(
     skip_missing: bool = True,
     max_pages: Optional[int] = 30,
     create_json: bool = True,
-    replace_null_with: Optional[float] = None
+    replace_null_with: Optional[float] = None,
+    page_locations: Optional[Dict] = None
 ) -> str:
     """
     Xử lý Báo cáo Lưu chuyển Tiền tệ từ một file markdown và lưu vào một file Excel.
@@ -204,10 +205,17 @@ def process_cash_flow_statement(
         content = f.read()
     
     # Bước 1: Sử dụng break_pages_for_financial_statements để xác định vị trí các phần
-    print("\n" + "-" * 80)
-    print("Step 1: Detecting financial statement locations...")
-    print("-" * 80)
-    page_locations = break_pages_for_financial_statements(str(input_file))
+    # Nếu page_locations đã được truyền vào, dùng luôn (tránh detect lại)
+    if page_locations is None:
+        print("\n" + "-" * 80)
+        print("Step 1: Detecting financial statement locations...")
+        print("-" * 80)
+        page_locations = break_pages_for_financial_statements(str(input_file))
+    else:
+        # Đã có page_locations từ bên ngoài, skip detect lại
+        print("\n" + "-" * 80)
+        print("Step 1: Using provided page locations (skip detection)...")
+        print("-" * 80)
     
     # Lấy page number của "Lưu chuyển tiền tệ"
     luu_chuyen_pages = []

@@ -11,3 +11,11 @@ python main_JSONLuuChuyenTienTe_to_DB.py "D:\GIT\Fintech\fintech\BaoCaoTaiChinh\
 python main_luuChuyenTienTe.py "E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm"        python main_JSONLuuChuyenTienTe_to_DB.py "E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm"                  
 python main_JSONLuuChuyenTienTe_to_DB.py "E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm"                  
           
+
+
+ python .\main_CanDoiKeToan_to_excelANDjson.py "E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\BIC" 
+ # Mặc định: GHI ĐÈ
+python main_JSON3Tables_to_DB.py test/
+
+# Không ghi đè (nếu muốn)
+python main_JSON3Tables_to_DB.py test/ --no-overwrite

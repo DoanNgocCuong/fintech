@@ -379,3 +379,5 @@ Frontend JavaScript sử dụng các API này thông qua:
 
 API base URL được tự động detect dựa trên hostname và port của frontend.
 
+
+
