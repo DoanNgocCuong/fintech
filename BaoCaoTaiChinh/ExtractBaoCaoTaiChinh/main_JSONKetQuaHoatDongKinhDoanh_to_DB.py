@@ -2,7 +2,7 @@
 Utility script: upload existing income statement JSON files into PostgreSQL.
 
 Usage:
-    python main_JSONKetQuaHoatDongKinhDoanh_to_DB.py <json_file_or_folder> [--overwrite] [--no-recursive]
+    python main_JSONKetQuaHoatDongKinhDoanh_to_DB.py <json_file_or_folder> [--no-overwrite] [--no-recursive]
 
 Responsibilities:
 - Scan a single file or a directory (recursive by default)
@@ -47,9 +47,8 @@ def parse_stock_year_quarter_from_filename(filename: str) -> Tuple[Optional[str]
     """
     Parse stock code, year, and quarter from filename.
     
-    Naming convention examples:
+    Naming convention examples (strict):
         STOCK_YYYY_1_QUARTER_*.json  → (STOCK, YYYY, QUARTER)
-        STOCK_YYYY_*.json            → (STOCK, YYYY, None)
         STOCK_YYYY_1_5_1_*.json      → quarter = 5 (the number after YYYY_1_)
         STOCK_YYYY_1_3_*.json        → quarter = 3
     
@@ -63,25 +62,13 @@ def parse_stock_year_quarter_from_filename(filename: str) -> Tuple[Optional[str]
 
     # Pattern 1: STOCK_YYYY_1_QUARTER_* (e.g., BIC_2024_1_5_1_KetQuaHoatDongKinhDoanh)
     # Extract quarter as the number after YYYY_1_
-    pattern_with_quarter = r"^([A-Z]+)_(\d{4})_1_(\d+)_"
+    pattern_with_quarter = r"^([A-Z]+)_(\d{4})_1_([1-5])_"
     match = re.match(pattern_with_quarter, stem)
     if match:
         stock = match.group(1)
         year = int(match.group(2))
         quarter = int(match.group(3))
         return stock, year, quarter
-
-    # Pattern 2: STOCK_YYYY_* (fallback, no quarter)
-    pattern_basic = r"^([A-Z]+)_(\d{4})_"
-    match_basic = re.match(pattern_basic, stem)
-    if match_basic:
-        return match_basic.group(1), int(match_basic.group(2)), None
-
-    # Pattern 3: STOCK_YYYY (with dash or underscore, no quarter)
-    pattern_fallback = r"^([A-Z]+)[_-](\d{4})"
-    match_fallback = re.match(pattern_fallback, stem)
-    if match_fallback:
-        return match_fallback.group(1), int(match_fallback.group(2)), None
 
     return None, None, None
 
@@ -104,7 +91,7 @@ def parse_stock_year_quarter_from_foldername(foldername: str) -> Tuple[Optional[
     """
     # Pattern 1: STOCK_YYYY_1_QUARTER_1_* (e.g., PGI_2025_1_2_1_zip, PGI_2025_1_2_1_rar)
     # Extract quarter as the number after YYYY_1_
-    pattern_with_quarter = r"^([A-Z]+)_(\d{4})_1_(\d+)_1_"
+    pattern_with_quarter = r"^([A-Z]+)_(\d{4})_1_([1-5])_1_"
     match = re.match(pattern_with_quarter, foldername)
     if match:
         stock = match.group(1)
@@ -113,25 +100,13 @@ def parse_stock_year_quarter_from_foldername(foldername: str) -> Tuple[Optional[
         return stock, year, quarter
 
     # Pattern 2: STOCK_YYYY_1_QUARTER_* (fallback, without the trailing _1_)
-    pattern_with_quarter_alt = r"^([A-Z]+)_(\d{4})_1_(\d+)_"
+    pattern_with_quarter_alt = r"^([A-Z]+)_(\d{4})_1_([1-5])_"
     match_alt = re.match(pattern_with_quarter_alt, foldername)
     if match_alt:
         stock = match_alt.group(1)
         year = int(match_alt.group(2))
         quarter = int(match_alt.group(3))
         return stock, year, quarter
-
-    # Pattern 3: STOCK_YYYY_* (fallback, no quarter)
-    pattern_basic = r"^([A-Z]+)_(\d{4})_"
-    match_basic = re.match(pattern_basic, foldername)
-    if match_basic:
-        return match_basic.group(1), int(match_basic.group(2)), None
-
-    # Pattern 4: STOCK_YYYY (with dash or underscore, no quarter)
-    pattern_fallback = r"^([A-Z]+)[_-](\d{4})"
-    match_fallback = re.match(pattern_fallback, foldername)
-    if match_fallback:
-        return match_fallback.group(1), int(match_fallback.group(2)), None
 
     return None, None, None
 
@@ -266,15 +241,20 @@ def process_json_files(json_files: List[Path], overwrite: bool) -> Tuple[int, in
 
 def main() -> None:
     if len(sys.argv) < 2:
-        print("Usage: python main_JSONKetQuaHoatDongKinhDoanh_to_DB.py <json_file_or_folder> [--overwrite] [--no-recursive]")
+        print("Usage: python main_JSONKetQuaHoatDongKinhDoanh_to_DB.py <json_file_or_folder> [--no-overwrite] [--no-recursive]")
         print("\nOptions:")
-        print("  --overwrite      Overwrite existing records in database")
+        print("  --no-overwrite   Do NOT overwrite existing records (default: overwrite)")
         print("  --no-recursive   Only search current directory (disable recursive search)")
         sys.exit(1)
 
-    overwrite = "--overwrite" in sys.argv[2:]
+    extra_args = sys.argv[2:]
+    overwrite = True
+    if "--no-overwrite" in extra_args:
+        overwrite = False
+    elif "--overwrite" in extra_args:
+        overwrite = True
     # Check for --no-recursive flag
-    recursive = "--no-recursive" not in sys.argv[2:]
+    recursive = "--no-recursive" not in extra_args
     target_path = Path(sys.argv[1])
 
     json_files = collect_json_files(target_path, recursive=recursive)
