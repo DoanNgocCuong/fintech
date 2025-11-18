@@ -5,6 +5,7 @@
 Dashboard hiển thị chi tiết báo cáo tài chính theo mã cổ phiếu với các tính năng:
 - Chọn mã cổ phiếu
 - Chọn loại báo cáo (Cân đối kế toán, Kết quả kinh doanh, Lưu chuyển tiền tệ)
+- Riêng Kết quả kinh doanh hỗ trợ chọn Phần I / Phần II
 - Hiển thị bảng với các chỉ tiêu tài chính theo quý/năm
 - Tìm kiếm chỉ tiêu
 - Xuất dữ liệu ra CSV
@@ -108,7 +109,9 @@ Lấy thống kê số lượng records trong mỗi bảng.
 {
   "success": true,
   "stats": {
-    "income_statement_raw": 1234,
+    "income_statement_p1_raw": 456,
+    "income_statement_p2_raw": 1234,
+    "income_statement_raw": 1690,
     "balance_sheet_raw": 1234,
     "cash_flow_statement_raw": 1234
   }
@@ -124,8 +127,9 @@ Lấy thống kê số lượng records trong mỗi bảng.
 Lấy danh sách mã cổ phiếu từ một bảng.
 
 **Query Parameters:**
-- `table` (optional, default: `income_statement_raw`): Tên bảng
-  - `income_statement_raw` - Kết quả kinh doanh
+- `table` (optional, default: `income_statement_p2_raw`): Tên bảng
+  - `income_statement_p1_raw` - KQKD Phần I
+  - `income_statement_p2_raw` - KQKD Phần II
   - `balance_sheet_raw` - Cân đối kế toán
   - `cash_flow_statement_raw` - Lưu chuyển tiền tệ
 
@@ -153,7 +157,7 @@ GET /api/stocks?table=balance_sheet_raw
 Lấy danh sách các năm có dữ liệu trong một bảng.
 
 **Query Parameters:**
-- `table` (optional, default: `income_statement_raw`): Tên bảng
+- `table` (optional, default: `income_statement_p2_raw`): Tên bảng
 
 **Response:**
 ```json
@@ -225,8 +229,9 @@ Lấy dữ liệu bảng kết quả kinh doanh cho một mã cổ phiếu.
 
 **Query Parameters:**
 - `stock` (required): Mã cổ phiếu
+- `section` (optional, default: `P2`): Chọn `P1` hoặc `P2`
 
-**Response:** Tương tự balance-sheet/table-data
+**Response:** Tương tự balance-sheet/table-data (theo section đã chọn)
 
 ---
 
@@ -254,6 +259,7 @@ Lấy dữ liệu bảng lưu chuyển tiền tệ cho một mã cổ phiếu.
 - `year` (optional): Năm
 - `quarter` (optional): Quý (1-4, hoặc NULL cho cuối năm)
 - `limit` (optional, default: 100): Số lượng kết quả tối đa
+- `section` (optional, default: `P2`): `P1` hoặc `P2`
 
 **Response:**
 ```json
@@ -425,16 +431,17 @@ const API_BASE = (() => {
 
 ```javascript
 const REPORT_TYPE_MAP = {
-    'balance': 'balance-sheet',
-    'income': 'income-statement',
-    'cashflow': 'cash-flow'
+    balance: 'balance-sheet',
+    income: 'income-statement',
+    cashflow: 'cash-flow'
 };
 
-const REPORT_TABLE_MAP = {
-    'balance': 'balance_sheet_raw',
-    'income': 'income_statement_raw',
-    'cashflow': 'cash_flow_statement_raw'
+const INCOME_SECTION_TABLES = {
+    P1: 'income_statement_p1_raw',
+    P2: 'income_statement_p2_raw'
 };
+
+const DEFAULT_INCOME_SECTION = 'P2';
 ```
 
 ### Database Configuration
@@ -452,8 +459,9 @@ DB_CONFIG = {
 ```
 
 **Tables:**
+- `income_statement_p1_raw` - Kết quả kinh doanh (Phần I)
+- `income_statement_p2_raw` - Kết quả kinh doanh (Phần II)
 - `balance_sheet_raw` - Cân đối kế toán
-- `income_statement_raw` - Kết quả kinh doanh
 - `cash_flow_statement_raw` - Lưu chuyển tiền tệ
 
 ---
@@ -580,7 +588,7 @@ DB_CONFIG = {
 
 4. Cập nhật frontend:
    - Thêm tab mới trong `index_detail.html`
-   - Cập nhật `REPORT_TYPE_MAP` và `REPORT_TABLE_MAP` trong `js/data.js`
+   - Cập nhật `REPORT_TYPE_MAP` và/hoặc `INCOME_SECTION_TABLES` trong `js/data.js`
    - Thêm event handler trong `js/app.js`
 
 ---

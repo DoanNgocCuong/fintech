@@ -34,9 +34,11 @@ Lấy thống kê số lượng records trong mỗi bảng.
 {
   "success": true,
   "stats": {
-    "income_statement_raw": 1234,
-    "balance_sheet_raw": 1234,
-    "cash_flow_statement_raw": 1234
+    "income_statement_p1_raw": 456,
+    "income_statement_p2_raw": 1234,
+    "income_statement_raw": 1690,
+    "balance_sheet_raw": 1100,
+    "cash_flow_statement_raw": 980
   }
 }
 ```
@@ -50,8 +52,9 @@ Lấy danh sách mã cổ phiếu từ một bảng.
 **Endpoint:** `GET /api/stocks`
 
 **Query Parameters:**
-- `table` (optional, default: `income_statement_raw`): Tên bảng
-  - `income_statement_raw` - Kết quả kinh doanh
+- `table` (optional, default: `income_statement_p2_raw`): Tên bảng
+  - `income_statement_p1_raw` - Kết quả kinh doanh (Phần I)
+  - `income_statement_p2_raw` - Kết quả kinh doanh (Phần II)
   - `balance_sheet_raw` - Cân đối kế toán
   - `cash_flow_statement_raw` - Lưu chuyển tiền tệ
 
@@ -79,9 +82,10 @@ Lấy danh sách các năm có dữ liệu trong một bảng.
 
 **Endpoint:** `GET /api/years`
 
-**Query Parameters:**
-- `table` (optional, default: `income_statement_raw`): Tên bảng
-  - `income_statement_raw`
+- **Query Parameters:**
+- `table` (optional, default: `income_statement_p2_raw`): Tên bảng
+  - `income_statement_p1_raw`
+  - `income_statement_p2_raw`
   - `balance_sheet_raw`
   - `cash_flow_statement_raw`
 
@@ -158,10 +162,11 @@ Lấy dữ liệu bảng kết quả kinh doanh cho một mã cổ phiếu.
 
 **Query Parameters:**
 - `stock` (required): Mã cổ phiếu
+- `section` (optional, default: `P2`): Phần báo cáo (`P1` hoặc `P2`)
 
 **Example:**
 ```
-GET /api/income-statement/table-data?stock=VCB
+GET /api/income-statement/table-data?stock=VCB&section=P1
 ```
 
 **Response:**
@@ -251,6 +256,7 @@ Các endpoint để lấy raw JSON data từ database.
 - `year` (optional): Năm
 - `quarter` (optional): Quý (1-4, hoặc NULL cho cuối năm)
 - `limit` (optional, default: 100): Số lượng kết quả tối đa
+- `section` (optional, default: `P2`): Chọn `P1` hoặc `P2`
 
 **Example:**
 ```
@@ -332,7 +338,8 @@ GET /api/cash-flow?stock=HPG&year=2024&quarter=4
 - Period label format: `Q{quarter}-{year}` (ví dụ: `Q4-2024`, `Q5-2024`)
 
 ### Table Names
-- `income_statement_raw` - Bảng kết quả kinh doanh
+- `income_statement_p1_raw` - Kết quả kinh doanh (Phần I)
+- `income_statement_p2_raw` - Kết quả kinh doanh (Phần II)
 - `balance_sheet_raw` - Bảng cân đối kế toán
 - `cash_flow_statement_raw` - Bảng lưu chuyển tiền tệ
 
@@ -374,8 +381,8 @@ curl "http://localhost:30011/api/stats"
 ## Frontend Usage
 
 Frontend JavaScript sử dụng các API này thông qua:
-- `loadStocks(reportType)` - Gọi `/api/stocks`
-- `loadTableData(stock, reportType)` - Gọi `/api/{report-type}/table-data`
+- `loadStocks(reportType, section)` - Gọi `/api/stocks`
+- `loadTableData(stock, reportType, section)` - Gọi `/api/{report-type}/table-data`
 
 API base URL được tự động detect dựa trên hostname và port của frontend.
 

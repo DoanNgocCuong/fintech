@@ -248,8 +248,13 @@
 
         <div class="stats-grid" id="statsGrid">
             <div class="stat-card">
-                <h3>Income Statements</h3>
-                <div class="number" id="incomeCount">-</div>
+                <h3>Income Statement · Phần I</h3>
+                <div class="number" id="incomeP1Count">-</div>
+                <p>Records</p>
+            </div>
+            <div class="stat-card">
+                <h3>Income Statement · Phần II</h3>
+                <div class="number" id="incomeP2Count">-</div>
                 <p>Records</p>
             </div>
             <div class="stat-card">
@@ -270,7 +275,8 @@
                 <div class="filter-item">
                     <label>Report Type</label>
                     <select id="reportType">
-                        <option value="income_statement_raw">Income Statement</option>
+                        <option value="income_statement_p1_raw">Income Statement · Phần I</option>
+                        <option value="income_statement_p2_raw" selected>Income Statement · Phần II</option>
                         <option value="balance_sheet_raw">Balance Sheet</option>
                         <option value="cash_flow_statement_raw">Cash Flow</option>
                     </select>
@@ -324,6 +330,26 @@
 
     <script>
         const API_BASE = 'http://103.253.20.30:30011/api';
+        const REPORT_CONFIG = {
+            income_statement_p1_raw: {
+                endpoint: 'income-statement',
+                section: 'P1',
+                label: 'Income Statement · Phần I'
+            },
+            income_statement_p2_raw: {
+                endpoint: 'income-statement',
+                section: 'P2',
+                label: 'Income Statement · Phần II'
+            },
+            balance_sheet_raw: {
+                endpoint: 'balance-sheet',
+                label: 'Balance Sheet'
+            },
+            cash_flow_statement_raw: {
+                endpoint: 'cash-flow',
+                label: 'Cash Flow'
+            }
+        };
         let yearChart = null;
         let stockChart = null;
 
@@ -353,9 +379,12 @@
                 const result = await response.json();
                 
                 if (result.success) {
-                    document.getElementById('incomeCount').textContent = result.stats.income_statement_raw || 0;
-                    document.getElementById('balanceCount').textContent = result.stats.balance_sheet_raw || 0;
-                    document.getElementById('cashFlowCount').textContent = result.stats.cash_flow_statement_raw || 0;
+                    const stats = result.stats || {};
+                    const safeNumber = (value) => typeof value === 'number' ? value : 0;
+                    document.getElementById('incomeP1Count').textContent = safeNumber(stats.income_statement_p1_raw);
+                    document.getElementById('incomeP2Count').textContent = safeNumber(stats.income_statement_p2_raw);
+                    document.getElementById('balanceCount').textContent = safeNumber(stats.balance_sheet_raw);
+                    document.getElementById('cashFlowCount').textContent = safeNumber(stats.cash_flow_statement_raw);
                 }
             } catch (error) {
                 console.error('Error loading stats:', error);
@@ -414,25 +443,25 @@
             const stock = document.getElementById('stockFilter').value;
             const year = document.getElementById('yearFilter').value;
             const quarter = document.getElementById('quarterFilter').value;
+            const config = REPORT_CONFIG[reportType];
 
-            let endpoint = '';
-            if (reportType === 'income_statement_raw') {
-                endpoint = 'income-statement';
-            } else if (reportType === 'balance_sheet_raw') {
-                endpoint = 'balance-sheet';
-            } else if (reportType === 'cash_flow_statement_raw') {
-                endpoint = 'cash-flow';
+            if (!config) {
+                document.getElementById('tableContainer').innerHTML = '<div class="error">Unsupported report type.</div>';
+                return;
             }
 
             const params = new URLSearchParams();
             if (stock) params.append('stock', stock);
             if (year) params.append('year', year);
             if (quarter) params.append('quarter', quarter);
+            if (config.section) params.append('section', config.section);
 
             try {
                 document.getElementById('tableContainer').innerHTML = '<div class="loading">Loading...</div>';
                 
-                const response = await fetch(`${API_BASE}/${endpoint}?${params.toString()}`);
+                const queryString = params.toString();
+                const requestUrl = queryString ? `${API_BASE}/${config.endpoint}?${queryString}` : `${API_BASE}/${config.endpoint}`;
+                const response = await fetch(requestUrl);
                 const result = await response.json();
                 
                 if (result.success) {
@@ -456,6 +485,8 @@
                 return;
             }
 
+            const config = REPORT_CONFIG[reportType] || {};
+
             let html = `
                 <p style="margin-bottom: 15px; color: #666;">
                     Showing ${data.length} record(s)
@@ -475,6 +506,8 @@
             `;
 
             data.forEach(item => {
+                const quarterValue = (item.quarter === null || item.quarter === undefined) ? 'null' : item.quarter;
+                const sectionArg = config.section ? `'${config.section}'` : 'null';
                 html += `
                     <tr>
                         <td><strong>${item.stock}</strong></td>
@@ -483,7 +516,7 @@
                         <td>${item.source_filename || '-'}</td>
                         <td>${item.created_at ? new Date(item.created_at).toLocaleString() : '-'}</td>
                         <td>
-                            <button class="btn" onclick="viewDetails('${item.stock}', ${item.year}, ${item.quarter || 'null'}, '${reportType}')" style="padding: 5px 15px; font-size: 0.9em;">
+                            <button class="btn" onclick="viewDetails('${item.stock}', ${item.year}, ${quarterValue}, '${reportType}', ${sectionArg})" style="padding: 5px 15px; font-size: 0.9em;">
                                 View
                             </button>
                         </td>
@@ -565,8 +598,12 @@
         }
 
         // View details (popup)
-        function viewDetails(stock, year, quarter, reportType) {
-            const jsonStr = JSON.stringify({stock, year, quarter, reportType}, null, 2);
+        function viewDetails(stock, year, quarter, reportType, section = null) {
+            const detail = { stock, year, quarter, reportType };
+            if (section) {
+                detail.section = section;
+            }
+            const jsonStr = JSON.stringify(detail, null, 2);
             alert(`Details:\n${jsonStr}\n\n(Full JSON viewer coming soon!)`);
         }
 

@@ -4,7 +4,6 @@ FastAPI backend API để serve data từ database cho dashboard visualization.
 
 from fastapi import FastAPI, Query, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
 from typing import Optional
 import sys
 from pathlib import Path
@@ -16,13 +15,26 @@ sys.path.insert(0, str(Path(__file__).parent))
 from utils_database_manager import connect, DB_CONFIG
 from utils_data_extractor import get_indicators_for_report_type, extract_value_from_json
 import json
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Optional
 
 app = FastAPI(
     title="Financial Reports Dashboard API",
     description="API để visualize và analyze financial data",
     version="1.0.0"
 )
+
+# Income statement sections mapping
+INCOME_SECTION_TABLES = {
+    "P1": "income_statement_p1_raw",
+    "P2": "income_statement_p2_raw",
+}
+DEFAULT_INCOME_SECTION = "P2"
+
+VALID_REPORT_TABLES = [
+    *INCOME_SECTION_TABLES.values(),
+    "balance_sheet_raw",
+    "cash_flow_statement_raw",
+]
 
 # Enable CORS for frontend
 app.add_middleware(
@@ -50,7 +62,11 @@ async def get_stats():
         
         stats = {}
         
-        tables = ['income_statement_raw', 'balance_sheet_raw', 'cash_flow_statement_raw']
+        tables = [
+            *INCOME_SECTION_TABLES.values(),
+            'balance_sheet_raw',
+            'cash_flow_statement_raw'
+        ]
         for table in tables:
             try:
                 cursor.execute(f'SELECT COUNT(*) FROM "{table}";')
@@ -58,6 +74,14 @@ async def get_stats():
                 stats[table] = count
             except Exception as e:
                 stats[table] = {'error': str(e)}
+        
+        # Backward compatibility aggregate for legacy key
+        income_total = 0
+        for table_name in INCOME_SECTION_TABLES.values():
+            value = stats.get(table_name)
+            if isinstance(value, int):
+                income_total += value
+        stats['income_statement_raw'] = income_total
         
         cursor.close()
         conn.close()
@@ -72,14 +96,20 @@ async def get_income_statements(
     stock: Optional[str] = Query(None, description="Stock symbol"),
     year: Optional[int] = Query(None, description="Year"),
     quarter: Optional[int] = Query(None, description="Quarter"),
-    limit: int = Query(100, description="Limit results")
+    limit: int = Query(100, description="Limit results"),
+    section: Optional[str] = Query(
+        DEFAULT_INCOME_SECTION,
+        description="Income statement section (P1/P2)"
+    )
 ):
     """Get income statement data."""
     try:
+        section_key = normalize_income_section(section)
+        table_name = INCOME_SECTION_TABLES[section_key]
         conn = connect()
         cursor = conn.cursor()
         
-        query = 'SELECT stock, year, quarter, source_filename, json_raw, created_at FROM "income_statement_raw" WHERE 1=1'
+        query = f'SELECT stock, year, quarter, source_filename, json_raw, created_at FROM "{table_name}" WHERE 1=1'
         params = []
         
         if stock:
@@ -219,14 +249,13 @@ async def get_cash_flows(
 
 @app.get("/api/stocks")
 async def get_stocks(
-    table: str = Query('income_statement_raw', description="Table name")
+    table: str = Query('income_statement_p2_raw', description="Table name")
 ):
     """Get list of unique stocks."""
     try:
         # Validate table name
-        valid_tables = ['income_statement_raw', 'balance_sheet_raw', 'cash_flow_statement_raw']
-        if table not in valid_tables:
-            table = 'income_statement_raw'
+        if table not in VALID_REPORT_TABLES:
+            table = INCOME_SECTION_TABLES[DEFAULT_INCOME_SECTION]
         
         conn = connect()
         cursor = conn.cursor()
@@ -262,12 +291,12 @@ async def get_stocks(
 
 @app.get("/api/years")
 async def get_years(
-    table: str = Query('income_statement_raw', description="Table name")
+    table: str = Query('income_statement_p2_raw', description="Table name")
 ):
     """Get list of unique years."""
     try:
-        if table not in ['income_statement_raw', 'balance_sheet_raw', 'cash_flow_statement_raw']:
-            table = 'income_statement_raw'
+        if table not in VALID_REPORT_TABLES:
+            table = INCOME_SECTION_TABLES[DEFAULT_INCOME_SECTION]
         
         conn = connect()
         cursor = conn.cursor()
@@ -454,11 +483,17 @@ async def get_balance_sheet_table_data(
 
 @app.get("/api/income-statement/table-data")
 async def get_income_statement_table_data(
-    stock: str = Query(..., description="Stock symbol")
+    stock: str = Query(..., description="Stock symbol"),
+    section: Optional[str] = Query(
+        DEFAULT_INCOME_SECTION,
+        description="Income statement section (P1/P2)"
+    )
 ):
     """Get income statement table data for a stock."""
     try:
-        return await get_table_data_for_stock(stock, "income_statement_raw", "income-statement")
+        section_key = normalize_income_section(section)
+        table_name = INCOME_SECTION_TABLES[section_key]
+        return await get_table_data_for_stock(stock, table_name, "income-statement")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -576,6 +611,16 @@ def flatten_tree_with_structure(tree: List[Dict[str, Any]], result: List[Dict[st
     return result
 
 
+def normalize_income_section(section: Optional[str]) -> str:
+    """
+    Normalize section string to P1/P2. Defaults to DEFAULT_INCOME_SECTION.
+    """
+    if not section:
+        return DEFAULT_INCOME_SECTION
+    section_key = str(section).strip().upper()
+    return section_key if section_key in INCOME_SECTION_TABLES else DEFAULT_INCOME_SECTION
+
+
 if __name__ == '__main__':
     import uvicorn
     import argparse
@@ -599,10 +644,11 @@ if __name__ == '__main__':
     print("  - GET /api/income-statement?stock=XXX&year=2024&quarter=5")
     print("  - GET /api/balance-sheet?stock=XXX&year=2024&quarter=5")
     print("  - GET /api/cash-flow?stock=XXX&year=2024&quarter=5")
-    print("  - GET /api/stocks?table=income_statement_raw")
-    print("  - GET /api/years?table=income_statement_raw")
+    print("  - GET /api/stocks?table=income_statement_p1_raw")
+    print("  - GET /api/stocks?table=income_statement_p2_raw")
+    print("  - GET /api/years?table=income_statement_p2_raw")
     print("  - GET /api/balance-sheet/table-data?stock=XXX")
-    print("  - GET /api/income-statement/table-data?stock=XXX")
+    print("  - GET /api/income-statement/table-data?stock=XXX&section=P2")
     print("  - GET /api/cash-flow/table-data?stock=XXX")
     print("\nAPI Documentation:")
     print(f"  - Swagger UI: http://{args.host}:{args.port}/docs")

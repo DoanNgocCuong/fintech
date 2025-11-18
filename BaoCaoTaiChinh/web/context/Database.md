@@ -17,7 +17,7 @@ DB_CONFIG: Dict[str, Any] = {
 - Host: 103.253.20.30:29990
 - Database name: financial-reporting-database
 
-### 2. Cấu trúc bảng (3 bảng)
+### 2. Cấu trúc bảng (4 bảng)
 
 Cả 3 bảng có cùng cấu trúc:
 
@@ -39,8 +39,9 @@ Cả 3 bảng có cùng cấu trúc:
 
 Các bảng:
 
+- `income_statement_p1_raw` (Kết quả hoạt động kinh doanh · Phần I)
+- `income_statement_p2_raw` (Kết quả hoạt động kinh doanh · Phần II)
 - `balance_sheet_raw` (Cân đối kế toán)
-- `income_statement_raw` (Kết quả hoạt động kinh doanh)
 - `cash_flow_statement_raw` (Lưu chuyển tiền tệ)
 
 Các trường:
@@ -67,7 +68,7 @@ Các trường:
 }
 ```
 
-#### Income Statement (`income_template_json.json`):
+#### Income Statement (`income_template_json_P1.json` / `income_template_json_P2.json`):
 
 ```json
 {

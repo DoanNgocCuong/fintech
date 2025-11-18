@@ -39,19 +39,25 @@ const REPORT_TYPE_MAP = {
     'cashflow': 'cash-flow'
 };
 
-// Report type to table name mapping
-const REPORT_TABLE_MAP = {
-    'balance': 'balance_sheet_raw',
-    'income': 'income_statement_raw',
-    'cashflow': 'cash_flow_statement_raw'
+const INCOME_SECTION_TABLES = {
+    'P1': 'income_statement_p1_raw',
+    'P2': 'income_statement_p2_raw'
 };
+
+const DEFAULT_INCOME_SECTION = 'P2';
 
 /**
  * Load stocks from API
  */
-async function loadStocks(reportType = 'balance') {
+async function loadStocks(reportType = 'balance', section = null) {
     try {
-        const tableName = REPORT_TABLE_MAP[reportType] || 'balance_sheet_raw';
+        let tableName = 'balance_sheet_raw';
+        if (reportType === 'income') {
+            const sectionKey = normalizeIncomeSection(section);
+            tableName = INCOME_SECTION_TABLES[sectionKey];
+        } else if (reportType === 'cashflow') {
+            tableName = 'cash_flow_statement_raw';
+        }
         const response = await fetch(`${API_BASE}/stocks?table=${tableName}`);
         const result = await response.json();
         
@@ -68,10 +74,15 @@ async function loadStocks(reportType = 'balance') {
 /**
  * Load table data for a stock and report type
  */
-async function loadTableData(stock, reportType) {
+async function loadTableData(stock, reportType, section = null) {
     try {
         const reportTypeApi = REPORT_TYPE_MAP[reportType] || 'balance-sheet';
-        const response = await fetch(`${API_BASE}/${reportTypeApi}/table-data?stock=${stock}`);
+        let url = `${API_BASE}/${reportTypeApi}/table-data?stock=${stock}`;
+        if (reportType === 'income') {
+            const sectionKey = normalizeIncomeSection(section);
+            url += `&section=${sectionKey}`;
+        }
+        const response = await fetch(url);
         const result = await response.json();
         
         if (result.success) {
@@ -144,7 +155,7 @@ function filterIndicators(indicators, searchTerm) {
 /**
  * Export data to CSV
  */
-function exportToCSV(data, stock, reportType) {
+function exportToCSV(data, stock, reportType, section = null) {
     if (!data || !data.indicators || !data.periods) {
         alert('Không có dữ liệu để xuất');
         return;
@@ -156,7 +167,12 @@ function exportToCSV(data, stock, reportType) {
         'cashflow': 'Lưu chuyển tiền tệ'
     };
     
-    let csv = `Báo cáo: ${reportTypeLabels[reportType]}\n`;
+    let reportLabel = reportTypeLabels[reportType] || reportType;
+    if (reportType === 'income' && section) {
+        reportLabel += section === 'P1' ? ' (Phần I)' : ' (Phần II)';
+    }
+    
+    let csv = `Báo cáo: ${reportLabel}\n`;
     csv += `Mã cổ phiếu: ${stock}\n`;
     csv += `Ngày xuất: ${new Date().toLocaleString('vi-VN')}\n\n`;
     
@@ -182,10 +198,17 @@ function exportToCSV(data, stock, reportType) {
     const link = document.createElement('a');
     const url = URL.createObjectURL(blob);
     link.setAttribute('href', url);
-    link.setAttribute('download', `bao_cao_${reportType}_${stock}_${new Date().getTime()}.csv`);
+    const sectionSuffix = section ? `_${section.toLowerCase()}` : '';
+    link.setAttribute('download', `bao_cao_${reportType}${sectionSuffix}_${stock}_${new Date().getTime()}.csv`);
     link.style.visibility = 'hidden';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+}
+
+function normalizeIncomeSection(section) {
+    if (!section) return DEFAULT_INCOME_SECTION;
+    const key = String(section).trim().toUpperCase();
+    return INCOME_SECTION_TABLES[key] ? key : DEFAULT_INCOME_SECTION;
 }
 

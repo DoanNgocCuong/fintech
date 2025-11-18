@@ -5,6 +5,7 @@
 // Global state
 let currentStock = '';
 let currentReportType = 'balance';
+let currentIncomeSection = 'P2';
 let tableData = null;
 let filteredIndicators = [];
 let allStocks = [];
@@ -19,6 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 async function initializeApp() {
     console.log('Initializing app...');
+    
+    const sectionSelect = document.getElementById('income-section-select');
+    if (sectionSelect && sectionSelect.value) {
+        currentIncomeSection = sectionSelect.value;
+    }
     
     // Load stocks for default report type
     await loadStocksForReport(currentReportType);
@@ -46,7 +52,7 @@ function setupEventListeners() {
 async function loadStocksForReport(reportType) {
     try {
         showLoading();
-        allStocks = await loadStocks(reportType);
+        allStocks = await loadStocks(reportType, getSectionForReport(reportType));
         populateStockSelector(allStocks);
         hideLoading();
     } catch (error) {
@@ -120,6 +126,11 @@ async function onTabChange(reportType) {
     
     currentReportType = reportType;
     
+    const sectionGroup = document.getElementById('income-section-group');
+    if (sectionGroup) {
+        sectionGroup.style.display = reportType === 'income' ? 'block' : 'none';
+    }
+    
     // Reload stocks for new report type
     await loadStocksForReport(reportType);
     
@@ -138,7 +149,7 @@ async function loadTableDataForStock(stock, reportType) {
     try {
         showLoading();
         
-        const data = await loadTableData(stock, reportType);
+        const data = await loadTableData(stock, reportType, getSectionForReport(reportType));
         
         if (!data || !data.indicators || data.indicators.length === 0) {
             showNoData();
@@ -449,7 +460,25 @@ function exportData() {
         return;
     }
     
-    exportToCSV(tableData, currentStock, currentReportType);
+    exportToCSV(tableData, currentStock, currentReportType, getSectionForReport(currentReportType));
+}
+
+function getSectionForReport(reportType) {
+    return reportType === 'income' ? currentIncomeSection : null;
+}
+
+async function onIncomeSectionChange() {
+    const selector = document.getElementById('income-section-select');
+    currentIncomeSection = selector ? selector.value : 'P2';
+    
+    if (currentReportType === 'income') {
+        await loadStocksForReport('income');
+        if (currentStock) {
+            await loadTableDataForStock(currentStock, 'income');
+        } else {
+            showNoData();
+        }
+    }
 }
 
 /**
