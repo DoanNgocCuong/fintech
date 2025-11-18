@@ -1,5 +1,4 @@
-
-# 2h để fix 1 bug về ghi đè dữ liệu. 
+# 2h để fix 1 bug về ghi đè dữ liệu. (Stock - year - 5 bị ghi đè bởi Stock - year - null)
 
 * **`quarter = 5`** là dữ liệu **ĐÚNG** (5.5 nghìn tỷ) ✅
 * **`quarter = NULL`** là dữ liệu **SAI** (6.6 triệu) ❌
@@ -7,14 +6,14 @@
 
 ---
 
-=> Điều này dẫn đến: 
+=> Điều này dẫn đến:
 
 1. DB dữ liệu khác
 2. Nhưng khi mapping ra UI thì nó lại bị sai.
 
 ---
 
-## 1.1 Các giải pháp đã thử 
+## 1.1 Các giải pháp đã thử
 
 1. Check lại toàn bộ luồng đẩy XLSX -> DB xem đã ghi đè chưa? => Bật ghi đè rùi.
 2. Xoá toàn bộ DB và chạy lại => vẫn bị

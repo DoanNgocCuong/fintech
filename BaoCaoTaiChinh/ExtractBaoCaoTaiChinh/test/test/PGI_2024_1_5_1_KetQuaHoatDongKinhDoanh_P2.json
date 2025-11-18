@@ -1,0 +1,209 @@
+{
+  "phan_2_bao_cao_ket_qua_hoat_dong_kinh_doanh_theo_hoat_dong": {
+    "doanh_thu_phi_bao_hiem_01": {
+      "ma_so": "01",
+      "ten_chi_tieu": "Doanh thu phí bảo hiểm (01 = 01.1 + 01.2 - 01.3)",
+      "so_cuoi_nam": 4393872320062.0,
+      "phi_bao_hiem_goc_01_1": {
+        "ma_so": "01.1",
+        "ten_chi_tieu": "Phí bảo hiểm gốc",
+        "so_cuoi_nam": 4396505471267.0
+      },
+      "phi_nhan_tai_bao_hiem_01_2": {
+        "ma_so": "01.2",
+        "ten_chi_tieu": "Phí nhận tái bảo hiểm",
+        "so_cuoi_nam": 213994875076.0
+      },
+      "tang_giam_du_phong_phi_bao_hiem_goc_va_nhan_tai_bao_hiem_01_3": {
+        "ma_so": "01.3",
+        "ten_chi_tieu": "Tăng (giảm) dự phòng phí bảo hiểm gốc và nhận tái bảo hiểm",
+        "so_cuoi_nam": 216628026281.0
+      }
+    },
+    "phi_nhuong_tai_bao_hiem_02": {
+      "ma_so": "02",
+      "ten_chi_tieu": "Phí nhượng tái bảo hiểm (02 = 02.1 - 02.2)",
+      "so_cuoi_nam": 1471695022300.0,
+      "tong_phi_nhuong_tai_bao_hiem_02_1": {
+        "ma_so": "02.1",
+        "ten_chi_tieu": "Tổng phí nhượng tái bảo hiểm",
+        "so_cuoi_nam": 1524644409562.0
+      },
+      "tang_giam_du_phong_phi_nhuong_tai_bao_hiem_02_2": {
+        "ma_so": "02.2",
+        "ten_chi_tieu": "Tăng (giảm) dự phòng phí nhượng tái bảo hiểm",
+        "so_cuoi_nam": 52949387262.0
+      }
+    },
+    "doanh_thu_phi_bao_hiem_thuan_03": {
+      "ma_so": "03",
+      "ten_chi_tieu": "Doanh thu phí bảo hiểm thuần (03 = 01 - 02)",
+      "so_cuoi_nam": 2922177297762.0
+    },
+    "hoa_hong_nhuong_tai_bao_hiem_va_doanh_thu_khac_hoat_dong_kinh_doanh_bao_hiem_04": {
+      "ma_so": "04",
+      "ten_chi_tieu": "Hoa hồng nhượng tái bảo hiểm và doanh thu khác hoạt động kinh doanh bảo hiểm (04 = 04.1 + 04.2)",
+      "so_cuoi_nam": 496180329528.0,
+      "hoa_hong_nhuong_tai_bao_hiem_04_1": {
+        "ma_so": "04.1",
+        "ten_chi_tieu": "Hoa hồng nhượng tái bảo hiểm",
+        "so_cuoi_nam": 318036774592.0
+      },
+      "doanh_thu_khac_hoat_dong_kinh_doanh_bao_hiem_04_2": {
+        "ma_so": "04.2",
+        "ten_chi_tieu": "Doanh thu khác hoạt động kinh doanh bảo hiểm",
+        "so_cuoi_nam": 178143554936.0
+      }
+    },
+    "doanh_thu_thuan_hoat_dong_kinh_doanh_bao_hiem_10": {
+      "ma_so": "10",
+      "ten_chi_tieu": "Doanh thu thuần hoạt động kinh doanh bảo hiểm (10= 03+04)",
+      "so_cuoi_nam": 3418357627290.0
+    },
+    "chi_boi_thuong_11": {
+      "ma_so": "11",
+      "ten_chi_tieu": "Chi bồi thường (11 = 11.1 - 11.2)",
+      "so_cuoi_nam": 1675374026628.0,
+      "tong_chi_boi_thuong_11_1": {
+        "ma_so": "11.1",
+        "ten_chi_tieu": "Tổng chi bồi thường",
+        "so_cuoi_nam": 1675374026628.0
+      },
+      "cac_khoan_giam_tru_11_2": {
+        "ma_so": "11.2",
+        "ten_chi_tieu": "Các khoản giảm trừ (Thu đòi người thứ 3 bồi hoàn, thu hàng đã xử lý bồi thường 100%)",
+        "so_cuoi_nam": null
+      }
+    },
+    "thu_boi_thuong_nhuong_tai_bao_hiem_12": {
+      "ma_so": "12",
+      "ten_chi_tieu": "Thu bồi thường nhượng tái bảo hiểm",
+      "so_cuoi_nam": 330852401336.0
+    },
+    "tang_giam_du_phong_boi_thuong_bao_hiem_goc_va_nhan_tai_bao_hiem_13": {
+      "ma_so": "13",
+      "ten_chi_tieu": "Tăng (giảm) dự phòng bồi thường bảo hiểm gốc và nhận tái bảo hiểm",
+      "so_cuoi_nam": 338526617821.0
+    },
+    "tang_giam_du_phong_boi_thuong_nhuong_tai_bao_hiem_14": {
+      "ma_so": "14",
+      "ten_chi_tieu": "Tăng (giảm) dự phòng bồi thường nhượng tái bảo hiểm",
+      "so_cuoi_nam": 278522951833.0
+    },
+    "tong_chi_boi_thuong_bao_hiem_15": {
+      "ma_so": "15",
+      "ten_chi_tieu": "Tổng chi bồi thường bảo hiểm (15 = 11 - 12 + 13 - 14)",
+      "so_cuoi_nam": 1404525291280.0
+    },
+    "tang_giam_du_phong_dao_dong_lon_16": {
+      "ma_so": "16",
+      "ten_chi_tieu": "Tăng (giảm) dự phòng dao động lớn",
+      "so_cuoi_nam": 7939844218.0
+    },
+    "chi_phi_khac_hoat_dong_kinh_doanh_bao_hiem_17": {
+      "ma_so": "17",
+      "ten_chi_tieu": "Chi phí khác hoạt động kinh doanh bảo hiểm (17 = 17.1 + 17.2)",
+      "so_cuoi_nam": 1190239217605.0,
+      "chi_hoa_hong_bao_hiem_17_1": {
+        "ma_so": "17.1",
+        "ten_chi_tieu": "Chi hoa hồng bảo hiểm",
+        "so_cuoi_nam": 238474724357.0
+      },
+      "chi_phi_khac_hoat_dong_kinh_doanh_bao_hiem_17_2": {
+        "ma_so": "17.2",
+        "ten_chi_tieu": "Chi phí khác hoạt động kinh doanh bảo hiểm",
+        "so_cuoi_nam": 951764493248.0
+      }
+    },
+    "tong_chi_phi_hoat_dong_kinh_doanh_bao_hiem_18": {
+      "ma_so": "18",
+      "ten_chi_tieu": "Tổng chi phí hoạt động kinh doanh bảo hiểm (18 = 15 + 16 + 17)",
+      "so_cuoi_nam": 2602704353103.0
+    },
+    "loi_nhuan_gop_hoat_dong_kinh_doanh_bao_hiem_19": {
+      "ma_so": "19",
+      "ten_chi_tieu": "Lợi nhuận gộp hoạt động kinh doanh bảo hiểm (19= 10 - 18)",
+      "so_cuoi_nam": 815653274187.0
+    },
+    "doanh_thu_kinh_doanh_bat_dong_san_dau_tu_20": {
+      "ma_so": "20",
+      "ten_chi_tieu": "Doanh thu kinh doanh bất động sản đầu tư",
+      "so_cuoi_nam": null
+    },
+    "gia_von_bat_dong_san_dau_tu_21": {
+      "ma_so": "21",
+      "ten_chi_tieu": "Giá vốn bất động sản đầu tư",
+      "so_cuoi_nam": null
+    },
+    "loi_nhuan_tu_hoat_dong_dau_tu_bat_dong_san_22": {
+      "ma_so": "22",
+      "ten_chi_tieu": "Lợi nhuận từ hoạt động đầu tư bất động sản (22= 20 -21)",
+      "so_cuoi_nam": null
+    },
+    "doanh_thu_hoat_dong_tai_chinh_23": {
+      "ma_so": "23",
+      "ten_chi_tieu": "Doanh thu hoạt động tài chính",
+      "so_cuoi_nam": 147801576743.0
+    },
+    "chi_phi_hoat_dong_tai_chinh_24": {
+      "ma_so": "24",
+      "ten_chi_tieu": "Chi phí hoạt động tài chính",
+      "so_cuoi_nam": 36102363451.0
+    },
+    "loi_nhuan_gop_hoat_dong_tai_chinh_25": {
+      "ma_so": "25",
+      "ten_chi_tieu": "Lợi nhuận gộp hoạt động tài chính (25 = 23 -24)",
+      "so_cuoi_nam": 111699213292.0
+    },
+    "chi_phi_quan_ly_doanh_nghiep_26": {
+      "ma_so": "26",
+      "ten_chi_tieu": "Chi phí quản lý doanh nghiệp",
+      "so_cuoi_nam": 655794195158.0
+    },
+    "loi_nhuan_thuan_tu_hoat_dong_kinh_doanh_30": {
+      "ma_so": "30",
+      "ten_chi_tieu": "Lợi nhuận thuần từ hoạt động kinh doanh (30= 19 + 22 + 25 – 26)",
+      "so_cuoi_nam": 271558292321.0
+    },
+    "thu_nhap_khac_31": {
+      "ma_so": "31",
+      "ten_chi_tieu": "Thu nhập khác",
+      "so_cuoi_nam": 24733019006.0
+    },
+    "chi_phi_khac_32": {
+      "ma_so": "32",
+      "ten_chi_tieu": "Chi phí khác",
+      "so_cuoi_nam": 5099949670.0
+    },
+    "loi_nhuan_khac_40": {
+      "ma_so": "40",
+      "ten_chi_tieu": "Lợi nhuận khác (40 = 31 - 32)",
+      "so_cuoi_nam": 19633069336.0
+    },
+    "tong_loi_nhuan_ke_toan_truoc_thue_50": {
+      "ma_so": "50",
+      "ten_chi_tieu": "Tổng lợi nhuận kế toán trước thuế (50= 30 + 40)",
+      "so_cuoi_nam": 291191361657.0
+    },
+    "chi_phi_thue_tndn_hien_hanh_51": {
+      "ma_so": "51",
+      "ten_chi_tieu": "Chi phí thuế TNDN hiện hành",
+      "so_cuoi_nam": 59532078426.0
+    },
+    "chi_phi_thue_tndn_hoan_lai_52": {
+      "ma_so": "52",
+      "ten_chi_tieu": "Chi phí thuế TNDN hoãn lại",
+      "so_cuoi_nam": -581222000.0
+    },
+    "loi_nhuan_sau_thue_thu_nhap_doanh_nghiep_60": {
+      "ma_so": "60",
+      "ten_chi_tieu": "Lợi nhuận sau thuế thu nhập doanh nghiệp (60 = 50 – 51 - 52)",
+      "so_cuoi_nam": 232240505231.0
+    },
+    "lai_co_ban_tren_co_phieu_70": {
+      "ma_so": "70",
+      "ten_chi_tieu": "Lãi cơ bản trên cổ phiếu (*)",
+      "so_cuoi_nam": 2094.0
+    }
+  }
+}

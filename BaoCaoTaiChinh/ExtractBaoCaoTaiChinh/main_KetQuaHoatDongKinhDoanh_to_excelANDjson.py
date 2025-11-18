@@ -63,6 +63,7 @@ JSON File (.json)
 
 import sys
 import json
+from collections import defaultdict
 from pathlib import Path
 from typing import Optional, List, Tuple, Dict, Any
 
@@ -84,11 +85,18 @@ try:
 except ImportError:
     pd = None
 
-# Load income template JSON from file
-_INCOME_TEMPLATE_JSON_PATH = Path(__file__).parent / "income_template_json.json"
+# Income templates per section
+_INCOME_TEMPLATE_JSON_PATHS = {
+    "P1": Path(__file__).parent / "income_template_json_P1.json",
+    "P2": Path(__file__).parent / "income_template_json_P2.json",
+}
+_DEFAULT_INCOME_SECTION = "P2"
 
 # Import detection functions và utilities
-from utils_markdownKetQuaHoatDongKinhDoanhText_DetectTable_to_xlsx import detect_ketquahoatdongkinhdoanh
+from utils_markdownKetQuaHoatDongKinhDoanhText_DetectTable_to_xlsx import (
+    detect_ketquahoatdongkinhdoanh,
+    detect_income_statement_section_tag,
+)
 from utils_markdownTable_to_xlsx import (
     _parse_markdown_table,
     _create_dataframe_from_rows,
@@ -255,131 +263,157 @@ def process_income_statement(
     
     print(f"  Processing {len(pages_to_process)} page(s): {[p[0] for p in pages_to_process]}")
     
-    # Tạo Excel writer
-    print(f"\nCreating Excel file: {output_file}")
-    with pd.ExcelWriter(str(output_path), engine='openpyxl') as writer:
-        sheet_count = 0
-        # Xử lý Kết quả Hoạt động Kinh doanh - CHỈ XỬ LÝ CÁC TRANG ĐÃ ĐƯỢC XÁC ĐỊNH
-        print("\n" + "-" * 80)
-        print("Processing: KET QUA HOAT DONG KINH DOANH (Income Statement)")
-        print("-" * 80)
+    print("\n" + "-" * 80)
+    print("Processing: KET QUA HOAT DONG KINH DOANH (Income Statement)")
+    print("-" * 80)
+
+    sectioned_pages: List[Tuple[str, int, List[str]]] = []
+    first_page_section = _DEFAULT_INCOME_SECTION
+    if pages_to_process:
+        first_page_content = pages_to_process[0][1]
+        first_page_section = detect_income_statement_section_tag(first_page_content)
+
+    for idx, (page_num, page_content) in enumerate(pages_to_process):
+        section = "P1" if (idx == 0 and first_page_section == "P1") else "P2"
+        tables = extract_markdown_tables(page_content)
+        if tables:
+            sectioned_pages.append((section, page_num, tables))
+
+    if not sectioned_pages:
+        print("  ✗ No pages found with income statement")
+        if not skip_missing:
+            raise ValueError("No pages found with income statement")
+    else:
+        print(f"  Found {len(sectioned_pages)} page(s) with income statement")
+
+    section_tables: Dict[str, List[Tuple[int, List[str]]]] = defaultdict(list)
+    for section, page_num, tables in sectioned_pages:
+        section_tables[section].append((page_num, tables))
+
+    excel_files: Dict[str, str] = {}
+    sheet_count_by_section: Dict[str, int] = {}
+
+    for section, page_table_list in section_tables.items():
+        if not page_table_list:
+            continue
+
+        section_output_path = output_path.parent / f"{output_path.stem}_{section}.xlsx"
+        print(f"\nCreating Excel file for section {section}: {section_output_path}")
+
         try:
-            # FIX: Không cần detect lại vì đã xác định các trang cần xử lý rồi
-            # Chỉ cần extract tables từ các trang đã được xác định
-            result_pages = []
-            for page_num, page_content in pages_to_process:
-                # Extract tables từ trang
-                tables = extract_markdown_tables(page_content)
-                if tables:
-                    result_pages.append((page_num, page_content, tables))
-            
-            if result_pages:
-                print(f"  Found {len(result_pages)} page(s) with income statement")
+            with pd.ExcelWriter(str(section_output_path), engine='openpyxl') as writer:
+                sheet_counter = 0
                 table_idx = 1
-                total_tables = sum(len(tables) for _, _, tables in result_pages)
-                
-                # Xử lý từng trang và extract tables
-                for page_num, page_content, tables in result_pages:
-                    print(f"  Processing page {page_num}...")
+                total_tables = sum(len(tables) for _, tables in page_table_list)
+
+                for page_num, tables in page_table_list:
+                    print(f"  Processing page {page_num} (section {section})...")
                     for table_text in tables:
                         rows = _parse_markdown_table(table_text)
                         if not rows or len(rows) < 2:
                             continue
-                        
-                        df = _create_dataframe_from_rows(rows)
 
+                        df = _create_dataframe_from_rows(rows)
                         df = _remove_last_column(df)
-                        
-                        # Sheet name (đặt tên theo số trang và số bảng)
+
                         if total_tables == 1:
-                            sheet_name = "KetQuaHoatDongKinhDoanh"[:31]
-                        elif len(result_pages) == 1:
-                            sheet_name = f"KetQua_T{table_idx}"[:31]
+                            sheet_name = f"KetQua_{section}"[:31]
+                        elif len(page_table_list) == 1:
+                            sheet_name = f"KetQua_{section}_T{table_idx}"[:31]
                         else:
-                            sheet_name = f"KetQua_P{page_num}_T{table_idx}"[:31]
-                        
+                            sheet_name = f"{section}_P{page_num}_T{table_idx}"[:31]
+
                         df.to_excel(writer, sheet_name=sheet_name, index=False)
-                        sheet_count += 1
+                        sheet_counter += 1
                         print(f"    ✓ Added sheet: {sheet_name}")
                         table_idx += 1
-            else:
-                print("  ✗ No pages found with income statement")
-                if not skip_missing:
-                    raise ValueError("No pages found with income statement")
+
+                if sheet_counter > 0:
+                    excel_files[section] = str(section_output_path)
+                    sheet_count_by_section[section] = sheet_counter
+                else:
+                    print(f"  ✗ No valid tables found for section {section}, skipping file.")
+                    section_output_path.unlink(missing_ok=True)  # Remove empty file if created
         except Exception as e:
             error_msg = str(e)
             try:
-                print(f"  ✗ Error: {error_msg}")
+                print(f"  ✗ Error processing section {section}: {error_msg}")
             except UnicodeEncodeError:
-                print(f"  [ERROR] Error: {error_msg}")
-            # Log error to file
+                print(f"  [ERROR] Error processing section {section}: {error_msg}")
             log_simple_error(
                 MARKDOWN_TO_XLSX_LOG_KetQuaHoatDongKinhDoanh,
                 str(input_file),
                 'markdown_to_xlsx',
-                f"Income statement processing failed: {error_msg}"
+                f"Income statement processing failed for section {section}: {error_msg}"
             )
             if not skip_missing:
-                raise            
+                raise
     
-    # Tổng kết
+    # Tổng kết Excel
     print("\n" + "=" * 80)
     print("SUMMARY")
     print("=" * 80)
-    print(f"Output Excel file: {output_file}")
-    print(f"Total sheets created: {sheet_count}")
+    total_sheets_created = sum(sheet_count_by_section.values())
+    if excel_files:
+        print(f"Total sections exported: {len(excel_files)}")
+        for section, path in excel_files.items():
+            sheets = sheet_count_by_section.get(section, 0)
+            print(f"  ✓ Section {section}: {path} ({sheets} sheet(s))")
+    else:
+        print("  ✗ No Excel files were created.")
+    print(f"Total sheets created: {total_sheets_created}")
     
     # Tạo JSON từ Excel nếu được yêu cầu
-    json_file = None
-    if create_json and sheet_count > 0:
+    json_files: Dict[str, str] = {}
+    if create_json and excel_files:
         print("\n" + "-" * 80)
-        print("Creating JSON file from Excel...")
+        print("Creating JSON files from Excel...")
         print("-" * 80)
-        try:
-            # Lazy import để tránh circular import
-            from utils_xlsx_to_json_income import create_json_result
-            
-            # Tự động tạo tên file JSON từ Excel file
-            json_output_file = str(output_path.parent / f"{output_path.stem}.json")
-            
-            # Tạo JSON
-            create_json_result(
-                excel_file=str(output_path),
-                output_json_file=json_output_file,
-                replace_null_with=replace_null_with
-            )
-            json_file = json_output_file
-            print(f"\n✓ JSON file created: {json_file}")
-        except Exception as e:
-            error_msg = str(e)
+        from utils_xlsx_to_json_income import create_json_result
+        for section, excel_file in excel_files.items():
             try:
-                print(f"\n✗ Error creating JSON file: {error_msg}")
-            except UnicodeEncodeError:
-                print(f"\n[ERROR] Error creating JSON file: {error_msg}")
-            # Log error to file
-            log_simple_error(
-                XLSX_TO_JSON_LOG_KetQuaHoatDongKinhDoanh,
-                str(output_path),
-                'xlsx_to_json',
-                f"Failed to create JSON from Excel: {error_msg}"
-            )
-            # Không raise error, chỉ cảnh báo vì Excel đã được tạo thành công
+                json_output_file = str(Path(excel_file).with_suffix(".json"))
+                create_json_result(
+                    excel_file=excel_file,
+                    output_json_file=json_output_file,
+                    replace_null_with=replace_null_with,
+                    section=section
+                )
+                json_files[section] = json_output_file
+                print(f"  ✓ JSON ({section}) created: {json_output_file}")
+            except Exception as e:
+                error_msg = str(e)
+                try:
+                    print(f"  ✗ Error creating JSON for section {section}: {error_msg}")
+                except UnicodeEncodeError:
+                    print(f"  [ERROR] Error creating JSON for section {section}: {error_msg}")
+                log_simple_error(
+                    XLSX_TO_JSON_LOG_KetQuaHoatDongKinhDoanh,
+                    excel_file,
+                    'xlsx_to_json',
+                    f"Failed to create JSON from Excel ({section}): {error_msg}"
+                )
+                if not skip_missing:
+                    raise
     
     print("=" * 80)
     
-    return str(output_path)
+    primary_excel = excel_files.get("P2") or excel_files.get("P1")
+    return primary_excel if primary_excel else str(output_path)
 
 
 
 def _get_income_statement_json_template(
+    section: str = _DEFAULT_INCOME_SECTION,
     replace_null_with: Optional[float] = None
 ) -> Dict[str, Any]:
     """
-    Load cấu trúc JSON template cho Kết quả Hoạt động Kinh doanh từ file.
+    Load cấu trúc JSON template cho Kết quả Hoạt động Kinh doanh theo từng phần (P1/P2).
     
     Cấu trúc: Nested/hierarchical structure - mỗi section có ma_so, so_cuoi_nam và chứa các section con bên trong.
     
     Args:
+        section (str): Section identifier ("P1" hoặc "P2"). Default: P2.
         replace_null_with (Optional[float]): Giá trị để thay thế cho null trong JSON.
                                            Nếu None, giữ nguyên null (sẽ được convert thành None trong Python).
                                            Nếu là số (ví dụ: 0), thay thế tất cả null thành số đó.
@@ -388,19 +422,24 @@ def _get_income_statement_json_template(
         Dict[str, Any]: Cấu trúc JSON template với tất cả các mã số và giá trị
     
     Raises:
-        FileNotFoundError: Nếu file income_template_json.json không tồn tại
+        FileNotFoundError: Nếu template tương ứng không tồn tại
+        ValueError: Nếu section không hợp lệ
     
     Ví dụ:
-        >>> template = _get_income_statement_json_template()  # Giữ nguyên null
-        >>> template = _get_income_statement_json_template(replace_null_with=0)  # Thay null thành 0
+        >>> template = _get_income_statement_json_template("P1")  # Giữ nguyên null
+        >>> template = _get_income_statement_json_template("P2", replace_null_with=0)  # Thay null thành 0
     """
-    if not _INCOME_TEMPLATE_JSON_PATH.exists():
+    section_key = (section or _DEFAULT_INCOME_SECTION).upper()
+    template_path = _INCOME_TEMPLATE_JSON_PATHS.get(section_key)
+    if template_path is None:
+        raise ValueError(f"Unsupported income statement section: {section}")
+    if not template_path.exists():
         raise FileNotFoundError(
-            f"Income template JSON file not found: {_INCOME_TEMPLATE_JSON_PATH}"
+            f"Income template JSON file not found for section {section_key}: {template_path}"
         )
     
     # Load JSON từ file
-    with open(_INCOME_TEMPLATE_JSON_PATH, 'r', encoding='utf-8') as f:
+    with open(template_path, 'r', encoding='utf-8') as f:
         template = json.load(f)
     
     # Nếu có yêu cầu replace null, thực hiện deep copy và replace

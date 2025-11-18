@@ -32,8 +32,12 @@ from utils_database_manager import (
     DB_CONFIG,
 )
 
-# Table name for income statements
-TABLE_NAME = 'income_statement_raw'
+# Table names for income statement sections
+SECTION_TABLE_MAP = {
+    "P1": "income_statement_p1_raw",
+    "P2": "income_statement_p2_raw",
+}
+DEFAULT_SECTION = "P2"
 
 
 @dataclass
@@ -141,6 +145,23 @@ def collect_json_files(target: Path, recursive: bool = True) -> List[Path]:
     return []
 
 
+def detect_section_from_name(name: str) -> str:
+    """
+    Detect section identifier (P1/P2) from filename or folder name.
+    Defaults to P2 if no marker is found.
+    """
+    upper_name = name.upper()
+    compact_name = upper_name.replace(" ", "")
+    
+    if any(marker in upper_name for marker in ["_P1", " PHAN I", " PHAN 1"]) \
+            or any(marker in compact_name for marker in ["PHANI", "PHAN1"]):
+        return "P1"
+    if any(marker in upper_name for marker in ["_P2", " PHAN II", " PHAN 2"]) \
+            or any(marker in compact_name for marker in ["PHANII", "PHAN2"]):
+        return "P2"
+    return DEFAULT_SECTION
+
+
 def process_json_files(json_files: List[Path], overwrite: bool) -> Tuple[int, int, List[FailedFile]]:
     """
     Process JSON files and upload to database.
@@ -214,9 +235,13 @@ def process_json_files(json_files: List[Path], overwrite: bool) -> Tuple[int, in
             ))
             continue
 
+        section = detect_section_from_name(json_file.stem)
+        table_name = SECTION_TABLE_MAP.get(section, SECTION_TABLE_MAP[DEFAULT_SECTION])
+        
         # Display parsed information
         quarter_info = f", quarter={quarter}" if quarter is not None else ", quarter=None"
-        print(f"  Parsed from {parse_source}: stock={stock}, year={year}{quarter_info}")
+        print(f"  Parsed from {parse_source}: stock={stock}, year={year}{quarter_info}, section={section}")
+        print(f"  Target table: {table_name}")
 
         upload_ok = upload_json_to_db(
             json_file=str(json_file),
@@ -224,7 +249,7 @@ def process_json_files(json_files: List[Path], overwrite: bool) -> Tuple[int, in
             year=year,
             quarter=quarter,
             overwrite=overwrite,
-            table_name=TABLE_NAME,
+            table_name=table_name,
             source_filename=json_file.name,
         )
         if upload_ok:
@@ -267,7 +292,9 @@ def main() -> None:
     print("=" * 80)
     print(f"Host: {DB_CONFIG['host']}:{DB_CONFIG['port']}")
     print(f"Database: {DB_CONFIG['database']}")
-    print(f"Table: {TABLE_NAME}")
+    print("Tables:")
+    for section, table in SECTION_TABLE_MAP.items():
+        print(f"  - Section {section}: {table}")
     print(f"Overwrite mode: {overwrite}")
     print(f"Recursive search: {recursive}")
     print("=" * 80)

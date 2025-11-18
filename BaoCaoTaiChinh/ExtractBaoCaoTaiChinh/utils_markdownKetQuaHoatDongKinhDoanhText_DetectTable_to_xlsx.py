@@ -26,7 +26,7 @@ CÀI ĐẶT:
 import re
 from difflib import SequenceMatcher
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Tuple, Union
 
 # Import functions from utils_markdownTable_to_xlsx
 from utils_markdownTable_to_xlsx import (
@@ -112,7 +112,31 @@ def _remove_markdown_tables(text: str) -> str:
     return '\n'.join(result_lines)
 
 
-def detect_ketquahoatdongkinhdoanh(text: str, threshold: float = 0.8) -> bool:
+def detect_income_statement_section_tag(text: str) -> str:
+    """
+    Determine income statement section for the FIRST detected page.
+    Rule: nếu trang đầu có chứa "Phần I" hoặc "Phần 1" → phần 1, ngược lại coi là phần 2.
+    """
+    normalized = remove_diacritics(text.lower())
+    normalized = re.sub(r'\s+', ' ', normalized)
+    if "phan i" in normalized or "phan 1" in normalized:
+        return "P1"
+    return "P2"
+
+
+def _detect_income_statement_section(text: str) -> str:
+    """
+    Backward-compatible helper to detect section string.
+    Should be used cho trang đầu tiên.
+    """
+    return detect_income_statement_section_tag(text)
+
+
+def detect_ketquahoatdongkinhdoanh(
+    text: str,
+    threshold: float = 0.8,
+    return_section: bool = False
+) -> Union[bool, Tuple[bool, Optional[str]]]:
     """
     Phát hiện xem văn bản có chứa "báo cáo kết quả hoạt động kinh doanh" hay không.
     
@@ -136,8 +160,12 @@ def detect_ketquahoatdongkinhdoanh(text: str, threshold: float = 0.8) -> bool:
         text (str): Văn bản cần kiểm tra
         threshold (float): Ngưỡng so khớp (mặc định: 0.8 = 80%)
         
+    Args:
+        return_section (bool): If True, return tuple (matched, section) with section in {"P1","P2"}.
+    
     Returns:
-        bool: True nếu tìm thấy "báo cáo kết quả hoạt động kinh doanh", False nếu không
+        bool | Tuple[bool, Optional[str]]: True nếu tìm thấy "báo cáo kết quả hoạt động kinh doanh", False nếu không.
+        Khi return_section=True, trả về tuple (bool, section)
         
     Ví dụ:
         >>> detect_ketquahoatdongkinhdoanh("BÁO CÁO KẾT QUẢ HOẠT ĐỘNG KINH DOANH")  # True
@@ -166,7 +194,7 @@ def detect_ketquahoatdongkinhdoanh(text: str, threshold: float = 0.8) -> bool:
     for other_statement_pattern in other_statements_patterns:
         if other_statement_pattern in text_khong_dau:
             # Đây là báo cáo tài chính khác, không phải kết quả hoạt động kinh doanh
-            return False
+            return (False, None) if return_section else False
     
     # Bước 3: Tạo compact version của text
     text_compact = _create_compact(text_without_tables)
@@ -185,7 +213,8 @@ def detect_ketquahoatdongkinhdoanh(text: str, threshold: float = 0.8) -> bool:
         
         # Kiểm tra nếu pattern xuất hiện trực tiếp trong compact text (exact match)
         if pattern_compact in text_compact:
-            return True
+            section = _detect_income_statement_section(text_without_tables)
+            return (True, section) if return_section else True
         
         # Bước 5: So khớp fuzzy theo character-level - sử dụng sliding window
         # Sử dụng thuật toán: score = ratio(candidate, REFERENCE)
@@ -210,9 +239,10 @@ def detect_ketquahoatdongkinhdoanh(text: str, threshold: float = 0.8) -> bool:
             score = SequenceMatcher(None, pattern_compact, candidate_compact).ratio()
             
             if score >= threshold:
-                return True
+                section = _detect_income_statement_section(text_without_tables)
+                return (True, section) if return_section else True
 
-    return False
+    return (False, None) if return_section else False
 
 
 def process_markdown_file_to_xlsx(
