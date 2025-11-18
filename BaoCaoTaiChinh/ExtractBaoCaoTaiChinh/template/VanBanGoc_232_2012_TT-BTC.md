@@ -1,6 +1,4 @@
-Trang 1
-
-
+Trang 1 
 
 PHẦN VĂN BẢN QUY PHẠM PHÁP LUẬT
 
@@ -46,15 +44,9 @@ Bộ trưởng Bộ Tài chính hướng dẫn kế toán áp dụng đối vớ
 
 1\. Thông tư này quy định một số Tài khoản, nguyên tắc, phương pháp hạch toán, mẫu Báo cáo tài chính áp dụng cho các doanh nghiệp bảo hiểm phi nhân thọ,
 
-
-
 ---
 
-
-
 Trang 2
-
-
 
 sức khỏe, tái bảo hiểm và chi nhánh doanh nghiệp bảo hiểm phi nhân thọ nước ngoài được thành lập và hoạt động theo pháp luật tại Việt Nam (sau đây viết tắt là Doanh nghiệp bảo hiểm phi nhân thọ).
 
@@ -94,15 +86,9 @@ TK 532 có các tài khoản cấp 2 như sau:
 
 2\. Bổ sung các Tài khoản kế toán so với Quyết định số 15/2006/QĐ-BTC và các Thông tư hướng dẫn sửa đổi, bổ sung Chế độ kế toán doanh nghiệp để áp dụng đối với doanh nghiệp bảo hiểm phi nhân thọ.
 
-
-
 ---
 
-
-
 Trang 3
-
-
 
 2.1. Bổ sung tài khoản cấp 2 của TK 244 - “Ký quỹ, ký cược dài hạn” như sau:
 
@@ -168,15 +154,9 @@ TK 624 có các tài khoản cấp 2 và cấp 3 như sau:
 
 \- TK 6248 - Chi phí hoạt động kinh doanh khác.
 
-
-
 ---
 
-
-
 Trang 4
-
-
 
 2.6. Bổ sung TK 005 - “Hợp đồng bảo hiểm chưa phát sinh trách nhiệm”
 
@@ -238,15 +218,9 @@ TK 005 có các tài khoản cấp 2 như sau:
 
 \- TK 641 - Chi phí bán hàng.
 
-
-
 ---
 
-
-
 Trang 5
-
-
 
 3.2. Không dùng các Tài khoản ngoài Bảng Cân đối kế toán:
 
@@ -274,15 +248,9 @@ Trang 5
 
 3.2. Cuối kỳ kế toán, doanh nghiệp bảo hiểm phi nhân thọ phải căn cứ vào số kế toán chi tiết của các khoản đầu tư theo từng hình thức đầu tư phát sinh trong kỳ để lập báo cáo hoạt động đầu tư theo quy định của chế độ tài chính (ví dụ căn cứ vào số kế toán chi tiết từng khoản tiền gửi có kỳ hạn ngắn hạn để lập bảng tổng hợp các khoản đầu tư dưới hình thức tiền gửi có kỳ hạn (ngắn hạn) theo từng
 
-
-
 ---
 
-
-
 Trang 6
-
-
 
 nguồn hình thành đầu tư: nguồn vốn chủ sở hữu, nguồn vốn nhàn rỗi từ dự phòng nghiệp vụ và các nguồn hợp pháp khác theo quy định của pháp luật).
 
@@ -312,15 +280,9 @@ Số tiền đã thanh toán của các đối tượng liên quan đến hoạt
 
 Số tiền còn phải thu của các đối tượng liên quan đến hoạt động kinh doanh bảo hiểm gốc, nhận tái bảo hiểm, nhượng tái bảo hiểm và hoạt động kinh doanh khác.
 
-
-
 ---
 
-
-
 Trang 7
-
-
 
 \## Bổ sung phương pháp hạch toán kế toán một số nghiệp vụ kinh tế chủ yếu
 
@@ -364,15 +326,9 @@ Nợ TK 624 - Chi phí kinh doanh bảo hiểm (62424)
 
 Có TK 131 - Phải thu của khách hàng (Hoa hồng nhận tái bảo hiểm phải trả).
 
-
-
 ---
 
-
-
 Trang 8
-
-
 
 6\. Khi doanh nghiệp nhận tái bảo hiểm nhận được số tiền phí nhận tái bảo hiểm phải thu sau khi trừ (-) hoa hồng nhận tái bảo hiểm phải trả cho doanh nghiệp nhượng tái bảo hiểm, ghi:
 
@@ -408,15 +364,9 @@ Nợ các TK 111, 112,...
 
 11\. Khi doanh nghiệp bảo hiểm phi nhân thọ phát sinh các khoản phải thu về cung cấp các dịch vụ đại lý giám định tổn thất, xét giải quyết bồi thường,... của khách hàng, ghi:
 
-
-
 ---
 
-
-
 Trang 9
-
-
 
 Nợ TK 131 - Phải thu của khách hàng
 
@@ -450,15 +400,9 @@ Tài khoản 142 - “Chi phí trả trước ngắn hạn”: Bổ sung nội d
 
 \- Định kỳ, doanh nghiệp bảo hiểm phi nhân thọ xác định và phân bổ khoản hoa hồng bảo hiểm vào chi phí kinh doanh bảo hiểm kỳ này.
 
-
-
 ---
 
-
-
 Trang 10
-
-
 
 \- Doanh nghiệp bảo hiểm phi nhân thọ phải hạch toán chi tiết hoa hồng bảo hiểm thực tế đã phát sinh chưa phân bổ, số đã phân bổ vào chi phí kinh doanh bảo hiểm trong kỳ để làm cơ sở thuyết minh trên báo cáo tài chính theo quy định.
 
@@ -506,15 +450,9 @@ c) Trường hợp phải trả hoa hồng cho doanh nghiệp môi giới bảo 
 
 Nợ TK 624 - Chi phí kinh doanh bảo hiểm
 
-
-
 ---
 
-
-
 Trang 11
-
-
 
 Nợ TK 133 - Thuế GTGT được khấu trừ (nếu có)
 
@@ -568,15 +506,9 @@ Có TK 131 - Phải thu của khách hàng.
 
 4\. Cuối kỳ kế toán, doanh nghiệp bảo hiểm phi nhân thọ phải xác định và ghi giảm chi phí kinh doanh bảo hiểm các khoản chi phí hoa hồng bảo hiểm phải trả thực tế đã phát sinh chưa được ghi nhận vào chi phí để xác định kết quả kinh doanh trong kỳ chuyển sang phân bổ vào các kỳ kế toán sau, ghi:
 
-
-
 ---
 
-
-
 Trang 12
-
-
 
 Nợ TK 142 - Chi phí trả trước ngắn hạn
 
@@ -604,15 +536,9 @@ Chi phí khai thác bảo hiểm của hoạt động kinh doanh bảo hiểm g�
 
 4\. Doanh nghiệp bảo hiểm phi nhân thọ phải hạch toán chi tiết chi phí khai thác bảo hiểm theo các nội dung chi phí được quy định trong chế độ tài chính và theo từng hoạt động kinh doanh bảo hiểm gốc và nhận tái bảo hiểm để có đủ thông tin thuyết minh trong báo cáo tài chính và theo yêu cầu quản lý của doanh nghiệp.
 
-
-
 ---
 
-
-
 Trang 13
-
-
 
 \\\*\\\*Điều 7. Kế toán các khoản ký quỹ bảo hiểm\\\*\\\*
 
@@ -658,15 +584,9 @@ Có TK 244 - Ký quỹ, ký cược dài hạn (2441).
 
 \- Tài khoản 2448 - “Ký quỹ, ký cược khác”: Dùng để phản ánh số tiền hoặc giá trị tài sản mà doanh nghiệp bảo hiểm phi nhân thọ đem đi ký quỹ, ký cược dài hạn tại các doanh nghiệp, tổ chức kinh tế khác có thời hạn trên 1 năm ngoài các khoản ký quỹ bảo hiểm.
 
-
-
 ---
 
-
-
 Trang 14
-
-
 
 Kế toán TK 2448 thực hiện theo quy định của TK 244 - Ký quỹ, ký cược dài hạn quy định trong Chế độ kế toán doanh nghiệp ban hành theo Quyết định số 15/2006/QĐ-BTC.
 
@@ -696,15 +616,9 @@ Số tiền phải trả cho các đối tượng liên quan đến hoạt độ
 
 Số tiền còn phải trả cho các đối tượng liên quan đến hoạt động kinh doanh bảo hiểm gốc, nhận tái bảo hiểm, nhượng tái bảo hiểm và hoạt động kinh doanh bảo hiểm khác.
 
-
-
 ---
 
-
-
 Trang 15
-
-
 
 \## Bổ sung phương pháp hạch toán kế toán một số nghiệp vụ kinh tế chủ yếu
 
@@ -742,15 +656,9 @@ Trang 15
 
 \- Có TK 331 - Phải trả cho người bán.
 
-
-
 ---
 
-
-
 Trang 16
-
-
 
 6\. Khi ứng trước hoặc thanh toán tiền bồi thường và các khoản chi khác cho doanh nghiệp nhượng tái bảo hiểm hoặc khi thanh toán các khoản nợ phải trả cho người cung cấp dịch vụ liên quan đến hoạt động kinh doanh nhận tái bảo hiểm, kế toán doanh nghiệp nhận tái bảo hiểm ghi:
 
@@ -792,15 +700,9 @@ Nợ TK 624 - Chi phí kinh doanh bảo hiểm (6243) (Tài khoản cấp 3 phù
 
 Có TK 331 - Phải trả cho người bán.
 
-
-
 ---
 
-
-
 Trang 17
-
-
 
 11\. Khi doanh nghiệp bảo hiểm phi nhân thọ ứng trước hoặc thanh toán các khoản phải trả cho người bán, người cung cấp dịch vụ liên quan đến các dịch vụ đại lý giám định tổn thất, xét giải quyết bồi thường,... ghi:
 
@@ -830,15 +732,9 @@ Tài khoản 3387 - “Doanh thu chưa thực hiện”: Bổ sung nội dung ph
 
 \- Doanh nghiệp nhượng tái bảo hiểm phải hạch toán chi tiết doanh thu hoa hồng bảo hiểm thực tế đã phát sinh chưa phân bổ, số đã phân bổ vào doanh thu hoạt động kinh doanh nhượng tái bảo hiểm trong kỳ để làm cơ sở thuyết minh trên báo cáo tài chính theo quy định.
 
-
-
 ---
 
-
-
 Trang 18
-
-
 
 \\\*\\\*Bổ sung kết cấu và nội dung phản ánh của TK 3387 - “Doanh thu chưa thực hiện”\\\*\\\*
 
@@ -878,15 +774,9 @@ Có TK 511 - Doanh thu bán hàng và cung cấp dịch vụ (5113).
 
 Tài khoản 352 - “Dự phòng phải trả”: Dùng để phản ánh các khoản dự phòng phải trả hiện có, tình hình trích lập và sử dụng các khoản dự phòng phải trả của doanh nghiệp bảo hiểm phi nhân thọ, bao gồm dự phòng nghiệp vụ bảo hiểm và dự phòng phải trả.
 
-
-
 ---
 
-
-
 Trang 19
-
-
 
 \\\*\\\*Bổ sung nguyên tắc hạch toán tài khoản này\\\*\\\*
 
@@ -914,15 +804,9 @@ Trang 19
 
 Tài khoản 3521 có 2 Tài khoản cấp 3:
 
-
-
 ---
 
-
-
 Trang 20
-
-
 
 \- Tài khoản 35211 - "Dự phòng phí bảo hiểm gốc và nhận tái bảo hiểm";
 
@@ -974,15 +858,9 @@ tái bảo hiểm).
 
 \+ Nếu khoản dự phòng phí bảo hiểm gốc và nhận tái bảo hiểm phải lập ở cuối kỳ kế toán này nhỏ hơn khoản dự phòng phí bảo hiểm gốc và nhận tái bảo hiểm đã lập ở cuối kỳ kế toán trước thì số chênh lệch nhỏ hơn phải được hoàn nhập, ghi:
 
-
-
 ---
 
-
-
 Trang 21
-
-
 
 Nợ TK 352 - Dự phòng phải trả (35211 - Dự phòng phí bảo hiểm gốc và nhận tái bảo hiểm)
 
@@ -1028,15 +906,9 @@ Nợ TK 624 - Chi phí kinh doanh bảo hiểm (62412, 62422)
 
 Có TK 352 - Dự phòng phải trả (35212 - Dự phòng phí nhượng tái bảo hiểm).
 
-
-
 ---
 
-
-
 Trang 22
-
-
 
 \\\*\\\*2. Tài khoản 3522 - “Dự phòng bồi thường”:\\\*\\\* Dùng để phản ánh tình hình trích lập và hoàn nhập khoản dự phòng bồi thường theo quy định của chế độ tài chính.
 
@@ -1086,15 +958,9 @@ Nợ TK 624 - Chi phí kinh doanh bảo hiểm (62413, 62423)
 
 Có TK 352 - Dự phòng phải trả (35221 - Dự phòng bồi thường bảo hiểm gốc và nhận tái bảo hiểm).
 
-
-
 ---
 
-
-
 Trang 23
-
-
 
 \+ Nếu khoản dự phòng bồi thường bảo hiểm gốc và nhận tái bảo hiểm phải lập ở cuối kỳ kế toán này nhỏ hơn khoản dự phòng bồi thường bảo hiểm gốc và nhận tái bảo hiểm đã lập ở cuối kỳ kế toán trước thì số chênh lệch nhỏ hơn phải được hoàn nhập, ghi:
 
@@ -1136,15 +1002,9 @@ Nợ TK 352 - Dự phòng phải trả (35222 - Dự phòng bồi thường như
 
 Có TK 624 - Chi phí kinh doanh bảo hiểm (62413, 62423).
 
-
-
 ---
 
-
-
 Trang 24
-
-
 
 \+ Nếu khoản dự phòng bồi thường nhượng tái bảo hiểm phải lập ở cuối kỳ kế toán này nhỏ hơn khoản dự phòng bồi thường nhượng tái bảo hiểm đã lập ở cuối kỳ kế toán trước thì số chênh lệch nhỏ hơn phải được hoàn nhập, ghi:
 
@@ -1184,15 +1044,9 @@ Có TK 624 - Chi phí kinh doanh bảo hiểm (6245).
 
 \- Cuối kỳ kế toán năm, căn cứ vào phí bảo hiểm giữ lại trong năm tài chính tiếp theo của từng nghiệp vụ bảo hiểm của doanh nghiệp bảo hiểm phi nhân thọ và tỷ lệ trích lập theo quy định của chế độ tài chính để xác định số dự phòng dao động lớn phải trích lập, ghi:
 
-
-
 ---
 
-
-
 Trang 25
-
-
 
 Nợ TK 624 - Chi phí kinh doanh bảo hiểm (6245)
 
@@ -1242,15 +1096,9 @@ Có các TK liên quan.
 
 Tài khoản 511 - “Doanh thu bán hàng và cung cấp dịch vụ”: Bổ sung nội dung phản ánh doanh thu của hoạt động kinh doanh bảo hiểm gồm: doanh thu phí bảo hiểm gốc, phí nhận tái bảo hiểm, hoa hồng nhượng tái bảo hiểm, doanh thu hoạt
 
-
-
 ---
 
-
-
 Trang 26
-
-
 
 động kinh doanh bất động sản đầu tư và doanh thu hoạt động kinh doanh khác của
 
@@ -1278,15 +1126,9 @@ hiểm, cho từng đối tượng khách hàng và yêu cầu quản lý của 
 
 \- Các doanh nghiệp nhượng tái và nhận tái bảo hiểm phải thực hiện thông báo, đối chiếu kịp thời để đảm bảo ghi nhận doanh thu hoa hồng nhượng tái bảo hiểm phải thu, phí nhượng tái bảo hiểm (đối với doanh nghiệp nhượng tái bảo hiểm) và doanh thu phí nhận tái bảo hiểm, hoa hồng nhận tái bảo hiểm phải trả (đối với doanh nghiệp nhận tái bảo hiểm) tại đúng thời điểm khi phát sinh trách nhiệm theo hợp đồng bảo hiểm đã giao kết chậm nhất trong cùng kỳ kế toán quý. Cuối năm tài chính, doanh nghiệp nhận tái và nhượng tái bảo hiểm phải đối chiếu công nợ phải thu, phải trả để đảm bảo ghi nhận doanh thu, chi phí đúng thời điểm phát sinh trách nhiệm theo hợp đồng bảo hiểm đã giao kết theo quy định của chế độ tài chính.
 
-
-
 ---
 
-
-
 Trang 27
-
-
 
 \\\*\\\*Bổ sung kết cấu và nội dung phản ánh của TK 511 - “Doanh thu bán hàng và cung cấp dịch vụ”\\\*\\\*
 
@@ -1324,15 +1166,9 @@ Doanh thu cung cấp dịch vụ của hoạt động kinh doanh bảo hiểm v�
 
 Tài khoản 531 - “Hoàn phí, hoa hồng bảo hiểm”: Dùng để phản ánh các khoản phí bảo hiểm gốc, phí nhận tái bảo hiểm, hoa hồng bảo hiểm do doanh nghiệp bảo
 
-
-
 ---
 
-
-
 Trang 28
-
-
 
 hiểm phi nhân thọ phải trả cho khách hàng hoặc các tổ chức khác như doanh nghiệp nhận tái hoặc doanh nghiệp nhượng tái bảo hiểm hoặc doanh nghiệp môi giới bảo hiểm,... trong các trường hợp khách hàng (bên mua bảo hiểm) hủy hợp đồng bảo hiểm đã giao kết với doanh nghiệp bảo hiểm phi nhân thọ.
 
@@ -1378,15 +1214,9 @@ Tài khoản 532 - “Giảm phí, hoa hồng bảo hiểm”: Dùng để phả
 
 phí bảo hiểm gốc, phí nhận tái bảo hiểm, hoa hồng bảo hiểm bị giảm do doanh
 
-
-
 ---
 
-
-
 Trang 29
-
-
 
 nghiệp bảo hiểm phi nhân thọ phải trả lại cho khách hàng (bên mua bảo hiểm) trong các trường hợp khi kết thúc hợp đồng bảo hiểm, đối tượng bảo hiểm không xảy ra tai nạn, tổn thất theo hợp đồng bảo hiểm đã giao kết giữa doanh nghiệp bảo hiểm phi nhân thọ với khách hàng hoặc do duy trì quan hệ lâu năm giữa doanh nghiệp bảo hiểm phi nhân thọ với khách hàng và các trường hợp theo cam kết khác ghi trong hợp đồng.
 
@@ -1416,15 +1246,9 @@ Kết chuyển các khoản giảm phí bảo hiểm, giảm hoa hồng bảo hi
 
 \- Tài khoản 5321 - “Giảm phí bảo hiểm gốc”: Dùng để phản ánh các khoản giảm phí bảo hiểm gốc phát sinh trong kỳ;
 
-
-
 ---
 
-
-
 Trang 30
-
-
 
 \- Tài khoản 5322 - “Giảm phí nhận tái bảo hiểm”: Dùng để phản ánh các khoản giảm phí nhận tái bảo hiểm phát sinh trong kỳ;
 
@@ -1448,15 +1272,9 @@ Bổ sung Tài khoản 533 - “Phí nhượng tái bảo hiểm”: Dùng để
 
 \- Trường hợp khách hàng thay đổi số tiền, phạm vi bảo hiểm hoặc thời hạn bảo hiểm theo hợp đồng bảo hiểm đã giao kết với doanh nghiệp bảo hiểm phi nhân thọ dẫn đến tăng phạm vi bảo hiểm làm tăng phí nhượng tái bảo hiểm, kế toán ghi Nợ
 
-
-
 ---
 
-
-
 Trang 31
-
-
 
 TK 533/Có TK 331; Trường hợp giảm số tiền, phạm vi bảo hiểm hoặc thời hạn bảo hiểm làm giảm phí nhượng tái bảo hiểm, kế toán ghi Nợ TK 331/Có TK 533.
 
@@ -1498,15 +1316,9 @@ Có TK 511 - Doanh thu bán hàng và cung cấp dịch vụ (5113).
 
 \- Khi doanh nghiệp nhượng tái bảo hiểm thanh toán phí nhượng tái bảo hiểm sau khi đã trừ (-) hoa hồng bảo hiểm phải thu của doanh nghiệp nhận tái bảo hiểm, ghi:
 
-
-
 ---
 
-
-
 Trang 32
-
-
 
 Nợ TK 331 - Phải trả cho người bán
 
@@ -1552,15 +1364,9 @@ Có TK 331 - Phải trả cho người bán.
 
 Nợ TK 531 - Hoàn phí, hoa hồng bảo hiểm (5313)
 
-
-
 ---
 
-
-
 Trang 33
-
-
 
 Có TK 331 - Phải trả cho người bán.
 
@@ -1602,15 +1408,9 @@ Nợ TK 131 - Phải thu của khách hàng (Trường hợp bên mua bảo hi�
 
 Có TK 511 - Doanh thu bán hàng và cung cấp dịch vụ (Giá chưa có thuế GTGT) (5111)
 
-
-
 ---
 
-
-
 Trang 34
-
-
 
 Có TK 3331 - Thuế GTGT phải nộp (33311) (nếu có).
 
@@ -1650,15 +1450,9 @@ Có TK 511 - Doanh thu bán hàng và cung cấp dịch vụ (5111).
 
 Nợ TK 005 - Hợp đồng bảo hiểm chưa phát sinh trách nhiệm (0053).
 
-
-
 ---
 
-
-
 Trang 35
-
-
 
 1.4. Khi hợp đồng bảo hiểm gốc đã phát sinh trách nhiệm, kế toán doanh nghiệp nhượng tái bảo hiểm phản ánh số tiền phí nhượng tái bảo hiểm phải chuyển cho doanh nghiệp nhận tái bảo hiểm (bao gồm cả thuế nhà thầu) (nếu có), ghi:
 
@@ -1702,15 +1496,9 @@ Có TK 331 - Phải trả cho người bán.
 
 Đồng thời ghi tăng doanh thu hoa hồng nhượng tái bảo hiểm phải thu thêm của doanh nghiệp nhận tái bảo hiểm, ghi:
 
-
-
 ---
 
-
-
 Trang 36
-
-
 
 Nợ TK 331 - Phải trả cho người bán
 
@@ -1760,15 +1548,9 @@ Nợ TK 3331 - Thuế GTGT phải nộp (33311) (nếu có)
 
 Có các TK 111, 112 (Tổng số tiền thanh toán) (Trường hợp đã thanh toán số tiền hoàn phí bảo hiểm cho bên mua bảo hiểm)
 
-
-
 ---
 
-
-
 Trang 37
-
-
 
 Có TK 131 - Phải thu của khách hàng (Trường hợp chưa trả số tiền hoàn phí bảo hiểm cho bên mua bảo hiểm).
 
@@ -1814,15 +1596,9 @@ Nợ TK 532 - Giảm phí, hoa hồng bảo hiểm
 
 Có TK 331 - Phải trả cho người bán.
 
-
-
 ---
 
-
-
 Trang 38
-
-
 
 \- Khi doanh nghiệp bảo hiểm nhận được số tiền phí nhượng tái bảo hiểm sau khi đã trừ (-) hoa hồng bảo hiểm phải trả cho doanh nghiệp nhận tái bảo hiểm, ghi:
 
@@ -1868,15 +1644,9 @@ Nợ TK 131 - Phải thu của khách hàng
 
 Có TK 511 - Doanh thu bán hàng và cung cấp dịch vụ (5112) (Số tiền phí nhận tái bảo hiểm phải thu của doanh nghiệp nhượng tái bảo hiểm).
 
-
-
 ---
 
-
-
 Trang 39
-
-
 
 Đồng thời ghi Có TK 005 - Hợp đồng nhận tái bảo hiểm chưa phát sinh trách nhiệm (0052).
 
@@ -1918,15 +1688,9 @@ Nợ các TK 111, 112 (Số tiền thực nhận từ doanh nghiệp nhượng t
 
 Có TK 131 - Phải thu của khách hàng
 
-
-
 ---
 
-
-
 Trang 40
-
-
 
 Có TK 3338 - Các loại thuế khác (chi tiết thuế nhà thầu phần hoa hồng nhận tái bảo hiểm phải trả cho doanh nghiệp nhưng tái bảo hiểm) (nếu có).
 
@@ -1964,15 +1728,9 @@ Nợ TK 624 - Chi phí kinh doanh bảo hiểm (62424)
 
 Có TK 131 - Phải thu của khách hàng (Hoa hồng nhận tái bảo hiểm phải trả thêm cho doanh nghiệp nhưng tái bảo hiểm).
 
-
-
 ---
 
-
-
 Trang 41
-
-
 
 \- Khi doanh nghiệp nhận tái bảo hiểm nhận được số tiền phí nhận tái bảo hiểm phải thu thêm sau khi đã trừ (-) hoa hồng nhận tái bảo hiểm phải trả cho doanh nghiệp nhượng tái bảo hiểm, ghi:
 
@@ -2010,15 +1768,9 @@ Có TK 131 - Phải thu của khách hàng (Số tiền phí nhận tái bảo h
 
 Đồng thời ghi giảm chi phí số tiền hoa hồng phải thu của doanh nghiệp nhượng tái bảo hiểm tương ứng với phí nhận tái bảo hiểm phải hoàn trả cho doanh nghiệp nhượng tái bảo hiểm, ghi:
 
-
-
 ---
 
-
-
 Trang 42
-
-
 
 Nợ TK 131 - Phải thu của khách hàng (Số tiền hoa hồng nhận tái bảo hiểm phải thu của doanh nghiệp nhượng tái bảo hiểm)
 
@@ -2054,15 +1806,9 @@ Có các TK 111, 112,... (Số tiền phí nhận tái bảo hiểm thực trả
 
 2.7. Cuối kỳ kế toán, kết chuyển các khoản hoàn phí nhận tái bảo hiểm phát sinh trong kỳ trừ (-) vào doanh thu nhận tái bảo hiểm thực tế phát sinh trong kỳ để xác định doanh thu thuần, ghi:
 
-
-
 ---
 
-
-
 Trang 43
-
-
 
 Nợ TK 511 - Doanh thu bán hàng và cung cấp dịch vụ (5112)
 
@@ -2104,15 +1850,9 @@ Có TK 331- Phải trả cho người bán (Số tiền phí nhượng tái bả
 
 Nợ TK 331 - Phải trả cho người bán
 
-
-
 ---
 
-
-
 Trang 44
-
-
 
 Có các TK 111, 112,... (Số tiền thực trả cho doanh nghiệp nhận tái bảo hiểm)
 
@@ -2148,15 +1888,9 @@ Có TK 331 - Phải trả cho người bán (Số tiền hoa hồng giảm phả
 
 Đồng thời ghi giảm phí nhượng tái bảo hiểm phải thu của doanh nghiệp nhận tái bảo hiểm theo hợp đồng nhượng tái bảo hiểm đã giao kết (bao gồm cả thuế nhà thầu) (nếu có), ghi:
 
-
-
 ---
 
-
-
 Trang 45
-
-
 
 Nợ TK 331 - Phải trả cho người bán
 
@@ -2196,15 +1930,9 @@ b) Trường hợp giảm phạm vi tái bảo hiểm làm giảm phí nhượng
 
 Nợ TK 511 - Doanh thu bán hàng và cung cấp dịch vụ (5113)
 
-
-
 ---
 
-
-
 Trang 46
-
-
 
 Có TK 331 - Phải trả cho người bán (Số tiền hoa hồng giảm phải trả trừ vào phí nhượng tái bảo hiểm phải thu của doanh nghiệp nhận tái bảo hiểm).
 
@@ -2262,15 +1990,9 @@ thất... theo hợp đồng bảo hiểm đã giao kết dẫn đến giảm ph
 
 và hoa hồng nhượng tái bảo hiểm, kế toán phản ánh phí nhượng tái bảo hiểm phải
 
-
-
 ---
 
-
-
 Trang 47
-
-
 
 thu (nếu có) của doanh nghiệp nhận tái bảo hiểm (bao gồm cả thuế nhà thầu) (nếu có), ghi:
 
@@ -2312,15 +2034,9 @@ Có TK 533 - Phí nhượng tái bảo hiểm.
 
 3.11. Cuối kỳ kế toán, kết chuyển các khoản hoàn hoa hồng nhượng tái bảo hiểm phát sinh trong kỳ trừ vào doanh thu hoa hồng nhượng tái bảo hiểm thực tế phát sinh trong kỳ để xác định doanh thu thuần, kế toán ghi:
 
-
-
 ---
 
-
-
 Trang 48
-
-
 
 Nợ TK 511 - Doanh thu bán hàng và cung cấp dịch vụ (5113)
 
@@ -2350,15 +2066,9 @@ Tài khoản này còn dùng để phản ánh chi phí các hoạt động kinh
 
 \- Chỉ phản ánh vào TK 624 - “Chi phí kinh doanh bảo hiểm” các chi phí thực tế phát sinh (đã chi tiền hoặc chưa chi tiền) có liên quan đến hoạt động kinh doanh bảo hiểm trong kỳ kế toán; các khoản phải thu để giảm chi phát sinh trong kỳ như thu bồi thường nhượng tái bảo hiểm, thu đòi người thứ ba bồi hoàn, thu hàng đã xử lý bồi thường 100%, hoa hồng bảo hiểm chò phân bổ các kỳ sau, các khoản hoàn nhập dự phòng nghiệp vụ.
 
-
-
 ---
 
-
-
 Trang 49
-
-
 
 \- Chi phí kinh doanh bảo hiểm hạch toán trên TK 624 phải phản ánh chi tiết theo từng loại hoạt động kinh doanh bảo hiểm gốc, nhận tái bảo hiểm, nhượng tái bảo hiểm và hoạt động kinh doanh khác. Trong từng loại hoạt động kinh doanh bảo hiểm phải hạch toán chi tiết từng loại nghiệp vụ bảo hiểm theo từng nội dung chi phí theo đúng quy định của chế độ tài chính và yêu cầu quản lý của doanh doanh nghiệp.
 
@@ -2382,15 +2092,9 @@ Trang 49
 
 \- Các khoản ghi giảm chi phí hoạt động kinh doanh bảo hiểm và hoạt động kinh doanh khác phát sinh trong kỳ (như thu bồi thường nhượng tái bảo hiểm, thu đời người thứ ba bồi hoàn, thu hàng đã xử lý bồi thường 100%, chi phí hoa hồng bảo hiểm chưa phân bổ chuyển kỳ sau, các khoản hoàn nhập dự phòng nghiệp vụ,...);
 
-
-
 ---
 
-
-
 Trang 50
-
-
 
 \- Số chi bồi thường bảo hiểm gốc và nhận tái bảo hiểm được chi từ quỹ dự phòng dao động lớn;
 
@@ -2424,15 +2128,9 @@ Các doanh nghiệp bảo hiểm phi nhân thọ được mở các tài khoản
 
 \- Tài khoản 6242 - “Chi phí kinh doanh nhận tái bảo hiểm”: Dùng để phản ánh chi phí của hoạt động kinh doanh nhận tái bảo hiểm gồm chi bồi thường, trích lập dự phòng nghiệp vụ, chi hoa hồng, chi xử lý hàng tổn thất đã được giải quyết bồi thường 100%, chi đòi người thứ ba bồi hoàn, chi đánh giá, giám định rủi ro đối
 
-
-
 ---
 
-
-
 Trang 51
-
-
 
 tượng bảo hiểm, và các khoản chi khác liên quan đến hoạt động kinh doanh nhận
 
@@ -2480,15 +2178,9 @@ Có TK 331 - Phải trả cho người bán (Nếu chưa trả tiền bồi thư
 
 Có các TK 111, 112,... (Nếu đã thanh toán tiền bồi thường cho người được bảo hiểm).
 
-
-
 ---
 
-
-
 Trang 52
-
-
 
 Khi phát sinh các khoản phải thu bồi thường tương ứng với phần trách nhiệm phí bảo hiểm đã nhượng tái của doanh nghiệp nhận tái bảo hiểm và ghi giảm chi phí kinh doanh bảo hiểm:
 
@@ -2528,15 +2220,9 @@ Nợ TK 624 - Chi phí kinh doanh bảo hiểm (62411)
 
 Có TK 331 - Phải trả cho người bán (Số phải trả doanh nghiệp nhận tái bảo hiểm từ số phải thu đòi người thứ ba bồi hoàn).
 
-
-
 ---
 
-
-
 Trang 53
-
-
 
 1.6. Khi thu hồi được hàng đã xử lý bồi thường 100%, doanh nghiệp bảo hiểm phi nhân thọ có trách nhiệm theo dõi chi tiết về mặt hiện vật trên số kế toán toàn bộ số hàng thu hồi được cho đến khi bán hoặc thanh lý. Khi xác định được số phải thu về hàng đã xử lý bồi thường 100%, kế toán ghi giảm chi phí kinh doanh bảo hiểm toàn bộ số phải thu hàng đã xử lý bồi thường 100%, ghi:
 
@@ -2582,15 +2268,9 @@ Nợ TK 624 - Chi phí kinh doanh bảo hiểm (62418)
 
 Có các TK 111, 112,...
 
-
-
 ---
 
-
-
 Trang 54
-
-
 
 1.11. Kế toán chi phí khai thác bảo hiểm:
 
@@ -2640,15 +2320,9 @@ b) Khi xác định được hoa hồng phải trả cho các đại lý bảo h
 
 Nợ TK 624 - Chi phí kinh doanh bảo hiểm (62414)
 
-
-
 ---
 
-
-
 Trang 55
-
-
 
 Nợ TK 133 - Thuế GTGT được khấu trừ (nếu có)
 
@@ -2704,15 +2378,9 @@ Có TK 334 - Phải trả người lao động.
 
 Nợ TK 334 - Phải trả người lao động (Phần khấu trừ vào lương)
 
-
-
 ---
 
-
-
 Trang 56
-
-
 
 Nợ TK 624 - Chi phí kinh doanh bảo hiểm (phần tính vào chi phí)
 
@@ -2760,15 +2428,9 @@ Nợ TK 352 - Dự phòng phải trả (35221 - Dự phòng bồi thường bả
 
 Có TK 624 - Chi phí kinh doanh bảo hiểm (62413).
 
-
-
 ---
 
-
-
 Trang 57
-
-
 
 1.15. Cuối kỳ kế toán năm (hoặc quý), căn cứ vào các khoản dự phòng bồi thường của hợp đồng nhượng tái bảo hiểm phải trích lập theo quy định của chế độ tài chính:
 
@@ -2802,15 +2464,9 @@ Có TK 624 - Chi phí kinh doanh bảo hiểm (62412).
 
 \- Nếu các khoản dự phòng phí nhượng tái bảo hiểm chưa được hưởng phải lập kỳ kế toán này lớn hơn các khoản dự phòng phí nhượng tái bảo hiểm chưa được hưởng đã trích lập kỳ kế toán trước, thì phải trích lập thêm số chênh lệch lớn hơn, ghi
 
-
-
 ---
 
-
-
 Trang 58
-
-
 
 Nợ TK 352 - Dự phòng phải trả (35212- Dự phòng phí nhượng tái bảo hiểm)
 
@@ -2856,15 +2512,9 @@ Có các TK 111, 112,...
 
 2.3. Khi nhận được thông báo của doanh nghiệp nhượng tái bảo hiểm về các khoản phải trả về chi đòi người thứ ba bồi hoàn, chi xử lý hàng tổn thất đã được giải quyết bồi thường 100% và các khoản chi khác (nếu có), căn cứ vào các chứng từ liên quan, ghi:
 
-
-
 ---
 
-
-
 Trang 59
-
-
 
 Nợ TK 624 - Chi phí kinh doanh bảo hiểm (6242)
 
@@ -2910,15 +2560,9 @@ Có TK 352 - Dự phòng phải trả (35221 - Dự phòng bồi thường bảo
 
 \- Nếu các khoản dự phòng bồi thường phải lập cho kỳ kế toán này nhỏ hơn các khoản dự phòng bồi thường đã trích lập kỳ kế toán trước, thì số chênh lệch nhỏ hơn phải được hoàn nhập, ghi:
 
-
-
 ---
 
-
-
 Trang 60
-
-
 
 Nợ TK 352 - Dự phòng phải trả (35221 - Dự phòng bồi thường bảo hiểm gốc và nhận tái bảo hiểm) (chi tiết dự phòng bồi thường nhận tái bảo hiểm)
 
@@ -2968,15 +2612,9 @@ Nợ TK 624 - Chi phí kinh doanh bảo hiểm (6243)
 
 Có các TK 111, 112, 141, 331,...
 
-
-
 ---
 
-
-
 Trang 61
-
-
 
 3.2. Cuối kỳ kế toán, kết chuyển chi phí hoạt động kinh doanh nhượng tái bảo hiểm phát sinh trong kỳ, ghi:
 
@@ -3026,15 +2664,9 @@ Nợ TK 911 - Xác định kết quả kinh doanh
 
 Có TK 624 - Chi phí kinh doanh bảo hiểm (6248).
 
-
-
 ---
 
-
-
 Trang 62
-
-
 
 \# Điều 18. Kế toán thuế
 
@@ -3076,15 +2708,9 @@ Trang 62
 
 \- Có các TK 111, 112, 331,...
 
-
-
 ---
 
-
-
 Trang 63
-
-
 
 1.5. Trường hợp doanh nghiệp bảo hiểm phi nhân thọ có hoạt động đầu tư xây dựng cơ bản hoặc mua sắm, sửa chữa lớn TSCĐ sử dụng đồng thời cho hoạt động kinh doanh bảo hiểm thuộc đối tượng chịu thuế GTGT và không chịu thuế GTGT hoặc phục vụ cho người lao động làm việc tại doanh nghiệp như: nhà nghỉ giữa ca, nhà ở cho người lao động,... thì thuế GTGT đầu vào được khấu trừ toàn bộ, ghi:
 
@@ -3122,15 +2748,9 @@ Nợ các TK 142, 242 (Trường hợp số thuế GTGT không được khấu t
 
 Có TK 133 - Thuế GTGT được khấu trừ.
 
-
-
 ---
 
-
-
 Trang 64
-
-
 
 \## 2. Thuế GTGT đầu ra
 
@@ -3186,15 +2806,9 @@ Khi trả tiền cho đại lý bảo hiểm, ghi:
 
 4.1. Khi hợp đồng nhượng tái bảo hiểm đã phát sinh trách nhiệm, kế toán phản ánh phí nhượng tái bảo hiểm phải chuyển cho doanh nghiệp nhận tái bảo hiểm, căn
 
-
-
 ---
 
-
-
 Trang 65
-
-
 
 cứ vào bản thanh toán về tái bảo hiểm được xác nhận theo hợp đồng nhượng tái bảo hiểm đã giao kết, ghi:
 
@@ -3244,15 +2858,9 @@ Có TK 3338 - Các loại thuế khác (Chi tiết thuế nhà thầu) (nếu c�
 
 Nợ các TK 241, 624, 642
 
-
-
 ---
 
-
-
 Trang 66
-
-
 
 Có các TK 111, 112, 331,...
 
@@ -3282,15 +2890,9 @@ Khi phát sinh các hoạt động đồng bảo hiểm trong các doanh nghiệ
 
 Nợ TK 005 - Hợp đồng bảo hiểm chưa phát sinh trách nhiệm (0051).
 
-
-
 ---
 
-
-
 Trang 67
-
-
 
 1.2. Khi phát sinh trách nhiệm đối với hợp đồng bảo hiểm đã giao kết giữa doanh nghiệp đứng đầu và khách hàng (bên mua bảo hiểm), kế toán doanh nghiệp đứng đầu ghi nhận doanh thu phí bảo hiểm được hưởng và phản ánh phí bảo hiểm phải trả cho các doanh nghiệp tham gia đồng bảo hiểm theo tỷ lệ phí bảo hiểm phân chia trong hợp đồng đồng bảo hiểm đã giao kết, ghi:
 
@@ -3322,15 +2924,9 @@ Nợ TK 131 - Phải thu của khách hàng (Số tiền chi bồi thường và
 
 Nợ TK 133 - Thuế GTGT được khấu trừ (nếu có)
 
-
-
 ---
 
-
-
 Trang 68
-
-
 
 Có TK 331 - Phải trả cho người bán (Số tiền chi bồi thường và các khoản chi khác phải trả khi xảy ra tai nạn, tổn thất).
 
@@ -3370,15 +2966,9 @@ Doanh thu của các hợp đồng bảo hiểm chưa phát sinh trách nhiệm 
 
 \- TK 0053 - “Hợp đồng nhượng tái bảo hiểm chưa phát sinh trách nhiệm”: Doanh thu của các hợp đồng nhượng tái bảo hiểm chưa phát sinh trách nhiệm.
 
-
-
 ---
 
-
-
 Trang 69
-
-
 
 \\\*\\\*Phương pháp hạch toán kế toán một số nghiệp vụ kinh tế chủ yếu\\\*\\\*
 
@@ -3450,15 +3040,9 @@ Các mẫu Báo cáo tài chính giữa niên độ (dạng đầy đủ) áp d�
 
 nghiệp bảo hiểm phi nhân thọ giống như mẫu Báo cáo tài chính giữa niên độ (dạng
 
-
-
 ---
 
-
-
 Trang 70
-
-
 
 đầy đủ) ban hành theo Quyết định số 15/2006/QĐ-BTC ngày 20/3/2006. Các chỉ tiêu trong từng báo cáo tài chính giữa niên độ dạng đầy đủ giống như báo cáo tài chính năm ban hành tại Thông tư này.
 
@@ -3472,7 +3056,9 @@ Thông tư này hướng dẫn nội dung và phương pháp lập các chỉ ti
 
 Là chỉ tiêu phản ánh số tiền còn phải thu liên quan đến hoạt động kinh doanh bảo hiểm gốc, nhận tái bảo hiểm, nhượng tái bảo hiểm và phải thu khác của khách hàng có thời hạn thanh toán dưới 1 năm tại thời điểm báo cáo. Số liệu để ghi vào chỉ tiêu “Phải thu khách hàng” căn cứ vào tổng số dư Nợ chi tiết TK 131 “Phải thu của khách hàng” mở theo từng khách hàng thuộc đối tượng phải thu trên số kế toán chi tiết TK 131, chi tiết các khoản phải thu ngắn hạn của khách hàng.
 
-$$Mã số 131 = Mã số 131.1 + Mã số 131.2$$
+$$
+Mã số 131 = Mã số 131.1 + Mã số 131.2
+$$
 
 \\\*\\\*Phải thu về hợp đồng bảo hiểm (Mã số 131.1)\\\*\\\*
 
@@ -3486,17 +3072,13 @@ Chỉ tiêu này phản ánh số tiền còn phải thu khác từ các đối 
 
 Chỉ tiêu này phản ánh chi phí hoa hồng bảo hiểm chưa phân bổ và chi phí trả trước ngắn hạn khác tại thời điểm báo cáo. Số liệu để ghi vào chỉ tiêu “Chi phí trả trước ngắn hạn” căn cứ vào số dư Nợ TK 142 “Chi phí trả trước ngắn hạn” trên số kế toán TK 142.
 
-$$Mã số 151 = Mã số 151.1 + Mã số 151.2$$
-
-
+$$
+Mã số 151 = Mã số 151.1 + Mã số 151.2
+$$
 
 ---
 
-
-
 Trang 71
-
-
 
 \\\*\\\*Chi phí hoa hồng chưa phân bổ (Mã số 151.1)\\\*\\\*
 
@@ -3510,13 +3092,17 @@ Chỉ tiêu này phản ánh số tiền đã thanh toán cho một số khoản
 
 Chỉ tiêu này phản ánh khoản dự phòng phí nhượng tái bảo hiểm và dự phòng bồi thường nhượng tái bảo hiểm tại thời điểm báo cáo. Số liệu để ghi vào chỉ tiêu “Tài sản tái bảo hiểm” căn cứ vào số dư Nợ các TK 35212 “Dự phòng phí nhượng tái bảo hiểm”, TK 35222 “Dự phòng bồi thường nhượng tái bảo hiểm” trên số kế toán chi tiết các TK 35212, TK 35222.
 
-$$Mã số 190 = Mã số 191 + Mã số 192$$
+$$
+Mã số 190 = Mã số 191 + Mã số 192
+$$
 
 \\\*\\\*Phải thu dài hạn khác (Mã số 218)\\\*\\\*
 
 Là chỉ tiêu phản ánh số tiền doanh nghiệp bảo hiểm phi nhân thọ mang đi ký quỹ bảo hiểm theo quy định và các khoản phải thu dài hạn khác từ các đối tượng có liên quan tại thời điểm báo cáo. Số liệu để ghi vào chỉ tiêu “Phải thu dài hạn khác” căn cứ vào số dư Nợ chi tiết các TK 138 “Phải thu khác”, TK 244 “Ký quỹ, ký cược dài hạn”, TK 338 “Phải trả, phải nộp khác” trên số kế toán chi tiết các TK 138, 244, 338, chi tiết các khoản phải thu dài hạn.
 
-$$Mã số 218 = Mã số 218.1 + Mã số 218.2$$
+$$
+Mã số 218 = Mã số 218.1 + Mã số 218.2
+$$
 
 \\\*\\\*Ký quỹ bảo hiểm (Mã số 218.1)\\\*\\\*
 
@@ -3526,15 +3112,9 @@ Chỉ tiêu này phản ánh số tiền doanh nghiệp bảo hiểm phi nhân t
 
 Chỉ tiêu này phản ánh các khoản phải thu khác từ các đối tượng có liên quan được xếp vào loại tài sản dài hạn, các khoản ứng trước cho người bán dài hạn (nếu có). Số liệu để ghi vào chỉ tiêu “Phải thu dài hạn khác” căn cứ vào số dư Nợ chi
 
-
-
 ---
 
-
-
 Trang 72
-
-
 
 tiết các TK 138 “Phải thu khác”, TK 338 “Phải trả, phải nộp khác”, TK 244 “Ký quỹ, ký cược dài hạn”, sau khi trừ (-) khoản ký quỹ bảo hiểm đã được phản ánh ở Mã số 218.1 trên số kế toán chi tiết các TK 138, 338 và trên số kế toán TK 2448 (chi tiết các khoản phải thu dài hạn).
 
@@ -3542,7 +3122,9 @@ tiết các TK 138 “Phải thu khác”, TK 338 “Phải trả, phải nộp 
 
 Là chỉ tiêu phản ánh số tiền còn phải trả cho các đối tượng liên quan đến hoạt động kinh doanh bảo hiểm gốc, nhận tái bảo hiểm, nhượng tái bảo hiểm và phải trả khác cho người bán có thời hạn thanh toán dưới 1 năm hoặc dưới một chu kỳ kinh doanh tại thời điểm báo cáo. Số liệu để ghi vào chỉ tiêu “Phải trả người bán” là số dư Có chi tiết TK 331 “Phải trả người bán” được phân loại là ngắn hạn mở theo từng người bán thuộc đối tượng phải trả trên số kế toán chi tiết TK 331, chi tiết các khoản phải trả ngắn hạn cho người bán.
 
-$$Mã số 312 = Mã số 312.1 + Mã số 312.2$$
+$$
+Mã số 312 = Mã số 312.1 + Mã số 312.2
+$$
 
 \### Phải trả về hợp đồng bảo hiểm (Mã số 312.1)
 
@@ -3560,21 +3142,17 @@ Chỉ tiêu này phản ánh doanh thu hoa hồng thực tế đã phát sinh nh
 
 Chỉ tiêu này phản ánh khoản dự phòng phải trả ngắn hạn tại thời điểm báo cáo. Số liệu để ghi vào chỉ tiêu “Dự phòng phải trả ngắn hạn” là số dư Có chi tiết TK 3524 “Dự phòng phải trả” (Chi tiết các khoản dự phòng cho các khoản phải trả ngắn hạn) trên số kế toán TK 3524.
 
-
-
 ---
 
-
-
 Trang 73
-
-
 
 \\\*\\\*Dự phòng nghiệp vụ (Mã số 329)\\\*\\\*
 
 Là chỉ tiêu tổng hợp phản ánh các khoản dự phòng nghiệp vụ chưa sử dụng tại thời điểm báo cáo.
 
-$$Mã số 329 = Mã số 329.1 + Mã số 329.2 + Mã số 329.3$$
+$$
+Mã số 329 = Mã số 329.1 + Mã số 329.2 + Mã số 329.3
+$$
 
 \\\*\\\*Dự phòng phí bảo hiểm gốc và nhận tái bảo hiểm (Mã số 329.1):\\\*\\\*
 
@@ -3604,15 +3182,9 @@ Chỉ tiêu này phản ánh Quỹ dự trữ bắt buộc chưa sử dụng t�
 
 Thông tư này hướng dẫn nội dung và phương pháp lập các chỉ tiêu (khoản mục) có sửa đổi, bổ sung để ghi số liệu vào cột 4 “Năm nay” của báo cáo này năm
 
-
-
 ---
 
-
-
 Trang 74
-
-
 
 nay. Các chỉ tiêu (khoản mục) không có sửa đổi, bổ sung được lập theo chế độ kế toán doanh nghiệp hiện hành (Chế độ kế toán doanh nghiệp ban hành theo Quyết định số 15/2006/QĐ-BTC ngày 20/3/2006 của Bộ Tài chính và các Thông tư hướng dẫn sửa đổi bổ sung Chế độ kế toán doanh nghiệp).
 
@@ -3628,7 +3200,9 @@ nay. Các chỉ tiêu (khoản mục) không có sửa đổi, bổ sung đượ
 
 Chỉ tiêu này phản ánh tổng doanh thu phí bảo hiểm gốc và nhận tái bảo hiểm sau khi trừ (-) các khoản, gồm: giảm phí bảo hiểm gốc, giảm phí nhận tái bảo hiểm, hoàn phí bảo hiểm gốc, hoàn phí nhận tái bảo hiểm và chênh lệch tăng, giảm dự phòng phí bảo hiểm gốc và nhận tái bảo hiểm trong kỳ báo cáo của doanh nghiệp bảo hiểm phi nhân thọ.
 
-$$Mã số 01 = Mã số 01.1 + Mã số 01.2 - Mã số 01.3$$
+$$
+Mã số 01 = Mã số 01.1 + Mã số 01.2 - Mã số 01.3
+$$
 
 \\\*\\\*Phí bảo hiểm gốc (Mã số 01.1)\\\*\\\*
 
@@ -3642,15 +3216,9 @@ Chỉ tiêu này phản ánh tổng số doanh thu phí nhận tái bảo hiểm
 
 Số liệu để ghi vào chỉ tiêu này là lũy kế số phát sinh Có của TK 5112 "Doanh thu phí nhận tái bảo hiểm" trừ (-) lũy kế số phát sinh Có của các TK 5312 - "Hoàn phí nhận tái bảo hiểm", TK 5322 "Giảm phí nhận tái bảo hiểm" và các TK 111, 112, 131 (Chi tiết giảm phí nhận tái bảo hiểm do giảm phạm vi hợp đồng) đối ứng
 
-
-
 ---
 
-
-
 Trang 75
-
-
 
 với bên Nợ TK 5112 trong kỳ báo cáo trên sổ kế toán các TK 5112, 5312, 5322, 111, 112, 131...
 
@@ -3666,7 +3234,9 @@ Số liệu để ghi vào chỉ tiêu này đối với trường hợp tăng l
 
 Chỉ tiêu này phản ánh tổng số phí nhượng tái bảo hiểm phải chuyển cho các doanh nghiệp nhận tái bảo hiểm phát sinh trong kỳ sau khi trừ (-) khoản chênh lệch tăng, giảm dự phòng phí nhượng tái bảo hiểm.
 
-$$Mã số 02 = Mã số 02.1 - Mã số 02.2$$
+$$
+Mã số 02 = Mã số 02.1 - Mã số 02.2
+$$
 
 \### Tổng phí nhượng tái bảo hiểm (Mã số 02.1)
 
@@ -3680,15 +3250,9 @@ Chỉ tiêu này phản ánh số chênh lệch tăng, giảm dự phòng phí n
 
 Số liệu để ghi vào chỉ tiêu này đối với trường hợp tăng là số trích bổ sung căn cứ vào số phát sinh Nợ của TK 35212 “Dự phòng phí nhượng tái bảo hiểm” đối ứng với bên Có TK 624 “Chi phí kinh doanh bảo hiểm” (62412, 62422) trên sổ kế toán TK 35212.
 
-
-
 ---
 
-
-
 Trang 76
-
-
 
 Số liệu để ghi vào chỉ tiêu này đối với trường hợp giảm căn cứ vào số phát sinh Có của TK 35212 “Dự phòng phí nhượng tái bảo hiểm” đối ứng với bên Nợ TK 624 “Chi phí kinh doanh bảo hiểm” (62412, 62422) trên số kế toán TK 35212, chỉ tiêu này được ghi bằng số âm dưới hình thức ghi trong ngoặc đơn (...).
 
@@ -3696,13 +3260,17 @@ Số liệu để ghi vào chỉ tiêu này đối với trường hợp giảm 
 
 Chỉ tiêu này phản ánh tổng số doanh thu phí bảo hiểm phát sinh sau khi trừ (-) các khoản giảm phí, hoàn phí, phí nhượng tái bảo hiểm và sau khi điều chỉnh các khoản tăng giảm dự phòng phí bảo hiểm gốc và nhận tái bảo hiểm, tăng giảm dự phòng phí nhượng tái bảo hiểm của doanh nghiệp bảo hiểm phi nhân thọ trong kỳ báo cáo.
 
-$$Mã số 03 = Mã số 01 - Mã số 02$$
+$$
+Mã số 03 = Mã số 01 - Mã số 02
+$$
 
 \## Hoa hồng nhượng tái bảo hiểm và doanh thu khác hoạt động kinh doanh bảo hiểm (Mã số 04)
 
 Chỉ tiêu này phản ánh các khoản doanh thu hoa hồng nhượng tái bảo hiểm và các khoản doanh thu khác hoạt động kinh doanh bảo hiểm phát sinh trong kỳ báo cáo.
 
-$$Mã số 04 = Mã số 04.1 + Mã số 04.2$$
+$$
+Mã số 04 = Mã số 04.1 + Mã số 04.2
+$$
 
 \### Hoa hồng nhượng tái bảo hiểm (Mã số 04.1)
 
@@ -3720,25 +3288,23 @@ Số liệu để ghi vào chỉ tiêu này là lũy kế số phát sinh Nợ c
 
 Chỉ tiêu này phản ánh tổng số doanh thu phí bảo hiểm, hoa hồng bảo hiểm và các khoản thu khác của hoạt động kinh doanh bảo hiểm sau khi trừ (-) các khoản
 
-
-
 ---
-
-
 
 Trang 77
 
-
-
 giảm phí, giảm hoa hồng, hoàn phí, hoàn hoa hồng, phí nhượng tái bảo hiểm và sau khi điều chỉnh các khoản tăng giảm dự phòng phí bảo hiểm gốc và nhận tái bảo hiểm, tăng giảm dự phòng phí nhượng tái bảo hiểm của doanh nghiệp bảo hiểm phi nhân thọ trong kỳ báo cáo.
 
-$$Mã số 10 = Mã số 03 + Mã số 04.$$
+$$
+Mã số 10 = Mã số 03 + Mã số 04.
+$$
 
 \### Chi bồi thường (Mã số 11)
 
 Chỉ tiêu này phản ánh tổng số chi bồi thường bảo hiểm gốc và nhận tái bảo hiểm và các khoản chi liên quan đến hoạt động bồi thường khi xảy ra tai nạn tổn thất sau khi trừ (-) các khoản phải thu ghi giảm chi bồi thường, gồm: thu đòi người thứ ba bồi hoàn, thu hàng đã xử lý bồi thường 100% của doanh nghiệp bảo hiểm phi nhân thọ phát sinh trong kỳ báo cáo.
 
-$$Mã số 11 = Mã số 11.1 - Mã số 11.2.$$
+$$
+Mã số 11 = Mã số 11.1 - Mã số 11.2.
+$$
 
 \### Tổng chi bồi thường (Mã số 11.1)
 
@@ -3758,15 +3324,9 @@ Chỉ tiêu này phản ánh số chi bồi thường phải thu của doanh ngh
 
 Số liệu để ghi vào chỉ tiêu này là số phát sinh Nợ TK 131 “Phải thu của khách hàng” đối ứng với bên Có TK 624 “Chi phí kinh doanh bảo hiểm” trong kỳ báo cáo trên số kế toán TK 131 (Chi tiết thu bồi thường nhượng tái bảo hiểm).
 
-
-
 ---
 
-
-
 Trang 78
-
-
 
 \\\*\\\*Tăng (giảm) dự phòng bồi thường bảo hiểm gốc và nhận tái bảo hiểm (Mã số 13)\\\*\\\*
 
@@ -3788,21 +3348,17 @@ Số liệu để ghi vào chỉ tiêu này đối với trường hợp tăng l
 
 Chỉ tiêu này là chỉ tiêu tổng hợp phản ánh tổng chi phí bồi thường của doanh nghiệp bảo hiểm phi nhân thọ sau khi trừ (-) các khoản thu giảm chi phí bồi thường bảo hiểm, thu bồi thường nhưadowtái bảo hiểm và sau khi điều chỉnh các khoản tăng giảm dự phòng bảo hiểm gốc và nhưadowtái bảo hiểm, tăng giảm dự phòng bồi thường nhưadowtái bảo hiểm phát sinh trong kỳ báo cáo.
 
-$$Mã số 15 = Mã số 11 - Mã số 12 + Mã số 13 - Mã số 14$$
+$$
+Mã số 15 = Mã số 11 - Mã số 12 + Mã số 13 - Mã số 14
+$$
 
 \\\*\\\*Tăng giảm dự phòng dao động lớn (Mã số 16)\\\*\\\*
 
 Chỉ tiêu này phản ánh số tăng, giảm dự phòng dao động lớn là số chênh lệch giữa số dự phòng dao động lớn phải trích trong năm với số dự phòng dao động lớn đã sử dụng trong năm.
 
-
-
 ---
 
-
-
 Trang 79
-
-
 
 Số liệu để ghi vào chỉ tiêu này đối với trường hợp tăng là số trích bổ sung căn cứ vào số phát sinh Có của TK 3523 “Dự phòng dao động lớn” đối ứng với bên Nợ TK 624 “Chi phí kinh doanh bảo hiểm” (6245) trừ (-) số phát sinh Nợ của TK 3523 “Dự phòng dao động lớn” đối ứng với bên Có TK 624 “Chi phí kinh doanh bảo hiểm” (6245) phát sinh trong kỳ báo cáo trên số kế toán TK 3523.
 
@@ -3812,7 +3368,9 @@ Số liệu để ghi vào chỉ tiêu này đối với trường hợp tăng l
 
 Chỉ tiêu này là chỉ tiêu tổng hợp phản ánh các khoản các khoản chi hoa hồng bảo hiểm và chi khác hoạt động kinh doanh bảo hiểm phát sinh trong kỳ báo cáo.
 
-$$Mã số 17 = Mã số 17.1 + Mã số 17.2$$
+$$
+Mã số 17 = Mã số 17.1 + Mã số 17.2
+$$
 
 \\\*\\\*Chi hoa hồng bảo hiểm (Mã số 17.1)\\\*\\\*
 
@@ -3826,27 +3384,25 @@ Chỉ tiêu này phản ánh các khoản chi khác của hoạt động kinh do
 
 Số liệu để ghi vào chỉ tiêu này là lũy kế số phát sinh Có của TK 624 “Chi phí kinh doanh bảo hiểm” (các tài khoản chi tiết của TK 624 ngoài các TK 62411, 62412, 62413, 62414, 62421, 62422, 62423, 62424, 6245) đối ứng với bên Nợ TK 911 “Xác định kết quả kinh doanh” trong kỳ báo cáo trên số kế toán các TK chi tiết của TK 624 “Chi phí kinh doanh bảo hiểm”.
 
-
-
 ---
 
-
-
 Trang 80
-
-
 
 \\\*\\\*Tổng chi phí hoạt động kinh doanh bảo hiểm (Mã số 18)\\\*\\\*
 
 Chỉ tiêu này là chỉ tiêu tổng hợp phản ánh tổng chi phí hoạt động kinh doanh bảo hiểm, bao gồm các khoản chi bồi thường, tăng giảm dự phòng giao động lớn và các khoản chi khác của hoạt động kinh doanh bảo hiểm.
 
-$$Mã số 18 = Mã số 15 + Mã số 16 + Mã số 17.$$
+$$
+Mã số 18 = Mã số 15 + Mã số 16 + Mã số 17.
+$$
 
 \\\*\\\*Lợi nhuận gộp hoạt động kinh doanh bảo hiểm (Mã số 19)\\\*\\\*
 
 Chỉ tiêu này phản ánh số chênh lệch giữa doanh thu thuần hoạt động kinh doanh bảo hiểm với tổng chi phí hoạt động kinh doanh bảo hiểm phát sinh trong kỳ báo cáo của doanh nghiệp bảo hiểm phi nhân thọ.
 
-$$Mã số 19 = Mã số 10 - Mã số 18$$
+$$
+Mã số 19 = Mã số 10 - Mã số 18
+$$
 
 \\\*\\\*Doanh thu kinh doanh bất động sản đầu tư (Mã số 20)\\\*\\\*
 
@@ -3864,7 +3420,9 @@ Số liệu để ghi vào chỉ tiêu này căn cứ vào sổ kế toán chi t
 
 Chỉ tiêu này phản ánh số chênh lệch giữa doanh thu hoạt động kinh doanh bất động sản đầu tư với giá vốn bất động sản đầu tư phát sinh trong kỳ báo cáo.
 
-$$Mã số 22 = Mã số 20 - Mã số 21$$
+$$
+Mã số 22 = Mã số 20 - Mã số 21
+$$
 
 \\\*\\\*Doanh thu hoạt động tài chính (Mã số 23)\\\*\\\*
 
@@ -3876,15 +3434,9 @@ Số liệu để ghi vào chỉ tiêu này là lũy kế số phát sinh Nợ c
 
 Chỉ tiêu này phản ánh chi phí hoạt động tài chính phát sinh trong kỳ báo cáo của doanh nghiệp bảo hiểm phi nhân thọ.
 
-
-
 ---
 
-
-
 Trang 81
-
-
 
 Số liệu để ghi vào chỉ tiêu này là lũy kế số phát sinh Có của TK 635 “Chi phí tài chính” đối ứng với bên Nợ TK 911 “Xác định kết quả kinh doanh” trong kỳ báo cáo trên sổ kế toán TK 635.
 
@@ -3892,7 +3444,9 @@ Số liệu để ghi vào chỉ tiêu này là lũy kế số phát sinh Có c�
 
 Chỉ tiêu này phản ánh số chênh lệch giữa doanh thu thuần hoạt động tài chính với chi phí hoạt động tài chính phát sinh trong kỳ báo cáo.
 
-$$Mã số 25 = Mã số 23 - Mã số 24$$
+$$
+Mã số 25 = Mã số 23 - Mã số 24
+$$
 
 \\\*\\\*Chi phí quản lý doanh nghiệp (Mã số 26)\\\*\\\*
 
@@ -3904,7 +3458,9 @@ Số liệu để ghi vào chỉ tiêu này là lũy kế số phát sinh Có c�
 
 Chỉ tiêu này phản ánh kết quả kinh doanh của doanh nghiệp bảo hiểm phi nhân thọ trong kỳ báo cáo. Chỉ tiêu này được tính toán trên cơ sở lợi nhuận gộp hoạt động kinh doanh bảo hiểm cộng (+) lợi nhuận từ hoạt động đầu tư bất động sản cộng (+) lợi nhuận gộp hoạt động tài chính trừ (-) chi phí quản lý doanh nghiệp phát sinh trong kỳ báo cáo.
 
-$$Mã số 30 = Mã số 19 + Mã số 22 + Mã số 25 - Mã số 26.$$
+$$
+Mã số 30 = Mã số 19 + Mã số 22 + Mã số 25 - Mã số 26.
+$$
 
 \\\*\\\*3. Nội dung và phương pháp lập Bản thuyết minh báo cáo tài chính (Mẫu số B 09 - DNPNT)\\\*\\\*
 
@@ -3914,15 +3470,9 @@ Thông tư này bổ sung một số nội dung của Bản thuyết minh báo c
 
 \- Tại điểm 11 - Nguyên tắc và phương pháp ghi nhận doanh thu, bổ sung các chỉ tiêu thuyết minh phí bảo hiểm gốc, nhận tái bảo hiểm, hoa hồng nhượng tái bảo hiểm, doanh thu hoạt động kinh doanh khác, các khoản giảm trừ doanh thu.
 
-
-
 ---
 
-
-
 Trang 82
-
-
 
 \- Tại điểm 12, sửa đổi thành “Nguyên tắc và phương pháp ghi nhận chi phí”,
 
@@ -3966,15 +3516,9 @@ hưởng, dự phòng bồi thường, dự phòng dao động lớn.
 
 \- \\\*\\\*Bổ sung điểm 26.1\\\*\\\* - Doanh thu phí bảo hiểm, trong đó bổ sung chỉ tiêu thuyết minh chi tiết phí bảo hiểm gốc, các khoản giảm trừ phí bảo hiểm gốc (Giảm phí,
 
-
-
 ---
 
-
-
 Trang 83
-
-
 
 hoàn phí bảo hiểm gốc), phí nhận tái bảo hiểm, các khoản giảm trừ phí nhận tái bảo hiểm (Giảm phí, hoàn phí nhận tái bảo hiểm), tăng (giảm) dự phòng phí bảo hiểm gốc và nhận tái bảo hiểm.
 
@@ -3994,15 +3538,9 @@ hoàn phí bảo hiểm gốc), phí nhận tái bảo hiểm, các khoản gi�
 
 \- Điểm 1, bổ sung thuyết minh các thông tin về rủi ro bảo hiểm và chính sách quản lý rủi ro của doanh nghiệp bảo hiểm phi nhân thọ, thuyết minh tình hình bồi thường tổn thất của doanh nghiệp bảo hiểm phi nhân thọ, gồm: Thuyết minh rủi ro bảo hiểm theo từng lĩnh vực kinh doanh bảo hiểm gốc, nhận tái và nhượng tái bảo hiểm, theo từng loại nghiệp vụ bảo hiểm và theo từng khu vực địa lý, chính sách của doanh nghiệp bảo hiểm phi nhân thọ để giảm thiểu các rủi ro phát sinh từ các hợp đồng bảo hiểm, phân tích độ nhạy của các rủi ro bảo hiểm, phân tích mức độ tập trung của các rủi ro bảo hiểm, thuyết minh về tình hình bồi thường để so sánh
 
-
-
 ---
 
-
-
 Trang 84
-
-
 
 các khoản bồi thường thực tế so với số liệu ước tính trước đây thông qua “Bảng tổng hợp số liệu về tình hình bồi thường”.
 
@@ -4028,15 +3566,9 @@ Chỉ tiêu này phản ánh số dự phòng nghiệp vụ của doanh nghiệp
 
 Các doanh nghiệp bảo hiểm phi nhân thọ phải thực hiện trích lập dự phòng nghiệp vụ theo quy định hiện hành của chế độ tài chính để làm cơ sở cho việc thuyết minh đầy đủ các chỉ tiêu về dự phòng bồi thường, dự phòng phí chưa được hưởng tính trên phí bảo hiểm gốc và phí nhận tái bảo hiểm (sau khi đã trừ các
 
-
-
 ---
 
-
-
 Trang 85
-
-
 
 khoản giảm phí, hoàn phí bảo hiểm) và dự phòng bồi thường, dự phòng phí chưa được hưởng tính trên phí nhượng tái bảo hiểm.
 
@@ -4058,7 +3590,9 @@ Số liệu để ghi vào cột 2, mục 2 căn cứ vào số dư Có TK 35211
 
 Số liệu để ghi vào cột 3, mục 2 căn cứ vào số dư Nợ TK 35212 "Dự phòng phí nhượng tái bảo hiểm" tại thời điểm lập báo cáo trên số kế toán TK 35212.
 
-$$Cột 4 = Cột 2 - Cột 3$$
+$$
+Cột 4 = Cột 2 - Cột 3
+$$
 
 \\\*\\\*Dự phòng bồi thường - Mục (1)\\\*\\\*
 
@@ -4070,17 +3604,13 @@ Số liệu để ghi vào cột 2, căn cứ vào số dư Có đầu kỳ, s�
 
 Số liệu để ghi vào cột 3, căn cứ vào số dư Nợ đầu kỳ, số phát sinh Nợ, số phát sinh Có trong kỳ và số dư Nợ cuối kỳ của TK 35222 "Dự phòng bồi thường nhượng tái bảo hiểm" trên số kế toán TK 35222.
 
-$$Cột 4 = Cột 2 - Cột 3$$
-
-
+$$
+Cột 4 = Cột 2 - Cột 3
+$$
 
 ---
 
-
-
 Trang 86
-
-
 
 \\\*\\\*Dự phòng phí chưa được hưởng - Mục (2)\\\*\\\*
 
@@ -4112,15 +3642,9 @@ Chỉ tiêu này phản ánh số dự phòng phí nhượng tái bảo hiểm v
 
 Bảng tổng hợp số liệu về tình hình bồi thường được lập theo năm tài chính, mục đích của bảng này để so sánh các khoản chi trả bồi thường thực tế so với những ước tính chi bồi thường trước đó. Các doanh nghiệp phải thực hiện thống kê tình hình bồi thường theo số liệu thực tế đã bồi thường kể từ ngày 01/01/2014 nhằm cung cấp số liệu để lập Bảng tổng hợp số liệu về tình hình bồi thường kể từ năm tài chính 2016 cụ thể như sau:
 
-
-
 ---
 
-
-
 Trang 87
-
-
 
 \- Năm tài chính 2016 các doanh nghiệp phải lập Bảng tổng hợp số liệu về tình hình bồi thường trong 3 năm (2014, 2015, 2016).
 
@@ -4156,15 +3680,9 @@ Số liệu để lập Bảng này căn cứ số liệu thống kê về tình
 
 \+ Dòng 3, cột 2 (2015): Căn cứ số ước tính chi bồi thường lũy kế đến cuối năm thứ 3 (năm 2017) cho các tổn thất xảy ra trong năm 2015.
 
-
-
 ---
 
-
-
 Trang 88
-
-
 
 \+ Dòng 4, cột 2 (2015): Căn cứ số ước tính chi bồi thường lũy kế đến cuối năm thứ 4 (năm 2018) cho các tổn thất xảy ra trong năm 2015.
 
@@ -4198,15 +3716,9 @@ Trang 88
 
 \\\*\\\*Mục II - Số đã chi trả bồi thường lũy kế:\\\*\\\* Phản ánh số chi bồi thường thực tế đã chi trả lũy kế cho các tổn thất đã xảy ra. Số liệu để lập chỉ tiêu này căn cứ số đã chi trả bồi thường thực tế lũy kế của năm xảy ra tổn thất, cụ thể:
 
-
-
 ---
 
-
-
 Trang 89
-
-
 
 \- Cột 1 (2014): Căn cứ số đã chi bồi thường lũy kế cho các tổn thất xảy ra trong năm 2014:
 
@@ -4242,15 +3754,9 @@ Trang 89
 
 \+ Dòng 3, cột 3 (2016): Căn cứ số đã chi bồi thường lũy kế đến cuối năm thứ 3 (năm 2018) cho các tổn thất xảy ra trong năm 2016.
 
-
-
 ---
 
-
-
 Trang 90
-
-
 
 \+ Dòng số đã chi bồi thường lũy kế đến năm hiện tại - Mục (1), cột 3 (2016): Căn cứ số đã chi bồi thường lũy kế đến cuối năm 2018 cho các tổn thất xảy ra trong năm 2016.
 
@@ -4282,15 +3788,9 @@ Trang 90
 
 1\. Thông tư này có hiệu lực kể từ ngày 01/01/2014 và bắt đầu thực hiện từ năm tài chính 2014.
 
-
-
 ---
 
-
-
 Trang 91
-
-
 
 Các nội dung hướng dẫn kế toán của doanh nghiệp bảo hiểm phi nhân thọ ban hành theo Quyết định số 1296/TC/QĐ/CĐKT ngày 31/12/1996 của Bộ trưởng Bộ Tài chính và Quyết định số 150/2001/QĐ-BTC ngày 31/12/2001 về việc bổ sung, sửa đổi chế độ kế toán doanh nghiệp bảo hiểm ban hành theo Quyết định số 1296/TC/QĐ/CĐKT ngày 31/12/1996 của Bộ trưởng Bộ Tài chính hết hiệu lực kể từ ngày 01/01/2014.
 
@@ -4304,23 +3804,15 @@ THỨ TRƯỞNG
 
 Trần Xuân Hà
 
-
-
 ---
 
-
-
 Trang 92
-
-
 
 \# Phụ lục số 01
 
 \## Kèm theo Thông tư số 232/2012/TT-BTC ngày 28/12/2012 của Bộ Tài chính hướng dẫn kế toán áp dụng đối với doanh nghiệp bảo hiểm phi nhân thọ, doanh nghiệp tái bảo hiểm và chi nhánh doanh nghiệp bảo hiểm phi nhân thọ nước ngoài
 
 \## DANH MỤC HỆ THỐNG TÀI KHOẢN KẾ TOÁN
-
-
 
 | Số TT | SỐ HIỆU TK | | | TÊN TÀI KHOẢN | GHI CHÚ |
 
@@ -4398,15 +3890,9 @@ Trang 92
 
 | 14 | 144 |  |  | Cầm cố, ký quỹ, ký cược ngắn hạn |  |
 
-
-
 ---
 
-
-
 Trang 93
-
-
 
 |  |  |  |  |  |
 
@@ -4506,15 +3992,9 @@ Trang 93
 
 |  | 2441 |  | Ký quỹ bảo hiểm |  |
 
-
-
 ---
 
-
-
 Trang 94
-
-
 
 |  |  |  |  |  |
 
@@ -4616,15 +4096,9 @@ Trang 94
 
 |  |  | 35222 | Dự phòng bồi thường nhượng tái bảo |  |
 
-
-
 ---
 
-
-
 Trang 95
-
-
 
 |  |  |  |  |  |  |
 
@@ -4718,15 +4192,9 @@ Trang 95
 
 | 66 | 532 |  |  | Giảm phí, hoa hồng bảo hiểm |  |
 
-
-
 ---
 
-
-
 Trang 96
-
-
 
 |  |  |  |  |  |
 
@@ -4804,15 +4272,9 @@ Trang 96
 
 | 73 | 811 |  | Chi phí khác | Chi tiết theo |
 
-
-
 ---
 
-
-
 Trang 97
-
-
 
 |  |  |  |  |  |
 
@@ -4850,15 +4312,9 @@ Trang 97
 
 | 5 | 007 |  | Ngoại tệ các loại |  |
 
-
-
 ---
 
-
-
 Trang 98
-
-
 
 Phụ lục số 02
 
@@ -4867,8 +4323,6 @@ Kèm theo Thông tư số 232/2012/TT-BTC ngày 28/12/2012 của Bộ Tài chín
 DANH MỤC VÀ MẪU BÁO CÁO TÀI CHÍNH
 
 ÁP DỤNG CHO DOANH NGHIỆP BẢO HIỂM PHI NHÂN THỌ
-
-
 
 | STT | Tên báo cáo tài chính | Ký hiệu |
 
@@ -4894,15 +4348,9 @@ DANH MỤC VÀ MẪU BÁO CÁO TÀI CHÍNH
 
 | 04 | Bản thuyết minh báo cáo tài chính chọn lọc | Mẫu số B 09 a - DNPNT |
 
-
-
 ---
 
-
-
 Trang 99
-
-
 
 \# I. MẪU BÁO CÁO TÀI CHÍNH NĂM
 
@@ -4923,8 +4371,6 @@ BẢNG CÂN ĐỐI KẾ TOÁN
 Tại ngày ... tháng ... năm ... (1)
 
 Đơn vị tính: ....................
-
-
 
 | TÀI SẢN | Mã số | Thuyết minh | Số cuối năm (3) | Số đầu năm (3) |
 
@@ -5004,15 +4450,9 @@ Tại ngày ... tháng ... năm ... (1)
 
 | 4.1. Ký quỹ bảo hiểm | 218.1 |  |  |  |
 
-
-
 ---
 
-
-
 Trang 100
-
-
 
 |  |  |  |  |
 
@@ -5118,15 +4558,9 @@ Trang 100
 
 | 2. Phải trả dài hạn nội bộ | 332 | V.19 |  |
 
-
-
 ---
 
-
-
 Trang 101
-
-
 
 |  |  |  |  |
 
@@ -5174,11 +4608,7 @@ Trang 101
 
 | \*\*TỔNG CỘNG NGUỒN VỐN (440 = 300 + 400)\*\* | \*\*440\*\* |  |  |
 
-
-
 CÁC CHỈ TIÊU NGOÀI BẢNG CÂN ĐỐI KẾ TOÁN
-
-
 
 | CHỈ TIÊU | Thuyết minh | Số cuối năm (3) | Số đầu năm (3) |
 
@@ -5193,8 +4623,6 @@ CÁC CHỈ TIÊU NGOÀI BẢNG CÂN ĐỐI KẾ TOÁN
 | 4. Hợp đồng bảo hiểm chưa phát sinh trách nhiệm |  |  |  |
 
 | 5. Ngoại tệ các loại |  |  |  |
-
-
 
 Người lập biểu
 
@@ -5218,15 +4646,9 @@ Ghi chú:
 
 (3) Đối với doanh nghiệp có kỳ kế toán năm là năm dương lịch (X) thì “Số cuối năm” có thể ghi là “31.12.X”; “Số đầu năm” có thể ghi là “01.01.X”.
 
-
-
 ---
 
-
-
 Trang 102
-
-
 
 2\. Báo cáo kết quả hoạt động kinh doanh
 
@@ -5247,8 +4669,6 @@ Năm........
 PHẦN I- BÁO CÁO KẾT QUẢ HOẠT ĐỘNG KINH DOANH TỔNG HỢP
 
 Đơn vị tính:...........
-
-
 
 | Chỉ tiêu | Mã số | Năm nay | Năm trước |
 
@@ -5284,21 +4704,13 @@ PHẦN I- BÁO CÁO KẾT QUẢ HOẠT ĐỘNG KINH DOANH TỔNG HỢP
 
 | 14. Lãi cơ bản trên cổ phiếu (\\\*) | 70 |  |  |
 
-
-
 ---
 
-
-
 Trang 103
-
-
 
 PHẦN II- BÁO CÁO KẾT QUẢ HOẠT ĐỘNG KINH DOANH THEO HOẠT ĐỘNG
 
 Đơn vị tính:...........
-
-
 
 | Chỉ tiêu | Mã số | Thuyết minh | Năm nay | Năm trước |
 
@@ -5330,15 +4742,9 @@ PHẦN II- BÁO CÁO KẾT QUẢ HOẠT ĐỘNG KINH DOANH THEO HOẠT ĐỘNG
 
 | 12. Chi phí khác hoạt động kinh doanh bảo hiểm (17 = 17.1 + 17.2) Trong đó: - Chi hoa hồng bảo hiểm 17.1 - Chi phí khác hoạt động kinh doanh bảo hiểm 17.2 | 17 | VI.28.2 |  |  |
 
-
-
 ---
 
-
-
 Trang 104
-
-
 
 |  |  |  |  |
 
@@ -5380,8 +4786,6 @@ Trang 104
 
 | 30. Lãi cơ bản trên cổ phiếu (\\\*) | 70 |  |  |
 
-
-
 Người lập biểu
 
 (Ký, họ tên)
@@ -5398,15 +4802,9 @@ Giám đốc
 
 3\. Báo cáo lưu chuyển tiền tệ: Thực hiện theo Chế độ kế toán doanh nghiệp hiện hành (Chế độ kế toán doanh nghiệp ban hành theo Quyết định số 15/2006/QĐ-BTC ngày 20/3/2006 của Bộ Tài chính và các Thông tư hướng dẫn sửa đổi bổ sung Chế độ kế toán doanh nghiệp).
 
-
-
 ---
 
-
-
 Trang 105
-
-
 
 4\. Bản thuyết minh báo cáo tài chính
 
@@ -5486,15 +4884,9 @@ Phương pháp chuyển đổi các đồng tiền khác ra đồng tiền sử 
 
 7 - Nguyên tắc ghi nhận và vốn hóa các khoản chi phí khác:
 
-
-
 ---
 
-
-
 Trang 106
-
-
 
 \- Chi phí trả trước;
 
@@ -5564,15 +4956,9 @@ Trang 106
 
 \- Dự phòng dao động lớn.
 
-
-
 ---
 
-
-
 Trang 107
-
-
 
 \# V- Thông tin bổ sung cho các khoản mục trình bày trong Bảng cân đối kế toán
 
@@ -5594,8 +4980,6 @@ Cuối năm
 
 02 - Các khoản đầu tư tài chính ngắn hạn (Mã số 120):
 
-
-
 |  | Cuối năm | | Đầu năm | |
 
 | --- | --- | --- | --- | --- |
@@ -5615,8 +4999,6 @@ Cuối năm
 | + Về số lượng |  |  |  |  |
 
 | + Về giá trị |  |  |  |  |
-
-
 
 03 - Các khoản phải thu ngắn hạn khác (Mã số 135)
 
@@ -5698,19 +5080,11 @@ Cuối năm
 
 ...
 
-
-
 ---
-
-
 
 Trang 108
 
-
-
 08 - Tăng, giảm tài sản cố định hữu hình (Mã số 221):
-
-
 
 | Khoản mục | Nhà cửa, vật kiến trúc | Máy móc, thiết bị | Phương tiện vận tải, truyền dẫn | ... | TSCĐ hữu hình khác | Tổng cộng |
 
@@ -5756,8 +5130,6 @@ Trang 108
 
 | - Tại ngày cuối năm |  |  |  |  |  |  |
 
-
-
 \- Giá trị còn lại cuối năm của TSCĐ hữu hình đã dùng để thế chấp, cầm cố đảm bảo các khoản vay:
 
 \- Nguyên giá TSCĐ cuối năm đã khấu hao hết nhưng vẫn còn sử dụng:
@@ -5769,8 +5141,6 @@ Trang 108
 \- Các thay đổi khác về TSCĐ hữu hình:
 
 09- Tăng, giảm tài sản cố định thuê tài chính (Mã số 224):
-
-
 
 | Khoản mục | Nhà cửa, vật kiến trúc | Máy móc, thiết bị | Phương tiện vận tải, truyền dẫn | ... | TSCĐ hữu hình khác | Tài sản cố định vô hình | Tổng cộng |
 
@@ -5814,15 +5184,9 @@ Trang 108
 
 | - Tại ngày cuối năm |  |  |  |  |  |  |  |
 
-
-
 ---
 
-
-
 Trang 109
-
-
 
 \\\* Tiền thuê phát sinh thêm được ghi nhận là chi phí trong năm:
 
@@ -5831,8 +5195,6 @@ Trang 109
 \\\* Điều khoản gia hạn thuê hoặc quyền được mua tài sản:
 
 10- Tăng, giảm tài sản cố định vô hình (Mã số 227):
-
-
 
 | Khoản mục | Quyền sử dụng đất | Quyền phát hành | Bản quyền, bằng sáng chế | ... | TSCĐ vô hình khác | Tổng cộng |
 
@@ -5876,13 +5238,9 @@ Trang 109
 
 | - Tại ngày cuối năm |  |  |  |  |  |  |
 
-
-
 \\\* Thuyết minh số liệu và giải trình khác:
 
 11- Chi phí xây dựng cơ bản dở dang (Mã số 230):
-
-
 
 |  | Cuối năm | Đầu năm |
 
@@ -5898,11 +5256,7 @@ Trang 109
 
 | + ............................ | ... | ... |
 
-
-
 12- Tăng, giảm bất động sản đầu tư (Mã số 240):
-
-
 
 | Khoản mục | Số đầu năm | Tăng trong năm | Giảm trong năm | Số cuối năm |
 
@@ -5938,15 +5292,9 @@ Trang 109
 
 | - Cơ sở hạ tầng |  |  |  |  |
 
-
-
 ---
 
-
-
 Trang 110
-
-
 
 \\\* Thuyết minh số liệu và giải trình khác:
 
@@ -5988,8 +5336,6 @@ Trang 110
 
 13- Các khoản đầu tư tài chính dài hạn (Mã số 258)
 
-
-
 |  | Cuối năm | | Đầu năm | |
 
 | --- | --- | --- | --- | --- |
@@ -6002,15 +5348,9 @@ Trang 110
 
 | c- Đầu tư dài hạn khác | - | - | - | - |
 
-
-
 ---
 
-
-
 Trang 111
-
-
 
 \- Đầu tư cổ phiếu
 
@@ -6122,15 +5462,9 @@ Cuối năm
 
 \- Kinh phí công đoàn
 
-
-
 ---
 
-
-
 Trang 112
-
-
 
 \- Bảo hiểm xã hội ... ...
 
@@ -6176,8 +5510,6 @@ b- Nợ dài hạn
 
 \- Các khoản nợ thuê tài chính
 
-
-
 | Thời hạn | Năm nay | | | Năm trước | | |
 
 | --- | --- | --- | --- | --- | --- | --- |
@@ -6189,8 +5521,6 @@ b- Nợ dài hạn
 | Trên 1 năm đến 5 năm |  |  |  |  |  |  |
 
 | Trên 5 năm |  |  |  |  |  |  |
-
-
 
 21- Tài sản thuế thu nhập hoãn lại và thuế thu nhập hoãn lại phải trả (Mã số 262 và Mã số 335)
 
@@ -6214,17 +5544,11 @@ Cuối năm Đầu năm
 
 \- Thuế thu nhập hoãn lại phải trả phát sinh từ các khoản chênh lệch tạm thời chịu thuế ... ...
 
-\- Khoản hoàn nhập thuế thu nhập hoãn lại phải trả đã được ... ... 
-
-
+\- Khoản hoàn nhập thuế thu nhập hoãn lại phải trả đã được ... ...
 
 ---
 
-
-
 Trang 113
-
-
 
 ghi nhận từ các năm trước
 
@@ -6233,8 +5557,6 @@ ghi nhận từ các năm trước
 22- Vốn chủ sở hữu (Mã số 410)
 
 a) Bảng đối chiếu biến động của vốn chủ sở hữu
-
-
 
 |  | Vốn đầu tư của chủ sở hữu | Thặng dụ vốn cổ phần | Vốn khác của chủ sở hữu | Quỹ dự phòng tài chính | Quỹ đầu tư phát triển | Quỹ dự trữ bắt buộc | Chênh lệch tỷ giá hối đoái | ... | Quỹ khác thuộc vốn chủ sở hữu | Cộng |
 
@@ -6274,8 +5596,6 @@ a) Bảng đối chiếu biến động của vốn chủ sở hữu
 
 | Số dư cuối năm nay |  |  |  |  |  |  |  |  |  |  |
 
-
-
 b) Chi tiết vốn đầu tư của chủ sở hữu
 
 Cuối năm
@@ -6286,15 +5606,9 @@ Cuối năm
 
 \- ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ...
 
-
-
 ---
 
-
-
 Trang 114
-
-
 
 d) Cổ tức
 
@@ -6305,8 +5619,6 @@ d) Cổ tức
 \+ Cổ tức đã công bố trên cổ phiếu ưu đãi:....................
 
 \- Cổ tức của cổ phiếu ưu đãi lũy kế chưa được ghi nhận:......
-
-
 
 | đ) Cổ phiếu | Cuối năm | Đầu năm |
 
@@ -6332,8 +5644,6 @@ d) Cổ tức
 
 | + Cổ phiếu ưu đãi | ... | ... |
 
-
-
 \\\* Mệnh giá cổ phiếu đang lưu hành : ............................
 
 e) Các quỹ của doanh nghiệp:
@@ -6358,8 +5668,6 @@ g) Thu nhập và chi phí, lãi hoặc lỗ được ghi nhận trực tiếp v
 
 24- Tài sản thuê ngoài
 
-
-
 |  | Cuối năm | Đầu năm |
 
 | --- | --- | --- |
@@ -6378,11 +5686,7 @@ g) Thu nhập và chi phí, lãi hoặc lỗ được ghi nhận trực tiếp v
 
 | - Trên 5 năm | ... | ... |
 
-
-
 25.1- Phải thu về hợp đồng bảo hiểm (Mã số 131.1)
-
-
 
 |  | Cuối năm | Đầu năm |
 
@@ -6398,15 +5702,9 @@ g) Thu nhập và chi phí, lãi hoặc lỗ được ghi nhận trực tiếp v
 
 | + Phải thu của doanh nghiệp môi giới bảo hiểm | ... | ... |
 
-
-
 ---
 
-
-
 Trang 115
-
-
 
 \+ Phải thu của các doanh nghiệp tham gia đồng bảo hiểm ... ...
 
@@ -6468,8 +5766,6 @@ Cộng ... ...
 
 25.4. Dự phòng nghiệp vụ (Mã số 329)
 
-
-
 | 25.4.1- Dự phòng bồi thường và dự phòng phí chưa được hưởng | Năm nay | | | Năm trước | | |
 
 | --- | --- | --- | --- | --- | --- | --- |
@@ -6486,15 +5782,9 @@ Cộng ... ...
 
 | - Dự phòng cho các tổn thất đã phát sinh nhưng chưa thông báo (nếu doanh nghiệp xác định được chỉ tiêu này thì | ... | ... | ... | ... | ... | ... |
 
-
-
 ---
 
-
-
 Trang 116
-
-
 
 phải thực hiện ngay, nếu chưa xác định được thì chậm nhất doanh nghiệp phải xác định để trình bày từ 31/12/2014).
 
@@ -6503,8 +5793,6 @@ phải thực hiện ngay, nếu chưa xác định được thì chậm nhất 
 Cộng
 
 \- Trong đó chi tiết:
-
-
 
 | (1)- Dự phòng bồi thường | Năm nay | | | Năm trước | | |
 
@@ -6520,8 +5808,6 @@ Cộng
 
 | 3. Số dư cuối năm | ... | ... | ... | ... | ... | ... |
 
-
-
 | (2)- Dự phòng phí chưa được hưởng | Năm nay | | | Năm trước | | |
 
 | --- | --- | --- | --- | --- | --- | --- |
@@ -6534,21 +5820,13 @@ Cộng
 
 | 2. Số trích lập thêm hoặc hoàn nhập | ... | ... | ... | ... | ... | ... |
 
-
-
 ---
 
-
-
 Trang 117
-
-
 
 trong năm
 
 3\. Số dư cuối năm
-
-
 
 |  |  |  |
 
@@ -6564,8 +5842,6 @@ trong năm
 
 | - Số dư cuối năm |  |  |
 
-
-
 25.5 - Tài sản tái bảo hiểm (Mã số 190)
 
 \- Dự phòng phí nhượng tái bảo hiểm
@@ -6579,8 +5855,6 @@ Cuối năm
 \## Cộng
 
 \### VI- Thông tin bổ sung cho các khoản mục trình bày trong Báo cáo kết quả hoạt động kinh doanh (Phần II)
-
-
 
 |  | Năm nay | Năm trước |
 
@@ -6597,8 +5871,6 @@ Cuối năm
 | - Các khoản giảm trừ phí nhận tái bảo hiểm (Giảm phí, hoàn phí nhận tái bảo hiểm) | (...) | (...) |
 
 | - Tăng (giảm) dự phòng phí bảo hiểm gốc và nhận tái bảo hiểm | (...) | (...) |
-
-
 
 \### Cộng
 
@@ -6640,23 +5912,15 @@ Cuối năm
 
 \- Thu phí giám định tổn thất
 
-
-
 ---
 
-
-
 Trang 118
-
-
 
 \- Doanh thu khác
 
 Cộng
 
 28.1- Tổng chi bồi thường bảo hiểm (Mã số 15)
-
-
 
 |  | Năm nay | Năm trước |
 
@@ -6674,13 +5938,9 @@ Cộng
 
 | (4) Tăng (giảm) dự phòng bồi thường nhượng tái bảo hiểm | (...) | (...) |
 
-
-
 Cộng
 
 28.2- Chi phí khác hoạt động kinh doanh bảo hiểm (Mã số 17)
-
-
 
 |  | Năm nay | Năm trước |
 
@@ -6700,13 +5960,9 @@ Cộng
 
 | - Chi khác |  |  |
 
-
-
 Cộng
 
 29- Doanh thu hoạt động tài chính (Mã số 23)
-
-
 
 |  | Năm nay | Năm trước |
 
@@ -6730,13 +5986,9 @@ Cộng
 
 | - Doanh thu hoạt động tài chính khác |  |  |
 
-
-
 Cộng
 
 30- Chi phí tài chính (Mã số 24)
-
-
 
 |  | Năm nay | Năm trước |
 
@@ -6758,13 +6010,9 @@ Cộng
 
 | - Chi phí tài chính khác |  |  |
 
-
-
 Cộng
 
 31- Chi phí thuế thu nhập doanh nghiệp hiện hành (Mã số 51)
-
-
 
 |  | Năm nay | Năm trước |
 
@@ -6776,19 +6024,11 @@ Cộng
 
 | - Tổng chi phí thuế thu nhập doanh nghiệp hiện hành | ... | ... |
 
-
-
 ---
-
-
 
 Trang 119
 
-
-
 32- Chi phí thuế thu nhập doanh nghiệp hoãn lại (Mã số 52)
-
-
 
 |  | Năm nay | Năm trước |
 
@@ -6806,11 +6046,7 @@ Trang 119
 
 | - Tổng chi phí thuế thu nhập doanh nghiệp hoãn lại | ... | ... |
 
-
-
 33.1. Chi phí quản lý doanh nghiệp (Mã số 24)
-
-
 
 |  | Năm nay | Năm trước |
 
@@ -6832,8 +6068,6 @@ Trang 119
 
 | - Chi phí bằng tiền khác |  |  |
 
-
-
 Cộng
 
 VII- Thông tin bổ sung cho các khoản mục trình bày trong
@@ -6841,8 +6075,6 @@ VII- Thông tin bổ sung cho các khoản mục trình bày trong
 Báo cáo lưu chuyển tiền tệ (Đơn vị tính:............)
 
 34- Các giao dịch không bằng tiền ảnh hưởng đến báo cáo lưu chuyển tiền tệ và các khoản tiền do doanh nghiệp nắm giữ nhưng không được sử dụng
-
-
 
 |  | Năm nay | Năm trước |
 
@@ -6854,21 +6086,13 @@ Báo cáo lưu chuyển tiền tệ (Đơn vị tính:............)
 
 | c) Trình bày giá trị và lý do của các khoản tiền và tương đương tiền lớn do doanh nghiệp nắm giữ nhưng không được sử dụng do có sự hạn chế của pháp luật hoặc các ràng buộc khác mà doanh nghiệp phải thực hiện. | ... | ... |
 
-
-
 VIII- Những thông tin khác
 
 1\. Thuyết minh các thông tin về rủi ro bảo hiểm và chính sách quản lý rủi ro của
 
-
-
 ---
 
-
-
 Trang 120
-
-
 
 doanh nghiệp bảo hiểm, thuyết minh tình hình bồi thường tổn thất của doanh nghiệp bảo hiểm, gồm:
 
@@ -6896,19 +6120,11 @@ Khi trình bày các thông tin về rủi ro bảo hiểm, doanh nghiệp phả
 
 1.4. Phân tích mức độ tập trung của các rủi ro bảo hiểm, bao gồm mô tả việc ban lãnh đạo quyết định mức độ tập trung và mô tả về tính chất chung mà có thể xác định đối với mỗi loại (ví dụ loại sự kiện bảo hiểm, khu vực địa lý hoặc loại tiền tệ).
 
-
-
 ---
-
-
 
 Trang 121
 
-
-
 1.5. Thuyết minh về tình hình bồi thường để so sánh các khoản bồi thường thực tế so với số liệu ước tính trước đây thông qua "Bảng tổng hợp số liệu về tình hình bồi thường" như sau:
-
-
 
 |  | Năm tổn thất | | | | | Tổng số |
 
@@ -6952,8 +6168,6 @@ Trang 121
 
 | V. Tỷ lệ % thặng dư hoặc thâm hụt dự phòng trên số ước tính chi bồi thường (5) = (4)/(1)\\\*100% | ... | ... | ... | ... | ... | ... |
 
-
-
 2- Những khoản nợ tiỀm tàng, khoản cam kết và những thông tin tài chính khác: ....................
 
 3- Những sự kiện phát sinh sau ngày kết thúc kỳ kế toán năm: ....................................
@@ -6962,15 +6176,9 @@ Trang 121
 
 5- Trình bày tài sản, doanh thu, kết quả kinh doanh theo bộ phận (theo lĩnh vực kinh doanh hoặc khu vực địa lý) theo quy định của Chuẩn mực kế toán số 28 “Báo cáo bộ phận” (2): ................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
 
-
-
 ---
 
-
-
 Trang 122
-
-
 
 \## II. MẪU BÁO CÁO TÀI CHÍNH GIỮA NIÊN ĐỘ
 
@@ -6996,8 +6204,6 @@ Tại ngày... tháng... năm...
 
 Đơn vị tính:.................
 
-
-
 | TÀI SẢN | Mã số | Thuyết minh | Số cuối quý | Số đầu năm |
 
 | --- | --- | --- | --- | --- |
@@ -7011,8 +6217,6 @@ Tại ngày... tháng... năm...
 | 1.Tiền | 111 |  |  |  |
 
 | ... (\\\*) |  |  |  |  |
-
-
 
 Ghi chú: (\\\*) Nội dung các chỉ tiêu và mã số trên báo cáo này tương tự như các chỉ tiêu của Bảng cân đối kế toán năm - Mẫu số B01-DNPNT.
 
@@ -7030,15 +6234,9 @@ Ghi chú: (\\\*) Nội dung các chỉ tiêu và mã số trên báo cáo này t
 
 (Ký, họ tên, đóng dấu)
 
-
-
 ---
 
-
-
 Trang 123
-
-
 
 2- Báo cáo kết quả hoạt động kinh doanh giữa niên độ (dẠng đầy đủ)
 
@@ -7058,8 +6256,6 @@ Quý ... Năm... ...
 
 PHẦN I- BÁO CÁO KẾT QUẢ HOẠT ĐỘNG KINH DOANH TỔNG HỢP
 
-
-
 | Chỉ tiêu | Mã số | Quý... | | Luỹ kế từ đầu năm đến cuối quý này | |
 
 | --- | --- | --- | --- | --- | --- |
@@ -7078,21 +6274,13 @@ PHẦN I- BÁO CÁO KẾT QUẢ HOẠT ĐỘNG KINH DOANH TỔNG HỢP
 
 |  |  |  |  |  |  |
 
-
-
 ---
 
-
-
 Trang 124
-
-
 
 PHẦN II- BÁO CÁO KẾT QUẢ HOẠT ĐỘNG KINH DOANH THEO HOẠT ĐỘNG
 
 Đơn vị tính:...........
-
-
 
 | Chỉ tiêu | Mã số | Thuyết minh | Quý... | | Luỹ kế từ đầu năm đến cuối quý này | |
 
@@ -7114,8 +6302,6 @@ PHẦN II- BÁO CÁO KẾT QUẢ HOẠT ĐỘNG KINH DOANH THEO HOẠT ĐỘNG
 
 | ...(\\\*) |  |  |  |  |  |  |
 
-
-
 Ghi chú: (\\\*) Nội dung các chỉ tiêu và mã số trên báo cáo này tương tự như các chỉ tiêu của
 
 Báo cáo kết quả hoạt động kinh doanh năm - Mẫu số B02-DNPNT.
@@ -7136,15 +6322,9 @@ Lập, ngày... tháng... năm...
 
 3\. Báo cáo lưu chuyển tiền tệ giữa niên độ: Thực hiện theo Chế độ kế toán doanh nghiệp hiện hành (Chế độ kế toán doanh nghiệp ban hành theo Quyết định số 15/2006/QĐ-BTC ngày 20/3/2006 của Bộ Tài chính và các Thông tư hướng dẫn sửa đổi bổ sung Chế độ kế toán doanh nghiệp).
 
-
-
 ---
 
-
-
 Trang 125
-
-
 
 4- Bản thuyết minh báo cáo tài chính chọnọc
 
@@ -7200,15 +6380,9 @@ V. Các sự kiện hoặc giao dịch trọng yếu trong kỳ kế toán giữ
 
 4\. Tính chất và giá trị của những thay đổi trong các ước tính kế toán đã được báo cáo trong báo cáo giữa niên độ trước của niên độ kế toán hiện tại hoặc những thay đổi trong các ước tính kế toán đã được báo cáo trong các niên độ trước, nếu những thay đổi này có ảnh hưởng trọng yếu đến kỳ kế toán giữa niên độ hiện tại.
 
-
-
 ---
 
-
-
 Trang 126
-
-
 
 5\. Trình bày việc phát hành, mua lại và hoàn trả các chứng khoán nợ và chứng khoán vốn.
 
@@ -7244,15 +6418,9 @@ Lập, ngày ... tháng ... năm ...
 
 (Ký, họ tên, đóng dấu)
 
-
-
 ---
 
-
-
 Trang 127
-
-
 
 \## VĂN PHÒNG CHÍNH PHỦ XUẤT BẢN
 
@@ -7269,4 +6437,3 @@ Trang 127
 \\\*\\\*In tại:\\\*\\\* Xí nghiệp Bản đồ 1 - Bộ Quốc phòng
 
 Giá: 10.000 đồng
-
