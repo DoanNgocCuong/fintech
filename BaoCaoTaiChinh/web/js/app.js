@@ -9,6 +9,12 @@ let currentIncomeSection = 'P2';
 let tableData = null;
 let filteredIndicators = [];
 let allStocks = [];
+let currentViewMode = 'quarter';
+
+const VIEW_MODE_DESCRIPTIONS = {
+    quarter: 'Hiển thị Q1 - Q4 (báo cáo theo quý)',
+    year: 'Chỉ hiển thị Q5 - báo cáo năm'
+};
 
 // Initialize app
 document.addEventListener('DOMContentLoaded', function() {
@@ -31,6 +37,7 @@ async function initializeApp() {
     
     // Set up event listeners
     setupEventListeners();
+    updateViewModeUI();
     
     console.log('App initialized');
 }
@@ -220,14 +227,28 @@ function renderTable(data, indicators) {
     
     // Sort periods
     const sortedPeriods = sortPeriods([...data.periods]);
+    const periodsToRender = getFilteredPeriods(sortedPeriods);
     
     // Create header row
     const indicatorHeader = document.createElement('th');
     indicatorHeader.textContent = 'Chỉ tiêu';
     indicatorHeader.style.minWidth = '300px';
     tableHeader.appendChild(indicatorHeader);
+
+    if (periodsToRender.length === 0) {
+        const messageRow = document.createElement('tr');
+        const messageCell = document.createElement('td');
+        messageCell.className = 'empty-period-message';
+        messageCell.colSpan = 1;
+        messageCell.textContent = currentViewMode === 'year'
+            ? 'Không có dữ liệu Q5 (báo cáo năm) cho mã này.'
+            : 'Không có dữ liệu Q1 - Q4 (báo cáo quý) cho mã này.';
+        messageRow.appendChild(messageCell);
+        tableBody.appendChild(messageRow);
+        return;
+    }
     
-    sortedPeriods.forEach(period => {
+    periodsToRender.forEach(period => {
         const th = document.createElement('th');
         th.textContent = period.label;
         th.style.textAlign = 'center';
@@ -235,13 +256,13 @@ function renderTable(data, indicators) {
     });
     
     // Render tree structure
-    renderTreeRows(indicators, tableBody, sortedPeriods, 0);
+    renderTreeRows(indicators, tableBody, periodsToRender, 0);
 }
 
 /**
  * Render tree rows recursively
  */
-function renderTreeRows(nodes, tableBody, sortedPeriods, depth = 0) {
+function renderTreeRows(nodes, tableBody, periodsToRender, depth = 0) {
     if (!nodes || !Array.isArray(nodes)) {
         console.warn('[DEBUG] renderTreeRows: nodes is not an array', nodes);
         return;
@@ -312,7 +333,7 @@ function renderTreeRows(nodes, tableBody, sortedPeriods, depth = 0) {
         row.appendChild(indicatorCell);
         
         // Value cells
-        sortedPeriods.forEach(period => {
+        periodsToRender.forEach(period => {
             const cell = document.createElement('td');
             const value = node.values && node.values[period.label];
             
@@ -335,7 +356,7 @@ function renderTreeRows(nodes, tableBody, sortedPeriods, depth = 0) {
         
         if (hasChildren && isExpanded) {
             console.log(`[DEBUG] Rendering children of ${node.key}, count=${node.children.length}`);
-            renderTreeRows(node.children, tableBody, sortedPeriods, depth + 1);
+            renderTreeRows(node.children, tableBody, periodsToRender, depth + 1);
         } else if (hasChildren && !isExpanded) {
             console.log(`[DEBUG] Node ${node.key} has ${node.children.length} children but is collapsed`);
         }
@@ -391,7 +412,8 @@ function updateSummary(data) {
     }
     
     if (totalPeriods) {
-        totalPeriods.textContent = data.periods ? data.periods.length : 0;
+        const periodsCount = data.periods ? getFilteredPeriods([...data.periods]).length : 0;
+        totalPeriods.textContent = periodsCount;
     }
     
     if (lastUpdate) {
@@ -451,6 +473,22 @@ function filterIndicatorsInTree(nodes, searchTerm) {
     return filtered;
 }
 
+function normalizeQuarterValue(value) {
+    if (value === null || value === undefined) return 5;
+    const quarterNumber = Number(value);
+    return Number.isNaN(quarterNumber) ? 5 : quarterNumber;
+}
+
+function getFilteredPeriods(periods = []) {
+    return periods.filter(period => {
+        const quarterValue = normalizeQuarterValue(period.quarter);
+        if (currentViewMode === 'year') {
+            return quarterValue === 5;
+        }
+        return quarterValue >= 1 && quarterValue <= 4;
+    });
+}
+
 /**
  * Export data
  */
@@ -460,7 +498,56 @@ function exportData() {
         return;
     }
     
-    exportToCSV(tableData, currentStock, currentReportType, getSectionForReport(currentReportType));
+    const filteredPeriods = tableData.periods ? getFilteredPeriods([...tableData.periods]) : [];
+    if (filteredPeriods.length === 0) {
+        alert('Không có dữ liệu cho chế độ xem hiện tại.');
+        return;
+    }
+    
+    const exportPayload = {
+        ...tableData,
+        periods: filteredPeriods
+    };
+    
+    exportToCSV(exportPayload, currentStock, currentReportType, getSectionForReport(currentReportType));
+}
+
+function setViewMode(mode) {
+    if (mode !== 'quarter' && mode !== 'year') return;
+    if (currentViewMode === mode) {
+        updateViewModeUI();
+        return;
+    }
+    
+    currentViewMode = mode;
+    updateViewModeUI();
+    
+    if (tableData) {
+        const indicatorsToRender = Array.isArray(filteredIndicators) ? filteredIndicators : tableData.indicators;
+        renderTable(tableData, indicatorsToRender);
+        updateSummary(tableData);
+    }
+}
+
+function updateViewModeUI() {
+    const quarterBtn = document.getElementById('mode-quarter');
+    const yearBtn = document.getElementById('mode-year');
+    const descriptionEl = document.getElementById('view-mode-description');
+    
+    if (quarterBtn) {
+        quarterBtn.classList.toggle('active', currentViewMode === 'quarter');
+    }
+    if (yearBtn) {
+        yearBtn.classList.toggle('active', currentViewMode === 'year');
+    }
+    if (descriptionEl) {
+        descriptionEl.textContent = VIEW_MODE_DESCRIPTIONS[currentViewMode] || '';
+    }
+    
+    const periodsLabel = document.getElementById('total-periods-label');
+    if (periodsLabel) {
+        periodsLabel.textContent = currentViewMode === 'year' ? 'Số năm (Q5)' : 'Số quý (Q1 - Q4)';
+    }
 }
 
 function getSectionForReport(reportType) {

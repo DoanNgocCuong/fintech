@@ -88,6 +88,30 @@
             font-size: 1.5em;
         }
 
+        .view-mode-toggle {
+            display: inline-flex;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .view-mode-toggle button {
+            flex: 1;
+            padding: 10px 20px;
+            border: none;
+            background: white;
+            color: #666;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .view-mode-toggle button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
         .filter-group {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -271,6 +295,16 @@
 
         <div class="filters">
             <h2>🔍 Filters</h2>
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+                <div>
+                    <label style="display:block; color:#666; font-weight:600; margin-bottom:8px; font-size:0.9em;">View mode</label>
+                    <div class="view-mode-toggle">
+                        <button id="quarterModeBtn" class="active" onclick="setViewMode('quarter')">Quarter view</button>
+                        <button id="yearModeBtn" onclick="setViewMode('year')">Year view</button>
+                    </div>
+                </div>
+                <div style="color:#999; font-size:0.9em;">Year view = tự động dùng Q5</div>
+            </div>
             <div class="filter-group">
                 <div class="filter-item">
                     <label>Report Type</label>
@@ -293,7 +327,7 @@
                         <option value="">All Years</option>
                     </select>
                 </div>
-                <div class="filter-item">
+                <div class="filter-item" id="quarterFilterWrapper">
                     <label>Quarter</label>
                     <select id="quarterFilter">
                         <option value="">All Quarters</option>
@@ -352,6 +386,7 @@
         };
         let yearChart = null;
         let stockChart = null;
+        let currentViewMode = 'quarter';
 
         // Check API status
         async function checkAPIStatus() {
@@ -442,7 +477,8 @@
             const reportType = document.getElementById('reportType').value;
             const stock = document.getElementById('stockFilter').value;
             const year = document.getElementById('yearFilter').value;
-            const quarter = document.getElementById('quarterFilter').value;
+            const quarterInput = document.getElementById('quarterFilter').value;
+            const quarter = currentViewMode === 'year' ? '5' : quarterInput;
             const config = REPORT_CONFIG[reportType];
 
             if (!config) {
@@ -607,6 +643,24 @@
             alert(`Details:\n${jsonStr}\n\n(Full JSON viewer coming soon!)`);
         }
 
+        function setViewMode(mode) {
+            currentViewMode = mode;
+            const quarterWrapper = document.getElementById('quarterFilterWrapper');
+            const quarterBtn = document.getElementById('quarterModeBtn');
+            const yearBtn = document.getElementById('yearModeBtn');
+
+            if (mode === 'year') {
+                quarterWrapper.style.display = 'none';
+                document.getElementById('quarterFilter').value = '';
+                yearBtn.classList.add('active');
+                quarterBtn.classList.remove('active');
+            } else {
+                quarterWrapper.style.display = '';
+                quarterBtn.classList.add('active');
+                yearBtn.classList.remove('active');
+            }
+        }
+
         // Event listeners
         document.getElementById('reportType').addEventListener('change', () => {
             loadStocks();
@@ -618,6 +672,7 @@
         loadStats();
         loadStocks();
         loadYears();
+        setViewMode('quarter');
 
         // Auto-refresh stats every 30 seconds
         setInterval(() => {
