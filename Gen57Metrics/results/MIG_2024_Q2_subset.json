@@ -1,0 +1,1 @@
+{"stock": "MIG", "year": 2024, "quarter": 2, "indicators_with_id": [{"id": 1, "name": "CFO", "value": 43544327319.0}], "metadata": {"calculated_at": "2025-11-19T20:44:43.021049", "requested": 1, "successful": 1, "failed": 0, "failed_list": [], "calculation_order": ["CFO"]}}

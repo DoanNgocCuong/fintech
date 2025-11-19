@@ -1,0 +1,24 @@
+{
+  "stock": "MIG",
+  "year": 2024,
+  "quarter": null,
+  "indicators_with_id": [
+    {
+      "id": 1,
+      "name": "CFO",
+      "value": null
+    }
+  ],
+  "metadata": {
+    "calculated_at": "2025-11-19T20:38:50.619401",
+    "requested": 1,
+    "successful": 0,
+    "failed": 1,
+    "failed_list": [
+      "CFO"
+    ],
+    "calculation_order": [
+      "CFO"
+    ]
+  }
+}

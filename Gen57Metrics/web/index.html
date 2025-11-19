@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gen57Metrics Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <h1>Gen57Metrics Dashboard</h1>
+        <p>Visualize 57 indicator definitions and live values per stock.</p>
+      </div>
+      <div class="badge">Beta</div>
+    </header>
+
+    <main>
+      <section class="control-panel">
+        <div class="field">
+          <label for="stockSelect">Stock</label>
+          <select id="stockSelect">
+            <option value="">Loading...</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="yearSelect">Year</label>
+          <select id="yearSelect">
+            <option value="">--</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="quarterSelect">Quarter</label>
+          <select id="quarterSelect">
+            <option value="">-- Quarter --</option>
+            <option value="1">Q1</option>
+            <option value="2">Q2</option>
+            <option value="3">Q3</option>
+            <option value="4">Q4</option>
+            <option value="5">Q5 (Annual)</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="groupFilter">Group</label>
+          <select id="groupFilter">
+            <option value="">All groups</option>
+          </select>
+        </div>
+
+        <div class="field grow">
+          <label for="searchInput">Search</label>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Name, definition, formula..."
+          />
+        </div>
+
+        <button id="runButton" class="primary">Calculate</button>
+      </section>
+
+      <section class="summary-panel">
+        <div class="card">
+          <p class="label">Indicators</p>
+          <p id="indicatorCount" class="value">0</p>
+        </div>
+        <div class="card">
+          <p class="label">Success</p>
+          <p id="successCount" class="value success">0</p>
+        </div>
+        <div class="card">
+          <p class="label">Failed</p>
+          <p id="failedCount" class="value danger">0</p>
+        </div>
+        <div class="card metadata-card">
+          <p class="label">Last calculation</p>
+          <p id="calcMeta">–</p>
+        </div>
+      </section>
+
+      <section class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Group</th>
+              <th>Indicator</th>
+              <th>Definition</th>
+              <th>Formula</th>
+              <th class="numeric">Value</th>
+              <th>QGV / 4M</th>
+              <th>Weights</th>
+            </tr>
+          </thead>
+          <tbody id="indicatorTableBody">
+            <tr>
+              <td colspan="8" class="empty">Select a stock to start.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" hidden></div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
+

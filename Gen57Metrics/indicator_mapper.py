@@ -12,11 +12,11 @@ from Gen57Metrics.indicator_registry import IndicatorDefinition
 
 # Import calculation functions from module folders
 try:
-    from Gen57Metrics.M1_BCTC_core_profit_and_cashflow.CFO import get_CFO_value
-    from Gen57Metrics.M1_BCTC_core_profit_and_cashflow.NI import get_NI_value
-    from Gen57Metrics.M1_BCTC_core_profit_and_cashflow.EBIT import get_EBIT_value
-    from Gen57Metrics.M1_BCTC_core_profit_and_cashflow.EBITDA import get_EBITDA_value
-    from Gen57Metrics.M1_BCTC_core_profit_and_cashflow.NOPAT import get_NOPAT_value
+    from Gen57Metrics.M1_BCTC_core_profit_and_cashflow.id1_CFO import get_CFO_value
+    from Gen57Metrics.M1_BCTC_core_profit_and_cashflow.id2_NI import get_NI_value
+    from Gen57Metrics.M1_BCTC_core_profit_and_cashflow.id3_EBIT import get_EBIT_value
+    from Gen57Metrics.M1_BCTC_core_profit_and_cashflow.id4_EBITDA import get_EBITDA_value
+    from Gen57Metrics.M1_BCTC_core_profit_and_cashflow.id5_NOPAT import get_NOPAT_value
 except ImportError as e:
     print(f"Warning: Could not import some calculation functions: {e}")
 

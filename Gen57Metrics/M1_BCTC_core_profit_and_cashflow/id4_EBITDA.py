@@ -26,10 +26,9 @@ def get_EBITDA_value(stock: str, year: int, quarter: int = None) -> Optional[flo
         return None
     
     # Mã 02: Depreciation and Amortization (D&A) from cash flow statement
-    # Note: Cash flow table name might be different, check table_name parameter
     depreciation_amortization = get_value_by_ma_so(
         stock, year, 2, quarter, 
-        table_name="cash_flow_raw"  # Assuming cash flow table name
+        table_name="cash_flow_statement_raw"  # Cash flow statement table
     )
     
     # If D&A is None, return None

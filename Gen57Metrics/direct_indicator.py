@@ -99,3 +99,7 @@ class DirectIndicator(BaseIndicator):
     def __repr__(self) -> str:
         return f"{self.__class__.__name__}(id={self.id}, name='{self.name}', ma_so={self.ma_so})"
 
+
+
+
+

@@ -82,6 +82,9 @@ Gen57Metrics/
 - ✅ **Error Tolerance**: Một indicator lỗi không làm dừng toàn bộ
 - ✅ **Progress Tracking**: Theo dõi successful/failed indicators
 - ✅ **Sorted by ID**: Kết quả được sort theo ID từ 1-57
+- ✅ **Database Persistence**: CLI có thể đẩy kết quả vào bảng PostgreSQL `indicator_57`
+- ✅ **Indicator Subset Mode**: Có thể chỉ tính các indicator cần thiết (ví dụ CFO) để tối ưu hiệu năng
+- ✅ **Auto JSON Output**: Mỗi lần chạy CLI tự tạo file JSON trong `Gen57Metrics/results/`
 
 ## Output Format
 
@@ -131,26 +134,35 @@ Gen57Metrics/
 ### 1. Command Line Interface (CLI)
 
 ```bash
-# Calculate annual indicators
-python calculate_all_indicators.py MIG 2024
+# Tính full 57 indicator cho MIG năm 2024, quý 2
+python calculate_all_indicators.py --stock MIG --year 2024 --quarter 2
 
-# Calculate quarterly indicators
-python calculate_all_indicators.py MIG 2024 --quarter 2
+# Tính riêng CFO
+python calculate_all_indicators.py --stock MIG --year 2024 --quarter 2 --indicator CFO
 
-# Save to JSON file
-python calculate_all_indicators.py MIG 2024 --quarter 2 --output result.json
+# Tính nhiều indicator cụ thể
+python calculate_all_indicators.py --stock MIG --year 2024 --quarter 2 --indicator CFO --indicator "Net Income (NI)"
 
-# Pretty print JSON
-python calculate_all_indicators.py MIG 2024 --pretty
+# Đổi đường dẫn file JSON
+python calculate_all_indicators.py --stock MIG --year 2024 --quarter 2 --output results/mig_q2.json
 
-# Exclude metadata
-python calculate_all_indicators.py MIG 2024 --no-metadata
+# Bật pretty print hoặc bỏ metadata nếu cần
+python calculate_all_indicators.py --stock MIG --year 2024 --quarter 2 --pretty --no-metadata
+
+# Mặc định: 
+#   - File JSON lưu tại Gen57Metrics/results/<STOCK>_<YEAR>_<Annual|Qn>_<all|subset>.json
+#   - Kết quả auto lưu vào bảng indicator_57 (PostgreSQL). Muốn bỏ qua, dùng --skip-db
+# Đổi tên bảng DB nếu cần:
+python calculate_all_indicators.py --stock MIG --year 2024 --quarter 2 --db-table fin_indicator_archive
+# Bỏ lưu DB:
+python calculate_all_indicators.py --stock MIG --year 2024 --quarter 2 --skip-db
 ```
 
 ### 2. Programmatic API
 
 ```python
 from Gen57Metrics.calculate_all_indicators import calculate_indicators_for_stock
+from Gen57Metrics.indicator_calculator import calculate_selected_indicators
 
 # Calculate all 57 indicators
 result = calculate_indicators_for_stock("MIG", 2024, quarter=2)
@@ -163,18 +175,45 @@ for indicator in result["indicators_with_id"]:
 cfo = next((ind for ind in result["indicators_with_id"] if ind["id"] == 1), None)
 if cfo:
     print(f"CFO: {cfo['value']}")
+
+# Calculate subset (ví dụ CFO trước)
+cfo_result = calculate_selected_indicators(["CFO"], "MIG", 2024)
 ```
 
 ### 3. Direct Usage
 
 ```python
 from Gen57Metrics.indicator_calculator import IndicatorCalculator
+from Gen57Metrics.indicator_result_repository import save_indicator_result_payload
 
 calculator = IndicatorCalculator()
 result = calculator.calculate_all("MIG", 2024, quarter=2)
 
+# Persist programmatically
+save_indicator_result_payload(result)
+
 # Calculate single indicator
 cfo_value = calculator.calculate_single("CFO", "MIG", 2024, quarter=2)
+
+## Database Persistence Details
+
+- Bảng mặc định: `indicator_57` (đặt tên này vì PostgreSQL không khuyến khích tên bắt đầu bằng số)
+- Schema chính:
+
+```
+id SERIAL PRIMARY KEY
+stock VARCHAR(10)
+year INTEGER
+quarter SMALLINT DEFAULT 0  -- 0 = annual report
+indicator_id INTEGER
+indicator_name VARCHAR(255)
+indicator_value DOUBLE PRECISION
+calculation_metadata JSONB
+created_at / updated_at timestamps
+UNIQUE(stock, year, quarter, indicator_name)
+```
+
+- Khi `quarter=None`, hệ thống lưu `quarter=0` để đảm bảo unique constraint hoạt động đồng nhất giữa báo cáo năm và quý.
 ```
 
 ## Tính Toán Indicators

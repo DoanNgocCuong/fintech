@@ -255,6 +255,97 @@ class IndicatorCalculator:
             }
         
         return result
+
+    def calculate_subset(
+        self,
+        indicator_names: List[str],
+        stock: str,
+        year: int,
+        quarter: Optional[int] = None,
+        include_metadata: bool = True
+    ) -> Dict[str, Any]:
+        """
+        Calculate only the provided list of indicators.
+
+        Args:
+            indicator_names: Names of indicators to calculate (order preserved)
+            stock: Stock symbol
+            year: Year
+            quarter: Quarter or None
+            include_metadata: Whether to include calculation metadata
+
+        Returns:
+            Dictionary with requested indicators and metadata
+        """
+        self._value_cache.clear()
+
+        normalized_names: List[str] = []
+        seen: Set[str] = set()
+        for raw_name in indicator_names:
+            if not raw_name:
+                continue
+            name = raw_name.strip()
+            if name and name not in seen:
+                normalized_names.append(name)
+                seen.add(name)
+
+        indicators_with_id: List[Dict[str, Any]] = []
+        successful: List[str] = []
+        failed: List[str] = []
+
+        for indicator_name in normalized_names:
+            indicator_def = self.registry.get_by_name(indicator_name)
+            if not indicator_def:
+                failed.append(indicator_name)
+                indicators_with_id.append({
+                    "id": None,
+                    "name": indicator_name,
+                    "value": None
+                })
+                continue
+
+            try:
+                value = self._calculate_indicator(indicator_name, stock, year, quarter)
+                indicators_with_id.append({
+                    "id": indicator_def.id,
+                    "name": indicator_name,
+                    "value": value
+                })
+                if value is not None:
+                    successful.append(indicator_name)
+                else:
+                    failed.append(indicator_name)
+            except Exception as exc:
+                indicators_with_id.append({
+                    "id": indicator_def.id,
+                    "name": indicator_name,
+                    "value": None
+                })
+                failed.append(indicator_name)
+                try:
+                    print(f"  ⚠ Error calculating {indicator_name}: {exc}")
+                except UnicodeEncodeError:
+                    print(f"  [WARN] Error calculating {indicator_name}: {exc}")
+
+        # Keep requested order, no sorting by ID to preserve intent
+        result: Dict[str, Any] = {
+            "stock": stock,
+            "year": year,
+            "quarter": quarter,
+            "indicators_with_id": indicators_with_id
+        }
+
+        if include_metadata:
+            result["metadata"] = {
+                "calculated_at": datetime.now().isoformat(),
+                "requested": len(normalized_names),
+                "successful": len(successful),
+                "failed": len(failed),
+                "failed_list": failed,
+                "calculation_order": normalized_names
+            }
+
+        return result
     
     def _calculate_indicator(
         self,
@@ -365,4 +456,28 @@ def calculate_all_indicators(
     """
     calculator = IndicatorCalculator()
     return calculator.calculate_all(stock, year, quarter, include_metadata)
+
+
+def calculate_selected_indicators(
+    indicator_names: List[str],
+    stock: str,
+    year: int,
+    quarter: Optional[int] = None,
+    include_metadata: bool = True
+) -> Dict[str, Any]:
+    """
+    Calculate selected indicators for a stock.
+
+    Args:
+        indicator_names: Indicator names to calculate
+        stock: Stock symbol
+        year: Year
+        quarter: Quarter (1-4) or None for annual
+        include_metadata: Whether to include calculation metadata
+
+    Returns:
+        Dictionary with requested indicators and metadata
+    """
+    calculator = IndicatorCalculator()
+    return calculator.calculate_subset(indicator_names, stock, year, quarter, include_metadata)
 
