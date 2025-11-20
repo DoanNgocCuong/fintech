@@ -1,14 +1,17 @@
-const API_BASE = (() => {
-  const { protocol, hostname, port } = window.location;
-  if (hostname === "localhost" || hostname === "127.0.0.1") {
-    const resolvedPort = port || "30014";
-    if (["30014", "8000", "30013"].includes(resolvedPort)) {
-      return `${protocol}//${hostname}:${resolvedPort}/api`;
-    }
-    return `${protocol}//${hostname}:30013/api`;
-  }
-  return `${protocol}//${hostname}${port ? `:${port}` : ""}/api`;
+const API_CANDIDATES = (() => {
+  const { protocol, hostname } = window.location;
+  const candidates = [
+    "http://103.253.20.30:30013/api",
+    `${protocol}//${hostname}:30013/api`,
+    `${protocol}//${hostname}:${window.location.port || "30013"}/api`,
+    "http://localhost:30013/api",
+  ];
+  return Array.from(new Set(candidates));
 })();
+
+let API_BASE = null;
+
+const HEALTH_PATH = "/health";
 
 const state = {
   indicators: [],
@@ -70,6 +73,39 @@ const fetchJson = async (url) => {
   return res.json();
 };
 
+const pingApi = async (base) => {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 3000);
+  try {
+    const response = await fetch(`${base}${HEALTH_PATH}`, { signal: controller.signal });
+    if (!response.ok) {
+      throw new Error(`Health returned ${response.status}`);
+    }
+  } finally {
+    clearTimeout(timeout);
+  }
+};
+
+const resolveApiBase = async () => {
+  for (const candidate of API_CANDIDATES) {
+    try {
+      await pingApi(candidate);
+      console.info(`[Gen57] Connected to API ${candidate}`);
+      return candidate;
+    } catch (error) {
+      console.warn(`[Gen57] API candidate failed: ${candidate}`, error);
+    }
+  }
+  throw new Error("No reachable API endpoint");
+};
+
+const buildUrl = (path) => {
+  if (!API_BASE) {
+    throw new Error("API base URL unresolved");
+  }
+  return `${API_BASE}${path}`;
+};
+
 const populateSelect = (selectEl, items, { placeholder = "-- Select --" } = {}) => {
   const fragment = document.createDocumentFragment();
   if (placeholder) {
@@ -89,7 +125,7 @@ const populateSelect = (selectEl, items, { placeholder = "-- Select --" } = {}) 
 };
 
 const loadBootstrap = async () => {
-  const data = await fetchJson(`${API_BASE}/dashboard/bootstrap`);
+  const data = await fetchJson(buildUrl("/dashboard/bootstrap"));
   state.indicators = data.indicators || [];
   state.groups = data.groups || [];
   populateSelect(els.group, [{ value: "", label: "All groups" }, ...state.groups.map((g) => ({ value: g, label: g }))], { placeholder: null });
@@ -97,7 +133,7 @@ const loadBootstrap = async () => {
 };
 
 const loadStocks = async () => {
-  const data = await fetchJson(`${API_BASE}/stocks`);
+  const data = await fetchJson(buildUrl("/stocks"));
   state.stocks = data.stocks || [];
   populateSelect(
     els.stock,
@@ -113,7 +149,7 @@ const loadPeriods = async (stock) => {
     populateSelect(els.quarter, [], { placeholder: "Annual (Q5)" });
     return;
   }
-  const data = await fetchJson(`${API_BASE}/periods?stock=${encodeURIComponent(stock)}`);
+  const data = await fetchJson(buildUrl(`/periods?stock=${encodeURIComponent(stock)}`));
   state.periods = data.periods || [];
 
   const years = Array.from(new Set(state.periods.map((p) => p.year))).map((year) => ({
@@ -243,7 +279,7 @@ const calculateIndicators = async () => {
     if (quarter !== null && !Number.isNaN(quarter)) {
       params.append("quarter", String(quarter));
     }
-    const data = await fetchJson(`${API_BASE}/indicator-values?${params.toString()}`);
+    const data = await fetchJson(buildUrl(`/indicator-values?${params.toString()}`));
     state.values = data.indicators || [];
     state.metadata = data.metadata || null;
     renderTable();
@@ -290,9 +326,11 @@ const bindEvents = () => {
 
 const init = async () => {
   try {
+    API_BASE = await resolveApiBase();
     await Promise.all([loadBootstrap(), loadStocks()]);
     bindEvents();
     renderTable();
+    showToast(`Connected to ${API_BASE}`, "info");
   } catch (error) {
     console.error(error);
     showToast("Failed to bootstrap dashboard", "danger");

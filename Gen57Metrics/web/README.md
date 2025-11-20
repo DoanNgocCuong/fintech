@@ -44,3 +44,4 @@ Then serve the static files (e.g. `python -m http.server 8081`) and open `http:/
 - Surface dependency graphs per indicator.
 - Add authentication if the API is exposed publicly.
 
+
