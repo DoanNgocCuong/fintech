@@ -14,7 +14,8 @@ from utils_xlsx_to_json import create_json_result as _create_json_result
 def create_json_result(
     excel_file: str, 
     output_json_file: Optional[str] = None,
-    replace_null_with: Optional[float] = None
+    replace_null_with: Optional[float] = None,
+    template_type: str = "GianTiep"
 ) -> Dict[str, Any]:
     """
     Đọc file Excel và tạo JSON result từ các sheets đã tạo.
@@ -29,6 +30,7 @@ def create_json_result(
         replace_null_with (Optional[float]): Giá trị để thay thế cho null trong JSON template.
                                            Nếu None, giữ nguyên null.
                                            Nếu là số (ví dụ: 0), thay thế tất cả null thành số đó.
+        template_type (str): Loại template - "TrucTiep" hoặc "GianTiep". Mặc định: "GianTiep"
         
     Returns:
         Dict[str, Any]: JSON structure đã được cập nhật với các giá trị từ Excel
@@ -41,10 +43,18 @@ def create_json_result(
         >>> json_result = create_json_result("BMI_2024_1_5_1_LuuChuyenTienTe.xlsx")
         >>> # Replace null với 0
         >>> json_result = create_json_result("BMI_2024_1_5_1_LuuChuyenTienTe.xlsx", replace_null_with=0)
+        >>> # Sử dụng template Trực tiếp
+        >>> json_result = create_json_result("BMI_2024_1_5_1_LuuChuyenTienTe.xlsx", template_type="TrucTiep")
     """
+    def _template_loader(replace_null_with: Optional[float] = None) -> Dict[str, Any]:
+        return _get_cash_flow_statement_json_template(
+            template_type=template_type,
+            replace_null_with=replace_null_with
+        )
+    
     return _create_json_result(
         excel_file=excel_file,
-        json_template_func=_get_cash_flow_statement_json_template,
+        json_template_func=_template_loader,
         output_json_file=output_json_file,
         replace_null_with=replace_null_with,
         sanitize_nan=False  # Cash flow statement không cần sanitize NaN

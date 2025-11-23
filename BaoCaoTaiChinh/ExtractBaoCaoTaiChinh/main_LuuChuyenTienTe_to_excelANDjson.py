@@ -90,6 +90,8 @@ except ImportError:
 
 # Load cash flow template JSON from file
 _CASH_FLOW_TEMPLATE_JSON_PATH = Path(__file__).parent / "cash_flow_template_json.json"
+_CASH_FLOW_TEMPLATE_GIANTIEP_PATH = Path(__file__).parent / "cash_flow_template_json_GianTiep.json"
+_CASH_FLOW_TEMPLATE_TRUCTIEP_PATH = Path(__file__).parent / "cash_flow_template_json_TrucTiep.json"
 
 # Import detection functions và utilities
 from utils_markdownLuuChuyenTienTeText_DetectTable_to_xlsx import detect_luuchuyentiente
@@ -253,6 +255,12 @@ def process_cash_flow_statement(
     
     print(f"  Processing {len(pages_to_process)} page(s): {[p[0] for p in pages_to_process]}")
     
+    # Detect loại cash flow (Trực tiếp hoặc Gián tiếp)
+    # Combine tất cả nội dung các trang cash flow để detect
+    cash_flow_content = "\n".join([page_content for _, page_content in pages_to_process])
+    cash_flow_type = detect_cash_flow_type_tructiep_or_giantiep(cash_flow_content)
+    print(f"\n  Detected cash flow type: {cash_flow_type} ({'Trực tiếp' if cash_flow_type == 'TrucTiep' else 'Gián tiếp'})")
+    
     # Tạo Excel writer
     print(f"\nCreating Excel file: {output_file}")
     with pd.ExcelWriter(str(output_path), engine='openpyxl') as writer:
@@ -340,11 +348,12 @@ def process_cash_flow_statement(
             # Tự động tạo tên file JSON từ Excel file
             json_output_file = str(output_path.parent / f"{output_path.stem}.json")
             
-            # Tạo JSON
+            # Tạo JSON với template type đã detect
             create_json_result(
                 excel_file=str(output_path),
                 output_json_file=json_output_file,
-                replace_null_with=replace_null_with
+                replace_null_with=replace_null_with,
+                template_type=cash_flow_type
             )
             json_file = json_output_file
             print(f"\n✓ JSON file created: {json_file}")
@@ -369,7 +378,59 @@ def process_cash_flow_statement(
 
 
 
+def detect_cash_flow_type_tructiep_or_giantiep(content: str) -> str:
+    """
+    Detect loại báo cáo lưu chuyển tiền tệ: Trực tiếp hoặc Gián tiếp.
+    
+    Logic:
+    - Nếu có "Tiền thu từ bán hàng" → Phương pháp Trực tiếp (TrucTiep)
+    - Nếu có "Lợi nhuận trước thuế" → Phương pháp Gián tiếp (GianTiep)
+    
+    Args:
+        content (str): Nội dung markdown đã extract (có thể là toàn bộ file hoặc phần cash flow)
+    
+    Returns:
+        str: "TrucTiep" hoặc "GianTiep"
+    
+    Ví dụ:
+        >>> content = "Tiền thu từ bán hàng, cung cấp dịch vụ..."
+        >>> detect_cash_flow_type_tructiep_or_giantiep(content)
+        'TrucTiep'
+        
+        >>> content = "Lợi nhuận trước thuế..."
+        >>> detect_cash_flow_type_tructiep_or_giantiep(content)
+        'GianTiep'
+    """
+    # Kiểm tra phương pháp Trực tiếp trước (cụ thể hơn)
+    # Tìm các keyword đặc trưng của phương pháp trực tiếp
+    truc_tiep_keywords = [
+        "Tiền thu từ bán hàng",
+        "Tiền chi trả cho người cung cấp",
+        "Tiền chi trả cho người lao động"
+    ]
+    
+    for keyword in truc_tiep_keywords:
+        if keyword in content:
+            return "TrucTiep"
+    
+    # Kiểm tra phương pháp Gián tiếp
+    # Tìm các keyword đặc trưng của phương pháp gián tiếp
+    gian_tiep_keywords = [
+        "Lợi nhuận trước thuế",
+        "Khấu hao TSCĐ",
+        "Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+    ]
+    
+    for keyword in gian_tiep_keywords:
+        if keyword in content:
+            return "GianTiep"
+    
+    # Mặc định: Gián tiếp (phổ biến hơn)
+    return "GianTiep"
+
+
 def _get_cash_flow_statement_json_template(
+    template_type: str = "GianTiep",
     replace_null_with: Optional[float] = None
 ) -> Dict[str, Any]:
     """
@@ -378,6 +439,7 @@ def _get_cash_flow_statement_json_template(
     Cấu trúc: Nested/hierarchical structure - mỗi section có ma_so, so_cuoi_nam và chứa các section con bên trong.
     
     Args:
+        template_type (str): Loại template - "TrucTiep" hoặc "GianTiep". Mặc định: "GianTiep"
         replace_null_with (Optional[float]): Giá trị để thay thế cho null trong JSON.
                                            Nếu None, giữ nguyên null (sẽ được convert thành None trong Python).
                                            Nếu là số (ví dụ: 0), thay thế tất cả null thành số đó.
@@ -386,19 +448,29 @@ def _get_cash_flow_statement_json_template(
         Dict[str, Any]: Cấu trúc JSON template với tất cả các mã số và giá trị
     
     Raises:
-        FileNotFoundError: Nếu file cash_flow_template_json.json không tồn tại
+        FileNotFoundError: Nếu file template không tồn tại
+        ValueError: Nếu template_type không hợp lệ
     
     Ví dụ:
-        >>> template = _get_cash_flow_statement_json_template()  # Giữ nguyên null
-        >>> template = _get_cash_flow_statement_json_template(replace_null_with=0)  # Thay null thành 0
+        >>> template = _get_cash_flow_statement_json_template()  # Mặc định: GianTiep
+        >>> template = _get_cash_flow_statement_json_template("TrucTiep")
+        >>> template = _get_cash_flow_statement_json_template("GianTiep", replace_null_with=0)
     """
-    if not _CASH_FLOW_TEMPLATE_JSON_PATH.exists():
+    # Xác định đường dẫn template file
+    if template_type == "TrucTiep":
+        template_path = _CASH_FLOW_TEMPLATE_TRUCTIEP_PATH
+    elif template_type == "GianTiep":
+        template_path = _CASH_FLOW_TEMPLATE_GIANTIEP_PATH
+    else:
+        raise ValueError(f"Invalid template_type: {template_type}. Must be 'TrucTiep' or 'GianTiep'")
+    
+    if not template_path.exists():
         raise FileNotFoundError(
-            f"Cash flow template JSON file not found: {_CASH_FLOW_TEMPLATE_JSON_PATH}"
+            f"Cash flow template JSON file not found: {template_path}"
         )
     
     # Load JSON từ file
-    with open(_CASH_FLOW_TEMPLATE_JSON_PATH, 'r', encoding='utf-8') as f:
+    with open(template_path, 'r', encoding='utf-8') as f:
         template = json.load(f)
     
     # Nếu có yêu cầu replace null, thực hiện deep copy và replace
