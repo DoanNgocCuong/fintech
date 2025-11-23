@@ -66,4 +66,5 @@ def get_gross_margin_value(
     if revenue in (None, 0) or gross_profit is None:
         return None
 
-    return gross_profit / revenue
+    # Sử dụng abs() cho tất cả giá trị trong phép chia
+    return abs(gross_profit) / abs(revenue)

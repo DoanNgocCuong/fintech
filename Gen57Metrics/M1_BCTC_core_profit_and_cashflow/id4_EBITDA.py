@@ -81,6 +81,6 @@ def get_EBITDA_value(
     if depreciation_amortization is None:
         return None
     
-    # EBITDA = EBIT + D&A
-    return ebit + depreciation_amortization
+    # EBITDA = EBIT + D&A (sử dụng abs() cho tất cả giá trị)
+    return abs(ebit) + abs(depreciation_amortization)
 

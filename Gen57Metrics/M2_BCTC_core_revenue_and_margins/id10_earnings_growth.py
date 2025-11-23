@@ -73,4 +73,5 @@ def get_earnings_growth_value(
     if previous in (None, 0):
         return None
 
-    return (current - previous) / previous
+    # Sử dụng abs() cho tất cả giá trị trong phép tính
+    return (abs(current) - abs(previous)) / abs(previous)
