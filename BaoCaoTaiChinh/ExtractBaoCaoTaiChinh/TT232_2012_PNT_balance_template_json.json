@@ -1,0 +1,204 @@
+{
+    "can_doi_ke_toan": {
+        "tai_san": {
+            "A_tai_san_ngan_han_100": {
+                "ma_so": 100,
+                "ten_chi_tieu": "A - TÀI SẢN NGẮN HẠN (100=110+120+130+140+150+190)",
+                "so_cuoi_nam": null,
+                "I_tien_va_cac_khoan_tuong_duong_tien_110": {
+                    "ma_so": 110,
+                    "so_cuoi_nam": null,
+                    "1_tien_111": {"ma_so": 111, "so_cuoi_nam": null},
+                    "2_cac_khoan_tuong_duong_tien_112": {"ma_so": 112, "so_cuoi_nam": null}
+                },
+                "II_dau_tu_tai_chinh_ngan_han_120": {
+                    "ma_so": 120,
+                    "so_cuoi_nam": null,
+                    "1_dau_tu_ngan_han_121": {"ma_so": 121, "so_cuoi_nam": null},
+                    "2_du_phong_giam_gia_dau_tu_ngan_han_129": {"ma_so": 129, "so_cuoi_nam": null}
+                },
+                "III_cac_khoan_phai_thu_ngan_han_130": {
+                    "ma_so": 130,
+                    "so_cuoi_nam": null,
+                    "1_phai_thu_cua_khach_hang_131": {
+                        "ma_so": 131,
+                        "so_cuoi_nam": null,
+                        "1_1_phai_thu_ve_hop_dong_bao_hiem_131_1": {"ma_so": "131.1", "so_cuoi_nam": null},
+                        "1_2_phai_thu_khac_cua_khach_hang_131_2": {"ma_so": "131.2", "so_cuoi_nam": null}
+                    },
+                    "2_tra_truoc_cho_nguoi_ban_132": {"ma_so": 132, "so_cuoi_nam": null},
+                    "3_phai_thu_noi_bo_ngan_han_133": {"ma_so": 133, "so_cuoi_nam": null},
+                    "4_cac_khoan_phai_thu_khac_135": {"ma_so": 135, "so_cuoi_nam": null},
+                    "5_du_phong_phai_thu_ngan_han_kho_doi_139": {"ma_so": 139, "so_cuoi_nam": null}
+                },
+                "IV_hang_ton_kho_140": {
+                    "ma_so": 140,
+                    "so_cuoi_nam": null,
+                    "1_hang_ton_kho_141": {"ma_so": 141, "so_cuoi_nam": null},
+                    "2_du_phong_giam_gia_hang_ton_kho_149": {"ma_so": 149, "so_cuoi_nam": null}
+                },
+                "V_tai_san_ngan_han_khac_150": {
+                    "ma_so": 150,
+                    "so_cuoi_nam": null,
+                    "1_chi_phi_tra_truoc_ngan_han_151": {
+                        "ma_so": 151,
+                        "so_cuoi_nam": null,
+                        "1_1_chi_phi_hoa_hong_chua_phan_bo_151_1": {"ma_so": "151.1", "so_cuoi_nam": null},
+                        "1_2_chi_phi_tra_truoc_ngan_han_khac_151_2": {"ma_so": "151.2", "so_cuoi_nam": null}
+                    },
+                    "2_thue_GTGT_duoc_khau_tru_152": {"ma_so": 152, "so_cuoi_nam": null},
+                    "3_thue_va_cac_khoan_khac_phai_thu_Nha_nuoc_154": {"ma_so": 154, "so_cuoi_nam": null},
+                    "4_giao_dich_mua_ban_lai_trai_phieu_Chinh_phu_157": {"ma_so": 157, "so_cuoi_nam": null},
+                    "5_tai_san_ngan_han_khac_158": {"ma_so": 158, "so_cuoi_nam": null}
+                },
+                "VIII_tai_san_tai_bao_hiem_190": {
+                    "ma_so": 190,
+                    "so_cuoi_nam": null,
+                    "1_du_phong_phi_nhuong_tai_bao_hiem_191": {"ma_so": 191, "so_cuoi_nam": null},
+                    "2_du_phong_boi_thuong_nhuong_tai_bao_hiem_192": {"ma_so": 192, "so_cuoi_nam": null}
+                }
+            },
+            "B_tai_san_dai_han_200": {
+                "ma_so": 200,
+                "ten_chi_tieu": "B - TÀI SẢN DÀI HẠN (200 = 210 + 220 + 240 + 250 + 260)",
+                "so_cuoi_nam": null,
+                "I_cac_khoan_phai_thu_dai_han_210": {
+                    "ma_so": 210,
+                    "so_cuoi_nam": null,
+                    "1_phai_thu_dai_han_cua_khach_hang_211": {"ma_so": 211, "so_cuoi_nam": null},
+                    "2_von_kinh_doanh_o_don_vi_truc_thuoc_212": {"ma_so": 212, "so_cuoi_nam": null},
+                    "3_phai_thu_dai_han_noi_bo_213": {"ma_so": 213, "so_cuoi_nam": null},
+                    "4_phai_thu_dai_han_khac_218": {
+                        "ma_so": 218,
+                        "so_cuoi_nam": null,
+                        "4_1_ky_quy_bao_hiem_218_1": {"ma_so": "218.1", "so_cuoi_nam": null},
+                        "4_2_phai_thu_dai_han_khac_218_2": {"ma_so": "218.2", "so_cuoi_nam": null}
+                    },
+                    "5_du_phong_phai_thu_dai_han_kho_doi_219": {"ma_so": 219, "so_cuoi_nam": null}
+                },
+                "II_tai_san_co_dinh_220": {
+                    "ma_so": 220,
+                    "so_cuoi_nam": null,
+                    "1_tai_san_co_dinh_huu_hinh_221": {
+                        "ma_so": 221,
+                        "so_cuoi_nam": null,
+                        "nguyen_gia_222": {"ma_so": 222, "so_cuoi_nam": null},
+                        "gia_tri_hao_mon_luy_ke_223": {"ma_so": 223, "so_cuoi_nam": null}
+                    },
+                    "2_tai_san_co_dinh_thue_tai_chinh_224": {
+                        "ma_so": 224,
+                        "so_cuoi_nam": null,
+                        "nguyen_gia_225": {"ma_so": 225, "so_cuoi_nam": null},
+                        "gia_tri_hao_mon_luy_ke_226": {"ma_so": 226, "so_cuoi_nam": null}
+                    },
+                    "3_tai_san_co_dinh_vo_hinh_227": {
+                        "ma_so": 227,
+                        "so_cuoi_nam": null,
+                        "nguyen_gia_228": {"ma_so": 228, "so_cuoi_nam": null},
+                        "gia_tri_hao_mon_luy_ke_229": {"ma_so": 229, "so_cuoi_nam": null}
+                    },
+                    "4_chi_phi_xay_dung_co_ban_do_dang_230": {"ma_so": 230, "so_cuoi_nam": null}
+                },
+                "III_bat_dong_san_dau_tu_240": {
+                    "ma_so": 240,
+                    "so_cuoi_nam": null,
+                    "nguyen_gia_241": {"ma_so": 241, "so_cuoi_nam": null},
+                    "gia_tri_hao_mon_luy_ke_242": {"ma_so": 242, "so_cuoi_nam": null}
+                },
+                "IV_dau_tu_tai_chinh_dai_han_250": {
+                    "ma_so": 250,
+                    "so_cuoi_nam": null,
+                    "1_dau_tu_vao_cong_ty_con_251": {"ma_so": 251, "so_cuoi_nam": null},
+                    "2_dau_tu_vao_cong_ty_lien_doanh_lien_ket_252": {"ma_so": 252, "so_cuoi_nam": null},
+                    "3_dau_tu_dai_han_khac_258": {"ma_so": 258, "so_cuoi_nam": null},
+                    "4_du_phong_giam_gia_dau_tu_tai_chinh_dai_han_259": {"ma_so": 259, "so_cuoi_nam": null}
+                },
+                "V_tai_san_dai_han_khac_260": {
+                    "ma_so": 260,
+                    "so_cuoi_nam": null,
+                    "1_chi_phi_tra_truoc_dai_han_261": {"ma_so": 261, "so_cuoi_nam": null},
+                    "2_tai_san_thue_thu_nhap_hoan_lai_262": {"ma_so": 262, "so_cuoi_nam": null},
+                    "3_tai_san_dai_han_khac_268": {"ma_so": 268, "so_cuoi_nam": null}
+                }
+            },
+            "tong_cong_tai_san_270": {
+                "ma_so": 270,
+                "ten_chi_tieu": "TỔNG CỘNG TÀI SẢN (270 = 100 + 200)",
+                "so_cuoi_nam": null
+            }
+        },
+        "nguon_von": {
+            "C_no_phai_tra_300": {
+                "ma_so": 300,
+                "ten_chi_tieu": "A - NỢ PHẢI TRẢ (300 = 310 + 330)",
+                "so_cuoi_nam": null,
+                "I_no_ngan_han_310": {
+                    "ma_so": 310,
+                    "so_cuoi_nam": null,
+                    "1_vay_va_no_ngan_han_311": {"ma_so": 311, "so_cuoi_nam": null},
+                    "2_phai_tra_cho_nguoi_ban_312": {
+                        "ma_so": 312,
+                        "so_cuoi_nam": null,
+                        "2_1_phai_tra_ve_hop_dong_bao_hiem_312_1": {"ma_so": "312.1", "so_cuoi_nam": null},
+                        "2_2_phai_tra_khac_cho_nguoi_ban_312_2": {"ma_so": "312.2", "so_cuoi_nam": null}
+                    },
+                    "3_nguoi_mua_tra_tien_truoc_313": {"ma_so": 313, "so_cuoi_nam": null},
+                    "4_thue_va_cac_khoan_phai_nop_Nha_nuoc_314": {"ma_so": 314, "so_cuoi_nam": null},
+                    "5_phai_tra_nguoi_lao_dong_315": {"ma_so": 315, "so_cuoi_nam": null},
+                    "6_chi_phi_phai_tra_316": {"ma_so": 316, "so_cuoi_nam": null},
+                    "7_phai_tra_noi_bo_317": {"ma_so": 317, "so_cuoi_nam": null},
+                    "8_cac_khoan_phai_tra_phai_nop_ngan_han_khac_319": {"ma_so": 319, "so_cuoi_nam": null},
+                    "9_doanh_thu_hoa_hong_chua_duoc_huong_319_1": {"ma_so": "319.1", "so_cuoi_nam": null},
+                    "10_du_phong_phai_tra_ngan_han_320": {"ma_so": 320, "so_cuoi_nam": null},
+                    "11_quy_khen_thuong_phuc_loi_323": {"ma_so": 323, "so_cuoi_nam": null},
+                    "12_giao_dich_mua_ban_lai_trai_phieu_Chinh_phu_327": {"ma_so": 327, "so_cuoi_nam": null},
+                    "13_du_phong_nghiep_vu_329": {
+                        "ma_so": 329,
+                        "so_cuoi_nam": null,
+                        "13_1_du_phong_phi_bao_hiem_goc_va_nhan_tai_bao_hiem_329_1": {"ma_so": "329.1", "so_cuoi_nam": null},
+                        "13_2_du_phong_boi_thuong_bao_hiem_goc_va_nhan_tai_bao_hiem_329_2": {"ma_so": "329.2", "so_cuoi_nam": null},
+                        "13_3_du_phong_dao_dong_lon_329_3": {"ma_so": "329.3", "so_cuoi_nam": null}
+                    }
+                },
+                "II_no_dai_han_330": {
+                    "ma_so": 330,
+                    "so_cuoi_nam": null,
+                    "1_phai_tra_dai_han_nguoi_ban_331": {"ma_so": 331, "so_cuoi_nam": null},
+                    "2_phai_tra_dai_han_noi_bo_332": {"ma_so": 332, "so_cuoi_nam": null},
+                    "3_phai_tra_dai_han_khac_333": {"ma_so": 333, "so_cuoi_nam": null},
+                    "4_vay_va_no_dai_han_334": {"ma_so": 334, "so_cuoi_nam": null},
+                    "5_thue_thu_nhap_hoan_lai_phai_tra_335": {"ma_so": 335, "so_cuoi_nam": null},
+                    "6_du_phong_tro_cap_mat_viec_lam_336": {"ma_so": 336, "so_cuoi_nam": null},
+                    "7_du_phong_phai_tra_dai_han_337": {"ma_so": 337, "so_cuoi_nam": null},
+                    "8_doanh_thu_chua_thuc_hien_338": {"ma_so": 338, "so_cuoi_nam": null},
+                    "9_quy_phat_trien_khoa_hoc_va_cong_nghe_339": {"ma_so": 339, "so_cuoi_nam": null}
+                }
+            },
+            "D_von_chu_so_huu_400": {
+                "ma_so": 400,
+                "ten_chi_tieu": "B - VỐN CHỦ SỞ HỮU (400 = 410)",
+                "so_cuoi_nam": null,
+                "I_von_chu_so_huu_410": {
+                    "ma_so": 410,
+                    "so_cuoi_nam": null,
+                    "1_von_dau_tu_cua_chu_so_huu_411": {"ma_so": 411, "so_cuoi_nam": null},
+                    "2_thang_du_von_co_phan_412": {"ma_so": 412, "so_cuoi_nam": null},
+                    "3_von_khac_cua_chu_so_huu_413": {"ma_so": 413, "so_cuoi_nam": null},
+                    "4_co_phieu_quy_414": {"ma_so": 414, "so_cuoi_nam": null},
+                    "5_chenh_lech_danh_gia_lai_tai_san_415": {"ma_so": 415, "so_cuoi_nam": null},
+                    "6_chenh_lech_ty_gia_hoi_doai_416": {"ma_so": 416, "so_cuoi_nam": null},
+                    "7_quy_dau_tu_phat_trien_417": {"ma_so": 417, "so_cuoi_nam": null},
+                    "8_quy_du_phong_tai_chinh_418": {"ma_so": 418, "so_cuoi_nam": null},
+                    "9_quy_du_tru_bat_buoc_419": {"ma_so": 419, "so_cuoi_nam": null},
+                    "10_quy_khac_thuoc_von_chu_so_huu_420": {"ma_so": 420, "so_cuoi_nam": null},
+                    "11_loi_nhuan_sau_thue_chua_phan_phoi_421": {"ma_so": 421, "so_cuoi_nam": null}
+                }
+            },
+            "tong_cong_nguon_von_440": {
+                "ma_so": 440,
+                "ten_chi_tieu": "TỔNG CỘNG NGUỒN VỐN (440 = 300 + 400)",
+                "so_cuoi_nam": null
+            }
+        }
+    }
+}

@@ -87,8 +87,8 @@ except ImportError:
 
 # Income templates per section
 _INCOME_TEMPLATE_JSON_PATHS = {
-    "P1": Path(__file__).parent / "income_template_json_P1.json",
-    "P2": Path(__file__).parent / "income_template_json_P2.json",
+    "P1": Path(__file__).parent / "TT199_2014_NT_income_template_json_P1.json",
+    "P2": Path(__file__).parent / "TT199_2014_NT_income_template_json_P2.json",
 }
 _DEFAULT_INCOME_SECTION = "P2"
 

@@ -1,0 +1,194 @@
+{
+    "bao_cao_luu_chuyen_tien_te": {
+        "I_luu_chuyen_tien_tu_hoat_dong_kinh_doanh_20": {
+            "ma_so": 20,
+            "ten_chi_tieu": "Lưu chuyển tiền thuần từ hoạt động kinh doanh",
+            "so_cuoi_nam": null,
+            "1_loi_nhuan_truoc_thue_01": {
+                "ma_so": 1,
+                "ten_chi_tieu": "Lợi nhuận trước thuế",
+                "so_cuoi_nam": null
+            },
+            "2_dieu_chinh_cho_cac_khoan": {
+                "ma_so": null,
+                "ten_chi_tieu": "Điều chỉnh cho các khoản",
+                "so_cuoi_nam": null,
+                "2_1_khau_hao_TSCD_va_BSDT_02": {
+                    "ma_so": 2,
+                    "ten_chi_tieu": "Khấu hao TSCĐ và BĐSĐT",
+                    "so_cuoi_nam": null
+                },
+                "2_2_cac_khoan_du_phong_03": {
+                    "ma_so": 3,
+                    "ten_chi_tieu": "Các khoản dự phòng",
+                    "so_cuoi_nam": null
+                },
+                "2_3_lai_lo_chenh_lech_ty_gia_hoi_doai_do_danh_gia_lai_cac_khoan_muc_tien_te_co_goc_ngoai_te_04": {
+                    "ma_so": 4,
+                    "ten_chi_tieu": "Lãi, lỗ chênh lệch tỷ giá hối đoái do đánh giá lại các khoản mục tiền tệ có gốc ngoại tệ",
+                    "so_cuoi_nam": null
+                },
+                "2_4_lai_lo_tu_hoat_dong_dau_tu_05": {
+                    "ma_so": 5,
+                    "ten_chi_tieu": "Lãi, lỗ từ hoạt động đầu tư",
+                    "so_cuoi_nam": null
+                },
+                "2_5_chi_phi_lai_vay_06": {
+                    "ma_so": 6,
+                    "ten_chi_tieu": "Chi phí lãi vay",
+                    "so_cuoi_nam": null
+                },
+                "2_6_cac_khoan_dieu_chinh_khac_07": {
+                    "ma_so": 7,
+                    "ten_chi_tieu": "Các khoản điều chỉnh khác",
+                    "so_cuoi_nam": null
+                }
+            },
+            "3_loi_nhuan_tu_hoat_dong_kinh_doanh_truoc_thay_doi_von_luu_dong_08": {
+                "ma_so": 8,
+                "ten_chi_tieu": "Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động",
+                "so_cuoi_nam": null,
+                "3_1_tang_giam_cac_khoan_phai_thu_09": {
+                    "ma_so": 9,
+                    "ten_chi_tieu": "Tăng, giảm các khoản phải thu",
+                    "so_cuoi_nam": null
+                },
+                "3_2_tang_giam_hang_ton_kho_10": {
+                    "ma_so": 10,
+                    "ten_chi_tieu": "Tăng, giảm hàng tồn kho",
+                    "so_cuoi_nam": null
+                },
+                "3_3_tang_giam_cac_khoan_phai_tra_khong_ke_lai_vay_phai_tra_thue_thu_nhap_doanh_nghiep_phai_nop_11": {
+                    "ma_so": 11,
+                    "ten_chi_tieu": "Tăng, giảm các khoản phải trả (Không kể lãi vay phải trả, thuế thu nhập doanh nghiệp phải nộp)",
+                    "so_cuoi_nam": null
+                },
+                "3_4_tang_giam_chi_phi_tra_truoc_12": {
+                    "ma_so": 12,
+                    "ten_chi_tieu": "Tăng, giảm chi phí trả trước",
+                    "so_cuoi_nam": null
+                },
+                "3_5_tang_giam_chung_khoan_kinh_doanh_13": {
+                    "ma_so": 13,
+                    "ten_chi_tieu": "Tăng, giảm chứng khoán kinh doanh",
+                    "so_cuoi_nam": null
+                },
+                "3_6_tien_lai_vay_da_tra_14": {
+                    "ma_so": 14,
+                    "ten_chi_tieu": "Tiền lãi vay đã trả",
+                    "so_cuoi_nam": null
+                },
+                "3_7_thue_thu_nhap_doanh_nghiep_da_nop_15": {
+                    "ma_so": 15,
+                    "ten_chi_tieu": "Thuế thu nhập doanh nghiệp đã nộp",
+                    "so_cuoi_nam": null
+                },
+                "3_8_tien_thu_khac_tu_hoat_dong_kinh_doanh_16": {
+                    "ma_so": 16,
+                    "ten_chi_tieu": "Tiền thu khác từ hoạt động kinh doanh",
+                    "so_cuoi_nam": null
+                },
+                "3_9_tien_chi_khac_cho_hoat_dong_kinh_doanh_17": {
+                    "ma_so": 17,
+                    "ten_chi_tieu": "Tiền chi khác cho hoạt động kinh doanh",
+                    "so_cuoi_nam": null
+                }
+            }
+        },
+        "II_luu_chuyen_tien_tu_hoat_dong_dau_tu_30": {
+            "ma_so": 30,
+            "ten_chi_tieu": "Lưu chuyển tiền thuần từ hoạt động đầu tư",
+            "so_cuoi_nam": null,
+            "1_tien_chi_de_mua_sam_xay_dung_TSCD_va_cac_tai_san_dai_han_khac_21": {
+                "ma_so": 21,
+                "ten_chi_tieu": "Tiền chi để mua sắm, xây dựng TSCĐ và các tài sản dài hạn khác",
+                "so_cuoi_nam": null
+            },
+            "2_tien_thu_tu_thanh_ly_nhuong_ban_TSCD_va_cac_tai_san_dai_han_khac_22": {
+                "ma_so": 22,
+                "ten_chi_tieu": "Tiền thu từ thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác",
+                "so_cuoi_nam": null
+            },
+            "3_tien_chi_cho_vay_mua_cac_cong_cu_no_cua_don_vi_khac_23": {
+                "ma_so": 23,
+                "ten_chi_tieu": "Tiền chi cho vay, mua các công cụ nợ của đơn vị khác",
+                "so_cuoi_nam": null
+            },
+            "4_tien_thu_hoi_cho_vay_ban_lai_cac_cong_cu_no_cua_don_vi_khac_24": {
+                "ma_so": 24,
+                "ten_chi_tieu": "Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác",
+                "so_cuoi_nam": null
+            },
+            "5_tien_chi_dau_tu_gop_von_vao_don_vi_khac_25": {
+                "ma_so": 25,
+                "ten_chi_tieu": "Tiền chi đầu tư góp vốn vào đơn vị khác",
+                "so_cuoi_nam": null
+            },
+            "6_tien_thu_hoi_dau_tu_gop_von_vao_don_vi_khac_26": {
+                "ma_so": 26,
+                "ten_chi_tieu": "Tiền thu hồi đầu tư góp vốn vào đơn vị khác",
+                "so_cuoi_nam": null
+            },
+            "7_tien_thu_lai_cho_vay_co_tuc_va_loi_nhuan_duoc_chia_27": {
+                "ma_so": 27,
+                "ten_chi_tieu": "Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia",
+                "so_cuoi_nam": null
+            }
+        },
+        "III_luu_chuyen_tien_tu_hoat_dong_tai_chinh_40": {
+            "ma_so": 40,
+            "ten_chi_tieu": "Lưu chuyển tiền thuần từ hoạt động tài chính",
+            "so_cuoi_nam": null,
+            "1_tien_thu_tu_phat_hanh_co_phieu_nhan_von_gop_cua_chu_so_huu_31": {
+                "ma_so": 31,
+                "ten_chi_tieu": "Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu",
+                "so_cuoi_nam": null
+            },
+            "2_tien_tra_lai_von_gop_cho_cac_chu_so_huu_mua_lai_co_phieu_cua_doanh_nghiep_da_phat_hanh_32": {
+                "ma_so": 32,
+                "ten_chi_tieu": "Tiền trả lại vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành",
+                "so_cuoi_nam": null
+            },
+            "3_tien_thu_tu_di_vay_33": {
+                "ma_so": 33,
+                "ten_chi_tieu": "Tiền thu từ đi vay",
+                "so_cuoi_nam": null
+            },
+            "4_tien_tra_no_goc_vay_34": {
+                "ma_so": 34,
+                "ten_chi_tieu": "Tiền trả nợ gốc vay",
+                "so_cuoi_nam": null
+            },
+            "5_tien_tra_no_goc_thue_tai_chinh_35": {
+                "ma_so": 35,
+                "ten_chi_tieu": "Tiền trả nợ gốc thuê tài chính",
+                "so_cuoi_nam": null
+            },
+            "6_co_tuc_loi_nhuan_da_tra_cho_chu_so_huu_36": {
+                "ma_so": 36,
+                "ten_chi_tieu": "Cổ tức, lợi nhuận đã trả cho chủ sở hữu",
+                "so_cuoi_nam": null
+            }
+        },
+        "luu_chuyen_tien_thuan_trong_ky_50": {
+            "ma_so": 50,
+            "ten_chi_tieu": "Lưu chuyển tiền thuần trong kỳ (50 = 20+30+40)",
+            "so_cuoi_nam": null
+        },
+        "tien_va_tuong_duong_tien_dau_ky_60": {
+            "ma_so": 60,
+            "ten_chi_tieu": "Tiền và tương đương tiền đầu kỳ",
+            "so_cuoi_nam": null
+        },
+        "anh_huong_cua_thay_doi_ti_gia_hoi_doai_quy_doi_ngoai_te_61": {
+            "ma_so": 61,
+            "ten_chi_tieu": "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ",
+            "so_cuoi_nam": null
+        },
+        "tien_va_tuong_duong_tien_cuoi_ky_70": {
+            "ma_so": 70,
+            "ten_chi_tieu": "Tiền và tương đương tiền cuối kỳ (70 = 50+60+61)",
+            "so_cuoi_nam": null
+        }
+    }
+}

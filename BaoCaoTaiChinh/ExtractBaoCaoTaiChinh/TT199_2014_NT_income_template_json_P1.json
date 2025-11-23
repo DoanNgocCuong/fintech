@@ -1,0 +1,74 @@
+{
+    "phan_1_bao_cao_ket_qua_hoat_dong_kinh_doanh_tong_hop": {
+      "doanh_thu_thuan_hoat_dong_kinh_doanh_bao_hiem_10": {
+        "ma_so": "10",
+        "ten_chi_tieu": "Doanh thu thuần hoạt động kinh doanh bảo hiểm",
+        "so_cuoi_nam": null
+      },
+      "doanh_thu_kinh_doanh_bat_dong_san_dau_tu_11": {
+        "ma_so": "11",
+        "ten_chi_tieu": "Doanh thu kinh doanh bất động sản đầu tư",
+        "so_cuoi_nam": null
+      },
+      "doanh_thu_hoat_dong_tai_chinh_12": {
+        "ma_so": "12",
+        "ten_chi_tieu": "Doanh thu hoạt động tài chính",
+        "so_cuoi_nam": null
+      },
+      "thu_nhap_khac_13": {
+        "ma_so": "13",
+        "ten_chi_tieu": "Thu nhập khác",
+        "so_cuoi_nam": null
+      },
+      "tong_chi_phi_hoat_dong_kinh_doanh_bao_hiem_20": {
+        "ma_so": "20",
+        "ten_chi_tieu": "Tổng chi phí hoạt động kinh doanh bảo hiểm",
+        "so_cuoi_nam": null
+      },
+      "gia_von_bat_dong_san_dau_tu_21": {
+        "ma_so": "21",
+        "ten_chi_tieu": "Giá vốn bất động sản đầu tư",
+        "so_cuoi_nam": null
+      },
+      "chi_phi_hoat_dong_tai_chinh_22": {
+        "ma_so": "22",
+        "ten_chi_tieu": "Chi phí hoạt động tài chính",
+        "so_cuoi_nam": null
+      },
+      "chi_phi_ban_hang_23": {
+        "ma_so": "23",
+        "ten_chi_tieu": "Chi phí bán hàng",
+        "so_cuoi_nam": null
+      },
+      "chi_phi_quan_ly_doanh_nghiep_24": {
+        "ma_so": "24",
+        "ten_chi_tieu": "Chi phí quản lý doanh nghiệp",
+        "so_cuoi_nam": null
+      },
+      "chi_phi_khac_25": {
+        "ma_so": "25",
+        "ten_chi_tieu": "Chi phí khác",
+        "so_cuoi_nam": null
+      },
+      "tong_loi_nhuan_ke_toan_truoc_thue_50": {
+        "ma_so": "50",
+        "ten_chi_tieu": "Tổng lợi nhuận kế toán trước thuế (50=10+11+12+13-20-21-22-23-24-25)",
+        "so_cuoi_nam": null
+      },
+      "chi_phi_thue_tndn_hien_hanh_51": {
+        "ma_so": "51",
+        "ten_chi_tieu": "Chi phí thuế TNDN hiện hành",
+        "so_cuoi_nam": null
+      },
+      "chi_phi_thue_tndn_hoan_lai_52": {
+        "ma_so": "52",
+        "ten_chi_tieu": "Chi phí thuế TNDN hoãn lại",
+        "so_cuoi_nam": null
+      },
+      "loi_nhuan_sau_thue_thu_nhap_doanh_nghiep_60": {
+        "ma_so": "60",
+        "ten_chi_tieu": "Lợi nhuận sau thuế thu nhập doanh nghiệp (60=50-51-52)",
+        "so_cuoi_nam": null
+      }
+    }
+  }

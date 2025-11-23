@@ -1,0 +1,286 @@
+================================================================================
+ERROR LOG
+================================================================================
+Generated at: 2025-11-23 18:51:35
+================================================================================
+
+[2025-11-23 18:51:35] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2014\Bao_cao_tai_chinh\BVH_2014_1_1_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:36] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2014\Bao_cao_tai_chinh\BVH_2014_1_2_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:37] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2014\Bao_cao_tai_chinh\BVH_2014_1_3_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:38] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2014\Bao_cao_tai_chinh\BVH_2014_1_4_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:39] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2014\Bao_cao_tai_chinh\BVH_2014_1_5_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:41] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2014\Tai_lieu_DHDCD\BVH_2014_5_1_1_rar\To-trinh-thu-lao-HDQT-va-BKS(NhieuFile)\Bao cao cua BKS trinh DHCD 2014_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:42] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2015\Bao_cao_tai_chinh\BVH_2015_1_1_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:43] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2015\Bao_cao_tai_chinh\BVH_2015_1_2_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:43] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2015\Bao_cao_tai_chinh\BVH_2015_1_3_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:44] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2015\Bao_cao_tai_chinh\BVH_2015_1_4_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:45] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2015\Bao_cao_tai_chinh\BVH_2015_1_5_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:47] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2015\Tai_lieu_DHDCD\BVH_2015_5_1_1_rar\7_ Bao cao cua BKS_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:48] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2016\Bao_cao_tai_chinh\BVH_2016_1_1_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:49] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2016\Bao_cao_tai_chinh\BVH_2016_1_2_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:50] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2016\Bao_cao_tai_chinh\BVH_2016_1_3_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:51] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2016\Bao_cao_tai_chinh\BVH_2016_1_4_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:52] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2016\Bao_cao_tai_chinh\BVH_2016_1_5_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:52] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2016\Nghi_quyet_DHDCD\BVH_2016_4_1_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:53] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\1239_GT bien dong KQKD Q3_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:54] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\Bao cao Ban Kiem soat tai DHDCD 2016_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:57] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2017\Bao_cao_tai_chinh\BVH_2017_1_1_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:58] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2017\Bao_cao_tai_chinh\BVH_2017_1_2_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:51:59] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2017\Bao_cao_tai_chinh\BVH_2017_1_3_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:00] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2017\Bao_cao_tai_chinh\BVH_2017_1_4_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:00] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2017\Bao_cao_tai_chinh\BVH_2017_1_5_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:02] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2018\Bao_cao_tai_chinh\BVH_2018_1_1_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:03] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2018\Bao_cao_tai_chinh\BVH_2018_1_2_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:04] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2018\Bao_cao_tai_chinh\BVH_2018_1_3_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:05] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2018\Bao_cao_tai_chinh\BVH_2018_1_4_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:05] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2018\Bao_cao_tai_chinh\BVH_2018_1_5_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:07] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2018\Tai_lieu_DHDCD\BVH_2018_5_1_1_rar\bc hop nhat 2017 da soat xet_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:08] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2018\Tai_lieu_DHDCD\BVH_2018_5_1_1_rar\bc rieng 2017 da soat xet_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:09] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2019\Bao_cao_tai_chinh\BVH_2019_1_1_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:09] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2019\Bao_cao_tai_chinh\BVH_2019_1_2_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:10] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2019\Bao_cao_tai_chinh\BVH_2019_1_3_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:11] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2019\Bao_cao_tai_chinh\BVH_2019_1_4_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:11] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2019\Bao_cao_tai_chinh\BVH_2019_1_5_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:15] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2019\Tai_lieu_DHDCD\BVH_2019_5_2_1_rar\14_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:17] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2020\Bao_cao_tai_chinh\BVH_2020_1_1_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:18] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2020\Bao_cao_tai_chinh\BVH_2020_1_2_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:19] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2020\Bao_cao_tai_chinh\BVH_2020_1_3_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:19] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2020\Bao_cao_tai_chinh\BVH_2020_1_4_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:20] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2020\Bao_cao_tai_chinh\BVH_2020_1_5_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:22] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2020\Tai_lieu_DHDCD\BVH_2020_5_1_1_rar\780 tieng viet_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:23] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2021\Bao_cao_tai_chinh\BVH_2021_1_1_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:24] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2021\Bao_cao_tai_chinh\BVH_2021_1_2_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:25] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2021\Bao_cao_tai_chinh\BVH_2021_1_3_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:25] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2021\Bao_cao_tai_chinh\BVH_2021_1_4_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:26] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2021\Bao_cao_tai_chinh\BVH_2021_1_5_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:28] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2022\Bao_cao_tai_chinh\BVH_2022_1_1_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:29] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2022\Bao_cao_tai_chinh\BVH_2022_1_2_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:29] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2022\Bao_cao_tai_chinh\BVH_2022_1_3_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:29] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2022\Bao_cao_tai_chinh\BVH_2022_1_4_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:30] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2022\Bao_cao_tai_chinh\BVH_2022_1_5_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:33] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2023\Bao_cao_tai_chinh\BVH_2023_1_1_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:33] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2023\Bao_cao_tai_chinh\BVH_2023_1_2_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:34] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2023\Bao_cao_tai_chinh\BVH_2023_1_3_1_rar\6_ BCTC BVH hop nhat truoc soat xet_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:34] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2023\Bao_cao_tai_chinh\BVH_2023_1_4_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:35] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2023\Bao_cao_tai_chinh\BVH_2023_1_5_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:36] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2023\Tai_lieu_DHDCD\BVH_2023_5_1_1_zip\494-Bao-cao-BKS_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:37] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2024\Bao_cao_tai_chinh\BVH_2024_1_1_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:38] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2024\Bao_cao_tai_chinh\BVH_2024_1_2_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:38] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2024\Bao_cao_tai_chinh\BVH_2024_1_3_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:39] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2024\Bao_cao_tai_chinh\BVH_2024_1_4_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:40] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2024\Bao_cao_tai_chinh\BVH_2024_1_5_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:41] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2024\Tai_lieu_DHDCD\BVH_2024_5_2_1_zip\638_VN_Report of Supervisory Board at 2024 AGM_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:43] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2025\Bao_cao_tai_chinh\BVH_2025_1_1_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:44] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2025\Bao_cao_tai_chinh\BVH_2025_1_2_1_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:46] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2025\Bao_cao_tai_chinh\BVH_2025_1_3_1_zip\20251030 - BVH - CBTT BCTC Hop nhat Quy 3.2025 truoc soat xet TV_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+
+[2025-11-23 18:52:46] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2025\Nghi_quyet_DHDCD\BVH_2025_4_1_1_zip\20250621___bvh___bien_ban_hop_dhdcd_thuong_nien_2025_sign_KetQuaHoatDongKinhDoanh_P2.xlsx
+  Reason: Failed to create JSON from Excel (P2): Income template JSON file not found for section P2: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\TT199_2014_NT_income_template_json_P2.json
+

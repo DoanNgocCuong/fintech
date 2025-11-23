@@ -84,7 +84,7 @@ except ImportError:
     pd = None
 
 # Load balance template JSON from file
-_BALANCE_TEMPLATE_JSON_PATH = Path(__file__).parent / "balance_template_json.json"
+_BALANCE_TEMPLATE_JSON_PATH = Path(__file__).parent / "TT199_2014_NT_balance_template_json.json"
 
 # Import detection functions và utilities
 from utils_markdownCanDoiKeToanText_DetectTable_to_xlsx import detect_candoiketoan

@@ -1,0 +1,26 @@
+================================================================================
+ERROR LOG
+================================================================================
+Generated at: 2025-11-23 14:53:47
+================================================================================
+
+[2025-11-23 14:53:47] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2014\Bao_cao_tai_chinh\BIC_2014_1_1_1_CanDoiKeToan.xlsx
+  Reason: Failed to create JSON from Excel: Balance template JSON file not found: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\balance_template_json.json
+
+[2025-11-23 14:53:47] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2014\Bao_cao_tai_chinh\BIC_2014_1_2_1_CanDoiKeToan.xlsx
+  Reason: Failed to create JSON from Excel: Balance template JSON file not found: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\balance_template_json.json
+
+[2025-11-23 14:53:48] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2014\Bao_cao_tai_chinh\BIC_2014_1_3_1_CanDoiKeToan.xlsx
+  Reason: Failed to create JSON from Excel: Balance template JSON file not found: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\balance_template_json.json
+
+[2025-11-23 14:53:48] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2014\Bao_cao_tai_chinh\BIC_2014_1_4_1_CanDoiKeToan.xlsx
+  Reason: Failed to create JSON from Excel: Balance template JSON file not found: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\balance_template_json.json
+
+[2025-11-23 14:53:48] xlsx_to_json
+  File: E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2014\Bao_cao_tai_chinh\BIC_2014_1_5_1_CanDoiKeToan.xlsx
+  Reason: Failed to create JSON from Excel: Balance template JSON file not found: D:\GIT\Fintech\fintech\BaoCaoTaiChinh\ExtractBaoCaoTaiChinh\balance_template_json.json
+
