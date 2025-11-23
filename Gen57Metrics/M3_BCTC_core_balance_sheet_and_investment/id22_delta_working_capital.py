@@ -70,5 +70,6 @@ def get_delta_working_capital_value(
     if previous is None:
         return None
 
-    return float(current - previous)
+    # Sử dụng abs() cho tất cả giá trị trong phép tính
+    return float(abs(current) - abs(previous))
 

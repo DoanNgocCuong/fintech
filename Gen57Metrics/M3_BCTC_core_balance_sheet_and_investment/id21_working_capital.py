@@ -98,5 +98,6 @@ def get_working_capital_value(
         return None
     
     # Working Capital = Current Assets + Inventory - Accounts Payable
-    return float(current_assets + inventory - accounts_payable)
+    # Sử dụng abs() cho tất cả giá trị trong phép tính
+    return float(abs(current_assets) + abs(inventory) - abs(accounts_payable))
 

@@ -79,5 +79,6 @@ def get_interest_bearing_debt_value(
     if not values:
         return None
     
-    return float(sum(values))
+    # Sử dụng abs() cho tất cả giá trị trước khi tính tổng
+    return float(sum(abs(v) for v in values))
 

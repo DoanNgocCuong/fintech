@@ -120,19 +120,21 @@ def get_fcff_value(
     if cfo is None or financial_expenses is None or current_tax is None or profit_before_tax is None or capex is None:
         return None
     
-    # Calculate tax rate: current_tax / profit_before_tax
+    # Calculate tax rate: current_tax / profit_before_tax (sử dụng abs() cho tất cả giá trị)
     # If profit_before_tax is 0 or negative, tax rate is 0
-    if profit_before_tax <= 0:
+    abs_profit_before_tax = abs(profit_before_tax)
+    if abs_profit_before_tax <= 0:
         tax_rate = 0.0
     else:
-        tax_rate = current_tax / profit_before_tax
+        tax_rate = abs(current_tax) / abs_profit_before_tax
     
     # Calculate after-tax financial expenses: financial_expenses * (1 - tax_rate)
-    after_tax_financial_expenses = financial_expenses * (1 - tax_rate)
+    # Sử dụng abs() cho financial_expenses
+    after_tax_financial_expenses = abs(financial_expenses) * (1 - tax_rate)
     
     # FCFF = CFO + After-tax Financial Expenses - CAPEX
-    # Note: financial_expenses is typically negative (expense), so we add it (subtract the negative)
-    fcff = cfo + after_tax_financial_expenses - capex
+    # Sử dụng abs() cho tất cả giá trị trong phép tính
+    fcff = abs(cfo) + after_tax_financial_expenses - abs(capex)
     
     return float(fcff)
 

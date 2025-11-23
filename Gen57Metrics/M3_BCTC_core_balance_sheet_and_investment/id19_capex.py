@@ -91,7 +91,6 @@ def get_capex_value(
         return None
     
     # Capex = Cash paid for fixed assets - Cash received from sale of fixed assets
-    # Typically value_21 is negative (cash outflow) and value_22 is positive (cash inflow)
-    # So Capex = value_21 - value_22 (both are typically negative, so result is negative)
-    return float(value_21 - value_22)
+    # Sử dụng abs() cho tất cả giá trị trong phép tính
+    return float(abs(value_21) - abs(value_22))
 
