@@ -20,6 +20,69 @@ DB_CONFIG: Dict[str, Any] = {
 }
 
 TABLE_NAME = 'balance_sheet_raw'
+COMPANY_TABLE = 'company'
+
+
+def get_legal_framework(stock: str) -> Optional[str]:
+    """
+    Lấy bộ luật (legal framework) của công ty từ bảng company.
+    
+    Args:
+        stock (str): Mã cổ phiếu (ví dụ: "MIG", "PGI", "BIC")
+    
+    Returns:
+        Optional[str]: Tên bộ luật (ví dụ: "TT232_2012", "TT199_2014") hoặc None nếu không tìm thấy
+    
+    Raises:
+        ImportError: Nếu psycopg2 chưa được cài đặt
+    
+    Ví dụ:
+        >>> legal_framework = get_legal_framework("MIG")
+        >>> print(legal_framework)
+        'TT232_2012'
+        
+        >>> legal_framework = get_legal_framework("BVH")
+        >>> print(legal_framework)
+        'TT199_2014'
+    """
+    if psycopg2 is None:
+        raise ImportError("psycopg2 is required. Install with: pip install psycopg2-binary")
+    
+    if not stock:
+        return None
+    
+    conn = None
+    cursor = None
+    try:
+        conn = connect()
+        cursor = conn.cursor()
+        
+        query = """
+        SELECT use_legal 
+        FROM company 
+        WHERE UPPER(company_name) = UPPER(%s)
+        LIMIT 1
+        """
+        cursor.execute(query, (str(stock).upper(),))
+        
+        result = cursor.fetchone()
+        
+        if result and result[0]:
+            return str(result[0])
+        
+        return None
+        
+    except Exception as e:
+        try:
+            print(f"  ⚠ Error getting legal framework for {stock}: {e}")
+        except UnicodeEncodeError:
+            print(f"  Error getting legal framework for {stock}: {e}")
+        return None
+    finally:
+        if cursor:
+            cursor.close()
+        if conn:
+            conn.close()
 
 
 def connect() -> "psycopg2.extensions.connection":

@@ -17,6 +17,23 @@ try:
     from Gen57Metrics.M1_BCTC_core_profit_and_cashflow.id3_EBIT import get_EBIT_value
     from Gen57Metrics.M1_BCTC_core_profit_and_cashflow.id4_EBITDA import get_EBITDA_value
     from Gen57Metrics.M1_BCTC_core_profit_and_cashflow.id5_NOPAT import get_NOPAT_value
+    from Gen57Metrics.M2_BCTC_core_revenue_and_margins.id6_revenue import get_revenue_value
+    from Gen57Metrics.M2_BCTC_core_revenue_and_margins.id7_gross_profit import get_gross_profit_value
+    from Gen57Metrics.M2_BCTC_core_revenue_and_margins.id8_gross_margin import get_gross_margin_value
+    from Gen57Metrics.M2_BCTC_core_revenue_and_margins.id9_revenue_growth import get_revenue_growth_value
+    from Gen57Metrics.M2_BCTC_core_revenue_and_margins.id10_earnings_growth import get_earnings_growth_value
+    from Gen57Metrics.M2_BCTC_core_revenue_and_margins.id11_core_revenue import get_core_revenue_value
+    # Balance Sheet & Investment indicators
+    from Gen57Metrics.M3_BCTC_core_balance_sheet_and_investment.id15_total_assets import get_total_assets_value
+    from Gen57Metrics.M3_BCTC_core_balance_sheet_and_investment.id16_equity import get_equity_value
+    from Gen57Metrics.M3_BCTC_core_balance_sheet_and_investment.id17_interest_bearing_debt import get_interest_bearing_debt_value
+    from Gen57Metrics.M3_BCTC_core_balance_sheet_and_investment.id18_cash_and_short_term_investments import get_cash_and_short_term_investments_value
+    from Gen57Metrics.M3_BCTC_core_balance_sheet_and_investment.id19_capex import get_capex_value
+    from Gen57Metrics.M3_BCTC_core_balance_sheet_and_investment.id21_working_capital import get_working_capital_value
+    from Gen57Metrics.M3_BCTC_core_balance_sheet_and_investment.id22_delta_working_capital import get_delta_working_capital_value
+    from Gen57Metrics.M3_BCTC_core_balance_sheet_and_investment.id23_accounts_receivable import get_accounts_receivable_value
+    from Gen57Metrics.M3_BCTC_core_balance_sheet_and_investment.id25_accounts_payable import get_accounts_payable_value
+    from Gen57Metrics.M3_BCTC_core_balance_sheet_and_investment.id30_fcff import get_fcff_value
 except ImportError as e:
     print(f"Warning: Could not import some calculation functions: {e}")
 
@@ -80,9 +97,26 @@ class IndicatorMapper:
         self.register("EBIT", get_EBIT_value)
         self.register("EBITDA", get_EBITDA_value)
         self.register("NOPAT", get_NOPAT_value)
+
+        # Revenue & Margins indicators
+        self.register("Revenue", get_revenue_value)
+        self.register("Gross Profit", get_gross_profit_value)
+        self.register("Gross Margin", get_gross_margin_value)
+        self.register("Revenue Growth", get_revenue_growth_value)
+        self.register("Earnings Growth", get_earnings_growth_value)
+        self.register("Core Revenue", get_core_revenue_value)
         
-        # TODO: Add more mappings as modules are created
-        # Revenue, Gross Profit, Gross Margin, etc.
+        # Balance Sheet & Investment indicators
+        self.register("Total Assets", get_total_assets_value)
+        self.register("Equity", get_equity_value)
+        self.register("Interest-bearing Debt", get_interest_bearing_debt_value)
+        self.register("Cash & Short-term Investments", get_cash_and_short_term_investments_value)
+        self.register("Capex", get_capex_value)
+        self.register("Working Capital (WC)", get_working_capital_value)
+        self.register("ΔWorking Capital", get_delta_working_capital_value)
+        self.register("Accounts Receivable", get_accounts_receivable_value)
+        self.register("Accounts Payable", get_accounts_payable_value)
+        self.register("FCFF (Free Cash Flow to Firm)", get_fcff_value)
     
     def register(self, indicator_name: str, func: Callable, ma_so: Optional[int] = None) -> None:
         """

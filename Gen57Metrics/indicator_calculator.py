@@ -165,7 +165,8 @@ class IndicatorCalculator:
         stock: str,
         year: int,
         quarter: Optional[int] = None,
-        include_metadata: bool = True
+        include_metadata: bool = True,
+        legal_framework: Optional[str] = None
     ) -> Dict[str, Any]:
         """
         Calculate all 57 indicators for a stock.
@@ -175,10 +176,17 @@ class IndicatorCalculator:
             year: Year (e.g., 2024)
             quarter: Quarter (1-4) or None for annual
             include_metadata: Whether to include calculation metadata
+            legal_framework: Legal framework (e.g., "TT199_2014", "TT232_2012"). 
+                           If None, will be fetched from database based on stock.
             
         Returns:
             Dictionary with all indicators and metadata
         """
+        # Get legal framework if not provided
+        if legal_framework is None:
+            from Gen57Metrics.utils_database_manager import get_legal_framework
+            legal_framework = get_legal_framework(stock)
+        
         # Clear cache for new calculation
         self._value_cache.clear()
         
@@ -194,7 +202,7 @@ class IndicatorCalculator:
         
         for indicator_name in calculation_order:
             try:
-                value = self._calculate_indicator(indicator_name, stock, year, quarter)
+                value = self._calculate_indicator(indicator_name, stock, year, quarter, legal_framework)
                 calculated_indicators[indicator_name] = value
                 
                 # Get indicator definition to include ID
@@ -262,7 +270,8 @@ class IndicatorCalculator:
         stock: str,
         year: int,
         quarter: Optional[int] = None,
-        include_metadata: bool = True
+        include_metadata: bool = True,
+        legal_framework: Optional[str] = None
     ) -> Dict[str, Any]:
         """
         Calculate only the provided list of indicators.
@@ -277,6 +286,11 @@ class IndicatorCalculator:
         Returns:
             Dictionary with requested indicators and metadata
         """
+        # Get legal framework if not provided
+        if legal_framework is None:
+            from Gen57Metrics.utils_database_manager import get_legal_framework
+            legal_framework = get_legal_framework(stock)
+        
         self._value_cache.clear()
 
         normalized_names: List[str] = []
@@ -305,7 +319,7 @@ class IndicatorCalculator:
                 continue
 
             try:
-                value = self._calculate_indicator(indicator_name, stock, year, quarter)
+                value = self._calculate_indicator(indicator_name, stock, year, quarter, legal_framework)
                 indicators_with_id.append({
                     "id": indicator_def.id,
                     "name": indicator_name,
@@ -352,7 +366,8 @@ class IndicatorCalculator:
         indicator_name: str,
         stock: str,
         year: int,
-        quarter: Optional[int] = None
+        quarter: Optional[int] = None,
+        legal_framework: Optional[str] = None
     ) -> Optional[float]:
         """
         Calculate a single indicator.
@@ -362,12 +377,13 @@ class IndicatorCalculator:
             stock: Stock symbol
             year: Year
             quarter: Quarter or None
+            legal_framework: Legal framework (e.g., "TT199_2014", "TT232_2012")
             
         Returns:
             Indicator value or None if calculation failed
         """
         # Check cache first
-        cache_key = f"{indicator_name}_{stock}_{year}_{quarter}"
+        cache_key = f"{indicator_name}_{stock}_{year}_{quarter}_{legal_framework}"
         if cache_key in self._value_cache:
             return self._value_cache[cache_key]
         
@@ -389,11 +405,33 @@ class IndicatorCalculator:
                 print(f"  [WARN] No calculation function for '{indicator_name}'")
             return None
         
-        # Calculate value
+        # Calculate value - try with legal_framework if function accepts it
         try:
-            value = calc_func(stock, year, quarter)
+            import inspect
+            sig = inspect.signature(calc_func)
+            params = list(sig.parameters.keys())
+            
+            # Check if function accepts legal_framework parameter
+            if 'legal_framework' in params:
+                value = calc_func(stock, year, quarter, legal_framework=legal_framework)
+            else:
+                # Fallback for functions that don't have legal_framework yet
+                value = calc_func(stock, year, quarter)
+            
             self._value_cache[cache_key] = value
             return value
+        except TypeError:
+            # If TypeError (wrong number of arguments), try without legal_framework
+            try:
+                value = calc_func(stock, year, quarter)
+                self._value_cache[cache_key] = value
+                return value
+            except Exception as e:
+                try:
+                    print(f"  ✗ Error calculating {indicator_name}: {e}")
+                except UnicodeEncodeError:
+                    print(f"  [ERROR] Error calculating {indicator_name}: {e}")
+                return None
         except Exception as e:
             try:
                 print(f"  ✗ Error calculating {indicator_name}: {e}")
@@ -406,7 +444,8 @@ class IndicatorCalculator:
         indicator_name: str,
         stock: str,
         year: int,
-        quarter: Optional[int] = None
+        quarter: Optional[int] = None,
+        legal_framework: Optional[str] = None
     ) -> Optional[float]:
         """
         Calculate a single indicator.
@@ -420,7 +459,12 @@ class IndicatorCalculator:
         Returns:
             Indicator value or None
         """
-        return self._calculate_indicator(indicator_name, stock, year, quarter)
+        # Get legal framework if not provided
+        if legal_framework is None:
+            from Gen57Metrics.utils_database_manager import get_legal_framework
+            legal_framework = get_legal_framework(stock)
+        
+        return self._calculate_indicator(indicator_name, stock, year, quarter, legal_framework)
     
     def clear_cache(self) -> None:
         """Clear value cache."""
@@ -435,7 +479,8 @@ def calculate_all_indicators(
     stock: str,
     year: int,
     quarter: Optional[int] = None,
-    include_metadata: bool = True
+    include_metadata: bool = True,
+    legal_framework: Optional[str] = None
 ) -> Dict[str, Any]:
     """
     Calculate all 57 indicators for a stock (convenience function).
@@ -445,6 +490,8 @@ def calculate_all_indicators(
         year: Year (e.g., 2024)
         quarter: Quarter (1-4) or None for annual
         include_metadata: Whether to include calculation metadata
+        legal_framework: Legal framework (e.g., "TT199_2014", "TT232_2012"). 
+                        If None, will be fetched from database based on stock.
         
     Returns:
         Dictionary with all indicators and metadata
@@ -455,7 +502,7 @@ def calculate_all_indicators(
         1234567890.0
     """
     calculator = IndicatorCalculator()
-    return calculator.calculate_all(stock, year, quarter, include_metadata)
+    return calculator.calculate_all(stock, year, quarter, include_metadata, legal_framework)
 
 
 def calculate_selected_indicators(
@@ -463,7 +510,8 @@ def calculate_selected_indicators(
     stock: str,
     year: int,
     quarter: Optional[int] = None,
-    include_metadata: bool = True
+    include_metadata: bool = True,
+    legal_framework: Optional[str] = None
 ) -> Dict[str, Any]:
     """
     Calculate selected indicators for a stock.
@@ -474,10 +522,12 @@ def calculate_selected_indicators(
         year: Year
         quarter: Quarter (1-4) or None for annual
         include_metadata: Whether to include calculation metadata
+        legal_framework: Legal framework (e.g., "TT199_2014", "TT232_2012"). 
+                        If None, will be fetched from database based on stock.
 
     Returns:
         Dictionary with requested indicators and metadata
     """
     calculator = IndicatorCalculator()
-    return calculator.calculate_subset(indicator_names, stock, year, quarter, include_metadata)
+    return calculator.calculate_subset(indicator_names, stock, year, quarter, include_metadata, legal_framework)
 
