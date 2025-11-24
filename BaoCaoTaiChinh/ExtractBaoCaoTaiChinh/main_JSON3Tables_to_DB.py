@@ -41,6 +41,13 @@ from utils_database_manager import (
 INCOME_STATEMENT_TABLE = 'income_statement_raw'
 CASH_FLOW_STATEMENT_TABLE = 'cash_flow_statement_raw'
 
+# Dedicated tables for income statement sections
+INCOME_SECTION_TABLES = {
+    "P1": "income_statement_p1_raw",
+    "P2": "income_statement_p2_raw",
+}
+DEFAULT_INCOME_SECTION = "P2"
+
 
 @dataclass
 class FailedFile:
@@ -157,6 +164,45 @@ def get_table_name(statement_type: str) -> str:
         raise ValueError(f"Unknown statement type: {statement_type}")
 
 
+def detect_income_section_from_name(name: str) -> Optional[str]:
+    """
+    Detect income statement section (P1/P2) from a string.
+    Returns None if no marker is found.
+    """
+    if not name:
+        return None
+
+    upper_name = name.upper()
+    compact_name = upper_name.replace(" ", "").replace("-", "")
+
+    p1_markers = ["_P1", "PHAN I", "PHAN 1", "PHAN-I", "PHAN-1"]
+    p2_markers = ["_P2", "PHAN II", "PHAN 2", "PHAN-II", "PHAN-2"]
+
+    if any(marker in upper_name for marker in p1_markers) or any(marker.replace(" ", "") in compact_name for marker in ["PHANI", "PHAN1"]):
+        return "P1"
+    if any(marker in upper_name for marker in p2_markers) or any(marker.replace(" ", "") in compact_name for marker in ["PHANII", "PHAN2"]):
+        return "P2"
+    return None
+
+
+def resolve_income_section(json_path: Path) -> str:
+    """
+    Resolve section by inspecting file name and ancestor folders.
+    Defaults to DEFAULT_INCOME_SECTION if no marker found.
+    """
+    candidates = [
+        json_path.stem,
+        json_path.name,
+        json_path.parent.name if json_path.parent else "",
+        json_path.parent.parent.name if json_path.parent and json_path.parent.parent else "",
+    ]
+    for candidate in candidates:
+        section = detect_income_section_from_name(candidate)
+        if section:
+            return section
+    return DEFAULT_INCOME_SECTION
+
+
 def collect_json_files(target: Path, recursive: bool = True) -> List[Path]:
     """
     Collect JSON files from target path (all 3 types of financial statements).
@@ -192,17 +238,18 @@ def process_json_files(json_files: List[Path], overwrite: bool) -> Tuple[int, in
     Process JSON files and upload to database.
     
     Returns:
-        Tuple of (success_count, failed_count, failed_files_list, stats_by_type)
+        Tuple of (success_count, failed_count, failed_files_list, stats_by_table)
     """
     success = 0
     failed = 0
     failed_files: List[FailedFile] = []
     
     # Statistics by statement type
-    stats_by_type = {
-        "CanDoiKeToan": {"success": 0, "failed": 0},
-        "KetQuaHoatDongKinhDoanh": {"success": 0, "failed": 0},
-        "LuuChuyenTienTe": {"success": 0, "failed": 0}
+    stats_by_table = {
+        BALANCE_SHEET_TABLE: {"label": "CanDoiKeToan", "success": 0, "failed": 0},
+        INCOME_SECTION_TABLES["P1"]: {"label": "KetQuaHoatDongKinhDoanh (P1)", "success": 0, "failed": 0},
+        INCOME_SECTION_TABLES["P2"]: {"label": "KetQuaHoatDongKinhDoanh (P2)", "success": 0, "failed": 0},
+        CASH_FLOW_STATEMENT_TABLE: {"label": "LuuChuyenTienTe", "success": 0, "failed": 0},
     }
 
     total = len(json_files)
@@ -226,6 +273,14 @@ def process_json_files(json_files: List[Path], overwrite: bool) -> Tuple[int, in
                 statement_type="Unknown"
             ))
             continue
+
+        # Determine destination table (needed even if parsing fails)
+        income_section = None
+        if statement_type == "KetQuaHoatDongKinhDoanh":
+            income_section = resolve_income_section(json_file)
+            table_name = INCOME_SECTION_TABLES.get(income_section, INCOME_SECTION_TABLES[DEFAULT_INCOME_SECTION])
+        else:
+            table_name = get_table_name(statement_type)
 
         # Try to parse from filename first
         stock, year, quarter = parse_stock_year_quarter_from_filename(json_file.name)
@@ -277,7 +332,9 @@ def process_json_files(json_files: List[Path], overwrite: bool) -> Tuple[int, in
             except UnicodeEncodeError:
                 print(f"  [ERROR] {reason}")
             failed += 1
-            stats_by_type[statement_type]["failed"] += 1
+            stats_bucket = stats_by_table.get(table_name)
+            if stats_bucket:
+                stats_bucket["failed"] += 1
             failed_files.append(FailedFile(
                 filepath=str(json_file),
                 reason=reason,
@@ -287,10 +344,10 @@ def process_json_files(json_files: List[Path], overwrite: bool) -> Tuple[int, in
 
         # Display parsed information
         quarter_info = f", quarter={quarter}" if quarter is not None else ", quarter=None"
-        table_name = get_table_name(statement_type)
         try:
             print(f"  Statement type: {statement_type}")
-            print(f"  Parsed from {parse_source}: stock={stock}, year={year}{quarter_info}")
+            section_info = f", section={income_section}" if income_section else ""
+            print(f"  Parsed from {parse_source}: stock={stock}, year={year}{quarter_info}{section_info}")
             print(f"  Target table: {table_name}")
         except UnicodeEncodeError:
             print(f"  Statement type: {statement_type}")
@@ -306,16 +363,19 @@ def process_json_files(json_files: List[Path], overwrite: bool) -> Tuple[int, in
             table_name=table_name,
             source_filename=json_file.name,
         )
+        stats_bucket = stats_by_table.get(table_name)
         if upload_ok:
             success += 1
-            stats_by_type[statement_type]["success"] += 1
+            if stats_bucket:
+                stats_bucket["success"] += 1
             try:
                 print(f"  ✓ Successfully uploaded to {table_name}")
             except UnicodeEncodeError:
                 print(f"  [OK] Successfully uploaded to {table_name}")
         else:
             failed += 1
-            stats_by_type[statement_type]["failed"] += 1
+            if stats_bucket:
+                stats_bucket["failed"] += 1
             failed_files.append(FailedFile(
                 filepath=str(json_file),
                 reason=f"Upload failed: stock={stock}, year={year}, quarter={quarter}",
@@ -326,7 +386,7 @@ def process_json_files(json_files: List[Path], overwrite: bool) -> Tuple[int, in
             except UnicodeEncodeError:
                 print(f"  [ERROR] Upload failed")
 
-    return success, failed, failed_files, stats_by_type
+    return success, failed, failed_files, stats_by_table
 
 
 def main() -> None:
@@ -353,12 +413,25 @@ def main() -> None:
         print(f"No JSON files found at: {target_path}")
         sys.exit(1)
 
-    # Count files by type
-    file_counts = {
-        "CanDoiKeToan": sum(1 for f in json_files if "CanDoiKeToan" in f.name),
-        "KetQuaHoatDongKinhDoanh": sum(1 for f in json_files if "KetQuaHoatDongKinhDoanh" in f.name),
-        "LuuChuyenTienTe": sum(1 for f in json_files if "LuuChuyenTienTe" in f.name)
+    # Count files by table destination
+    table_file_counts = {
+        BALANCE_SHEET_TABLE: 0,
+        INCOME_SECTION_TABLES["P1"]: 0,
+        INCOME_SECTION_TABLES["P2"]: 0,
+        CASH_FLOW_STATEMENT_TABLE: 0,
     }
+    for file_path in json_files:
+        if "CanDoiKeToan" in file_path.name:
+            table_key = BALANCE_SHEET_TABLE
+        elif "KetQuaHoatDongKinhDoanh" in file_path.name:
+            section = resolve_income_section(file_path)
+            table_key = INCOME_SECTION_TABLES.get(section, INCOME_SECTION_TABLES[DEFAULT_INCOME_SECTION])
+        elif "LuuChuyenTienTe" in file_path.name:
+            table_key = CASH_FLOW_STATEMENT_TABLE
+        else:
+            continue
+        if table_key in table_file_counts:
+            table_file_counts[table_key] += 1
 
     print("=" * 80)
     print("DATABASE CONFIGURATION")
@@ -366,14 +439,15 @@ def main() -> None:
     print(f"Host: {DB_CONFIG['host']}:{DB_CONFIG['port']}")
     print(f"Database: {DB_CONFIG['database']}")
     print(f"Tables:")
-    print(f"  - balance_sheet_raw: {file_counts['CanDoiKeToan']} file(s)")
-    print(f"  - income_statement_raw: {file_counts['KetQuaHoatDongKinhDoanh']} file(s)")
-    print(f"  - cash_flow_statement_raw: {file_counts['LuuChuyenTienTe']} file(s)")
+    print(f"  - {BALANCE_SHEET_TABLE}: {table_file_counts[BALANCE_SHEET_TABLE]} file(s)")
+    print(f"  - {INCOME_SECTION_TABLES['P1']}: {table_file_counts[INCOME_SECTION_TABLES['P1']]} file(s)")
+    print(f"  - {INCOME_SECTION_TABLES['P2']}: {table_file_counts[INCOME_SECTION_TABLES['P2']]} file(s)")
+    print(f"  - {CASH_FLOW_STATEMENT_TABLE}: {table_file_counts[CASH_FLOW_STATEMENT_TABLE]} file(s)")
     print(f"Overwrite mode: {overwrite}")
     print(f"Recursive search: {recursive}")
     print("=" * 80)
 
-    success, failed, failed_files, stats_by_type = process_json_files(json_files, overwrite)
+    success, failed, failed_files, stats_by_table = process_json_files(json_files, overwrite)
 
     print("\n" + "=" * 80)
     print("SUMMARY")
@@ -381,9 +455,10 @@ def main() -> None:
     print(f"Total JSON files: {len(json_files)}")
     print(f"Successful uploads: {success}")
     print(f"Failed uploads: {failed}")
-    print("\nBreakdown by statement type:")
-    for stmt_type, stats in stats_by_type.items():
-        print(f"  {stmt_type}:")
+    print("\nBreakdown by table:")
+    for table_name, stats in stats_by_table.items():
+        label = stats.get("label", table_name)
+        print(f"  {label} ({table_name}):")
         print(f"    Success: {stats['success']}")
         print(f"    Failed: {stats['failed']}")
     

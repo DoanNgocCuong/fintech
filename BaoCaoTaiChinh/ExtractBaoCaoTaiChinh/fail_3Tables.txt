@@ -1,12 +1,12 @@
 ================================================================================
 FAILED FILES LOG - 3 FINANCIAL STATEMENTS
 ================================================================================
-Generated at: 2025-11-23 18:57:45
-Total failed files: 73
+Generated at: 2025-11-24 22:32:48
+Total failed files: 356
 ================================================================================
 
 
-KetQuaHoatDongKinhDoanh (39 file(s)):
+KetQuaHoatDongKinhDoanh (271 file(s)):
 --------------------------------------------------------------------------------
 1. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2014\Tai_lieu_DHDCD\BVH_2014_5_1_1_rar\To-trinh-thu-lao-HDQT-va-BKS(NhieuFile)\Bao cao cua BKS trinh DHCD 2014_KetQuaHoatDongKinhDoanh.json
    Reason: Cannot parse stock/year from filename or folder: Bao cao cua BKS trinh DHCD 2014_KetQuaHoatDongKinhDoanh.json (folder: To-trinh-thu-lao-HDQT-va-BKS(NhieuFile))
@@ -125,8 +125,704 @@ KetQuaHoatDongKinhDoanh (39 file(s)):
 39. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2025\Tai_lieu_DHDCD\BVH_2025_5_1_1_zip\5.-Tờ-trình-BCTC-hợp-nhất-và-riêng-2024_KetQuaHoatDongKinhDoanh.json
    Reason: Cannot parse stock/year from filename or folder: 5.-Tờ-trình-BCTC-hợp-nhất-và-riêng-2024_KetQuaHoatDongKinhDoanh.json (folder: BVH_2025_5_1_1_zip)
 
+40. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2014\Nghi_quyet_DHDCD\BIC_2014_4_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2014_4_1_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
 
-CanDoiKeToan (14 file(s)):
+41. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2014\Nghi_quyet_DHDCD\BIC_2014_4_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2014_4_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Nghi_quyet_DHDCD)
+
+42. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2014\Tai_lieu_DHDCD\BIC_2014_5_1_1_zip\(3) BC KQKD 2013_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: (3) BC KQKD 2013_KetQuaHoatDongKinhDoanh.json (folder: BIC_2014_5_1_1_zip)
+
+43. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2014\Tai_lieu_DHDCD\BIC_2014_5_1_1_zip\(3) BC KQKD 2013_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: (3) BC KQKD 2013_KetQuaHoatDongKinhDoanh_P2.json (folder: BIC_2014_5_1_1_zip)
+
+44. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2014\Tai_lieu_DHDCD\BIC_2014_5_1_1_zip\(4) BC KQHD HDQT BIC_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: (4) BC KQHD HDQT BIC_KetQuaHoatDongKinhDoanh.json (folder: BIC_2014_5_1_1_zip)
+
+45. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2014\Tai_lieu_DHDCD\BIC_2014_5_1_1_zip\(4) BC KQHD HDQT BIC_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: (4) BC KQHD HDQT BIC_KetQuaHoatDongKinhDoanh_P2.json (folder: BIC_2014_5_1_1_zip)
+
+46. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2014\Tai_lieu_DHDCD\BIC_2014_5_1_1_zip\(5) Bao cao hoat dong cua Ban Kiem soat_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: (5) Bao cao hoat dong cua Ban Kiem soat_KetQuaHoatDongKinhDoanh.json (folder: BIC_2014_5_1_1_zip)
+
+47. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2014\Tai_lieu_DHDCD\BIC_2014_5_1_1_zip\(5) Bao cao hoat dong cua Ban Kiem soat_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: (5) Bao cao hoat dong cua Ban Kiem soat_KetQuaHoatDongKinhDoanh_P2.json (folder: BIC_2014_5_1_1_zip)
+
+48. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2014\Tai_lieu_DHDCD\BIC_2014_5_1_1_zip\(7) To trinh phe duyet quyet toan tai chinh, pp loi nhuan_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: (7) To trinh phe duyet quyet toan tai chinh, pp loi nhuan_KetQuaHoatDongKinhDoanh.json (folder: BIC_2014_5_1_1_zip)
+
+49. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2014\Tai_lieu_DHDCD\BIC_2014_5_1_1_zip\(7) To trinh phe duyet quyet toan tai chinh, pp loi nhuan_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: (7) To trinh phe duyet quyet toan tai chinh, pp loi nhuan_KetQuaHoatDongKinhDoanh_P2.json (folder: BIC_2014_5_1_1_zip)
+
+50. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2014\Tai_lieu_DHDCD\BIC_2014_5_1_1_zip\BIC_TAILIEU_DHCD_2014_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_TAILIEU_DHCD_2014_KetQuaHoatDongKinhDoanh.json (folder: BIC_2014_5_1_1_zip)
+
+51. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2014\Tai_lieu_DHDCD\BIC_2014_5_1_1_zip\BIC_TAILIEU_DHCD_2014_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_TAILIEU_DHCD_2014_KetQuaHoatDongKinhDoanh_P2.json (folder: BIC_2014_5_1_1_zip)
+
+52. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2015\Tai_lieu_DHDCD\BIC_2015_5_2_1_zip\20150406_7.BC hoat dong cua BKS nam 2014_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 20150406_7.BC hoat dong cua BKS nam 2014_KetQuaHoatDongKinhDoanh.json (folder: BIC_2015_5_2_1_zip)
+
+53. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2015\Tai_lieu_DHDCD\BIC_2015_5_2_1_zip\20150406_7.BC hoat dong cua BKS nam 2014_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 20150406_7.BC hoat dong cua BKS nam 2014_KetQuaHoatDongKinhDoanh_P2.json (folder: BIC_2015_5_2_1_zip)
+
+54. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2016\Nghi_quyet_DHDCD\BIC_2016_4_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2016_4_1_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
+
+55. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2016\Nghi_quyet_DHDCD\BIC_2016_4_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2016_4_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Nghi_quyet_DHDCD)
+
+56. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2016\Tai_lieu_DHDCD\BIC_2016_5_1_1_rar\BIC\2. Bao cao KQKD 2015 va KHKD 2016_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 2. Bao cao KQKD 2015 va KHKD 2016_KetQuaHoatDongKinhDoanh.json (folder: BIC)
+
+57. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2016\Tai_lieu_DHDCD\BIC_2016_5_1_1_rar\BIC\4. Bao cao cua Ban Kiem soat_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 4. Bao cao cua Ban Kiem soat_KetQuaHoatDongKinhDoanh.json (folder: BIC)
+
+58. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2016\Tai_lieu_DHDCD\BIC_2016_5_1_1_rar\BIC\4. Bao cao cua Ban Kiem soat_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 4. Bao cao cua Ban Kiem soat_KetQuaHoatDongKinhDoanh_P2.json (folder: BIC)
+
+59. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2016\Tai_lieu_DHDCD\BIC_2016_5_1_1_rar\BIC\5. TT phe duyet quyet toan tai chinh phuong an PPLN co tuc 2015 va ke hoach 2016_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 5. TT phe duyet quyet toan tai chinh phuong an PPLN co tuc 2015 va ke hoach 2016_KetQuaHoatDongKinhDoanh.json (folder: BIC)
+
+60. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2016\Tai_lieu_DHDCD\BIC_2016_5_1_1_rar\BIC\5. TT phe duyet quyet toan tai chinh phuong an PPLN co tuc 2015 va ke hoach 2016_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 5. TT phe duyet quyet toan tai chinh phuong an PPLN co tuc 2015 va ke hoach 2016_KetQuaHoatDongKinhDoanh_P2.json (folder: BIC)
+
+61. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2016\Tai_lieu_DHDCD\BIC_2016_5_1_1_rar\BIC\7. TT chuyen doi hoat dong theo mo hinh Cong ty me con_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 7. TT chuyen doi hoat dong theo mo hinh Cong ty me con_KetQuaHoatDongKinhDoanh.json (folder: BIC)
+
+62. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2016\Tai_lieu_DHDCD\BIC_2016_5_1_1_rar\BIC\7. TT chuyen doi hoat dong theo mo hinh Cong ty me con_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 7. TT chuyen doi hoat dong theo mo hinh Cong ty me con_KetQuaHoatDongKinhDoanh_P2.json (folder: BIC)
+
+63. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2017\Nghi_quyet_DHDCD\BIC_2017_4_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2017_4_1_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
+
+64. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2017\Nghi_quyet_DHDCD\BIC_2017_4_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2017_4_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Nghi_quyet_DHDCD)
+
+65. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2017\Tai_lieu_DHDCD\BIC_2017_5_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2017_5_1_1_KetQuaHoatDongKinhDoanh.json (folder: Tai_lieu_DHDCD)
+
+66. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2017\Tai_lieu_DHDCD\BIC_2017_5_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2017_5_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Tai_lieu_DHDCD)
+
+67. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2018\Nghi_quyet_DHDCD\BIC_2018_4_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2018_4_1_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
+
+68. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2018\Nghi_quyet_DHDCD\BIC_2018_4_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2018_4_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Nghi_quyet_DHDCD)
+
+69. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2018\Tai_lieu_DHDCD\BIC_2018_5_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2018_5_1_1_KetQuaHoatDongKinhDoanh.json (folder: Tai_lieu_DHDCD)
+
+70. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2018\Tai_lieu_DHDCD\BIC_2018_5_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2018_5_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Tai_lieu_DHDCD)
+
+71. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2019\Nghi_quyet_DHDCD\BIC_2019_4_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2019_4_1_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
+
+72. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2019\Nghi_quyet_DHDCD\BIC_2019_4_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2019_4_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Nghi_quyet_DHDCD)
+
+73. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2019\Tai_lieu_DHDCD\BIC_2019_5_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2019_5_1_1_KetQuaHoatDongKinhDoanh.json (folder: Tai_lieu_DHDCD)
+
+74. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2019\Tai_lieu_DHDCD\BIC_2019_5_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2019_5_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Tai_lieu_DHDCD)
+
+75. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2020\Nghi_quyet_DHDCD\BIC_2020_4_1_1_zip\20200625_20200625 - BIC - BB DHDCD 2020_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 20200625_20200625 - BIC - BB DHDCD 2020_KetQuaHoatDongKinhDoanh.json (folder: BIC_2020_4_1_1_zip)
+
+76. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2020\Nghi_quyet_DHDCD\BIC_2020_4_1_1_zip\20200625_20200625 - BIC - BB DHDCD 2020_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 20200625_20200625 - BIC - BB DHDCD 2020_KetQuaHoatDongKinhDoanh_P2.json (folder: BIC_2020_4_1_1_zip)
+
+77. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2020\Nghi_quyet_DHDCD\BIC_2020_4_1_1_zip\20200625_20200625 - BIC - NQ DHDCD 2020_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 20200625_20200625 - BIC - NQ DHDCD 2020_KetQuaHoatDongKinhDoanh.json (folder: BIC_2020_4_1_1_zip)
+
+78. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2020\Nghi_quyet_DHDCD\BIC_2020_4_1_1_zip\20200625_20200625 - BIC - NQ DHDCD 2020_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 20200625_20200625 - BIC - NQ DHDCD 2020_KetQuaHoatDongKinhDoanh_P2.json (folder: BIC_2020_4_1_1_zip)
+
+79. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\2. _KQKD 2019 va KHKD 2020_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 2. _KQKD 2019 va KHKD 2020_KetQuaHoatDongKinhDoanh.json (folder: BIC_2020_5_1_1_rar)
+
+80. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\2. _KQKD 2019 va KHKD 2020_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 2. _KQKD 2019 va KHKD 2020_KetQuaHoatDongKinhDoanh_P2.json (folder: BIC_2020_5_1_1_rar)
+
+81. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\3.1 Phe duyet dieu chinh bao cao QTTC 2018 va phuong an phan phoi loi nhuan sau thue 0218 the KTNN _KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 3.1 Phe duyet dieu chinh bao cao QTTC 2018 va phuong an phan phoi loi nhuan sau thue 0218 the KTNN _KetQuaHoatDongKinhDoanh.json (folder: BIC_2020_5_1_1_rar)
+
+82. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\3.1 Phe duyet dieu chinh bao cao QTTC 2018 va phuong an phan phoi loi nhuan sau thue 0218 the KTNN _KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 3.1 Phe duyet dieu chinh bao cao QTTC 2018 va phuong an phan phoi loi nhuan sau thue 0218 the KTNN _KetQuaHoatDongKinhDoanh_P2.json (folder: BIC_2020_5_1_1_rar)
+
+83. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\3.2 Phe duyet QTTT, phuong an PPLN sau thue 2019_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 3.2 Phe duyet QTTT, phuong an PPLN sau thue 2019_KetQuaHoatDongKinhDoanh.json (folder: BIC_2020_5_1_1_rar)
+
+84. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\3.2 Phe duyet QTTT, phuong an PPLN sau thue 2019_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 3.2 Phe duyet QTTT, phuong an PPLN sau thue 2019_KetQuaHoatDongKinhDoanh_P2.json (folder: BIC_2020_5_1_1_rar)
+
+85. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\5.Bao cao ket qua hoat dong 2019 va dinh huong hoat dong 2020 cua BKS _KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 5.Bao cao ket qua hoat dong 2019 va dinh huong hoat dong 2020 cua BKS _KetQuaHoatDongKinhDoanh.json (folder: BIC_2020_5_1_1_rar)
+
+86. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2021\Nghi_quyet_DHDCD\BIC_2021_4_1_1_zip\20210419_20210419 - BIC - BB DHCD TN_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 20210419_20210419 - BIC - BB DHCD TN_KetQuaHoatDongKinhDoanh.json (folder: BIC_2021_4_1_1_zip)
+
+87. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2021\Nghi_quyet_DHDCD\BIC_2021_4_1_1_zip\20210419_20210419 - BIC - BB DHCD TN_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 20210419_20210419 - BIC - BB DHCD TN_KetQuaHoatDongKinhDoanh_P2.json (folder: BIC_2021_4_1_1_zip)
+
+88. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2021\Nghi_quyet_DHDCD\BIC_2021_4_1_1_zip\20210419_20210419 - BIC - NQ DHCD TN_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 20210419_20210419 - BIC - NQ DHCD TN_KetQuaHoatDongKinhDoanh.json (folder: BIC_2021_4_1_1_zip)
+
+89. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2021\Nghi_quyet_DHDCD\BIC_2021_4_1_1_zip\20210419_20210419 - BIC - NQ DHCD TN_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 20210419_20210419 - BIC - NQ DHCD TN_KetQuaHoatDongKinhDoanh_P2.json (folder: BIC_2021_4_1_1_zip)
+
+90. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2021\Tai_lieu_DHDCD\BIC_2021_5_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2021_5_1_1_KetQuaHoatDongKinhDoanh.json (folder: Tai_lieu_DHDCD)
+
+91. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2021\Tai_lieu_DHDCD\BIC_2021_5_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2021_5_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Tai_lieu_DHDCD)
+
+92. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2022\Nghi_quyet_DHDCD\BIC_2022_4_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2022_4_1_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
+
+93. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2022\Nghi_quyet_DHDCD\BIC_2022_4_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2022_4_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Nghi_quyet_DHDCD)
+
+94. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2022\Tai_lieu_DHDCD\BIC_2022_5_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2022_5_1_1_KetQuaHoatDongKinhDoanh.json (folder: Tai_lieu_DHDCD)
+
+95. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2022\Tai_lieu_DHDCD\BIC_2022_5_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2022_5_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Tai_lieu_DHDCD)
+
+96. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2023\Nghi_quyet_DHDCD\BIC_2023_4_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2023_4_1_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
+
+97. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2023\Nghi_quyet_DHDCD\BIC_2023_4_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2023_4_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Nghi_quyet_DHDCD)
+
+98. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2023\Tai_lieu_DHDCD\BIC_2023_5_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2023_5_1_1_KetQuaHoatDongKinhDoanh.json (folder: Tai_lieu_DHDCD)
+
+99. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2023\Tai_lieu_DHDCD\BIC_2023_5_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2023_5_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Tai_lieu_DHDCD)
+
+100. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2024\Nghi_quyet_DHDCD\BIC_2024_4_2_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2024_4_2_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
+
+101. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2024\Nghi_quyet_DHDCD\BIC_2024_4_2_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2024_4_2_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Nghi_quyet_DHDCD)
+
+102. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2024\Tai_lieu_DHDCD\BIC_2024_5_2_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2024_5_2_1_KetQuaHoatDongKinhDoanh.json (folder: Tai_lieu_DHDCD)
+
+103. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2024\Tai_lieu_DHDCD\BIC_2024_5_2_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2024_5_2_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Tai_lieu_DHDCD)
+
+104. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2025\Tai_lieu_DHDCD\BIC_2025_5_1_1_zip\20250418_20250417___bic___tai_lieu_dai_hoi_dong_co_dong_thuong_nien_nam_2025_signed_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 20250418_20250417___bic___tai_lieu_dai_hoi_dong_co_dong_thuong_nien_nam_2025_signed_KetQuaHoatDongKinhDoanh.json (folder: BIC_2025_5_1_1_zip)
+
+105. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2025\Tai_lieu_DHDCD\BIC_2025_5_1_1_zip\20250418_20250417___bic___tai_lieu_dai_hoi_dong_co_dong_thuong_nien_nam_2025_signed_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 20250418_20250417___bic___tai_lieu_dai_hoi_dong_co_dong_thuong_nien_nam_2025_signed_KetQuaHoatDongKinhDoanh_P2.json (folder: BIC_2025_5_1_1_zip)
+
+106. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2025\Tai_lieu_DHDCD\BIC_2025_5_1_1_zip\BIC_TAILIEU_DHDCD thuong nien_2025_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_TAILIEU_DHDCD thuong nien_2025_KetQuaHoatDongKinhDoanh.json (folder: BIC_2025_5_1_1_zip)
+
+107. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2025\Tai_lieu_DHDCD\BIC_2025_5_1_1_zip\BIC_TAILIEU_DHDCD thuong nien_2025_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_TAILIEU_DHDCD thuong nien_2025_KetQuaHoatDongKinhDoanh_P2.json (folder: BIC_2025_5_1_1_zip)
+
+108. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2014\Nghi_quyet_DHDCD\BMI_2014_4_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BMI_2014_4_1_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
+
+109. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2014\Nghi_quyet_DHDCD\BMI_2014_4_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BMI_2014_4_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Nghi_quyet_DHDCD)
+
+110. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2015\Nghi_quyet_DHDCD\BMI_2015_4_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BMI_2015_4_1_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
+
+111. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2015\Nghi_quyet_DHDCD\BMI_2015_4_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BMI_2015_4_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Nghi_quyet_DHDCD)
+
+112. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2015\Tai_lieu_DHDCD\BMI_2015_5_1_1_rar\Bao cao cua BKS_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: Bao cao cua BKS_KetQuaHoatDongKinhDoanh.json (folder: BMI_2015_5_1_1_rar)
+
+113. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2016\Tai_lieu_DHDCD\BMI_2016_5_1_1_rar\BMI\Bao cao cua Ban Kiem Soat_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: Bao cao cua Ban Kiem Soat_KetQuaHoatDongKinhDoanh.json (folder: BMI)
+
+114. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2016\Tai_lieu_DHDCD\BMI_2016_5_1_1_rar\BMI\TT Chien luoc kinh doanh 2016 2020_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: TT Chien luoc kinh doanh 2016 2020_KetQuaHoatDongKinhDoanh.json (folder: BMI)
+
+115. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2016\Tai_lieu_DHDCD\BMI_2016_5_1_1_rar\BMI\TT Chien luoc kinh doanh 2016 2020_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: TT Chien luoc kinh doanh 2016 2020_KetQuaHoatDongKinhDoanh_P2.json (folder: BMI)
+
+116. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2016\Tai_lieu_DHDCD\BMI_2016_5_1_1_rar\BMI\TT thong qua ket qua kinh doanh 2015_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: TT thong qua ket qua kinh doanh 2015_KetQuaHoatDongKinhDoanh.json (folder: BMI)
+
+117. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2016\Tai_lieu_DHDCD\BMI_2016_5_1_1_rar\BMI\TT thong qua ket qua kinh doanh 2015_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: TT thong qua ket qua kinh doanh 2015_KetQuaHoatDongKinhDoanh_P2.json (folder: BMI)
+
+118. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2017\Tai_lieu_DHDCD\BMI_2017_5_1_1_rar\Bao cao 2016 HĐQT_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: Bao cao 2016 HĐQT_KetQuaHoatDongKinhDoanh.json (folder: BMI_2017_5_1_1_rar)
+
+119. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2017\Tai_lieu_DHDCD\BMI_2017_5_1_1_rar\Bao cao 2016 HĐQT_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: Bao cao 2016 HĐQT_KetQuaHoatDongKinhDoanh_P2.json (folder: BMI_2017_5_1_1_rar)
+
+120. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2017\Tai_lieu_DHDCD\BMI_2017_5_1_1_rar\Bao cao KQKD 2016_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: Bao cao KQKD 2016_KetQuaHoatDongKinhDoanh.json (folder: BMI_2017_5_1_1_rar)
+
+121. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2017\Tai_lieu_DHDCD\BMI_2017_5_1_1_rar\Bao cao KQKD 2016_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: Bao cao KQKD 2016_KetQuaHoatDongKinhDoanh_P2.json (folder: BMI_2017_5_1_1_rar)
+
+122. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2018\Tai_lieu_DHDCD\BMI_2018_5_1_1_rar\Bao cao HDQT nam 2017 va phuong huong 2018_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: Bao cao HDQT nam 2017 va phuong huong 2018_1_KetQuaHoatDongKinhDoanh.json (folder: BMI_2018_5_1_1_rar)
+
+123. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2019\Nghi_quyet_DHDCD\BMI_2019_4_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BMI_2019_4_1_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
+
+124. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2019\Nghi_quyet_DHDCD\BMI_2019_4_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BMI_2019_4_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Nghi_quyet_DHDCD)
+
+125. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\Bao cao hoat dong 2018 cua BKS_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: Bao cao hoat dong 2018 cua BKS_KetQuaHoatDongKinhDoanh.json (folder: BMI_2019_5_1_1_rar)
+
+126. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\Bao cao hoat dong 2018 cua BKS_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: Bao cao hoat dong 2018 cua BKS_KetQuaHoatDongKinhDoanh_P2.json (folder: BMI_2019_5_1_1_rar)
+
+127. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\Bao cao KQKD 2018 cua Tong giam doc_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: Bao cao KQKD 2018 cua Tong giam doc_KetQuaHoatDongKinhDoanh.json (folder: BMI_2019_5_1_1_rar)
+
+128. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\Bao cao KQKD 2018 cua Tong giam doc_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: Bao cao KQKD 2018 cua Tong giam doc_KetQuaHoatDongKinhDoanh_P2.json (folder: BMI_2019_5_1_1_rar)
+
+129. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\Bao-cao-hoat-dong-2018-cua-BKS_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: Bao-cao-hoat-dong-2018-cua-BKS_KetQuaHoatDongKinhDoanh.json (folder: BMI_2019_5_1_1_rar)
+
+130. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\Bao-cao-hoat-dong-2018-cua-BKS_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: Bao-cao-hoat-dong-2018-cua-BKS_KetQuaHoatDongKinhDoanh_P2.json (folder: BMI_2019_5_1_1_rar)
+
+131. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\BCTC 2018 - Da kiem toan_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BCTC 2018 - Da kiem toan_1_KetQuaHoatDongKinhDoanh.json (folder: BMI_2019_5_1_1_rar)
+
+132. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\BCTC 2018 - Da kiem toan_1_KetQuaHoatDongKinhDoanh_P1.json
+   Reason: Cannot parse stock/year from filename or folder: BCTC 2018 - Da kiem toan_1_KetQuaHoatDongKinhDoanh_P1.json (folder: BMI_2019_5_1_1_rar)
+
+133. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\BCTC 2018 - Da kiem toan_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BCTC 2018 - Da kiem toan_1_KetQuaHoatDongKinhDoanh_P2.json (folder: BMI_2019_5_1_1_rar)
+
+134. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\BMI_Du thao Nghi quyet DHDCD 25.4.2019_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BMI_Du thao Nghi quyet DHDCD 25.4.2019_KetQuaHoatDongKinhDoanh.json (folder: BMI_2019_5_1_1_rar)
+
+135. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\BMI_Du thao Nghi quyet DHDCD 25.4.2019_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BMI_Du thao Nghi quyet DHDCD 25.4.2019_KetQuaHoatDongKinhDoanh_P2.json (folder: BMI_2019_5_1_1_rar)
+
+136. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2021\Nghi_quyet_DHDCD\BMI_2021_4_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BMI_2021_4_1_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
+
+137. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210331_010.BMI. T_ tr8nh vv T_ng quan chi_n lu_c kinh doanh 2021 û 2025_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 20210331_010.BMI. T_ tr8nh vv T_ng quan chi_n lu_c kinh doanh 2021 û 2025_KetQuaHoatDongKinhDoanh.json (folder: BMI_2021_5_1_1_rar)
+
+138. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210331_010.BMI. T_ tr8nh vv T_ng quan chi_n lu_c kinh doanh 2021 û 2025_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 20210331_010.BMI. T_ tr8nh vv T_ng quan chi_n lu_c kinh doanh 2021 û 2025_KetQuaHoatDongKinhDoanh_P2.json (folder: BMI_2021_5_1_1_rar)
+
+139. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210420_20210420 - BMI - CBTT Tai lieu DHDCDTN nam 2021_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 20210420_20210420 - BMI - CBTT Tai lieu DHDCDTN nam 2021_KetQuaHoatDongKinhDoanh.json (folder: BMI_2021_5_1_1_rar)
+
+140. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2021\Tai_lieu_DHDCD\BMI_2021_5_1_1_rar\20210420_20210420 - BMI - CBTT Tai lieu DHDCDTN nam 2021_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 20210420_20210420 - BMI - CBTT Tai lieu DHDCDTN nam 2021_KetQuaHoatDongKinhDoanh_P2.json (folder: BMI_2021_5_1_1_rar)
+
+141. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2022\Tai_lieu_DHDCD\BMI_2022_5_2_1_zip\07.01.TL05.TO TRINH PHE DUYET BCTC 2021_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 07.01.TL05.TO TRINH PHE DUYET BCTC 2021_KetQuaHoatDongKinhDoanh.json (folder: BMI_2022_5_2_1_zip)
+
+142. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2022\Tai_lieu_DHDCD\BMI_2022_5_2_1_zip\07.01.TL05.TO TRINH PHE DUYET BCTC 2021_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 07.01.TL05.TO TRINH PHE DUYET BCTC 2021_KetQuaHoatDongKinhDoanh_P2.json (folder: BMI_2022_5_2_1_zip)
+
+143. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2023\Tai_lieu_DHDCD\BMI_2023_5_1_1_rar\Du thao full bo tai lieu DHDCD 2023 lan 2 (2)_compressed_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: Du thao full bo tai lieu DHDCD 2023 lan 2 (2)_compressed_KetQuaHoatDongKinhDoanh.json (folder: BMI_2023_5_1_1_rar)
+
+144. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2023\Tai_lieu_DHDCD\BMI_2023_5_1_1_rar\Du thao full bo tai lieu DHDCD 2023 lan 2 (2)_compressed_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: Du thao full bo tai lieu DHDCD 2023 lan 2 (2)_compressed_KetQuaHoatDongKinhDoanh_P2.json (folder: BMI_2023_5_1_1_rar)
+
+145. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2023\Tai_lieu_DHDCD\BMI_2023_5_1_1_rar\Tai lieu DHDCD lan 3-đã nén_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: Tai lieu DHDCD lan 3-đã nén_KetQuaHoatDongKinhDoanh.json (folder: BMI_2023_5_1_1_rar)
+
+146. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2023\Tai_lieu_DHDCD\BMI_2023_5_1_1_rar\Tai lieu DHDCD lan 3-đã nén_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: Tai lieu DHDCD lan 3-đã nén_KetQuaHoatDongKinhDoanh_P2.json (folder: BMI_2023_5_1_1_rar)
+
+147. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2024\Tai_lieu_DHDCD\BMI_2024_5_1_1_zip\To trinh (06.12.2024) Vv dieu chinh cac chi tieu ke hoach kinh doanh nam 2024 cua Bao Minh_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: To trinh (06.12.2024) Vv dieu chinh cac chi tieu ke hoach kinh doanh nam 2024 cua Bao Minh_KetQuaHoatDongKinhDoanh.json (folder: BMI_2024_5_1_1_zip)
+
+148. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2024\Tai_lieu_DHDCD\BMI_2024_5_1_1_zip\To trinh (06.12.2024) Vv dieu chinh cac chi tieu ke hoach kinh doanh nam 2024 cua Bao Minh_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: To trinh (06.12.2024) Vv dieu chinh cac chi tieu ke hoach kinh doanh nam 2024 cua Bao Minh_KetQuaHoatDongKinhDoanh_P2.json (folder: BMI_2024_5_1_1_zip)
+
+149. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\10. Tờ trình v.v kế hoạch kinh doanh năm 2025 (Bản trình DHCDTN)_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 10. Tờ trình v.v kế hoạch kinh doanh năm 2025 (Bản trình DHCDTN)_KetQuaHoatDongKinhDoanh.json (folder: BMI_2025_5_1_1_zip)
+
+150. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\BCTC TONG HOP TOM TAT 31-12-2024 (VIET) FINAL_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BCTC TONG HOP TOM TAT 31-12-2024 (VIET) FINAL_1_KetQuaHoatDongKinhDoanh.json (folder: BMI_2025_5_1_1_zip)
+
+151. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\BCTC TONG HOP TOM TAT 31-12-2024 (VIET) FINAL_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BCTC TONG HOP TOM TAT 31-12-2024 (VIET) FINAL_1_KetQuaHoatDongKinhDoanh_P2.json (folder: BMI_2025_5_1_1_zip)
+
+152. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2018\Nghi_quyet_DHDCD\MIG_2018_4_2_1_zip\2.MIG_2018.4.26_b0fbea2_Nghi_Quyet_DHDCD_thuong_nien_nam_2018_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 2.MIG_2018.4.26_b0fbea2_Nghi_Quyet_DHDCD_thuong_nien_nam_2018_KetQuaHoatDongKinhDoanh.json (folder: MIG_2018_4_2_1_zip)
+
+153. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2018\Nghi_quyet_DHDCD\MIG_2018_4_2_1_zip\2.MIG_2018.4.26_b0fbea2_Nghi_Quyet_DHDCD_thuong_nien_nam_2018_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 2.MIG_2018.4.26_b0fbea2_Nghi_Quyet_DHDCD_thuong_nien_nam_2018_KetQuaHoatDongKinhDoanh_P2.json (folder: MIG_2018_4_2_1_zip)
+
+154. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2018\Tai_lieu_DHDCD\MIG_2018_5_1_1_rar\BC TGĐ chuẩn_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BC TGĐ chuẩn_KetQuaHoatDongKinhDoanh.json (folder: MIG_2018_5_1_1_rar)
+
+155. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2018\Tai_lieu_DHDCD\MIG_2018_5_1_1_rar\BC TGĐ chuẩn_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: BC TGĐ chuẩn_KetQuaHoatDongKinhDoanh_P2.json (folder: MIG_2018_5_1_1_rar)
+
+156. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2018\Tai_lieu_DHDCD\MIG_2018_5_1_1_rar\Báo cáo BKS_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: Báo cáo BKS_KetQuaHoatDongKinhDoanh.json (folder: MIG_2018_5_1_1_rar)
+
+157. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2018\Tai_lieu_DHDCD\MIG_2018_5_1_1_rar\Tờ trình Thông qua BCTC và Phương án phân phối lợi nhuận_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: Tờ trình Thông qua BCTC và Phương án phân phối lợi nhuận_KetQuaHoatDongKinhDoanh.json (folder: MIG_2018_5_1_1_rar)
+
+158. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2018\Tai_lieu_DHDCD\MIG_2018_5_1_1_rar\Tờ trình Thông qua BCTC và Phương án phân phối lợi nhuận_KetQuaHoatDongKinhDoanh_P1.json
+   Reason: Cannot parse stock/year from filename or folder: Tờ trình Thông qua BCTC và Phương án phân phối lợi nhuận_KetQuaHoatDongKinhDoanh_P1.json (folder: MIG_2018_5_1_1_rar)
+
+159. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2018\Tai_lieu_DHDCD\MIG_2018_5_1_1_rar\Tờ trình Thông qua BCTC và Phương án phân phối lợi nhuận_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: Tờ trình Thông qua BCTC và Phương án phân phối lợi nhuận_KetQuaHoatDongKinhDoanh_P2.json (folder: MIG_2018_5_1_1_rar)
+
+160. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2018\Tai_lieu_DHDCD\MIG_2018_5_1_1_rar\Tờ trình xin phê duyệt Quy chế nội bộ về quản trị Công ty_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: Tờ trình xin phê duyệt Quy chế nội bộ về quản trị Công ty_KetQuaHoatDongKinhDoanh.json (folder: MIG_2018_5_1_1_rar)
+
+161. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2018\Tai_lieu_DHDCD\MIG_2018_5_1_1_rar\Tờ trình xin phê duyệt Quy chế nội bộ về quản trị Công ty_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: Tờ trình xin phê duyệt Quy chế nội bộ về quản trị Công ty_KetQuaHoatDongKinhDoanh_P2.json (folder: MIG_2018_5_1_1_rar)
+
+162. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2019\Nghi_quyet_DHDCD\MIG_2019_4_1_1_zip\1.MIG_2019.4.16_4da783d_Nghi_Quyet_Dai_hoi_dong_co_dong_thuong_nien_nam_2019_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 1.MIG_2019.4.16_4da783d_Nghi_Quyet_Dai_hoi_dong_co_dong_thuong_nien_nam_2019_KetQuaHoatDongKinhDoanh.json (folder: MIG_2019_4_1_1_zip)
+
+163. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2019\Nghi_quyet_DHDCD\MIG_2019_4_1_1_zip\1.MIG_2019.4.16_4da783d_Nghi_Quyet_Dai_hoi_dong_co_dong_thuong_nien_nam_2019_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 1.MIG_2019.4.16_4da783d_Nghi_Quyet_Dai_hoi_dong_co_dong_thuong_nien_nam_2019_KetQuaHoatDongKinhDoanh_P2.json (folder: MIG_2019_4_1_1_zip)
+
+164. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2019\Tai_lieu_DHDCD\MIG_2019_5_1_1_rar\Báo cáo TGĐ_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: Báo cáo TGĐ_KetQuaHoatDongKinhDoanh.json (folder: MIG_2019_5_1_1_rar)
+
+165. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2019\Tai_lieu_DHDCD\MIG_2019_5_1_1_rar\Báo cáo TGĐ_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: Báo cáo TGĐ_KetQuaHoatDongKinhDoanh_P2.json (folder: MIG_2019_5_1_1_rar)
+
+166. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2020\Nghi_quyet_DHDCD\MIG_2020_4_1_1_zip\2.MIG_2020.5.29_d8d09c2_Nghi_quyet_DHCD_2020_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 2.MIG_2020.5.29_d8d09c2_Nghi_quyet_DHCD_2020_KetQuaHoatDongKinhDoanh.json (folder: MIG_2020_4_1_1_zip)
+
+167. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\Báo cáo TGĐ_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: Báo cáo TGĐ_KetQuaHoatDongKinhDoanh.json (folder: MIG_2020_5_1_1_rar)
+
+168. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2020\Tai_lieu_DHDCD\MIG_2020_5_1_1_rar\Báo cáo TGĐ_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: Báo cáo TGĐ_KetQuaHoatDongKinhDoanh_P2.json (folder: MIG_2020_5_1_1_rar)
+
+169. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2021\Nghi_quyet_DHDCD\MIG_2021_4_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: MIG_2021_4_1_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
+
+170. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2021\Nghi_quyet_DHDCD\MIG_2021_4_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: MIG_2021_4_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Nghi_quyet_DHDCD)
+
+171. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\02.Tờ trình xin thông qua báo cáo tài chính năm 2020 đã được kiểm toán và Phương án phân phối lợi nhuận năm 2020_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 02.Tờ trình xin thông qua báo cáo tài chính năm 2020 đã được kiểm toán và Phương án phân phối lợi nhuận năm 2020_KetQuaHoatDongKinhDoanh.json (folder: MIG_2021_5_1_1_zip)
+
+172. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\02.Tờ trình xin thông qua báo cáo tài chính năm 2020 đã được kiểm toán và Phương án phân phối lợi nhuận năm 2020_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 02.Tờ trình xin thông qua báo cáo tài chính năm 2020 đã được kiểm toán và Phương án phân phối lợi nhuận năm 2020_KetQuaHoatDongKinhDoanh_P2.json (folder: MIG_2021_5_1_1_zip)
+
+173. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\17.DU THAO NGHI QUYET_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 17.DU THAO NGHI QUYET_KetQuaHoatDongKinhDoanh.json (folder: MIG_2021_5_1_1_zip)
+
+174. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\17.DU THAO NGHI QUYET_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 17.DU THAO NGHI QUYET_KetQuaHoatDongKinhDoanh_P2.json (folder: MIG_2021_5_1_1_zip)
+
+175. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\Bao cao Ban TGD_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: Bao cao Ban TGD_KetQuaHoatDongKinhDoanh.json (folder: MIG_2021_5_1_1_zip)
+
+176. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\Bao cao Ban TGD_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: Bao cao Ban TGD_KetQuaHoatDongKinhDoanh_P2.json (folder: MIG_2021_5_1_1_zip)
+
+177. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2022\Nghi_quyet_DHDCD\MIG_2022_4_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: MIG_2022_4_1_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
+
+178. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2022\Nghi_quyet_DHDCD\MIG_2022_4_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: MIG_2022_4_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Nghi_quyet_DHDCD)
+
+179. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2022\Tai_lieu_DHDCD\MIG_2022_5_1_1_rar\05. To trinh phan phoi loi nhuan_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 05. To trinh phan phoi loi nhuan_KetQuaHoatDongKinhDoanh.json (folder: MIG_2022_5_1_1_rar)
+
+180. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2022\Tai_lieu_DHDCD\MIG_2022_5_1_1_rar\05. To trinh phan phoi loi nhuan_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 05. To trinh phan phoi loi nhuan_KetQuaHoatDongKinhDoanh_P2.json (folder: MIG_2022_5_1_1_rar)
+
+181. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2023\Nghi_quyet_DHDCD\MIG_2023_4_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: MIG_2023_4_1_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
+
+182. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2023\Nghi_quyet_DHDCD\MIG_2023_4_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: MIG_2023_4_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Nghi_quyet_DHDCD)
+
+183. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\02. BC TGĐ.fin_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 02. BC TGĐ.fin_KetQuaHoatDongKinhDoanh.json (folder: MIG_2023_5_1_1_zip)
+
+184. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\02. BC TGĐ.fin_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 02. BC TGĐ.fin_KetQuaHoatDongKinhDoanh_P2.json (folder: MIG_2023_5_1_1_zip)
+
+185. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\03 Bao cao cua BKS.fin_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 03 Bao cao cua BKS.fin_KetQuaHoatDongKinhDoanh.json (folder: MIG_2023_5_1_1_zip)
+
+186. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2023\Tai_lieu_DHDCD\MIG_2023_5_1_1_zip\03 Bao cao cua BKS.fin_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 03 Bao cao cua BKS.fin_KetQuaHoatDongKinhDoanh_P2.json (folder: MIG_2023_5_1_1_zip)
+
+187. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2024\Nghi_quyet_DHDCD\MIG_2024_4_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: MIG_2024_4_1_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
+
+188. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2024\Nghi_quyet_DHDCD\MIG_2024_4_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: MIG_2024_4_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Nghi_quyet_DHDCD)
+
+189. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2024\Tai_lieu_DHDCD\MIG_2024_5_1_1_zip\02. BC BDH ve KQKD 2023 va phuong huong 2024_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 02. BC BDH ve KQKD 2023 va phuong huong 2024_KetQuaHoatDongKinhDoanh.json (folder: MIG_2024_5_1_1_zip)
+
+190. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2024\Tai_lieu_DHDCD\MIG_2024_5_1_1_zip\02. BC BDH ve KQKD 2023 va phuong huong 2024_KetQuaHoatDongKinhDoanh_P1.json
+   Reason: Cannot parse stock/year from filename or folder: 02. BC BDH ve KQKD 2023 va phuong huong 2024_KetQuaHoatDongKinhDoanh_P1.json (folder: MIG_2024_5_1_1_zip)
+
+191. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2024\Tai_lieu_DHDCD\MIG_2024_5_1_1_zip\03. BC BKS ve hoat dong 2023 va ke hoach 2024_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 03. BC BKS ve hoat dong 2023 va ke hoach 2024_KetQuaHoatDongKinhDoanh.json (folder: MIG_2024_5_1_1_zip)
+
+192. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2024\Tai_lieu_DHDCD\MIG_2024_5_1_1_zip\03. BC BKS ve hoat dong 2023 va ke hoach 2024_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 03. BC BKS ve hoat dong 2023 va ke hoach 2024_KetQuaHoatDongKinhDoanh_P2.json (folder: MIG_2024_5_1_1_zip)
+
+193. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2025\Nghi_quyet_DHDCD\MIG_2025_4_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: MIG_2025_4_1_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
+
+194. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2025\Nghi_quyet_DHDCD\MIG_2025_4_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: MIG_2025_4_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Nghi_quyet_DHDCD)
+
+195. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\10. Du thao NQ DHDCD thong qua cac van de Dai hoi_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 10. Du thao NQ DHDCD thong qua cac van de Dai hoi_KetQuaHoatDongKinhDoanh.json (folder: MIG_2025_5_1_1_zip)
+
+196. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\10. Du thao NQ DHDCD thong qua cac van de Dai hoi_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 10. Du thao NQ DHDCD thong qua cac van de Dai hoi_KetQuaHoatDongKinhDoanh_P2.json (folder: MIG_2025_5_1_1_zip)
+
+197. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\2. Bao cao Tong giam doc_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 2. Bao cao Tong giam doc_KetQuaHoatDongKinhDoanh.json (folder: MIG_2025_5_1_1_zip)
+
+198. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\2. Bao cao Tong giam doc_KetQuaHoatDongKinhDoanh_P1.json
+   Reason: Cannot parse stock/year from filename or folder: 2. Bao cao Tong giam doc_KetQuaHoatDongKinhDoanh_P1.json (folder: MIG_2025_5_1_1_zip)
+
+199. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\3. Bao cao Ban kiem soat_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 3. Bao cao Ban kiem soat_KetQuaHoatDongKinhDoanh.json (folder: MIG_2025_5_1_1_zip)
+
+200. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2025\Tai_lieu_DHDCD\MIG_2025_5_1_1_zip\3. Bao cao Ban kiem soat_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 3. Bao cao Ban kiem soat_KetQuaHoatDongKinhDoanh_P2.json (folder: MIG_2025_5_1_1_zip)
+
+201. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2014\Tai_lieu_DHDCD\PGI_2014_5_1_1\2014 Bao cao cua BKS tai Dai hoi dong co dong nam 2014_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 2014 Bao cao cua BKS tai Dai hoi dong co dong nam 2014_KetQuaHoatDongKinhDoanh.json (folder: PGI_2014_5_1_1)
+
+202. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2016\Tai_lieu_DHDCD\PGI_2016_5_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: PGI_2016_5_1_1_KetQuaHoatDongKinhDoanh.json (folder: Tai_lieu_DHDCD)
+
+203. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2016\Tai_lieu_DHDCD\PGI_2016_5_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: PGI_2016_5_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Tai_lieu_DHDCD)
+
+204. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_2_1_rar\4.-BC-của-HĐQT-1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 4.-BC-của-HĐQT-1_KetQuaHoatDongKinhDoanh.json (folder: PGI_2017_5_2_1_rar)
+
+205. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_2_1_rar\4.-BC-của-HĐQT-1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 4.-BC-của-HĐQT-1_KetQuaHoatDongKinhDoanh_P2.json (folder: PGI_2017_5_2_1_rar)
+
+206. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_2_1_rar\8.-Phương-án-PPLN-2016-và-KH-2017-1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 8.-Phương-án-PPLN-2016-và-KH-2017-1_KetQuaHoatDongKinhDoanh.json (folder: PGI_2017_5_2_1_rar)
+
+207. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_2_1_rar\8.-Phương-án-PPLN-2016-và-KH-2017-1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 8.-Phương-án-PPLN-2016-và-KH-2017-1_KetQuaHoatDongKinhDoanh_P2.json (folder: PGI_2017_5_2_1_rar)
+
+208. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_2_1_rar\BC-cua-TGD-tai-DHDCD-16.04.2017_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: BC-cua-TGD-tai-DHDCD-16.04.2017_KetQuaHoatDongKinhDoanh.json (folder: PGI_2017_5_2_1_rar)
+
+209. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2017\Tai_lieu_DHDCD\PGI_2017_5_2_1_rar\BC-cua-TGD-tai-DHDCD-16.04.2017_KetQuaHoatDongKinhDoanh_P1.json
+   Reason: Cannot parse stock/year from filename or folder: BC-cua-TGD-tai-DHDCD-16.04.2017_KetQuaHoatDongKinhDoanh_P1.json (folder: PGI_2017_5_2_1_rar)
+
+210. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2018\Tai_lieu_DHDCD\PGI_2018_5_1_1_rar\20180410_2. Báo cáo của Hội đồng quản trị_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 20180410_2. Báo cáo của Hội đồng quản trị_KetQuaHoatDongKinhDoanh.json (folder: PGI_2018_5_1_1_rar)
+
+211. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2018\Tai_lieu_DHDCD\PGI_2018_5_1_1_rar\20180410_2. Báo cáo của Hội đồng quản trị_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 20180410_2. Báo cáo của Hội đồng quản trị_KetQuaHoatDongKinhDoanh_P2.json (folder: PGI_2018_5_1_1_rar)
+
+212. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2018\Tai_lieu_DHDCD\PGI_2018_5_1_1_rar\20180410_4. ờ trình phương án phân phối Lợi nhuận 2017 và KH 2018_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 20180410_4. ờ trình phương án phân phối Lợi nhuận 2017 và KH 2018_KetQuaHoatDongKinhDoanh.json (folder: PGI_2018_5_1_1_rar)
+
+213. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2018\Tai_lieu_DHDCD\PGI_2018_5_1_1_rar\20180410_4. ờ trình phương án phân phối Lợi nhuận 2017 và KH 2018_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 20180410_4. ờ trình phương án phân phối Lợi nhuận 2017 và KH 2018_KetQuaHoatDongKinhDoanh_P2.json (folder: PGI_2018_5_1_1_rar)
+
+214. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2019\Tai_lieu_DHDCD\PGI_2019_5_1_1_zip\2.-Báo-cáo-HĐQT0001_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 2.-Báo-cáo-HĐQT0001_KetQuaHoatDongKinhDoanh.json (folder: PGI_2019_5_1_1_zip)
+
+215. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2019\Tai_lieu_DHDCD\PGI_2019_5_1_1_zip\2.-Báo-cáo-HĐQT0001_KetQuaHoatDongKinhDoanh_P1.json
+   Reason: Cannot parse stock/year from filename or folder: 2.-Báo-cáo-HĐQT0001_KetQuaHoatDongKinhDoanh_P1.json (folder: PGI_2019_5_1_1_zip)
+
+216. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2019\Tai_lieu_DHDCD\PGI_2019_5_1_1_zip\3.2-PGI_2018_Hop-nhat_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 3.2-PGI_2018_Hop-nhat_KetQuaHoatDongKinhDoanh.json (folder: PGI_2019_5_1_1_zip)
+
+217. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2019\Tai_lieu_DHDCD\PGI_2019_5_1_1_zip\3.2-PGI_2018_Hop-nhat_KetQuaHoatDongKinhDoanh_P1.json
+   Reason: Cannot parse stock/year from filename or folder: 3.2-PGI_2018_Hop-nhat_KetQuaHoatDongKinhDoanh_P1.json (folder: PGI_2019_5_1_1_zip)
+
+218. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2019\Tai_lieu_DHDCD\PGI_2019_5_1_1_zip\3.2-PGI_2018_Hop-nhat_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 3.2-PGI_2018_Hop-nhat_KetQuaHoatDongKinhDoanh_P2.json (folder: PGI_2019_5_1_1_zip)
+
+219. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2020\Nghi_quyet_DHDCD\PGI_2020_4_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: PGI_2020_4_1_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
+
+220. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2020\Nghi_quyet_DHDCD\PGI_2020_4_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: PGI_2020_4_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Nghi_quyet_DHDCD)
+
+221. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\10.-Tờ-trình-phương-án-phân-phối-lợi-nhuận-2019-và-một-số-chỉ-tiêu-kế-hoạch-2020_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 10.-Tờ-trình-phương-án-phân-phối-lợi-nhuận-2019-và-một-số-chỉ-tiêu-kế-hoạch-2020_KetQuaHoatDongKinhDoanh.json (folder: PGI_2020_5_1_1_rar)
+
+222. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\10.-Tờ-trình-phương-án-phân-phối-lợi-nhuận-2019-và-một-số-chỉ-tiêu-kế-hoạch-2020_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 10.-Tờ-trình-phương-án-phân-phối-lợi-nhuận-2019-và-một-số-chỉ-tiêu-kế-hoạch-2020_KetQuaHoatDongKinhDoanh_P2.json (folder: PGI_2020_5_1_1_rar)
+
+223. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\4.2-BCTC-đã-kiểm-toán_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 4.2-BCTC-đã-kiểm-toán_KetQuaHoatDongKinhDoanh.json (folder: PGI_2020_5_1_1_rar)
+
+224. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\4.2-BCTC-đã-kiểm-toán_KetQuaHoatDongKinhDoanh_P1.json
+   Reason: Cannot parse stock/year from filename or folder: 4.2-BCTC-đã-kiểm-toán_KetQuaHoatDongKinhDoanh_P1.json (folder: PGI_2020_5_1_1_rar)
+
+225. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\4.2-BCTC-đã-kiểm-toán_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 4.2-BCTC-đã-kiểm-toán_KetQuaHoatDongKinhDoanh_P2.json (folder: PGI_2020_5_1_1_rar)
+
+226. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\5.-Báo-cáo-kết-quả-hoạt-động-của-HĐQT-năm-2019-và-định-hướng-kế-hoạch-2020_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 5.-Báo-cáo-kết-quả-hoạt-động-của-HĐQT-năm-2019-và-định-hướng-kế-hoạch-2020_KetQuaHoatDongKinhDoanh.json (folder: PGI_2020_5_1_1_rar)
+
+227. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\5.-Báo-cáo-kết-quả-hoạt-động-của-HĐQT-năm-2019-và-định-hướng-kế-hoạch-2020_KetQuaHoatDongKinhDoanh_P1.json
+   Reason: Cannot parse stock/year from filename or folder: 5.-Báo-cáo-kết-quả-hoạt-động-của-HĐQT-năm-2019-và-định-hướng-kế-hoạch-2020_KetQuaHoatDongKinhDoanh_P1.json (folder: PGI_2020_5_1_1_rar)
+
+228. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\6.2-Thuyết-minh-chênh-lệch-Báo-cáo-kiểm-toán_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 6.2-Thuyết-minh-chênh-lệch-Báo-cáo-kiểm-toán_KetQuaHoatDongKinhDoanh.json (folder: PGI_2020_5_1_1_rar)
+
+229. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\6.2-Thuyết-minh-chênh-lệch-Báo-cáo-kiểm-toán_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 6.2-Thuyết-minh-chênh-lệch-Báo-cáo-kiểm-toán_KetQuaHoatDongKinhDoanh_P2.json (folder: PGI_2020_5_1_1_rar)
+
+230. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2021\Nghi_quyet_DHDCD\PGI_2021_4_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: PGI_2021_4_1_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
+
+231. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2021\Nghi_quyet_DHDCD\PGI_2021_4_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: PGI_2021_4_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Nghi_quyet_DHDCD)
+
+232. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_2_1_rar\5.-Tờ-trình-thông-qua-BCTC-đã-kiểm-toán-năm-2020_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 5.-Tờ-trình-thông-qua-BCTC-đã-kiểm-toán-năm-2020_KetQuaHoatDongKinhDoanh.json (folder: PGI_2021_5_2_1_rar)
+
+233. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_2_1_rar\5.1.-Báo-cáo-tài-chính-năm-2020_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 5.1.-Báo-cáo-tài-chính-năm-2020_KetQuaHoatDongKinhDoanh.json (folder: PGI_2021_5_2_1_rar)
+
+234. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_2_1_rar\5.1.-Báo-cáo-tài-chính-năm-2020_KetQuaHoatDongKinhDoanh_P1.json
+   Reason: Cannot parse stock/year from filename or folder: 5.1.-Báo-cáo-tài-chính-năm-2020_KetQuaHoatDongKinhDoanh_P1.json (folder: PGI_2021_5_2_1_rar)
+
+235. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_2_1_rar\5.1.-Báo-cáo-tài-chính-năm-2020_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 5.1.-Báo-cáo-tài-chính-năm-2020_KetQuaHoatDongKinhDoanh_P2.json (folder: PGI_2021_5_2_1_rar)
+
+236. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_2_1_rar\6.-Tờ-trình-phương-án-phân-phối-lợi-nhuận-năm-2020_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 6.-Tờ-trình-phương-án-phân-phối-lợi-nhuận-năm-2020_KetQuaHoatDongKinhDoanh.json (folder: PGI_2021_5_2_1_rar)
+
+237. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_2_1_rar\6.-Tờ-trình-phương-án-phân-phối-lợi-nhuận-năm-2020_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 6.-Tờ-trình-phương-án-phân-phối-lợi-nhuận-năm-2020_KetQuaHoatDongKinhDoanh_P2.json (folder: PGI_2021_5_2_1_rar)
+
+238. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2022\Nghi_quyet_DHDCD\PGI_2022_4_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: PGI_2022_4_1_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
+
+239. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2022\Nghi_quyet_DHDCD\PGI_2022_4_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: PGI_2022_4_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Nghi_quyet_DHDCD)
+
+240. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2022\Tai_lieu_DHDCD\PGI_2022_5_1_1_rar\PGI_TAILIEU_DHCD thuong nien_2022\20220329_4__to_trinh_thong_qua_bctc_da_kiem_toan_nam_2021_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 20220329_4__to_trinh_thong_qua_bctc_da_kiem_toan_nam_2021_KetQuaHoatDongKinhDoanh.json (folder: PGI_TAILIEU_DHCD thuong nien_2022)
+
+241. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2022\Tai_lieu_DHDCD\PGI_2022_5_1_1_rar\PGI_TAILIEU_DHCD thuong nien_2022\20220329_5__bao_cao_ket_qua_hoat_dong_cua_hdqt_2021_va_dinh_huong_ke_hoach_2022_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 20220329_5__bao_cao_ket_qua_hoat_dong_cua_hdqt_2021_va_dinh_huong_ke_hoach_2022_KetQuaHoatDongKinhDoanh.json (folder: PGI_TAILIEU_DHCD thuong nien_2022)
+
+242. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2022\Tai_lieu_DHDCD\PGI_2022_5_1_1_rar\PGI_TAILIEU_DHCD thuong nien_2022\20220329_5__bao_cao_ket_qua_hoat_dong_cua_hdqt_2021_va_dinh_huong_ke_hoach_2022_KetQuaHoatDongKinhDoanh_P1.json
+   Reason: Cannot parse stock/year from filename or folder: 20220329_5__bao_cao_ket_qua_hoat_dong_cua_hdqt_2021_va_dinh_huong_ke_hoach_2022_KetQuaHoatDongKinhDoanh_P1.json (folder: PGI_TAILIEU_DHCD thuong nien_2022)
+
+243. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2022\Tai_lieu_DHDCD\PGI_2022_5_1_1_rar\PGI_TAILIEU_DHCD thuong nien_2022\20220329_7__to_trinh_phuong_an_phan_phoi_loi_nhuan_nam_2021_va_mot_so_chi_tieu_tai_chinh_2022_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 20220329_7__to_trinh_phuong_an_phan_phoi_loi_nhuan_nam_2021_va_mot_so_chi_tieu_tai_chinh_2022_KetQuaHoatDongKinhDoanh.json (folder: PGI_TAILIEU_DHCD thuong nien_2022)
+
+244. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2022\Tai_lieu_DHDCD\PGI_2022_5_1_1_rar\PGI_TAILIEU_DHCD thuong nien_2022\20220329_7__to_trinh_phuong_an_phan_phoi_loi_nhuan_nam_2021_va_mot_so_chi_tieu_tai_chinh_2022_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 20220329_7__to_trinh_phuong_an_phan_phoi_loi_nhuan_nam_2021_va_mot_so_chi_tieu_tai_chinh_2022_KetQuaHoatDongKinhDoanh_P2.json (folder: PGI_TAILIEU_DHCD thuong nien_2022)
+
+245. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2022\Tai_lieu_DHDCD\PGI_2022_5_1_1_rar\PGI_TAILIEU_DHCD thuong nien_2022\20220415_20220415___pgi___cbtt_dinh_chinh_tai_lieu_dhdcd_2022_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 20220415_20220415___pgi___cbtt_dinh_chinh_tai_lieu_dhdcd_2022_KetQuaHoatDongKinhDoanh.json (folder: PGI_TAILIEU_DHCD thuong nien_2022)
+
+246. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2022\Tai_lieu_DHDCD\PGI_2022_5_1_1_rar\PGI_TAILIEU_DHCD thuong nien_2022\20220415_20220415___pgi___cbtt_dinh_chinh_tai_lieu_dhdcd_2022_KetQuaHoatDongKinhDoanh_P1.json
+   Reason: Cannot parse stock/year from filename or folder: 20220415_20220415___pgi___cbtt_dinh_chinh_tai_lieu_dhdcd_2022_KetQuaHoatDongKinhDoanh_P1.json (folder: PGI_TAILIEU_DHCD thuong nien_2022)
+
+247. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2023\Tai_lieu_DHDCD\PGI_2023_5_1_1_zip\20230331_2__bao_cao_kq_dieu_hanh_2022_dinh_huong_2023__KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 20230331_2__bao_cao_kq_dieu_hanh_2022_dinh_huong_2023__KetQuaHoatDongKinhDoanh.json (folder: PGI_2023_5_1_1_zip)
+
+248. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2023\Tai_lieu_DHDCD\PGI_2023_5_1_1_zip\20230331_3__bao_cao_ket_qua_hoat_dong_cua_hdqt_nam_2022_va_ke_hoach_nam_2023_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 20230331_3__bao_cao_ket_qua_hoat_dong_cua_hdqt_nam_2022_va_ke_hoach_nam_2023_KetQuaHoatDongKinhDoanh.json (folder: PGI_2023_5_1_1_zip)
+
+249. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2023\Tai_lieu_DHDCD\PGI_2023_5_1_1_zip\20230331_3__bao_cao_ket_qua_hoat_dong_cua_hdqt_nam_2022_va_ke_hoach_nam_2023_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 20230331_3__bao_cao_ket_qua_hoat_dong_cua_hdqt_nam_2022_va_ke_hoach_nam_2023_KetQuaHoatDongKinhDoanh_P2.json (folder: PGI_2023_5_1_1_zip)
+
+250. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2023\Tai_lieu_DHDCD\PGI_2023_5_1_1_zip\20230331_4__bao_cao_cua_ubkt_tai_dhdcd_2023_final_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 20230331_4__bao_cao_cua_ubkt_tai_dhdcd_2023_final_KetQuaHoatDongKinhDoanh.json (folder: PGI_2023_5_1_1_zip)
+
+251. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2023\Tai_lieu_DHDCD\PGI_2023_5_1_1_zip\20230331_4__bao_cao_cua_ubkt_tai_dhdcd_2023_final_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 20230331_4__bao_cao_cua_ubkt_tai_dhdcd_2023_final_KetQuaHoatDongKinhDoanh_P2.json (folder: PGI_2023_5_1_1_zip)
+
+252. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2023\Tai_lieu_DHDCD\PGI_2023_5_1_1_zip\20230331_5_1__to_trinh_phe_duyet_bctc_2022_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 20230331_5_1__to_trinh_phe_duyet_bctc_2022_KetQuaHoatDongKinhDoanh.json (folder: PGI_2023_5_1_1_zip)
+
+253. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2023\Tai_lieu_DHDCD\PGI_2023_5_1_1_zip\20230331_5_2_bctc_nam_2022_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 20230331_5_2_bctc_nam_2022_KetQuaHoatDongKinhDoanh.json (folder: PGI_2023_5_1_1_zip)
+
+254. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2023\Tai_lieu_DHDCD\PGI_2023_5_1_1_zip\20230331_5_2_bctc_nam_2022_KetQuaHoatDongKinhDoanh_P1.json
+   Reason: Cannot parse stock/year from filename or folder: 20230331_5_2_bctc_nam_2022_KetQuaHoatDongKinhDoanh_P1.json (folder: PGI_2023_5_1_1_zip)
+
+255. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2023\Tai_lieu_DHDCD\PGI_2023_5_1_1_zip\20230331_5_2_bctc_nam_2022_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 20230331_5_2_bctc_nam_2022_KetQuaHoatDongKinhDoanh_P2.json (folder: PGI_2023_5_1_1_zip)
+
+256. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2024\Nghi_quyet_DHDCD\PGI_2024_4_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: PGI_2024_4_1_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
+
+257. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2024\Nghi_quyet_DHDCD\PGI_2024_4_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: PGI_2024_4_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Nghi_quyet_DHDCD)
+
+258. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\4.-Báo-cáo-của-HĐQT_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 4.-Báo-cáo-của-HĐQT_KetQuaHoatDongKinhDoanh.json (folder: PGI_2024_5_1_1_zip)
+
+259. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\4.-Báo-cáo-của-HĐQT_KetQuaHoatDongKinhDoanh_P1.json
+   Reason: Cannot parse stock/year from filename or folder: 4.-Báo-cáo-của-HĐQT_KetQuaHoatDongKinhDoanh_P1.json (folder: PGI_2024_5_1_1_zip)
+
+260. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\5.-Báo-cáo-của-UBKT-tại-ĐHĐCD-2024-final_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 5.-Báo-cáo-của-UBKT-tại-ĐHĐCD-2024-final_KetQuaHoatDongKinhDoanh.json (folder: PGI_2024_5_1_1_zip)
+
+261. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\5.-Báo-cáo-của-UBKT-tại-ĐHĐCD-2024-final_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 5.-Báo-cáo-của-UBKT-tại-ĐHĐCD-2024-final_KetQuaHoatDongKinhDoanh_P2.json (folder: PGI_2024_5_1_1_zip)
+
+262. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\6.-Tờ-trình-phê-duyệt-BCTC-2023_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 6.-Tờ-trình-phê-duyệt-BCTC-2023_KetQuaHoatDongKinhDoanh.json (folder: PGI_2024_5_1_1_zip)
+
+263. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\6.-Tờ-trình-phê-duyệt-BCTC-2023_KetQuaHoatDongKinhDoanh_P1.json
+   Reason: Cannot parse stock/year from filename or folder: 6.-Tờ-trình-phê-duyệt-BCTC-2023_KetQuaHoatDongKinhDoanh_P1.json (folder: PGI_2024_5_1_1_zip)
+
+264. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\6.-Tờ-trình-phê-duyệt-BCTC-2023_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 6.-Tờ-trình-phê-duyệt-BCTC-2023_KetQuaHoatDongKinhDoanh_P2.json (folder: PGI_2024_5_1_1_zip)
+
+265. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\6.1-BCTC-2023_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 6.1-BCTC-2023_KetQuaHoatDongKinhDoanh.json (folder: PGI_2024_5_1_1_zip)
+
+266. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\6.1-BCTC-2023_KetQuaHoatDongKinhDoanh_P1.json
+   Reason: Cannot parse stock/year from filename or folder: 6.1-BCTC-2023_KetQuaHoatDongKinhDoanh_P1.json (folder: PGI_2024_5_1_1_zip)
+
+267. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\6.1-BCTC-2023_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 6.1-BCTC-2023_KetQuaHoatDongKinhDoanh_P2.json (folder: PGI_2024_5_1_1_zip)
+
+268. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\7.-Tơ-trinh-PPLN-2023_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: 7.-Tơ-trinh-PPLN-2023_KetQuaHoatDongKinhDoanh.json (folder: PGI_2024_5_1_1_zip)
+
+269. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\7.-Tơ-trinh-PPLN-2023_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: 7.-Tơ-trinh-PPLN-2023_KetQuaHoatDongKinhDoanh_P2.json (folder: PGI_2024_5_1_1_zip)
+
+270. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2025\Nghi_quyet_DHDCD\PGI_2025_4_1_1_KetQuaHoatDongKinhDoanh.json
+   Reason: Cannot parse stock/year from filename or folder: PGI_2025_4_1_1_KetQuaHoatDongKinhDoanh.json (folder: Nghi_quyet_DHDCD)
+
+271. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2025\Nghi_quyet_DHDCD\PGI_2025_4_1_1_KetQuaHoatDongKinhDoanh_P2.json
+   Reason: Cannot parse stock/year from filename or folder: PGI_2025_4_1_1_KetQuaHoatDongKinhDoanh_P2.json (folder: Nghi_quyet_DHDCD)
+
+
+CanDoiKeToan (43 file(s)):
 --------------------------------------------------------------------------------
 1. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\1113_CanDoiKeToan.json
    Reason: Cannot parse stock/year from filename or folder: 1113_CanDoiKeToan.json (folder: BVH)
@@ -170,8 +866,95 @@ CanDoiKeToan (14 file(s)):
 14. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2025\Tai_lieu_DHDCD\BVH_2025_5_1_1_zip\5.-Tờ-trình-BCTC-hợp-nhất-và-riêng-2024_CanDoiKeToan.json
    Reason: Cannot parse stock/year from filename or folder: 5.-Tờ-trình-BCTC-hợp-nhất-và-riêng-2024_CanDoiKeToan.json (folder: BVH_2025_5_1_1_zip)
 
+15. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\5.Bao cao ket qua hoat dong 2019 va dinh huong hoat dong 2020 cua BKS _CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: 5.Bao cao ket qua hoat dong 2019 va dinh huong hoat dong 2020 cua BKS _CanDoiKeToan.json (folder: BIC_2020_5_1_1_rar)
 
-LuuChuyenTienTe (20 file(s)):
+16. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2021\Tai_lieu_DHDCD\BIC_2021_5_1_1_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2021_5_1_1_CanDoiKeToan.json (folder: Tai_lieu_DHDCD)
+
+17. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2022\Nghi_quyet_DHDCD\BIC_2022_4_1_1_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2022_4_1_1_CanDoiKeToan.json (folder: Nghi_quyet_DHDCD)
+
+18. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2022\Tai_lieu_DHDCD\BIC_2022_5_1_1_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2022_5_1_1_CanDoiKeToan.json (folder: Tai_lieu_DHDCD)
+
+19. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2023\Nghi_quyet_DHDCD\BIC_2023_4_1_1_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2023_4_1_1_CanDoiKeToan.json (folder: Nghi_quyet_DHDCD)
+
+20. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2023\Tai_lieu_DHDCD\BIC_2023_5_1_1_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2023_5_1_1_CanDoiKeToan.json (folder: Tai_lieu_DHDCD)
+
+21. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2024\Nghi_quyet_DHDCD\BIC_2024_4_2_1_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2024_4_2_1_CanDoiKeToan.json (folder: Nghi_quyet_DHDCD)
+
+22. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2024\Tai_lieu_DHDCD\BIC_2024_5_2_1_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2024_5_2_1_CanDoiKeToan.json (folder: Tai_lieu_DHDCD)
+
+23. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2025\Tai_lieu_DHDCD\BIC_2025_5_1_1_zip\20250418_20250417___bic___tai_lieu_dai_hoi_dong_co_dong_thuong_nien_nam_2025_signed_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: 20250418_20250417___bic___tai_lieu_dai_hoi_dong_co_dong_thuong_nien_nam_2025_signed_CanDoiKeToan.json (folder: BIC_2025_5_1_1_zip)
+
+24. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2025\Tai_lieu_DHDCD\BIC_2025_5_1_1_zip\BIC_TAILIEU_DHDCD thuong nien_2025_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_TAILIEU_DHDCD thuong nien_2025_CanDoiKeToan.json (folder: BIC_2025_5_1_1_zip)
+
+25. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2015\Tai_lieu_DHDCD\BMI_2015_5_1_1_rar\Bao cao cua BKS_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: Bao cao cua BKS_CanDoiKeToan.json (folder: BMI_2015_5_1_1_rar)
+
+26. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2016\Tai_lieu_DHDCD\BMI_2016_5_1_1_rar\BMI\Bao cao cua Ban Kiem Soat_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: Bao cao cua Ban Kiem Soat_CanDoiKeToan.json (folder: BMI)
+
+27. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2017\Tai_lieu_DHDCD\BMI_2017_5_1_1_rar\Bao cao KQKD 2016_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: Bao cao KQKD 2016_CanDoiKeToan.json (folder: BMI_2017_5_1_1_rar)
+
+28. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2017\Tai_lieu_DHDCD\BMI_2017_5_1_1_rar\BC tham tra cua BKS_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: BC tham tra cua BKS_CanDoiKeToan.json (folder: BMI_2017_5_1_1_rar)
+
+29. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2018\Nghi_quyet_DHDCD\BMI_2018_4_1_1_zip\20180423_20180423 - BMP - BB DHDCDTN 2018_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: 20180423_20180423 - BMP - BB DHDCDTN 2018_CanDoiKeToan.json (folder: BMI_2018_4_1_1_zip)
+
+30. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2018\Nghi_quyet_DHDCD\BMI_2018_4_1_1_zip\20180423_20180423 - BMP - NQ DHDCDTN 2018_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: 20180423_20180423 - BMP - NQ DHDCDTN 2018_CanDoiKeToan.json (folder: BMI_2018_4_1_1_zip)
+
+31. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2018\Tai_lieu_DHDCD\BMI_2018_5_1_1_rar\Bao cao BKS danh gia KQKD 2017 KQHD HDQT BDH_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: Bao cao BKS danh gia KQKD 2017 KQHD HDQT BDH_CanDoiKeToan.json (folder: BMI_2018_5_1_1_rar)
+
+32. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\BCTC 2018 - Da kiem toan_1_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: BCTC 2018 - Da kiem toan_1_CanDoiKeToan.json (folder: BMI_2019_5_1_1_rar)
+
+33. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2021\Nghi_quyet_DHDCD\BMI_2021_4_1_1_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: BMI_2021_4_1_1_CanDoiKeToan.json (folder: Nghi_quyet_DHDCD)
+
+34. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2022\Tai_lieu_DHDCD\BMI_2022_5_2_1_zip\07.01.TL05.TO TRINH PHE DUYET BCTC 2021_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: 07.01.TL05.TO TRINH PHE DUYET BCTC 2021_CanDoiKeToan.json (folder: BMI_2022_5_2_1_zip)
+
+35. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\BCTC TONG HOP TOM TAT 31-12-2024 (VIET) FINAL_1_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: BCTC TONG HOP TOM TAT 31-12-2024 (VIET) FINAL_1_CanDoiKeToan.json (folder: BMI_2025_5_1_1_zip)
+
+36. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2018\Tai_lieu_DHDCD\MIG_2018_5_1_1_rar\Tờ trình Thông qua BCTC và Phương án phân phối lợi nhuận_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: Tờ trình Thông qua BCTC và Phương án phân phối lợi nhuận_CanDoiKeToan.json (folder: MIG_2018_5_1_1_rar)
+
+37. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\MIG\2021\Tai_lieu_DHDCD\MIG_2021_5_1_1_zip\02.Tờ trình xin thông qua báo cáo tài chính năm 2020 đã được kiểm toán và Phương án phân phối lợi nhuận năm 2020_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: 02.Tờ trình xin thông qua báo cáo tài chính năm 2020 đã được kiểm toán và Phương án phân phối lợi nhuận năm 2020_CanDoiKeToan.json (folder: MIG_2021_5_1_1_zip)
+
+38. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2019\Tai_lieu_DHDCD\PGI_2019_5_1_1_zip\3.2-PGI_2018_Hop-nhat_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: 3.2-PGI_2018_Hop-nhat_CanDoiKeToan.json (folder: PGI_2019_5_1_1_zip)
+
+39. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\4.2-BCTC-đã-kiểm-toán_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: 4.2-BCTC-đã-kiểm-toán_CanDoiKeToan.json (folder: PGI_2020_5_1_1_rar)
+
+40. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_2_1_rar\5.1.-Báo-cáo-tài-chính-năm-2020_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: 5.1.-Báo-cáo-tài-chính-năm-2020_CanDoiKeToan.json (folder: PGI_2021_5_2_1_rar)
+
+41. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2023\Tai_lieu_DHDCD\PGI_2023_5_1_1_zip\20230331_5_2_bctc_nam_2022_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: 20230331_5_2_bctc_nam_2022_CanDoiKeToan.json (folder: PGI_2023_5_1_1_zip)
+
+42. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\6.-Tờ-trình-phê-duyệt-BCTC-2023_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: 6.-Tờ-trình-phê-duyệt-BCTC-2023_CanDoiKeToan.json (folder: PGI_2024_5_1_1_zip)
+
+43. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\6.1-BCTC-2023_CanDoiKeToan.json
+   Reason: Cannot parse stock/year from filename or folder: 6.1-BCTC-2023_CanDoiKeToan.json (folder: PGI_2024_5_1_1_zip)
+
+
+LuuChuyenTienTe (42 file(s)):
 --------------------------------------------------------------------------------
 1. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2016\Tai_lieu_DHDCD\BVH_2016_5_1_1_rar\BVH\1113_LuuChuyenTienTe.json
    Reason: Cannot parse stock/year from filename or folder: 1113_LuuChuyenTienTe.json (folder: BVH)
@@ -232,4 +1015,70 @@ LuuChuyenTienTe (20 file(s)):
 
 20. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\NT\BVH\2025\Tai_lieu_DHDCD\BVH_2025_5_1_1_zip\7.-BC-của-BKS-ĐHĐCĐ-2025_LuuChuyenTienTe.json
    Reason: Cannot parse stock/year from filename or folder: 7.-BC-của-BKS-ĐHĐCĐ-2025_LuuChuyenTienTe.json (folder: BVH_2025_5_1_1_zip)
+
+21. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2017\Tai_lieu_DHDCD\BIC_2017_5_1_1_LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2017_5_1_1_LuuChuyenTienTe.json (folder: Tai_lieu_DHDCD)
+
+22. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2018\Tai_lieu_DHDCD\BIC_2018_5_1_1_LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2018_5_1_1_LuuChuyenTienTe.json (folder: Tai_lieu_DHDCD)
+
+23. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2020\Tai_lieu_DHDCD\BIC_2020_5_1_1_rar\5.Bao cao ket qua hoat dong 2019 va dinh huong hoat dong 2020 cua BKS _LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: 5.Bao cao ket qua hoat dong 2019 va dinh huong hoat dong 2020 cua BKS _LuuChuyenTienTe.json (folder: BIC_2020_5_1_1_rar)
+
+24. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2021\Tai_lieu_DHDCD\BIC_2021_5_1_1_LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2021_5_1_1_LuuChuyenTienTe.json (folder: Tai_lieu_DHDCD)
+
+25. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2022\Tai_lieu_DHDCD\BIC_2022_5_1_1_LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2022_5_1_1_LuuChuyenTienTe.json (folder: Tai_lieu_DHDCD)
+
+26. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2024\Tai_lieu_DHDCD\BIC_2024_5_1_1_LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_2024_5_1_1_LuuChuyenTienTe.json (folder: Tai_lieu_DHDCD)
+
+27. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2025\Tai_lieu_DHDCD\BIC_2025_5_1_1_zip\20250418_20250417___bic___tai_lieu_dai_hoi_dong_co_dong_thuong_nien_nam_2025_signed_LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: 20250418_20250417___bic___tai_lieu_dai_hoi_dong_co_dong_thuong_nien_nam_2025_signed_LuuChuyenTienTe.json (folder: BIC_2025_5_1_1_zip)
+
+28. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BIC\2025\Tai_lieu_DHDCD\BIC_2025_5_1_1_zip\BIC_TAILIEU_DHDCD thuong nien_2025_LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: BIC_TAILIEU_DHDCD thuong nien_2025_LuuChuyenTienTe.json (folder: BIC_2025_5_1_1_zip)
+
+29. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2015\Tai_lieu_DHDCD\BMI_2015_5_1_1_rar\Bao cao cua BKS_LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: Bao cao cua BKS_LuuChuyenTienTe.json (folder: BMI_2015_5_1_1_rar)
+
+30. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2016\Tai_lieu_DHDCD\BMI_2016_5_1_1_rar\BMI\Bao cao cua Ban Kiem Soat_LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: Bao cao cua Ban Kiem Soat_LuuChuyenTienTe.json (folder: BMI)
+
+31. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2017\Tai_lieu_DHDCD\BMI_2017_5_1_1_rar\BC tham tra cua BKS_LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: BC tham tra cua BKS_LuuChuyenTienTe.json (folder: BMI_2017_5_1_1_rar)
+
+32. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2018\Tai_lieu_DHDCD\BMI_2018_5_1_1_rar\Bao cao BKS danh gia KQKD 2017 KQHD HDQT BDH_LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: Bao cao BKS danh gia KQKD 2017 KQHD HDQT BDH_LuuChuyenTienTe.json (folder: BMI_2018_5_1_1_rar)
+
+33. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2019\Tai_lieu_DHDCD\BMI_2019_5_1_1_rar\BCTC 2018 - Da kiem toan_1_LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: BCTC 2018 - Da kiem toan_1_LuuChuyenTienTe.json (folder: BMI_2019_5_1_1_rar)
+
+34. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2021\Nghi_quyet_DHDCD\BMI_2021_4_1_1_LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: BMI_2021_4_1_1_LuuChuyenTienTe.json (folder: Nghi_quyet_DHDCD)
+
+35. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\BMI\2025\Tai_lieu_DHDCD\BMI_2025_5_1_1_zip\BCTC TONG HOP TOM TAT 31-12-2024 (VIET) FINAL_1_LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: BCTC TONG HOP TOM TAT 31-12-2024 (VIET) FINAL_1_LuuChuyenTienTe.json (folder: BMI_2025_5_1_1_zip)
+
+36. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2014\Tai_lieu_DHDCD\PGI_2014_5_1_1\2014 Bao cao cua BKS tai Dai hoi dong co dong nam 2014_LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: 2014 Bao cao cua BKS tai Dai hoi dong co dong nam 2014_LuuChuyenTienTe.json (folder: PGI_2014_5_1_1)
+
+37. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2019\Tai_lieu_DHDCD\PGI_2019_5_1_1_zip\3.2-PGI_2018_Hop-nhat_LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: 3.2-PGI_2018_Hop-nhat_LuuChuyenTienTe.json (folder: PGI_2019_5_1_1_zip)
+
+38. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2020\Tai_lieu_DHDCD\PGI_2020_5_1_1_rar\4.2-BCTC-đã-kiểm-toán_LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: 4.2-BCTC-đã-kiểm-toán_LuuChuyenTienTe.json (folder: PGI_2020_5_1_1_rar)
+
+39. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2021\Tai_lieu_DHDCD\PGI_2021_5_2_1_rar\5.1.-Báo-cáo-tài-chính-năm-2020_LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: 5.1.-Báo-cáo-tài-chính-năm-2020_LuuChuyenTienTe.json (folder: PGI_2021_5_2_1_rar)
+
+40. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2023\Tai_lieu_DHDCD\PGI_2023_5_1_1_zip\20230331_5_2_bctc_nam_2022_LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: 20230331_5_2_bctc_nam_2022_LuuChuyenTienTe.json (folder: PGI_2023_5_1_1_zip)
+
+41. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\6.-Tờ-trình-phê-duyệt-BCTC-2023_LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: 6.-Tờ-trình-phê-duyệt-BCTC-2023_LuuChuyenTienTe.json (folder: PGI_2024_5_1_1_zip)
+
+42. E:\Vietstock_Downloads_CLI\HOSE_markdown\Ngành Bảo hiểm\PNT\PGI\2024\Tai_lieu_DHDCD\PGI_2024_5_1_1_zip\6.1-BCTC-2023_LuuChuyenTienTe.json
+   Reason: Cannot parse stock/year from filename or folder: 6.1-BCTC-2023_LuuChuyenTienTe.json (folder: PGI_2024_5_1_1_zip)
 
