@@ -9,3 +9,5 @@ This module contains calculation functions for profit and cashflow indicators:
 - NOPAT (Net Operating Profit After Tax)
 """
 
+
+

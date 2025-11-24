@@ -32,7 +32,7 @@ for path in {str(PROJECT_ROOT), str(PACKAGE_ROOT)}:
         sys.path.insert(0, path)
 
 from Gen57Metrics.indicator_calculator import calculate_all_indicators
-from Gen57Metrics.utils_database_manager import connect
+from Gen57Metrics.utils_database_manager import connect, DB_CONFIG
 
 app = FastAPI(
     title="Gen57Metrics Dashboard API",
@@ -276,4 +276,44 @@ async def bootstrap() -> Dict[str, Any]:
 
 __all__ = ["app"]
 
+# Note: from __future__ imports must occur at the very top of the file (Python rule).
+# This block should be BELOW all import statements and after the FastAPI code, as here.
 
+if __name__ == "__main__":
+    import argparse
+    import uvicorn
+    try:
+        # Try importing DB_CONFIG from the real package module name to avoid relative import error
+        from Gen57Metrics.utils_database_manager import DB_CONFIG
+    except ImportError:
+        # Fallback for local script runs (if package/module layout is different)
+        from utils_database_manager import DB_CONFIG
+
+    parser = argparse.ArgumentParser(description="Gen57Metrics FastAPI Server")
+    parser.add_argument("--host", type=str, default="0.0.0.0", help="Host to bind to")
+    parser.add_argument("--port", type=int, default=30013, help="Port to bind to")
+    parser.add_argument("--reload", action="store_true", help="Enable auto-reload (dev only)")
+    args = parser.parse_args()
+
+    print("=" * 80)
+    print("Gen57Metrics API Server (FastAPI)")
+    print("=" * 80)
+    try:
+        print(f"Database: {DB_CONFIG['host']}:{DB_CONFIG['port']}")
+        print(f"Database name: {DB_CONFIG['database']}")
+    except Exception:
+        pass
+    print("=" * 80)
+    print(f"\nStarting server on http://{args.host}:{args.port}")
+    print("\nKey API Endpoints:")
+
+    print("\nAPI Documentation:")
+    print(f"  - Swagger UI: http://{args.host}:{args.port}/docs")
+    print(f"  - ReDoc:      http://{args.host}:{args.port}/redoc")
+    print("=" * 80)
+
+    if args.reload:
+        # Note: uvicorn's native reload is recommended via CLI, but allow flag here for convenience
+        uvicorn.run("Gen57Metrics.web.app:app", host=args.host, port=args.port, reload=True)
+    else:
+        uvicorn.run("Gen57Metrics.web.app:app", host=args.host, port=args.port, reload=False)
