@@ -57,6 +57,34 @@ body {
   color: #475467;
 }
 
+.view-mode-field {
+  min-width: 200px;
+}
+
+.view-mode-toggle {
+  display: inline-flex;
+  padding: 0.25rem;
+  background: #f4f4f6;
+  border-radius: 999px;
+  gap: 0.25rem;
+}
+
+.view-mode-btn {
+  border: none;
+  background: transparent;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #475467;
+  cursor: pointer;
+}
+
+.view-mode-btn.active {
+  background: #fff;
+  color: #2563eb;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.12);
+}
+
 .field select,
 .field input {
   padding: 0.55rem 0.75rem;
@@ -163,6 +191,12 @@ tbody td {
   vertical-align: top;
   font-size: 0.92rem;
   color: #101828;
+}
+
+.period-value {
+  text-align: right;
+  min-width: 130px;
+  font-variant-numeric: tabular-nums;
 }
 
 tbody tr:hover {

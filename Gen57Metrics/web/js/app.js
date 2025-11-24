@@ -19,27 +19,26 @@ const state = {
   stocks: [],
   periods: [],
   selectedStock: "",
-  selectedYear: "",
-  selectedQuarter: "",
   searchTerm: "",
   groupFilter: "",
-  values: [],
-  metadata: null,
+  periodMode: "quarter",
+  periodCache: new Map(),
 };
 
 const els = {
   stock: document.getElementById("stockSelect"),
-  year: document.getElementById("yearSelect"),
-  quarter: document.getElementById("quarterSelect"),
   group: document.getElementById("groupFilter"),
   search: document.getElementById("searchInput"),
   run: document.getElementById("runButton"),
+  tableHeader: document.getElementById("tableHeader"),
   tableBody: document.getElementById("indicatorTableBody"),
   indicatorCount: document.getElementById("indicatorCount"),
   successCount: document.getElementById("successCount"),
   failedCount: document.getElementById("failedCount"),
   calcMeta: document.getElementById("calcMeta"),
   toast: document.getElementById("toast"),
+  modeQuarter: document.getElementById("modeQuarter"),
+  modeYear: document.getElementById("modeYear"),
 };
 
 const formatter = new Intl.NumberFormat("vi-VN", {
@@ -52,6 +51,21 @@ const debounce = (fn, delay = 300) => {
     clearTimeout(timer);
     timer = setTimeout(() => fn(...args), delay);
   };
+};
+
+const periodKey = (period) => `${period.year}-Q${typeof period.quarter === "number" ? period.quarter : "?"}`;
+
+const formatQuarter = (quarter) => {
+  if (quarter === 5) return "FY";
+  if (!quarter) return "Q?";
+  return `Q${quarter}`;
+};
+
+const formatPeriodLabel = (period, mode) => {
+  if (mode === "year") {
+    return `FY ${period.year}`;
+  }
+  return `${formatQuarter(period.quarter)}-${period.year}`;
 };
 
 const showToast = (message, variant = "info") => {
@@ -124,130 +138,124 @@ const populateSelect = (selectEl, items, { placeholder = "-- Select --" } = {}) 
   selectEl.append(fragment);
 };
 
-const loadBootstrap = async () => {
-  const data = await fetchJson(buildUrl("/dashboard/bootstrap"));
-  state.indicators = data.indicators || [];
-  state.groups = data.groups || [];
-  populateSelect(els.group, [{ value: "", label: "All groups" }, ...state.groups.map((g) => ({ value: g, label: g }))], { placeholder: null });
-  updateIndicatorCount();
-};
-
-const loadStocks = async () => {
-  const data = await fetchJson(buildUrl("/stocks"));
-  state.stocks = data.stocks || [];
-  populateSelect(
-    els.stock,
-    state.stocks.map((stock) => ({ value: stock, label: stock })),
-    { placeholder: "-- Pick stock --" }
-  );
-};
-
-const loadPeriods = async (stock) => {
-  if (!stock) {
-    state.periods = [];
-    populateSelect(els.year, [], { placeholder: "--" });
-    populateSelect(els.quarter, [], { placeholder: "Annual (Q5)" });
-    return;
-  }
-  const data = await fetchJson(buildUrl(`/periods?stock=${encodeURIComponent(stock)}`));
-  state.periods = data.periods || [];
-
-  const years = Array.from(new Set(state.periods.map((p) => p.year))).map((year) => ({
-    value: year,
-    label: year,
-  }));
-  populateSelect(els.year, years, { placeholder: "-- Year --" });
-
-  // Build quarter select once (1-4 + annual)
-  const quarters = [
-    { value: "", label: "-- Quarter --" },
-    { value: "1", label: "Q1" },
-    { value: "2", label: "Q2" },
-    { value: "3", label: "Q3" },
-    { value: "4", label: "Q4" },
-    { value: "5", label: "Q5 (Annual)" },
-  ];
-  populateSelect(els.quarter, quarters, { placeholder: null });
-
-  if (state.periods.length) {
-    const [{ year, quarter }] = state.periods;
-    els.year.value = String(year);
-    if (typeof quarter === "number") {
-      els.quarter.value = String(quarter);
-    } else {
-      els.quarter.value = "";
-    }
-    state.selectedYear = els.year.value;
-    state.selectedQuarter = els.quarter.value;
-  }
-};
-
-const computeRows = () => {
-  const valueMap = new Map(state.values.map((item) => [item.id, item.value]));
-  return state.indicators
-    .filter((item) => {
-      const matchesGroup = state.groupFilter ? item.group === state.groupFilter : true;
-      const search = state.searchTerm.trim().toLowerCase();
-      if (!search) return matchesGroup;
-      return (
-        matchesGroup &&
-        ((item.name || "").toLowerCase().includes(search) ||
-          (item.definition || "").toLowerCase().includes(search) ||
-          (item.formula || "").toLowerCase().includes(search))
-      );
-    })
-    .map((item) => ({
-      ...item,
-      value: valueMap.has(item.id) ? valueMap.get(item.id) : null,
-    }));
-};
-
 const updateIndicatorCount = () => {
   els.indicatorCount.textContent = state.indicators.length;
 };
 
+const getActivePeriods = () => {
+  if (!state.periods.length) {
+    return [];
+  }
+  if (state.periodMode === "year") {
+    const annual = state.periods.filter((item) => item.quarter === 5);
+    if (annual.length) {
+      return annual;
+    }
+    const seenYears = new Set();
+    const fallback = [];
+    for (const period of state.periods) {
+      if (seenYears.has(period.year)) continue;
+      seenYears.add(period.year);
+      fallback.push(period);
+    }
+    return fallback;
+  }
+  return state.periods;
+};
+
 const renderTable = () => {
-  const rows = computeRows();
-  if (!rows.length) {
-    els.tableBody.innerHTML = `<tr><td colspan="8" class="empty">No indicators match the current filters.</td></tr>`;
+  const baseHeaders = [
+    "<th>ID</th>",
+    "<th>Group</th>",
+    "<th>Indicator</th>",
+    "<th>Definition</th>",
+    "<th>Formula</th>",
+    "<th>Usage</th>",
+    "<th>Weights</th>",
+  ];
+  const periods = getActivePeriods();
+  const periodHeaders = periods.map(
+    (period) => `<th class="period-value">${formatPeriodLabel(period, state.periodMode)}</th>`
+  );
+
+  const totalHeaders = [...baseHeaders, ...periodHeaders].join("");
+  els.tableHeader.innerHTML = `<tr>${totalHeaders}</tr>`;
+
+  const filteredIndicators = state.indicators.filter((item) => {
+    const matchesGroup = state.groupFilter ? item.group === state.groupFilter : true;
+    const term = state.searchTerm.trim().toLowerCase();
+    if (!term) return matchesGroup;
+    return (
+      matchesGroup &&
+      ((item.name || "").toLowerCase().includes(term) ||
+        (item.definition || "").toLowerCase().includes(term) ||
+        (item.formula || "").toLowerCase().includes(term))
+    );
+  });
+
+  if (!filteredIndicators.length) {
+    els.tableBody.innerHTML = `<tr><td colspan="${baseHeaders.length + periodHeaders.length}" class="empty">No indicators match the current filters.</td></tr>`;
     return;
   }
 
-  const html = rows
-    .map((row) => {
-      const value = row.value ?? null;
-      const valueDisplay = value === null ? "-" : formatter.format(value);
-      const usedBlock = [row.used_in_qgv, row.used_in_4m]
+  if (!periods.length) {
+    const message = state.selectedStock
+      ? "No periods available for this view mode."
+      : "Select a stock to view indicator values.";
+    els.tableBody.innerHTML = `<tr><td colspan="${baseHeaders.length}" class="empty">${message}</td></tr>`;
+    return;
+  }
+
+  const rows = filteredIndicators
+    .map((indicator) => {
+      const usedBlock = [indicator.used_in_qgv, indicator.used_in_4m]
         .filter(Boolean)
         .map((text) => `<span class="value-chip">${text}</span>`)
         .join("");
       const weights = [
-        row.weight_in_qgv ? `QGV: ${row.weight_in_qgv}` : "",
-        row.weight_in_4m ? `4M: ${row.weight_in_4m}` : "",
+        indicator.weight_in_qgv ? `QGV: ${indicator.weight_in_qgv}` : "",
+        indicator.weight_in_4m ? `4M: ${indicator.weight_in_4m}` : "",
       ]
         .filter(Boolean)
         .join(" · ");
 
+      const valueCells = periods
+        .map((period) => {
+          const cache = state.periodCache.get(periodKey(period));
+          if (!cache) {
+            return '<td class="period-value">Loading…</td>';
+          }
+          const value = cache.valuesById.get(indicator.id) ?? null;
+          const display = value === null || Number.isNaN(value) ? "–" : formatter.format(value);
+          return `<td class="period-value">${display}</td>`;
+        })
+        .join("");
+
       return `
         <tr>
-          <td>${row.id ?? ""}</td>
-          <td>${row.group ?? ""}</td>
-          <td><strong>${row.name ?? ""}</strong></td>
-          <td>${row.definition ?? ""}</td>
-          <td>${row.formula ?? ""}</td>
-          <td class="numeric">${valueDisplay}</td>
+          <td>${indicator.id ?? ""}</td>
+          <td>${indicator.group ?? ""}</td>
+          <td><strong>${indicator.name ?? ""}</strong></td>
+          <td>${indicator.definition ?? ""}</td>
+          <td>${indicator.formula ?? ""}</td>
           <td>${usedBlock || "-"}</td>
           <td>${weights || "-"}</td>
+          ${valueCells}
         </tr>
       `;
     })
     .join("");
 
-  els.tableBody.innerHTML = html;
+  els.tableBody.innerHTML = rows;
 };
 
 const updateSummary = () => {
-  const metadata = state.metadata || {};
+  const periods = getActivePeriods();
+  const dataset = periods
+    .map((period) => state.periodCache.get(periodKey(period)))
+    .find((entry) => entry && entry.metadata);
+
+  const metadata = dataset?.metadata || {};
   els.successCount.textContent = metadata.successful ?? 0;
   els.failedCount.textContent = metadata.failed ?? 0;
   els.calcMeta.textContent = metadata.calculated_at
@@ -255,57 +263,95 @@ const updateSummary = () => {
     : "–";
 };
 
-const calculateIndicators = async () => {
-  const stock = state.selectedStock;
-  const year = parseInt(state.selectedYear, 10);
-  const quarter =
-    state.selectedQuarter && !Number.isNaN(Number(state.selectedQuarter))
-      ? parseInt(state.selectedQuarter, 10)
-      : null;
+const cachePeriodData = (period, data) => {
+  const valuesById = new Map((data.indicators || []).map((item) => [item.id ?? item.ID, item.value ?? null]));
+  state.periodCache.set(periodKey(period), {
+    period,
+    metadata: data.metadata || null,
+    valuesById,
+  });
+};
 
-  if (!stock || Number.isNaN(year)) {
-    showToast("Please select stock and year.", "danger");
+const fetchPeriodValues = async (period) => {
+  const params = new URLSearchParams({
+    stock: state.selectedStock,
+    year: String(period.year),
+  });
+  if (typeof period.quarter === "number") {
+    params.append("quarter", String(period.quarter));
+  }
+  const data = await fetchJson(buildUrl(`/indicator-values?${params.toString()}`));
+  cachePeriodData(period, data);
+};
+
+const refreshValues = async ({ force = false } = {}) => {
+  if (!state.selectedStock) {
+    showToast("Please choose a stock first.", "danger");
+    return;
+  }
+
+  const periods = getActivePeriods();
+  if (!periods.length) {
+    showToast("No periods available to load.", "danger");
     return;
   }
 
   els.run.disabled = true;
-  els.run.textContent = "Calculating…";
+  els.run.textContent = "Refreshing…";
 
   try {
-    const params = new URLSearchParams({
-      stock,
-      year: String(year),
-    });
-    if (quarter !== null && !Number.isNaN(quarter)) {
-      params.append("quarter", String(quarter));
+    for (const period of periods) {
+      const key = periodKey(period);
+      if (!force && state.periodCache.has(key)) {
+        continue;
+      }
+      await fetchPeriodValues(period);
     }
-    const data = await fetchJson(buildUrl(`/indicator-values?${params.toString()}`));
-    state.values = data.indicators || [];
-    state.metadata = data.metadata || null;
     renderTable();
     updateSummary();
-    showToast("Indicators updated", "success");
+    showToast("Indicator values updated.", "success");
   } catch (error) {
     console.error(error);
-    showToast(error.message || "Failed to calculate indicators", "danger");
+    showToast(error.message || "Failed to load values", "danger");
   } finally {
     els.run.disabled = false;
-    els.run.textContent = "Calculate";
+    els.run.textContent = "Refresh values";
   }
 };
 
+const setPeriodMode = (mode) => {
+  if (state.periodMode === mode) return;
+  state.periodMode = mode;
+  els.modeQuarter.classList.toggle("active", mode === "quarter");
+  els.modeYear.classList.toggle("active", mode === "year");
+  renderTable();
+  refreshValues();
+};
+
+const handleStockChange = async (stock) => {
+  state.selectedStock = stock;
+  state.periodCache.clear();
+
+  if (!stock) {
+    state.periods = [];
+    renderTable();
+    updateSummary();
+    return;
+  }
+
+  const data = await fetchJson(buildUrl(`/periods?stock=${encodeURIComponent(stock)}`));
+  state.periods = (data.periods || []).map((period) => ({
+    year: period.year,
+    quarter: typeof period.quarter === "number" ? period.quarter : null,
+  }));
+
+  renderTable();
+  refreshValues({ force: true });
+};
+
 const bindEvents = () => {
-  els.stock.addEventListener("change", async (event) => {
-    state.selectedStock = event.target.value;
-    await loadPeriods(state.selectedStock);
-  });
-
-  els.year.addEventListener("change", (event) => {
-    state.selectedYear = event.target.value;
-  });
-
-  els.quarter.addEventListener("change", (event) => {
-    state.selectedQuarter = event.target.value;
+  els.stock.addEventListener("change", (event) => {
+    handleStockChange(event.target.value);
   });
 
   els.group.addEventListener("change", (event) => {
@@ -321,7 +367,32 @@ const bindEvents = () => {
     }, 250)
   );
 
-  els.run.addEventListener("click", calculateIndicators);
+  els.run.addEventListener("click", () => refreshValues({ force: true }));
+
+  els.modeQuarter.addEventListener("click", () => setPeriodMode("quarter"));
+  els.modeYear.addEventListener("click", () => setPeriodMode("year"));
+};
+
+const loadBootstrap = async () => {
+  const data = await fetchJson(buildUrl("/dashboard/bootstrap"));
+  state.indicators = data.indicators || [];
+  state.groups = data.groups || [];
+  populateSelect(
+    els.group,
+    [{ value: "", label: "All groups" }, ...state.groups.map((group) => ({ value: group, label: group }))],
+    { placeholder: null }
+  );
+  updateIndicatorCount();
+};
+
+const loadStocks = async () => {
+  const data = await fetchJson(buildUrl("/stocks"));
+  state.stocks = data.stocks || [];
+  populateSelect(
+    els.stock,
+    state.stocks.map((stock) => ({ value: stock, label: stock })),
+    { placeholder: "-- Pick stock --" }
+  );
 };
 
 const init = async () => {
