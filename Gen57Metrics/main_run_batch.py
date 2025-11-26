@@ -21,6 +21,7 @@ if str(parent_dir) not in sys.path:
 
 from Gen57Metrics.indicator_calculator import calculate_all_indicators
 from Gen57Metrics.utils_database_manager import connect
+from Gen57Metrics.indicator_result_repository import save_indicator_result_payload
 
 
 def get_stocks_from_database() -> List[str]:
@@ -193,7 +194,46 @@ def calculate_for_stock(
         print(f"✓ {stock}: {successful}/{total} indicators calculated successfully")
         if failed > 0:
             print(f"  ⚠ {failed} indicators failed")
-        
+
+        # Log chi tiết từng indicator (ID, tên, value) để debug / kiểm tra kết quả
+        indicators_with_id = result.get("indicators_with_id", [])
+        if indicators_with_id:
+            print("\n  Indicator values:")
+            for item in indicators_with_id:
+                ind_id = item.get("id")
+                name = item.get("name")
+                value = item.get("value")
+                id_str = f"{ind_id:02d}" if isinstance(ind_id, int) else "--"
+                print(f"    - [{id_str}] {name}: {value}")
+            print()
+
+        # Persist kết quả vào bảng indicator_57 để API/web chỉ đọc từ DB
+        try:
+            json_payload = dict(result)
+            json_payload.pop("metadata", None)
+
+            row_payload = {
+                "stock": result.get("stock", stock).upper(),
+                "year": int(result.get("year", year)),
+                "quarter": int(
+                    result.get("quarter")
+                    if result.get("quarter") is not None
+                    else (quarter if quarter is not None else 5)
+                ),
+                "json_raw": json_payload,
+            }
+
+            rows_written = save_indicator_result_payload(row_payload)
+            try:
+                print(f"  ✓ Persisted {rows_written} row to table 'indicator_57'")
+            except UnicodeEncodeError:
+                print(f"  Persisted {rows_written} row to table 'indicator_57'")
+        except Exception as persist_exc:
+            try:
+                print(f"  ⚠ Warning: could not persist indicator results to DB: {persist_exc}")
+            except UnicodeEncodeError:
+                print(f"  Warning: could not persist indicator results to DB: {persist_exc}")
+
         return {
             "stock": stock,
             "success": True,

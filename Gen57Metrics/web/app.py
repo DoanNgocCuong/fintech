@@ -31,7 +31,6 @@ for path in {str(PROJECT_ROOT), str(PACKAGE_ROOT)}:
     if path not in sys.path:
         sys.path.insert(0, path)
 
-from Gen57Metrics.indicator_calculator import calculate_all_indicators
 from Gen57Metrics.utils_database_manager import connect, DB_CONFIG
 
 app = FastAPI(
@@ -189,19 +188,23 @@ async def list_stocks(
 @app.get("/api/periods")
 async def list_periods(
     stock: str = Query(..., description="Stock ticker"),
-    source: str = Query(DEFAULT_SOURCE_KEY, description="Logical source/table for period discovery"),
 ) -> Dict[str, Any]:
-    table_name = _resolve_table(source)
+    """
+    Danh sách các kỳ đã có kết quả 57 chỉ số (đọc từ bảng indicator_57).
+    UI dùng endpoint này để vẽ các cột năm/quý, sau đó gọi /indicator-values
+    cho từng kỳ. Không phụ thuộc trực tiếp vào bảng raw (balance/income/cashflow).
+    """
+    table_name = "indicator_57"
     stock_code = stock.strip().upper()
 
     if not stock_code:
         raise HTTPException(status_code=400, detail="Stock ticker is required.")
 
     query = f'''
-        SELECT DISTINCT year, COALESCE(quarter, 5) AS quarter_label
+        SELECT DISTINCT year, quarter
         FROM "{table_name}"
         WHERE stock = %s
-        ORDER BY year DESC, quarter_label DESC;
+        ORDER BY year DESC, quarter DESC;
     '''
 
     try:
@@ -237,23 +240,58 @@ async def indicator_values(
     if not stock_code:
         raise HTTPException(status_code=400, detail="Stock ticker is required.")
 
+    # Luôn đọc từ bảng indicator_57 (kết quả đã được batch job đẩy vào trước đó),
+    # tuyệt đối không tự tính lại khi gọi API.
+    params: List[Any] = [stock_code, year]
+    if quarter is not None:
+        query = """
+            SELECT json_raw
+            FROM "indicator_57"
+            WHERE stock = %s AND year = %s AND quarter = %s
+            LIMIT 1;
+        """
+        params.append(quarter)
+    else:
+        # Nếu không truyền quarter, lấy kỳ mới nhất (quarter lớn nhất) của năm đó
+        query = """
+            SELECT json_raw
+            FROM "indicator_57"
+            WHERE stock = %s AND year = %s
+            ORDER BY quarter DESC
+            LIMIT 1;
+        """
+
     try:
-        result = calculate_all_indicators(
-            stock=stock_code,
-            year=year,
-            quarter=quarter,
-            include_metadata=include_metadata,
-        )
+        rows = _fetch_rows(query, tuple(params))
     except Exception as exc:
-        raise HTTPException(status_code=500, detail=f"Failed to calculate indicators: {exc}") from exc
+        raise HTTPException(status_code=500, detail=f"Database error: {exc}") from exc
+
+    if not rows:
+        raise HTTPException(
+            status_code=404,
+            detail=f"No indicator_57 record found for {stock_code} year={year} quarter={quarter or 'latest'}",
+        )
+
+    row_json = rows[0][0]
+    # row_json chính là payload json_raw đã được lưu từ batch (bao gồm indicators_with_id)
+    if isinstance(row_json, str):
+        try:
+            payload = json.loads(row_json)
+        except Exception:
+            payload = {}
+    else:
+        payload = row_json or {}
+
+    indicators = payload.get("indicators_with_id", [])
+    metadata = payload.get("metadata") if include_metadata else None
 
     return {
         "success": True,
         "stock": stock_code,
         "year": year,
         "quarter": quarter,
-        "indicators": result.get("indicators_with_id", []),
-        "metadata": result.get("metadata"),
+        "indicators": indicators,
+        "metadata": metadata,
     }
 
 
