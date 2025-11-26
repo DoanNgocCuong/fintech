@@ -33,11 +33,12 @@ from utils_database_manager import (
 )
 
 # Table names for income statement sections
+# P1: Bảng KQKD đầy đủ / chuẩn TT199 (tổng thể)
+# P2: Bảng KQKD theo hoạt động (template riêng, có _P2 trong tên file)
 SECTION_TABLE_MAP = {
     "P1": "income_statement_p1_raw",
     "P2": "income_statement_p2_raw",
 }
-DEFAULT_SECTION = "P2"
 
 
 @dataclass
@@ -145,21 +146,26 @@ def collect_json_files(target: Path, recursive: bool = True) -> List[Path]:
     return []
 
 
-def detect_section_from_name(name: str) -> str:
+def detect_section_from_name(name: str) -> str | None:
     """
     Detect section identifier (P1/P2) from filename or folder name.
     Defaults to P2 if no marker is found.
     """
     upper_name = name.upper()
     compact_name = upper_name.replace(" ", "")
-    
+
+    # Explicit markers cho phần 1
     if any(marker in upper_name for marker in ["_P1", " PHAN I", " PHAN 1"]) \
             or any(marker in compact_name for marker in ["PHANI", "PHAN1"]):
         return "P1"
+
+    # Explicit markers cho phần 2
     if any(marker in upper_name for marker in ["_P2", " PHAN II", " PHAN 2"]) \
             or any(marker in compact_name for marker in ["PHANII", "PHAN2"]):
         return "P2"
-    return DEFAULT_SECTION
+
+    # Không có marker rõ ràng → trả về None để caller tự quyết định (thường là bỏ qua file)
+    return None
 
 
 def process_json_files(json_files: List[Path], overwrite: bool) -> Tuple[int, int, List[FailedFile]]:
@@ -236,7 +242,24 @@ def process_json_files(json_files: List[Path], overwrite: bool) -> Tuple[int, in
             continue
 
         section = detect_section_from_name(json_file.stem)
-        table_name = SECTION_TABLE_MAP.get(section, SECTION_TABLE_MAP[DEFAULT_SECTION])
+
+        if section is None:
+            reason = (
+                "Cannot detect section (P1/P2) from name; "
+                "expected markers like '_P1', '_P2', 'PHAN I', 'PHAN II', etc."
+            )
+            try:
+                print(f"  ✗ {reason}")
+            except UnicodeEncodeError:
+                print(f"  [ERROR] {reason}")
+            failed += 1
+            failed_files.append(FailedFile(
+                filepath=str(json_file),
+                reason=reason
+            ))
+            continue
+
+        table_name = SECTION_TABLE_MAP.get(section)
         
         # Display parsed information
         quarter_info = f", quarter={quarter}" if quarter is not None else ", quarter=None"

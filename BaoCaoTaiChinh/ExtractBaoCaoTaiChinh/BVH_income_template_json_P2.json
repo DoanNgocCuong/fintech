@@ -1,0 +1,249 @@
+{
+  "phan_2_bao_cao_ket_qua_hoat_dong_kinh_doanh_theo_hoat_dong": {
+    "doanh_thu_phi_bao_hiem_01": {
+      "ma_so": "01",
+      "ten_chi_tieu": "Doanh thu phí bảo hiểm (01 = 02 + 03 + 04)",
+      "so_cuoi_nam": null
+    },
+    "phi_bao_hiem_goc_02": {
+      "ma_so": "02",
+      "ten_chi_tieu": "Phí bảo hiểm gốc",
+      "so_cuoi_nam": null
+    },
+    "phi_nhan_tai_bao_hiem_03": {
+      "ma_so": "03",
+      "ten_chi_tieu": "Phí nhận tái bảo hiểm",
+      "so_cuoi_nam": null
+    },
+    "tang_giam_du_phong_phi_chua_duoc_huong_cua_bao_hiem_goc_va_nhan_tai_bao_hiem_04": {
+      "ma_so": "04",
+      "ten_chi_tieu": "(Tăng)/Giảm dự phòng phí chưa được hưởng của bảo hiểm gốc và nhận tái bảo hiểm",
+      "so_cuoi_nam": null
+    },
+    "phi_nhuong_tai_bao_hiem_05": {
+      "ma_so": "05",
+      "ten_chi_tieu": "Phí nhượng tái bảo hiểm (05 = 06 + 07)",
+      "so_cuoi_nam": null
+    },
+    "tong_phi_nhuong_tai_bao_hiem_06": {
+      "ma_so": "06",
+      "ten_chi_tieu": "Tổng phí nhượng tái bảo hiểm",
+      "so_cuoi_nam": null
+    },
+    "tang_giam_du_phong_phi_nhuong_tai_bao_hiem_07": {
+      "ma_so": "07",
+      "ten_chi_tieu": "Tăng/(Giảm) dự phòng phí nhượng tái bảo hiểm",
+      "so_cuoi_nam": null
+    },
+    "doanh_thu_phi_bao_hiem_thuan_08": {
+      "ma_so": "08",
+      "ten_chi_tieu": "Doanh thu phí bảo hiểm thuần (08 = 01 + 05)",
+      "so_cuoi_nam": null
+    },
+    "hoa_hong_nhuong_tai_bao_hiem_va_doanh_thu_khac_hoat_dong_kinh_doanh_bao_hiem_09": {
+      "ma_so": "09",
+      "ten_chi_tieu": "Hoa hồng nhượng tái bảo hiểm và doanh thu khác hoạt động kinh doanh bảo hiểm",
+      "so_cuoi_nam": null
+    },
+    "doanh_thu_thuan_tu_hoat_dong_kinh_doanh_bao_hiem_15": {
+      "ma_so": "15",
+      "ten_chi_tieu": "Doanh thu thuần từ hoạt động kinh doanh bảo hiểm (15 = 08 + 09)",
+      "so_cuoi_nam": null
+    },
+    "chi_boi_thuong_bao_hiem_goc_va_chi_tra_dao_han_16": {
+      "ma_so": "16",
+      "ten_chi_tieu": "Chi bồi thường bảo hiểm gốc và chi trả đáo hạn",
+      "so_cuoi_nam": null
+    },
+    "chi_boi_thuong_nhan_tai_bao_hiem_17": {
+      "ma_so": "17",
+      "ten_chi_tieu": "Chi bồi thường nhận tái bảo hiểm",
+      "so_cuoi_nam": null
+    },
+    "cac_khoan_giam_tru_chi_phi_18": {
+      "ma_so": "18",
+      "ten_chi_tieu": "Các khoản giảm trừ chi phí (18 = 19 + 20)",
+      "so_cuoi_nam": null
+    },
+    "thu_doi_nguoi_thu_ba_19": {
+      "ma_so": "19",
+      "ten_chi_tieu": "Thu đời người thứ ba",
+      "so_cuoi_nam": null
+    },
+    "thu_xu_ly_hang_boi_thuong_100_20": {
+      "ma_so": "20",
+      "ten_chi_tieu": "Thu xử lý hàng bồi thường 100%",
+      "so_cuoi_nam": null
+    },
+    "thu_boi_thuong_nhuong_tai_bao_hiem_21": {
+      "ma_so": "21",
+      "ten_chi_tieu": "Thu bồi thường nhượng tái bảo hiểm",
+      "so_cuoi_nam": null
+    },
+    "tang_du_phong_nghiep_vu_bao_hiem_goc_22": {
+      "ma_so": "22",
+      "ten_chi_tieu": "Tăng dự phòng nghiệp vụ bảo hiểm gốc (22 = 23 + 24 + 25 + 26)",
+      "so_cuoi_nam": null
+    },
+    "tang_du_phong_toan_hoc_23": {
+      "ma_so": "23",
+      "ten_chi_tieu": "Tăng dự phòng toán học",
+      "so_cuoi_nam": null
+    },
+    "tang_du_phong_lai_cam_ket_dau_tu_toi_thieu_24": {
+      "ma_so": "24",
+      "ten_chi_tieu": "Tăng dự phòng lãi cam kết đầu tư tối thiểu",
+      "so_cuoi_nam": null
+    },
+    "tang_du_phong_chia_lai_25": {
+      "ma_so": "25",
+      "ten_chi_tieu": "Tăng dự phòng chia lãi",
+      "so_cuoi_nam": null
+    },
+    "tang_du_phong_dam_bao_can_doi_26": {
+      "ma_so": "26",
+      "ten_chi_tieu": "Tăng dự phòng đảm bảo cân đối",
+      "so_cuoi_nam": null
+    },
+    "tang_giam_du_phong_boi_thuong_bao_hiem_goc_va_nhan_tai_bao_hiem_27": {
+      "ma_so": "27",
+      "ten_chi_tieu": "(Tăng)/Giảm dự phòng bồi thường bảo hiểm gốc và nhận tái bảo hiểm",
+      "so_cuoi_nam": null
+    },
+    "tang_giam_du_phong_boi_thuong_nhuong_tai_bao_hiem_28": {
+      "ma_so": "28",
+      "ten_chi_tieu": "Tăng/(Giảm) dự phòng bồi thường nhượng tái bảo hiểm",
+      "so_cuoi_nam": null
+    },
+    "tong_chi_boi_thuong_va_tra_tien_bao_hiem_29": {
+      "ma_so": "29",
+      "ten_chi_tieu": "Tổng chi bồi thường và trả tiền bảo hiểm (29 = 16 + 17 + 18 + 21 + 22 + 27 + 28)",
+      "so_cuoi_nam": null
+    },
+    "giam_tang_du_phong_dao_dong_lon_30": {
+      "ma_so": "30",
+      "ten_chi_tieu": "Giảm/(Tăng) dự phòng dao động lớn",
+      "so_cuoi_nam": null
+    },
+    "chi_khac_hoat_dong_bao_hiem_goc_31": {
+      "ma_so": "31",
+      "ten_chi_tieu": "Chi khác hoạt động bảo hiểm gốc (31 = 32 + 33)",
+      "so_cuoi_nam": null
+    },
+    "chi_hoa_hong_32": {
+      "ma_so": "32",
+      "ten_chi_tieu": "Chi hoa hồng",
+      "so_cuoi_nam": null
+    },
+    "chi_khac_hoat_dong_kinh_doanh_bao_hiem_33": {
+      "ma_so": "33",
+      "ten_chi_tieu": "Chi khác hoạt động kinh doanh bảo hiểm",
+      "so_cuoi_nam": null
+    },
+    "tong_chi_truc_tiep_hoat_dong_kinh_doanh_bao_hiem_41": {
+      "ma_so": "41",
+      "ten_chi_tieu": "Tổng chi trực tiếp hoạt động kinh doanh bảo hiểm (41 = 29 + 30 + 31)",
+      "so_cuoi_nam": null
+    },
+    "loi_nhuan_gop_hoat_dong_kinh_doanh_bao_hiem_42": {
+      "ma_so": "42",
+      "ten_chi_tieu": "Lợi nhuận gộp hoạt động kinh doanh bảo hiểm (42 = 15 + 41)",
+      "so_cuoi_nam": null
+    },
+    "doanh_thu_hoat_dong_khac_43_1": {
+      "ma_so": "43.1",
+      "ten_chi_tieu": "Doanh thu hoạt động khác",
+      "so_cuoi_nam": null
+    },
+    "chi_phi_hoat_dong_khac_43_2": {
+      "ma_so": "43.2",
+      "ten_chi_tieu": "Chi phí hoạt động khác",
+      "so_cuoi_nam": null
+    },
+    "thu_nhap_thuan_tu_cac_hoat_dong_khac_43": {
+      "ma_so": "43",
+      "ten_chi_tieu": "Thu nhập thuần từ các hoạt động khác (43 = 43.1 + 43.2)",
+      "so_cuoi_nam": null
+    },
+    "doanh_thu_hoat_dong_tai_chinh_44_1": {
+      "ma_so": "44.1",
+      "ten_chi_tieu": "Doanh thu hoạt động tài chính",
+      "so_cuoi_nam": null
+    },
+    "chi_phi_hoat_dong_tai_chinh_44_2": {
+      "ma_so": "44.2",
+      "ten_chi_tieu": "Chi phí hoạt động tài chính",
+      "so_cuoi_nam": null
+    },
+    "loi_nhuan_hoat_dong_tai_chinh_44": {
+      "ma_so": "44",
+      "ten_chi_tieu": "Lợi nhuận hoạt động tài chính (44 = 44.1 + 44.2)",
+      "so_cuoi_nam": null
+    },
+    "phan_loi_nhuan_trong_cong_ty_lien_ket_don_vi_kinh_doanh_dong_kiem_soat_45": {
+      "ma_so": "45",
+      "ten_chi_tieu": "Phần lợi nhuận trong công ty liên kết, đơn vị kinh doanh đồng kiểm soát",
+      "so_cuoi_nam": null
+    },
+    "chi_phi_ban_hang_46": {
+      "ma_so": "46",
+      "ten_chi_tieu": "Chi phí bán hàng",
+      "so_cuoi_nam": null
+    },
+    "chi_phi_quan_ly_doanh_nghiep_47": {
+      "ma_so": "47",
+      "ten_chi_tieu": "Chi phí quản lý doanh nghiệp",
+      "so_cuoi_nam": null
+    },
+    "thu_nhap_khac_48_1": {
+      "ma_so": "48.1",
+      "ten_chi_tieu": "Thu nhập khác",
+      "so_cuoi_nam": null
+    },
+    "chi_phi_khac_48_2": {
+      "ma_so": "48.2",
+      "ten_chi_tieu": "Chi phí khác",
+      "so_cuoi_nam": null
+    },
+    "loi_nhuan_khac_48": {
+      "ma_so": "48",
+      "ten_chi_tieu": "Lợi nhuận khác (48 = 48.1 + 48.2)",
+      "so_cuoi_nam": null
+    },
+    "tong_loi_nhuan_ke_toan_truoc_thue_50": {
+      "ma_so": "50",
+      "ten_chi_tieu": "TỔNG LỢI NHUẬN KẾ TOÁN TRƯỚC THUẾ (50 = 42 + 43 + 44 + 45 + 46 + 47 + 48)",
+      "so_cuoi_nam": null
+    },
+    "chi_phi_thue_thu_nhap_doanh_nghiep_hien_hanh_51": {
+      "ma_so": "51",
+      "ten_chi_tieu": "Chi phí thuế thu nhập doanh nghiệp hiện hành",
+      "so_cuoi_nam": null
+    },
+    "chi_phi_thu_nhap_thue_thu_nhap_doanh_nghiep_hoan_lai_52": {
+      "ma_so": "52",
+      "ten_chi_tieu": "(Chi phí)/Thu nhập thuế thu nhập doanh nghiệp hoãn lại",
+      "so_cuoi_nam": null
+    },
+    "loi_nhuan_sau_thue_thu_nhap_doanh_nghiep_60": {
+      "ma_so": "60",
+      "ten_chi_tieu": "LỢI NHUẬN SAU THUẾ THU NHẬP DOANH NGHIỆP (60 = 50 + 51 + 52)",
+      "so_cuoi_nam": null
+    },
+    "loi_nhuan_sau_thue_cua_chu_so_huu_tap_doan_61": {
+      "ma_so": "61",
+      "ten_chi_tieu": "LỢI NHUẬN SAU THUẾ CỦA CHỦ SỞ HỮU TẬP ĐOÀN",
+      "so_cuoi_nam": null
+    },
+    "loi_nhuan_sau_thue_cua_co_dong_khong_kiem_soat_62": {
+      "ma_so": "62",
+      "ten_chi_tieu": "Lợi nhuận sau thuế của cổ đông không kiểm soát",
+      "so_cuoi_nam": null
+    },
+    "lai_co_ban_tren_co_phieu_70": {
+      "ma_so": "70",
+      "ten_chi_tieu": "Lãi cơ bản trên cổ phiếu",
+      "so_cuoi_nam": null
+    }
+  }
+}
