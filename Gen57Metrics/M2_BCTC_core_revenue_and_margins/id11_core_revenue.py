@@ -31,13 +31,16 @@ def get_core_revenue_value(
     Lấy giá trị Core Revenue (Doanh thu cốt lõi, segment chính) 
     cho cổ phiếu và kỳ báo cáo chỉ định.
 
-    - Core Revenue lấy từ Báo cáo kết quả hoạt động kinh doanh (BCKQ HĐKD), Mẫu B02-DNNT, sử dụng mã số 10.
+    - Core Revenue lấy từ Báo cáo kết quả hoạt động kinh doanh (BCKQ HĐKD), Mẫu B02-DNNT.
+    - Mặc định (không phải BVH): 
+        Core Revenue = KQKD_10.
+    - Trường hợp riêng BVH (bảo hiểm), theo mapping BVH:
+        Core Revenue_BVH = KQKD_02 (Phí bảo hiểm gốc).
     - Chỉ lấy từ bảng income_statement_p2_raw (P2), không lấy từ P1.
-    - Công thức: KQKD_10
     - Công thức thay thế: Core Revenue = Revenue from core business segments
 
     Tham số:
-        stock: Mã cổ phiếu, ví dụ: "MIG", "PGI", "BIC".
+        stock: Mã cổ phiếu, ví dụ: "MIG", "PGI", "BIC", "BVH".
         year: Năm tài chính, ví dụ: 2024.
         quarter: Quý (1-4) cho báo cáo quý, hoặc 5 cho báo cáo năm (mặc định: 5).
         legal_framework: Tên bộ luật (ví dụ: "TT199_2014", "TT232_2012"). 
@@ -45,25 +48,18 @@ def get_core_revenue_value(
 
     Kết quả trả về:
         Optional[float]: Giá trị Core Revenue lấy từ database, hoặc None nếu không tìm thấy.
-
-    Ví dụ:
-        >>> # Lấy Core Revenue năm của MIG năm 2024 (quarter=5)
-        >>> core_revenue = get_core_revenue_value("MIG", 2024)
-        >>> print(core_revenue)
-        1234567890.0
-
-        >>> # Lấy Core Revenue quý 2 của MIG năm 2024
-        >>> core_revenue_q2 = get_core_revenue_value("MIG", 2024, quarter=2)
-        >>> print(core_revenue_q2)
-        987654321.0
     """
     # Get legal framework if not provided
     if legal_framework is None:
         legal_framework = get_legal_framework(stock)
-    
-    # Map ma_so based on legal framework (currently same for all frameworks)
-    ma_so = CORE_REVENUE_CODE
-    
+
+    # Trường hợp riêng cho BVH: Core Revenue = KQKD_02 (Phí bảo hiểm gốc)
+    if stock and stock.strip().upper() == "BVH":
+        ma_so = 2
+    else:
+        # Mặc định: Core Revenue = KQKD_10
+        ma_so = CORE_REVENUE_CODE
+
     return get_value_by_ma_so(
         stock=stock,
         year=year,

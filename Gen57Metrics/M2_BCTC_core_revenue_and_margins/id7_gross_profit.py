@@ -31,13 +31,16 @@ def get_gross_profit_value(
     Lấy giá trị Gross Profit (Lợi nhuận gộp về bán hàng và cung cấp dịch vụ) 
     cho cổ phiếu và kỳ báo cáo chỉ định.
 
-    - Gross Profit lấy từ Báo cáo kết quả hoạt động kinh doanh (BCKQ HĐKD), Mẫu B02-DNNT, sử dụng mã số 18.
+    - Gross Profit lấy từ Báo cáo kết quả hoạt động kinh doanh (BCKQ HĐKD), Mẫu B02-DNNT.
+    - Mặc định (không phải BVH): 
+        Gross Profit = KQKD_18 (mã số 18, template TT200 chuẩn).
+    - Trường hợp riêng BVH (bảo hiểm):
+        Gross Profit_BVH = KQKD_42
     - Chỉ lấy từ bảng income_statement_p2_raw (P2), không lấy từ P1.
-    - Công thức: KQKD_18
     - Công thức thay thế: Gross Profit = Revenue – COGS
 
     Tham số:
-        stock: Mã cổ phiếu, ví dụ: "MIG", "PGI", "BIC".
+        stock: Mã cổ phiếu, ví dụ: "MIG", "PGI", "BIC", "BVH".
         year: Năm tài chính, ví dụ: 2024.
         quarter: Quý (1-4) cho báo cáo quý, hoặc 5 cho báo cáo năm (mặc định: 5).
         legal_framework: Tên bộ luật (ví dụ: "TT199_2014", "TT232_2012"). 
@@ -45,25 +48,18 @@ def get_gross_profit_value(
 
     Kết quả trả về:
         Optional[float]: Giá trị Gross Profit lấy từ database, hoặc None nếu không tìm thấy.
-
-    Ví dụ:
-        >>> # Lấy Gross Profit năm của MIG năm 2024 (quarter=5)
-        >>> gross_profit = get_gross_profit_value("MIG", 2024)
-        >>> print(gross_profit)
-        1234567890.0
-
-        >>> # Lấy Gross Profit quý 2 của MIG năm 2024
-        >>> gross_profit_q2 = get_gross_profit_value("MIG", 2024, quarter=2)
-        >>> print(gross_profit_q2)
-        987654321.0
     """
     # Get legal framework if not provided
     if legal_framework is None:
         legal_framework = get_legal_framework(stock)
-    
-    # Map ma_so based on legal framework (currently same for all frameworks)
-    ma_so = GROSS_PROFIT_CODE
-    
+
+    # Trường hợp riêng cho BVH: Gross Profit = KQKD_42
+    if stock and stock.strip().upper() == "BVH":
+        ma_so = 42
+    else:
+        # Mặc định: Gross Profit = KQKD_18
+        ma_so = GROSS_PROFIT_CODE
+
     return get_value_by_ma_so(
         stock=stock,
         year=year,

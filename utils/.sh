@@ -1,0 +1,1 @@
+python utils_clean_json_files.py "D:\path\to\folder"
