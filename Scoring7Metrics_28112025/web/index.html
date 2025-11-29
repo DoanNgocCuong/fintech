@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoring 7 Metrics Dashboard - 7 Tiêu chí Định tính</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Scoring 7 Metrics Dashboard</span>
+                </div>
+                <div class="header-actions">
+                    <button class="btn-export" onclick="exportData()">
+                        <i class="fas fa-download"></i>
+                        Xuất dữ liệu
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Controls Section -->
+            <div class="controls-section">
+                <div class="control-group">
+                    <label for="company-select">
+                        <i class="fas fa-building"></i>
+                        Công ty
+                    </label>
+                    <div class="select-wrapper">
+                        <select id="company-select" onchange="onCompanyChange()">
+                            <option value="">-- Chọn công ty --</option>
+                        </select>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label for="year-select">
+                        <i class="fas fa-calendar"></i>
+                        Năm
+                    </label>
+                    <div class="select-wrapper">
+                        <select id="year-select" onchange="onYearChange()">
+                            <option value="">-- Chọn năm --</option>
+                        </select>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>
+                        <i class="fas fa-search"></i>
+                        Tìm kiếm Evidence
+                    </label>
+                    <div class="search-wrapper">
+                        <input type="text" id="search-input" placeholder="Nhập từ khóa..." oninput="onSearchChange()">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs Section - 7 Tiêu chí -->
+            <div class="tabs-section">
+                <div class="tabs">
+                    <button class="tab active" data-group="governance" onclick="onTabChange('governance')">
+                        <i class="fas fa-users-cog"></i>
+                        <span>Quản trị</span>
+                    </button>
+                    <button class="tab" data-group="incentive" onclick="onTabChange('incentive')">
+                        <i class="fas fa-gift"></i>
+                        <span>Đãi ngộ</span>
+                    </button>
+                    <button class="tab" data-group="payout" onclick="onTabChange('payout')">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <span>Chi trả</span>
+                    </button>
+                    <button class="tab" data-group="capital" onclick="onTabChange('capital')">
+                        <i class="fas fa-coins"></i>
+                        <span>Vốn</span>
+                    </button>
+                    <button class="tab" data-group="ownership" onclick="onTabChange('ownership')">
+                        <i class="fas fa-handshake"></i>
+                        <span>Sở hữu</span>
+                    </button>
+                    <button class="tab" data-group="strategy" onclick="onTabChange('strategy')">
+                        <i class="fas fa-chess"></i>
+                        <span>Chiến lược</span>
+                    </button>
+                    <button class="tab" data-group="risk" onclick="onTabChange('risk')">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Rủi ro</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div id="loading" class="loading" style="display: none;">
+                <i class="fas fa-spinner fa-spin"></i>
+                <span>Đang tải dữ liệu...</span>
+            </div>
+
+            <!-- Error Message -->
+            <div id="error-message" class="error-message" style="display: none;"></div>
+
+            <!-- Content Section -->
+            <div id="content-section" class="content-section">
+                <!-- Summary Section -->
+                <div class="summary-section">
+                    <h2 id="summary-title">Tóm tắt</h2>
+                    <div id="summary-content" class="summary-content">
+                        <p class="placeholder">Chọn công ty và năm để xem tóm tắt</p>
+                    </div>
+                </div>
+
+                <!-- Metrics Section -->
+                <div class="metrics-section">
+                    <h2 id="metrics-title">Metrics</h2>
+                    <div id="metrics-content" class="metrics-content">
+                        <p class="placeholder">Chọn công ty và năm để xem metrics</p>
+                    </div>
+                </div>
+
+                <!-- Evidences Section -->
+                <div class="evidences-section">
+                    <h2 id="evidences-title">Trích dẫn (Evidences)</h2>
+                    <div id="evidences-content" class="evidences-content">
+                        <p class="placeholder">Chọn công ty và năm để xem trích dẫn</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Scoring 7 Metrics Dashboard. Sử dụng dữ liệu từ parsed_data.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
+
