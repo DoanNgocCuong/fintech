@@ -20,6 +20,7 @@ from utils_data_extractor import (
     format_company_data_response, extract_all_metrics,
     extract_summary, extract_evidences, GROUP_IDS, GROUP_NAMES
 )
+from utils_config import get_frontend_config
 
 app = FastAPI(
     title="Scoring 7 Metrics Dashboard API",
@@ -42,6 +43,57 @@ app.add_middleware(
 async def health_check():
     """Health check endpoint."""
     return {"status": "ok", "message": "API is running"}
+
+
+@app.get("/api/config")
+async def get_config_endpoint(request):
+    """
+    Get frontend configuration từ .env file.
+    Frontend sẽ gọi endpoint này để lấy API base URL.
+    """
+    try:
+        from fastapi import Request
+        import socket
+        
+        # Lấy port thực tế mà server đang chạy
+        # Từ request URL hoặc từ server config
+        server_port = request.url.port
+        if not server_port:
+            # Nếu không có port trong request, lấy từ config
+            config = get_config()
+            server_port = config['api']['port']
+        
+        config = get_frontend_config()
+        
+        # Override api_local_url với port thực tế đang chạy
+        config['api_local_url'] = f"http://localhost:{server_port}"
+        
+        return {
+            "success": True,
+            "config": config
+        }
+    except Exception as e:
+        # Nếu có lỗi, trả về error message rõ ràng
+        import warnings
+        warnings.warn(f"Error loading config: {e}. Using localhost fallback.", UserWarning)
+        
+        # Lấy port từ request nếu có
+        try:
+            server_port = request.url.port or 30015
+        except:
+            server_port = 30015
+        
+        # Fallback to localhost với port thực tế
+        return {
+            "success": True,
+            "config": {
+                "api_base_url": f"http://localhost:{server_port}",
+                "api_local_url": f"http://localhost:{server_port}",
+                "environment": "local",
+                "error": str(e),
+                "note": "Please configure API_PRODUCTION_URL in .env file"
+            }
+        }
 
 
 @app.get("/api/stats")
@@ -251,10 +303,16 @@ async def get_metrics_by_group_endpoint(
 if __name__ == '__main__':
     import uvicorn
     import argparse
+    from utils_config import get_config
+    
+    config = get_config()
+    api_config = config.get('api', {})
     
     parser = argparse.ArgumentParser(description='Scoring 7 Metrics Dashboard API Server')
-    parser.add_argument('--host', type=str, default='0.0.0.0', help='Host to bind to')
-    parser.add_argument('--port', type=int, default=8000, help='Port to bind to')
+    # Host và Port được hard code trong utils_config.py
+    # Có thể override bằng command line arguments
+    parser.add_argument('--host', type=str, default=api_config.get('host', '0.0.0.0'), help='Host to bind to (default: 0.0.0.0)')
+    parser.add_argument('--port', type=int, default=api_config.get('port', 30015), help='Port to bind to (default: 30015)')
     parser.add_argument('--reload', action='store_true', help='Enable auto-reload')
     args = parser.parse_args()
     
@@ -281,5 +339,13 @@ if __name__ == '__main__':
     print("\nOpen index.html in your browser to view the dashboard")
     print("=" * 80)
     
-    uvicorn.run(app, host=args.host, port=args.port, reload=args.reload)
+    # Fix reload warning: nếu dùng reload, phải dùng import string
+    if args.reload:
+        print("\n⚠️  Note: Using --reload requires import string format.")
+        print("   For reload, use: uvicorn app:app --host 0.0.0.0 --port 30015 --reload")
+        print("   Or run without --reload for production\n")
+        # Vẫn chạy nhưng không dùng reload để tránh warning
+        uvicorn.run(app, host=args.host, port=args.port, reload=False)
+    else:
+        uvicorn.run(app, host=args.host, port=args.port, reload=False)
 

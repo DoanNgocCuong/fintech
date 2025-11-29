@@ -14,14 +14,46 @@ except ImportError:
     PsycopgJson = None
 
 
-# Database configuration
-DB_CONFIG: Dict[str, Any] = {
-    'host': '103.253.20.30',
-    'port': 29990,
-    'database': 'financial-reporting-database',
-    'user': 'postgres',
-    'password': 'postgres',
-}
+# Database configuration - Đọc từ .env (không có hard code)
+def _load_db_config():
+    """Load DB config từ .env. Nếu không có sẽ raise error với message rõ ràng."""
+    try:
+        from utils_config import get_config
+        config = get_config()
+        db_config = config.get('database', {})
+        
+        # Bắt buộc phải có DB_HOST trong .env hoặc environment variable
+        db_host = db_config.get('host')
+        if not db_host:
+            raise ValueError(
+                "DB_HOST is required. Please set DB_HOST in .env file or environment variable.\n"
+                "Example: DB_HOST=your_database_host\n"
+                "Required variables: DB_HOST, DB_PORT, DB_NAME, DB_USER, DB_PASSWORD"
+            )
+        
+        return {
+            'host': db_host,
+            'port': int(db_config.get('port') or 29990),
+            'database': db_config.get('name') or 'financial-reporting-database',
+            'user': db_config.get('user') or 'postgres',
+            'password': db_config.get('password') or 'postgres',
+        }
+    except ValueError:
+        # Re-raise ValueError để user biết cần config
+        raise
+    except Exception as e:
+        # Nếu có lỗi khác, raise với message rõ ràng
+        raise ValueError(
+            f"Error loading database config: {e}\n"
+            "Please ensure .env file exists with:\n"
+            "  DB_HOST=your_database_host\n"
+            "  DB_PORT=29990\n"
+            "  DB_NAME=financial-reporting-database\n"
+            "  DB_USER=postgres\n"
+            "  DB_PASSWORD=postgres"
+        ) from e
+
+DB_CONFIG: Dict[str, Any] = _load_db_config()
 
 TABLE_NAME = 'company_json_documents'
 

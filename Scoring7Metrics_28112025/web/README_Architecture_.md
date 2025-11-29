@@ -222,8 +222,8 @@ const governanceEvidences = data.evidences.governance;
 ## 🔌 API Endpoints (Dự kiến)
 
 ### Base URL
-- **Local**: `http://localhost:8000/api` (hoặc `http://localhost:30011/api`)
-- **Production**: `http://103.253.20.30:30011/api`
+- **Local**: `http://localhost:8000/api` (hoặc port từ .env)
+- **Production**: Đọc từ `.env` file (`API_PRODUCTION_URL`) - **KHÔNG hard code**
 
 ### 1. Health Check
 **Endpoint:** `GET /api/health`
@@ -498,14 +498,17 @@ Lấy metrics của một tiêu chí cụ thể cho nhiều công ty/năm.
 
 **Database Config:**
 ```python
+# Đọc từ .env file - KHÔNG hard code
 DB_CONFIG = {
-    'host': '103.253.20.30',
-    'port': 29990,
-    'database': 'financial-reporting-database',
-    'user': 'postgres',
-    'password': 'postgres',
+    'host': ...,  # Từ DB_HOST trong .env
+    'port': ...,  # Từ DB_PORT trong .env
+    'database': ...,  # Từ DB_NAME trong .env
+    'user': ...,  # Từ DB_USER trong .env
+    'password': ...,  # Từ DB_PASSWORD trong .env
 }
 ```
+
+**⚠️ Lưu ý:** Tất cả config đọc từ `.env` file, không có hard code IP/URL trong code.
 
 ---
 
