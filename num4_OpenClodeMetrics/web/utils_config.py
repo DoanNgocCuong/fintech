@@ -4,15 +4,14 @@ Configuration utilities - Đọc từ .env file
 
 import os
 from pathlib import Path
-from typing import Any, Dict
-
+from typing import Dict, Any
 
 # Tìm file .env ở root project (D:\GIT\Fintech\fintech\.env)
 def find_env_file() -> Path:
     """Tìm file .env từ thư mục hiện tại lên đến root project."""
     current = Path(__file__).resolve()
     
-    # Đi lên từ web/ -> Scoring7Metrics_28112025/ -> fintech/
+    # Đi lên từ web/ -> num4_OpenClodeMetrics/ -> fintech/
     for parent in current.parents:
         env_file = parent / '.env'
         if env_file.exists():
@@ -62,7 +61,7 @@ def get_config() -> Dict[str, Any]:
     
     # API Server Config - Hard code trong code, không đọc từ .env
     api_host = '0.0.0.0'  # Bind tất cả interfaces
-    api_port = 30015  # Port backend chạy
+    api_port = 30017  # Port backend chạy (num4_OpenClodeMetrics)
     
     # BASE_URL_SERVER - Chỉ IP hoặc domain, không có port
     base_url_server = env_vars.get('BASE_URL_SERVER') or os.getenv('BASE_URL_SERVER')

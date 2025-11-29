@@ -6,7 +6,7 @@ Tất cả functions làm việc với parsed_data (KHÔNG phải json_raw).
 from typing import Optional, Dict, Any, List
 
 
-# 7 Tiêu chí (Groups)
+# Groups - có thể điều chỉnh tùy theo cấu trúc dữ liệu thực tế
 GROUP_IDS = [
     'governance',
     'incentive',
@@ -34,7 +34,7 @@ def extract_metrics_from_parsed_data(parsed_data: Dict[str, Any], group_id: str)
     
     Args:
         parsed_data: Parsed data từ database
-        group_id: Tiêu chí (governance, incentive, payout, ...) - có thể là lowercase hoặc mixed case
+        group_id: Tiêu chí (governance, incentive, payout, ...)
         
     Returns:
         Dict chứa metrics cho group_id đó
@@ -43,19 +43,12 @@ def extract_metrics_from_parsed_data(parsed_data: Dict[str, Any], group_id: str)
         return {}
     
     analysis_result = parsed_data.get('analysis_result', [])
-    group_id_lower = group_id.lower()
     
-    # Tìm item có group_id tương ứng (case-insensitive)
+    # Tìm item có group_id tương ứng
     for item in analysis_result:
-        item_group_id = item.get('group_id')
-        if item_group_id and item_group_id.lower() == group_id_lower:
+        if item.get('group_id') == group_id:
             metrics = item.get('metrics', {})
-            # Tìm metrics với group_id lowercase trước
-            group_metrics = metrics.get(group_id_lower, {})
-            # Nếu không tìm thấy, thử với group_id gốc từ DB
-            if not group_metrics and item_group_id:
-                group_metrics = metrics.get(item_group_id.lower(), {})
-            return group_metrics
+            return metrics.get(group_id, {})
     
     return {}
 
@@ -68,7 +61,7 @@ def extract_all_metrics(parsed_data: Dict[str, Any]) -> Dict[str, Dict[str, Any]
         parsed_data: Parsed data từ database
         
     Returns:
-        Dict với key là group_id (lowercase), value là metrics dict
+        Dict với key là group_id, value là metrics dict
     """
     if not isinstance(parsed_data, dict):
         return {}
@@ -80,16 +73,7 @@ def extract_all_metrics(parsed_data: Dict[str, Any]) -> Dict[str, Dict[str, Any]
         group_id = item.get('group_id')
         if group_id:
             metrics = item.get('metrics', {})
-            # Normalize group_id về lowercase để match với key trong metrics
-            # DB có thể có "Governance" nhưng metrics key là "governance"
-            group_id_lower = group_id.lower()
-            # Tìm metrics với group_id lowercase
-            group_metrics = metrics.get(group_id_lower, {})
-            # Nếu không tìm thấy với lowercase, thử với group_id gốc (backward compatibility)
-            if not group_metrics:
-                group_metrics = metrics.get(group_id, {})
-            # Lưu với key lowercase để consistent với frontend
-            all_metrics[group_id_lower] = group_metrics
+            all_metrics[group_id] = metrics.get(group_id, {})
     
     return all_metrics
 
@@ -100,26 +84,23 @@ def extract_summary(parsed_data: Dict[str, Any], group_id: Optional[str] = None)
     
     Args:
         parsed_data: Parsed data từ database
-        group_id: Tiêu chí cụ thể (optional, nếu None thì lấy tất cả) - case-insensitive
+        group_id: Tiêu chí cụ thể (optional, nếu None thì lấy tất cả)
         
     Returns:
-        Dict với key là group_id (lowercase), value là summary string
+        Dict với key là group_id, value là summary string
     """
     if not isinstance(parsed_data, dict):
         return {}
     
     summaries = {}
     analysis_result = parsed_data.get('analysis_result', [])
-    group_id_lower = group_id.lower() if group_id else None
     
     for item in analysis_result:
         item_group_id = item.get('group_id')
         if item_group_id:
-            # Case-insensitive comparison
-            if group_id is None or item_group_id.lower() == group_id_lower:
+            if group_id is None or item_group_id == group_id:
                 summary = item.get('summary', '')
-                # Lưu với key lowercase để consistent
-                summaries[item_group_id.lower()] = summary
+                summaries[item_group_id] = summary
     
     return summaries
 
@@ -130,26 +111,23 @@ def extract_evidences(parsed_data: Dict[str, Any], group_id: Optional[str] = Non
     
     Args:
         parsed_data: Parsed data từ database
-        group_id: Tiêu chí cụ thể (optional, nếu None thì lấy tất cả) - case-insensitive
+        group_id: Tiêu chí cụ thể (optional, nếu None thì lấy tất cả)
         
     Returns:
-        Dict với key là group_id (lowercase), value là list evidences
+        Dict với key là group_id, value là list evidences
     """
     if not isinstance(parsed_data, dict):
         return {}
     
     all_evidences = {}
     analysis_result = parsed_data.get('analysis_result', [])
-    group_id_lower = group_id.lower() if group_id else None
     
     for item in analysis_result:
         item_group_id = item.get('group_id')
         if item_group_id:
-            # Case-insensitive comparison
-            if group_id is None or item_group_id.lower() == group_id_lower:
+            if group_id is None or item_group_id == group_id:
                 evidences = item.get('evidences', [])
-                # Lưu với key lowercase để consistent
-                all_evidences[item_group_id.lower()] = evidences
+                all_evidences[item_group_id] = evidences
     
     return all_evidences
 
@@ -213,5 +191,4 @@ def format_company_data_response(parsed_data: Dict[str, Any], company_name: str,
         'summary': summaries,
         'evidences': evidences
     }
-
 
